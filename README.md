@@ -1,8 +1,8 @@
 tail.select
 ===========
-> Version: 0.3.0 (Alpha)<br />
-> License: X11 / MIT<br />
-> Author: SamBrishes, pytesNET
+[![npm](https://img.shields.io/npm/v/tail.select.svg?style=flat-square)](https://www.npmjs.com/package/tail.select)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Author](https://img.shields.io/badge/Author-SamBrishes@pytesNET-lightgrey.svg?style=flat-square)](https://www.github.com/pytesNET)
 
 The tail.select script is back, completely re-written in pure vanilla JavaScript from scratch! It
 offers almost the same functionality as the jQuery version, back in 2016, and has been enriched with
