@@ -1,6 +1,13 @@
 CHANGELOG
 ===========
 
+Version 0.3.1 - Alpha
+---------------------
+-   Info: Official support for IE >= 9 starts now :(
+-   Add: New `clone()` helper function as Fallback for IE >= 9.
+-   Add: New `.IE` helper variable for Fallback use for IE >= 9.
+-   Bugfix: Almost complete IE >= 9 support, except the `animate` option.
+
 Version 0.3.0 - Alpha
 ---------------------
 -   Info: The complete script has been re-written from scratch and doesn't depend on jQuery anymore!
