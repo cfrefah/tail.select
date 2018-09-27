@@ -1089,6 +1089,7 @@
                                 }
                                 this.setAttribute("data-select", "load");
                                 this.removeAttribute("data-group");
+                                this.disabled = false;
                                 this.innerText = this.innerText.replace("Unload", "Load");
                                 this.className = this.className.replace("loading", "").trim();
                             } else if(action == "load"){
