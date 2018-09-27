@@ -1080,6 +1080,9 @@
                                 }
                                 mani.init();
                             } else if(action == "onload"){
+                                this.disabled = true;
+                                this.className = this.className.replace("red", "loading");
+
                                 var items = mani.options.items[this.getAttribute("data-group")];
                                 for(var key in items){
                                     mani.options.remove(key, items[key].group);
@@ -1087,7 +1090,7 @@
                                 this.setAttribute("data-select", "load");
                                 this.removeAttribute("data-group");
                                 this.innerText = this.innerText.replace("Unload", "Load");
-                                this.className = this.className.replace("red", "").trim();
+                                this.className = this.className.replace("loading", "").trim();
                             } else if(action == "load"){
                                 this.disabled = true;
                                 this.className += " loading";

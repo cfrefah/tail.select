@@ -988,6 +988,10 @@ ul.main-navi > li.item-external > a > span{
     border-color: #1f722b;
     background-color: #29983a;
 }
+.content section.demo-content .demo-advanced button.green:active{
+    border-color: #000408;
+    background-color: #202428;
+}
 .content section.demo-content .demo-advanced button.red{
     border-color: #CB414A;
     background-color: #CB414A;
@@ -995,6 +999,10 @@ ul.main-navi > li.item-external > a > span{
 .content section.demo-content .demo-advanced button.red:hover{
     border-color: #79272c;
     background-color: #a2343b;
+}
+.content section.demo-content .demo-advanced button.red:active{
+    border-color: #000408;
+    background-color: #202428;
 }
 .content section.demo-content .demo-advanced button.loading:before{
     top: 3px;
