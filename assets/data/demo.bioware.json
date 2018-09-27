@@ -1,0 +1,176 @@
+[
+	{
+		"text": "Baldur's Gate",
+		"value": "baldurs-gate",
+		"group": "BioWare",
+		"desc": "Released in 1998 for Win, OSX."
+	},
+	{
+		"text": "Baldur's Gate II: Shadows of Amn",
+		"value": "baldurs-gate-ii-shadows-of-amn",
+		"group": "BioWare",
+		"desc": "Released in 2000 for Win, OSX."
+	},
+	{
+		"text": "Baldur's Gate II: Throne of Bhaal",
+		"value": "baldurs-gate-ii-throne-of-bhaal",
+		"group": "BioWare",
+		"desc": "Released in 2001 for Win, OSX."
+	},
+	{
+		"text": "Baldur's Gate: Tales of the Sword Coast",
+		"value": "baldurs-gate-tales-of-the-sword-coast",
+		"group": "BioWare",
+		"desc": "Released in 1999 for Win, OSX."
+	},
+	{
+		"text": "Dragon Age II",
+		"value": "dragon-age-ii",
+		"group": "BioWare",
+		"desc": "Released in 2011 for Win, PS3, X360."
+	},
+	{
+		"text": "Dragon Age: Inquisition",
+		"value": "dragon-age-inquisition",
+		"group": "BioWare",
+		"desc": "Released in 2014 for Win, PS3, PS4, X360, XBO."
+	},
+	{
+		"text": "Dragon Age: Origins",
+		"value": "dragon-age-origins",
+		"group": "BioWare",
+		"desc": "Released in 2009 for Win, PS3, X360."
+	},
+	{
+		"text": "Dragon Age: Origins – Awakening",
+		"value": "dragon-age-origins-awakening",
+		"group": "BioWare",
+		"desc": "Released in 2010 for Win, PS3, X360."
+	},
+	{
+		"text": "",
+		"value": "",
+		"group": "BioWare",
+		"desc": "Released in NaN for ."
+	},
+	{
+		"text": "Jade Empire",
+		"value": "jade-empire",
+		"group": "BioWare",
+		"desc": "Released in 2005 for Win, Xbox, X360."
+	},
+	{
+		"text": "Mass Effect",
+		"value": "mass-effect",
+		"group": "BioWare",
+		"desc": "Released in 2007 for Win, X360."
+	},
+	{
+		"text": "Mass Effect 2",
+		"value": "mass-effect-2",
+		"group": "BioWare",
+		"desc": "Released in 2010 for Win, PS3, X360."
+	},
+	{
+		"text": "Mass Effect 3",
+		"value": "mass-effect-3",
+		"group": "BioWare",
+		"desc": "Released in 2012 for Win, PS3, X360, Wii U."
+	},
+	{
+		"text": "Mass Effect Galaxy",
+		"value": "mass-effect-galaxy",
+		"group": "BioWare",
+		"desc": "Released in 2009 for ."
+	},
+	{
+		"text": "Mass Effect: Andromeda",
+		"value": "mass-effect-andromeda",
+		"group": "BioWare",
+		"desc": "Released in 2017 for Win, PS4, XBO."
+	},
+	{
+		"text": "MDK2",
+		"value": "mdk2",
+		"group": "BioWare",
+		"desc": "Released in 2000 for Win, PS2."
+	},
+	{
+		"text": "Neverwinter Nights",
+		"value": "neverwinter-nights",
+		"group": "BioWare",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Neverwinter Nights: Hordes of the Underdark",
+		"value": "neverwinter-nights-hordes-of-the-underdark",
+		"group": "BioWare",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Neverwinter Nights: Shadows of Undrentide",
+		"value": "neverwinter-nights-shadows-of-undrentide",
+		"group": "BioWare",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Shattered Steel",
+		"value": "shattered-steel",
+		"group": "BioWare",
+		"desc": "Released in 1996 for OSX."
+	},
+	{
+		"text": "Sonic Chronicles: The Dark Brotherhood",
+		"value": "sonic-chronicles-the-dark-brotherhood",
+		"group": "BioWare",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "Star Wars: Knights of the Old Republic",
+		"value": "star-wars-knights-of-the-old-republic",
+		"group": "BioWare",
+		"desc": "Released in 2003 for Win, Xbox."
+	},
+	{
+		"text": "Star Wars: The Old Republic",
+		"value": "star-wars-the-old-republic",
+		"group": "BioWare",
+		"desc": "Released in 2011 for Win."
+	},
+	{
+		"text": "Star Wars: The Old Republic – Galactic Starfighter",
+		"value": "star-wars-the-old-republic-galactic-starfighter",
+		"group": "BioWare",
+		"desc": "Released in 2014 for Win."
+	},
+	{
+		"text": "Star Wars: The Old Republic – Galactic Strongholds",
+		"value": "star-wars-the-old-republic-galactic-strongholds",
+		"group": "BioWare",
+		"desc": "Released in 2014 for Win."
+	},
+	{
+		"text": "Star Wars: The Old Republic – Knights of the Eternal Throne",
+		"value": "star-wars-the-old-republic-knights-of-the-eternal-throne",
+		"group": "BioWare",
+		"desc": "Released in 2016 for Win."
+	},
+	{
+		"text": "Star Wars: The Old Republic – Knights of the Fallen Empire",
+		"value": "star-wars-the-old-republic-knights-of-the-fallen-empire",
+		"group": "BioWare",
+		"desc": "Released in 2015 for Win."
+	},
+	{
+		"text": "Star Wars: The Old Republic – Rise of the Hutt Cartel",
+		"value": "star-wars-the-old-republic-rise-of-the-hutt-cartel",
+		"group": "BioWare",
+		"desc": "Released in 2013 for Win."
+	},
+	{
+		"text": "Star Wars: The Old Republic – Shadow of Revan",
+		"value": "star-wars-the-old-republic-shadow-of-revan",
+		"group": "BioWare",
+		"desc": "Released in 2014 for Win."
+	}
+]

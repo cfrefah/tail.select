@@ -1,0 +1,44 @@
+[
+	{
+		"text": "The Witcher",
+		"value": "the-witcher",
+		"group": "CD Projekt RED",
+		"desc": "Released in 2007 for Win, OSX."
+	},
+	{
+		"text": "The Witcher 2: Assassins of Kings",
+		"value": "the-witcher-2-assassins-of-kings",
+		"group": "CD Projekt RED",
+		"desc": "Released in 2011 for Win, OSX, Linux, X360."
+	},
+	{
+		"text": "The Witcher Adventure Game",
+		"value": "the-witcher-adventure-game",
+		"group": "CD Projekt RED",
+		"desc": "Released in 2014 for Win, OSX."
+	},
+	{
+		"text": "The Witcher 3: Wild Hunt",
+		"value": "the-witcher-3-wild-hunt",
+		"group": "CD Projekt RED",
+		"desc": "Released in 2015 for Win, PS4, XBO."
+	},
+	{
+		"text": "The Witcher 3: Wild Hunt – Hearts of Stone",
+		"value": "the-witcher-3-wild-hunt-hearts-of-stone",
+		"group": "CD Projekt RED",
+		"desc": "Released in 2015 for Win, PS4, XBO."
+	},
+	{
+		"text": "The Witcher 3: Wild Hunt – Blood and Wine",
+		"value": "the-witcher-3-wild-hunt-blood-and-wine",
+		"group": "CD Projekt RED",
+		"desc": "Released in 2016 for Win, PS4, XBO."
+	},
+	{
+		"text": "Gwent: The Witcher Card Game",
+		"value": "gwent-the-witcher-card-game",
+		"group": "CD Projekt RED",
+		"desc": "Released in 2016 for Win, PS4, XBO."
+	}
+]

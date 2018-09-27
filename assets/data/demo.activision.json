@@ -1,0 +1,2066 @@
+[
+	{
+		"text": "007 Blood Stone",
+		"value": "007-blood-stone",
+		"group": "Activision",
+		"desc": "Released in 2010 for PS3, NDS, Win, X360."
+	},
+	{
+		"text": "007 Legends",
+		"value": "007-legends",
+		"group": "Activision",
+		"desc": "Released in 2012 for PS3, X360, WiiU, Win."
+	},
+	{
+		"text": "A-10 Cuba!",
+		"value": "a10-cuba",
+		"group": "Activision",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "Activision Anthology",
+		"value": "activision-anthology",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2."
+	},
+	{
+		"text": "Activision Game Vault: Volume 1",
+		"value": "activision-game-vault-volume-1",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Activision Game Vault: Volume 2",
+		"value": "activision-game-vault-volume-2",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Activision Game Vault: Volume 3",
+		"value": "activision-game-vault-volume-3",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Activision Hits: Remixed",
+		"value": "activision-hits-remixed",
+		"group": "Activision",
+		"desc": "Released in 2006 for PSP."
+	},
+	{
+		"text": "Activision's Atari 2600 Action Pack",
+		"value": "activisions-atari-2600-action-pack",
+		"group": "Activision",
+		"desc": "Released in 1995 for Win."
+	},
+	{
+		"text": "Activision's Atari 2600 Action Pack 2",
+		"value": "activisions-atari-2600-action-pack-2",
+		"group": "Activision",
+		"desc": "Released in 1995 for Win."
+	},
+	{
+		"text": "Activision's Atari 2600 Action Pack 3",
+		"value": "activisions-atari-2600-action-pack-3",
+		"group": "Activision",
+		"desc": "Released in 1995 for Win."
+	},
+	{
+		"text": "Activision's Commodore 64 15 Pack",
+		"value": "activisions-commodore-64-15-pack",
+		"group": "Activision",
+		"desc": "Released in 1995 for Win."
+	},
+	{
+		"text": "The Adventure Collection",
+		"value": "the-adventure-collection",
+		"group": "Activision",
+		"desc": "Released in 1995 for Win."
+	},
+	{
+		"text": "Alcatraz: Prison Escape",
+		"value": "alcatraz-prison-escape",
+		"group": "Activision",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Alundra 2: A New Legend Begins",
+		"value": "alundra-2-a-new-legend-begins",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS1."
+	},
+	{
+		"text": "Amazing Spider-Man, TheThe Amazing Spider-Man",
+		"value": "amazing-spiderman-thethe-amazing-spiderman",
+		"group": "Activision",
+		"desc": "Released in 2012 for X360, PS3, 3DS, NDS, Wii, Win."
+	},
+	{
+		"text": "Amazing Spider-Man 2, TheThe Amazing Spider-Man 2",
+		"value": "amazing-spiderman-2-thethe-amazing-spiderman-2",
+		"group": "Activision",
+		"desc": "Released in 2014 for X360, XBO, PS3, PS4, 3DS, WiiU, Win."
+	},
+	{
+		"text": "American Chopper 2: Full Throttle",
+		"value": "american-chopper-2-full-throttle",
+		"group": "Activision",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "Angry Birds Trilogy",
+		"value": "angry-birds-trilogy",
+		"group": "Activision",
+		"desc": "Released in 2012 for PS3, X360, 3DS, Wii, WiiU."
+	},
+	{
+		"text": "Angry Birds Star Wars",
+		"value": "angry-birds-star-wars",
+		"group": "Activision",
+		"desc": "Released in 2013 for PS3, X360, 3DS, Wii, WiiU."
+	},
+	{
+		"text": "Animal Planet: Emergency Vets",
+		"value": "animal-planet-emergency-vets",
+		"group": "Activision",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "Animal Planet: Vet Life",
+		"value": "animal-planet-vet-life",
+		"group": "Activision",
+		"desc": "Released in 2009 for NDS, Wii."
+	},
+	{
+		"text": "Apache: Air Assault",
+		"value": "apache-air-assault",
+		"group": "Activision",
+		"desc": "Released in 2010 for PS3, X360, Win."
+	},
+	{
+		"text": "Apocalypse",
+		"value": "apocalypse",
+		"group": "Activision",
+		"desc": "Released in 1998 for PS1."
+	},
+	{
+		"text": "Arcade Zone",
+		"value": "arcade-zone",
+		"group": "Activision",
+		"desc": "Released in 2009 for Wii."
+	},
+	{
+		"text": "Armed and Dangerous (UK release)",
+		"value": "armed-and-dangerous-uk-release",
+		"group": "Activision",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Asteroids",
+		"value": "asteroids",
+		"group": "Activision",
+		"desc": "Released in 1998 for PS1, Win."
+	},
+	{
+		"text": "Autocracy",
+		"value": "autocracy",
+		"group": "Activision",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Bakugan: Battle Brawlers",
+		"value": "bakugan-battle-brawlers",
+		"group": "Activision",
+		"desc": "Released in 2009 for NDS, PS2, PS3, X360, Wii."
+	},
+	{
+		"text": "Bakugan: Battle Trainer",
+		"value": "bakugan-battle-trainer",
+		"group": "Activision",
+		"desc": "Released in 2010 for NDS."
+	},
+	{
+		"text": "Band Hero",
+		"value": "band-hero",
+		"group": "Activision",
+		"desc": "Released in 2009 for NDS, PS2, PS3, X360, Wii."
+	},
+	{
+		"text": "The Barbie Diaries High School Mystery",
+		"value": "the-barbie-diaries-high-school-mystery",
+		"group": "Activision",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Barbie in the 12 Dancing Princesses",
+		"value": "barbie-in-the-12-dancing-princesses",
+		"group": "Activision",
+		"desc": "Released in 2006 for NDS, PS2, Win."
+	},
+	{
+		"text": "Barbie as the Island Princess",
+		"value": "barbie-as-the-island-princess",
+		"group": "Activision",
+		"desc": "Released in 2007 for NDS, PS2, Wii, Win."
+	},
+	{
+		"text": "Barbie Fashion Show: An Eye for Style",
+		"value": "barbie-fashion-show-an-eye-for-style",
+		"group": "Activision",
+		"desc": "Released in 2008 for NDS, Win."
+	},
+	{
+		"text": "Battleship",
+		"value": "battleship",
+		"group": "Activision",
+		"desc": "Released in 2012 for 3DS, NDS, PS3, X360, Wii."
+	},
+	{
+		"text": "Battlezone",
+		"value": "battlezone",
+		"group": "Activision",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Battlezone: Gold Pack",
+		"value": "battlezone-gold-pack",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Battlezone II: Combat Commander",
+		"value": "battlezone-ii-combat-commander",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Big Rigs: Over the Road Racing",
+		"value": "big-rigs-over-the-road-racing",
+		"group": "Activision",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Blade",
+		"value": "blade",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS1."
+	},
+	{
+		"text": "Blade II",
+		"value": "blade-ii",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2, Xbox."
+	},
+	{
+		"text": "Blast Chamber",
+		"value": "blast-chamber",
+		"group": "Activision",
+		"desc": "Released in 1996 for PS1."
+	},
+	{
+		"text": "Blood Omen: Legacy of Kain",
+		"value": "blood-omen-legacy-of-kain",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Bloody Roar 3",
+		"value": "bloody-roar-3",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS2."
+	},
+	{
+		"text": "Blur",
+		"value": "blur",
+		"group": "Activision",
+		"desc": "Released in 2010 for PS3, Win, X360."
+	},
+	{
+		"text": "Buzz Lightyear of Star Command",
+		"value": "buzz-lightyear-of-star-command",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS1, Win."
+	},
+	{
+		"text": "Cabela's Adventure Camp",
+		"value": "cabelas-adventure-camp",
+		"group": "Activision",
+		"desc": "Released in 2011 for PS3, Wii, X360."
+	},
+	{
+		"text": "Cabela's African Safari",
+		"value": "cabelas-african-safari",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, PSP, Win, X360."
+	},
+	{
+		"text": "Cabela's Alaskan Adventures",
+		"value": "cabelas-alaskan-adventures",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, Win, X360."
+	},
+	{
+		"text": "Cabela's Big Game Hunter",
+		"value": "cabelas-big-game-hunter",
+		"group": "Activision",
+		"desc": "Released in 2007 for PS2, Wii, X360."
+	},
+	{
+		"text": "Cabela's Big Game Hunter III: The Next Harvest",
+		"value": "cabelas-big-game-hunter-iii-the-next-harvest",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Cabela's Big Game Hunter 2012",
+		"value": "cabelas-big-game-hunter-2012",
+		"group": "Activision",
+		"desc": "Released in 2011 for PS3, Wii, X360."
+	},
+	{
+		"text": "Cabela's Big Game Hunter: Hunting Party – Kinect",
+		"value": "cabelas-big-game-hunter-hunting-party-kinect",
+		"group": "Activision",
+		"desc": "Released in 2011 for X360."
+	},
+	{
+		"text": "Cabela's Big Game Hunter: Pro Hunts",
+		"value": "cabelas-big-game-hunter-pro-hunts",
+		"group": "Activision",
+		"desc": "Released in 2014 for PS3, X360, Wii, Win."
+	},
+	{
+		"text": "Cabela's Dangerous Hunts",
+		"value": "cabelas-dangerous-hunts",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, Xbox, Win."
+	},
+	{
+		"text": "Cabela's Dangerous Hunts 2",
+		"value": "cabelas-dangerous-hunts-2",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Cabela's Dangerous Hunts 2009",
+		"value": "cabelas-dangerous-hunts-2009",
+		"group": "Activision",
+		"desc": "Released in 2008 for PS2, PS3, Wii, X360."
+	},
+	{
+		"text": "Cabela's Dangerous Hunts 2011",
+		"value": "cabelas-dangerous-hunts-2011",
+		"group": "Activision",
+		"desc": "Released in 2010 for PS3, Wii, X360."
+	},
+	{
+		"text": "Cabela's Dangerous Hunts 2013",
+		"value": "cabelas-dangerous-hunts-2013",
+		"group": "Activision",
+		"desc": "Released in 2012 for PS3, Wii, X360, Win."
+	},
+	{
+		"text": "Cabela's Dangerous Hunts: Ultimate Challenge",
+		"value": "cabelas-dangerous-hunts-ultimate-challenge",
+		"group": "Activision",
+		"desc": "Released in 2006 for PSP."
+	},
+	{
+		"text": "Cabela's GrandSlam Hunting: North American 29",
+		"value": "cabelas-grandslam-hunting-north-american-29",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Cabela's Hunting Expeditions",
+		"value": "cabelas-hunting-expeditions",
+		"group": "Activision",
+		"desc": "Released in 2012 for PS3, Wii, X360, Win."
+	},
+	{
+		"text": "Cabela's Monster Buck Hunter",
+		"value": "cabelas-monster-buck-hunter",
+		"group": "Activision",
+		"desc": "Released in 2010 for Wii."
+	},
+	{
+		"text": "Cabela's North American Adventures",
+		"value": "cabelas-north-american-adventures",
+		"group": "Activision",
+		"desc": "Released in 2010 for Wii, PSP."
+	},
+	{
+		"text": "Cabela's Survival: Shadows of Katmai",
+		"value": "cabelas-survival-shadows-of-katmai",
+		"group": "Activision",
+		"desc": "Released in 2011 for PS3, Wii, X360."
+	},
+	{
+		"text": "Cabela's 4x4 Off-Road Adventure",
+		"value": "cabelas-4x4-offroad-adventure",
+		"group": "Activision",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Cabela's 4x4 Off-Road Adventure 2",
+		"value": "cabelas-4x4-offroad-adventure-2",
+		"group": "Activision",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Cabela's 4x4 Off-Road Adventure 3",
+		"value": "cabelas-4x4-offroad-adventure-3",
+		"group": "Activision",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Call of Duty",
+		"value": "call-of-duty",
+		"group": "Activision",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Call of Duty 2",
+		"value": "call-of-duty-2",
+		"group": "Activision",
+		"desc": "Released in 2005 for Win, X360."
+	},
+	{
+		"text": "Call of Duty 2: Big Red One",
+		"value": "call-of-duty-2-big-red-one",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, Xbox."
+	},
+	{
+		"text": "Call of Duty 3",
+		"value": "call-of-duty-3",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, PS3, Wii, Xbox, X360."
+	},
+	{
+		"text": "Call of Duty 4: Modern Warfare",
+		"value": "call-of-duty-4-modern-warfare",
+		"group": "Activision",
+		"desc": "Released in 2007 for X360, PS3, Win, Wii."
+	},
+	{
+		"text": "Call of Duty: Advanced Warfare",
+		"value": "call-of-duty-advanced-warfare",
+		"group": "Activision",
+		"desc": "Released in 2014 for Win, PS3, PS4, X360, XBO."
+	},
+	{
+		"text": "Call of Duty: Black Ops",
+		"value": "call-of-duty-black-ops",
+		"group": "Activision",
+		"desc": "Released in 2010 for Win, X360, PS3, Wii, NDS."
+	},
+	{
+		"text": "Call of Duty: Black Ops II",
+		"value": "call-of-duty-black-ops-ii",
+		"group": "Activision",
+		"desc": "Released in 2012 for PS3, X360, WiiU, Win."
+	},
+	{
+		"text": "Call of Duty: Black Ops III",
+		"value": "call-of-duty-black-ops-iii",
+		"group": "Activision",
+		"desc": "Released in 2015 for PS3, PS4, X360, XBO, Win."
+	},
+	{
+		"text": "Call of Duty: Finest Hour",
+		"value": "call-of-duty-finest-hour",
+		"group": "Activision",
+		"desc": "Released in 2004 for PS2, Xbox."
+	},
+	{
+		"text": "Call of Duty: Ghosts",
+		"value": "call-of-duty-ghosts",
+		"group": "Activision",
+		"desc": "Released in 2013 for Win, X360, PS3, WiiU, PS4, XBO."
+	},
+	{
+		"text": "Call of Duty: Modern Warfare 2",
+		"value": "call-of-duty-modern-warfare-2",
+		"group": "Activision",
+		"desc": "Released in 2009 for Win, X360, PS3."
+	},
+	{
+		"text": "Call of Duty: Modern Warfare 3",
+		"value": "call-of-duty-modern-warfare-3",
+		"group": "Activision",
+		"desc": "Released in 2011 for Win, X360, PS3, Wii."
+	},
+	{
+		"text": "Call of Duty: Roads to Victory",
+		"value": "call-of-duty-roads-to-victory",
+		"group": "Activision",
+		"desc": "Released in 2007 for PSP."
+	},
+	{
+		"text": "Call of Duty: United Offensive",
+		"value": "call-of-duty-united-offensive",
+		"group": "Activision",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Call of Duty: World at War",
+		"value": "call-of-duty-world-at-war",
+		"group": "Activision",
+		"desc": "Released in 2008 for Win, X360, PS3."
+	},
+	{
+		"text": "Call to Power II",
+		"value": "call-to-power-ii",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Chivalry: Medieval Warfare",
+		"value": "chivalry-medieval-warfare",
+		"group": "Activision",
+		"desc": "Released in 2014 for PS3, X360."
+	},
+	{
+		"text": "Civilization: Call to Power",
+		"value": "civilization-call-to-power",
+		"group": "Activision",
+		"desc": "Released in 1999 for Linux, Win."
+	},
+	{
+		"text": "Crash: Mind over Mutant",
+		"value": "crash-mind-over-mutant",
+		"group": "Activision",
+		"desc": "Released in 2008 for NDS, PS2, PSP, Wii, X360."
+	},
+	{
+		"text": "Dark Reign 2",
+		"value": "dark-reign-2",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Dark Reign: Rise of the Shadowhand",
+		"value": "dark-reign-rise-of-the-shadowhand",
+		"group": "Activision",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Dark Reign: The Future of War",
+		"value": "dark-reign-the-future-of-war",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Day of Defeat",
+		"value": "day-of-defeat",
+		"group": "Activision",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Deadpool",
+		"value": "deadpool",
+		"group": "Activision",
+		"desc": "Released in 2013 for PS3, PS4, X360, XBO, Win."
+	},
+	{
+		"text": "Destiny",
+		"value": "destiny",
+		"group": "Activision",
+		"desc": "Released in 2014 for PS3, PS4, X360, XBO."
+	},
+	{
+		"text": "Disney/Pixar's Toy Story 2: Buzz Lightyear to the Rescue!",
+		"value": "disneypixars-toy-story-2-buzz-lightyear-to-the-rescue",
+		"group": "Activision",
+		"desc": "Released in 1999 for PS1, Win."
+	},
+	{
+		"text": "Disney's Extreme Skate Adventure",
+		"value": "disneys-extreme-skate-adventure",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, Xbox."
+	},
+	{
+		"text": "DJ Hero",
+		"value": "dj-hero",
+		"group": "Activision",
+		"desc": "Released in 2009 for PS2, PS3, Wii, X360."
+	},
+	{
+		"text": "Doom 3",
+		"value": "doom-3",
+		"group": "Activision",
+		"desc": "Released in 2004 for Win, Xbox."
+	},
+	{
+		"text": "DreamWorks' Shark Tale",
+		"value": "dreamworks-shark-tale",
+		"group": "Activision",
+		"desc": "Released in 2004 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Empires: Dawn of the Modern World",
+		"value": "empires-dawn-of-the-modern-world",
+		"group": "Activision",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Enemy Territory: Quake Wars",
+		"value": "enemy-territory-quake-wars",
+		"group": "Activision",
+		"desc": "Released in 2007 for Linux, X360, PS3."
+	},
+	{
+		"text": "Family Guy: Back to the Multiverse",
+		"value": "family-guy-back-to-the-multiverse",
+		"group": "Activision",
+		"desc": "Released in 2012 for PS3, Win, X360."
+	},
+	{
+		"text": "Fantastic Four",
+		"value": "fantastic-four",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Fast & Furious: Showdown",
+		"value": "fast-furious-showdown",
+		"group": "Activision",
+		"desc": "Released in 2013 for PS3, X360, WiiU, Win, 3DS."
+	},
+	{
+		"text": "The Fifth Element",
+		"value": "the-fifth-element",
+		"group": "Activision",
+		"desc": "Released in 1998 for PS1."
+	},
+	{
+		"text": "Fighter Squadron: The Screamin' Demons Over Europe",
+		"value": "fighter-squadron-the-screamin-demons-over-europe",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Generator Rex: Agent of Providence",
+		"value": "generator-rex-agent-of-providence",
+		"group": "Activision",
+		"desc": "Released in 2011 for 3DS, NDS, PS3, X360, Wii."
+	},
+	{
+		"text": "Gladius",
+		"value": "gladius",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, Xbox."
+	},
+	{
+		"text": "GoldenEye 007",
+		"value": "goldeneye-007",
+		"group": "Activision",
+		"desc": "Released in 2010 for NDS, Wii."
+	},
+	{
+		"text": "GoldenEye 007: Reloaded",
+		"value": "goldeneye-007-reloaded",
+		"group": "Activision",
+		"desc": "Released in 2011 for PS3, X360."
+	},
+	{
+		"text": "Guardian's Crusade",
+		"value": "guardians-crusade",
+		"group": "Activision",
+		"desc": "Released in 1999 for PS1."
+	},
+	{
+		"text": "Guitar Hero 5",
+		"value": "guitar-hero-5",
+		"group": "Activision",
+		"desc": "Released in 2009 for PS2, PS3, Wii, X360."
+	},
+	{
+		"text": "Guitar Hero: Aerosmith",
+		"value": "guitar-hero-aerosmith",
+		"group": "Activision",
+		"desc": "Released in 2008 for PS2, PS3, Wii, X360."
+	},
+	{
+		"text": "Guitar Hero II",
+		"value": "guitar-hero-ii",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, X360."
+	},
+	{
+		"text": "Guitar Hero III: Legends of Rock",
+		"value": "guitar-hero-iii-legends-of-rock",
+		"group": "Activision",
+		"desc": "Released in 2007 for PS2, PS3, Wii, X360."
+	},
+	{
+		"text": "Guitar Hero: Metallica",
+		"value": "guitar-hero-metallica",
+		"group": "Activision",
+		"desc": "Released in 2009 for PS2, PS3, Wii, X360."
+	},
+	{
+		"text": "Guitar Hero on Tour",
+		"value": "guitar-hero-on-tour",
+		"group": "Activision",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "Guitar Hero World Tour",
+		"value": "guitar-hero-world-tour",
+		"group": "Activision",
+		"desc": "Released in 2008 for PS2, PS3, Wii, Win, X360."
+	},
+	{
+		"text": "Guitar Hero on Tour: Decades",
+		"value": "guitar-hero-on-tour-decades",
+		"group": "Activision",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "Guitar Hero: Warriors of Rock",
+		"value": "guitar-hero-warriors-of-rock",
+		"group": "Activision",
+		"desc": "Released in 2010 for PS3, Wii, X360."
+	},
+	{
+		"text": "Guitar Hero Live",
+		"value": "guitar-hero-live",
+		"group": "Activision",
+		"desc": "Released in 2015 for PS3, PS4, WiiU, X360, XBO."
+	},
+	{
+		"text": "GUN",
+		"value": "gun",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, Win, Xbox, X360."
+	},
+	{
+		"text": "Heavy Gear",
+		"value": "heavy-gear",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Heavy Gear II",
+		"value": "heavy-gear-ii",
+		"group": "Activision",
+		"desc": "Released in 1999 for Linux, Win."
+	},
+	{
+		"text": "Heretic II",
+		"value": "heretic-ii",
+		"group": "Activision",
+		"desc": "Released in 1998 for Linux, Win."
+	},
+	{
+		"text": "Hexen II",
+		"value": "hexen-ii",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Hexen II: Mission Pack: Portal of Praevus",
+		"value": "hexen-ii-mission-pack-portal-of-praevus",
+		"group": "Activision",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "The House of the Dead 2",
+		"value": "the-house-of-the-dead-2",
+		"group": "Activision",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "How to Train Your Dragon",
+		"value": "how-to-train-your-dragon",
+		"group": "Activision",
+		"desc": "Released in 2010 for NDS, PS3, Wii, X360."
+	},
+	{
+		"text": "HyperBlade",
+		"value": "hyperblade",
+		"group": "Activision",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "iCarly",
+		"value": "icarly",
+		"group": "Activision",
+		"desc": "Released in 2009 for Wii, NDS."
+	},
+	{
+		"text": "iCarly 2: iJoin the Click",
+		"value": "icarly-2-ijoin-the-click",
+		"group": "Activision",
+		"desc": "Released in 2010 for Wii, NDS."
+	},
+	{
+		"text": "Ice Age: Continental Drift – Arctic Games",
+		"value": "ice-age-continental-drift-arctic-games",
+		"group": "Activision",
+		"desc": "Released in 2012 for Wii, X360, NDS, 3DS."
+	},
+	{
+		"text": "Ice Age: Dawn of the Dinosaurs",
+		"value": "ice-age-dawn-of-the-dinosaurs",
+		"group": "Activision",
+		"desc": "Released in 2009 for Wii, PS3, PS2, X360, NDS, Win."
+	},
+	{
+		"text": "Impact Wrestling Activision",
+		"value": "impact-wrestling-activision",
+		"group": "Activision",
+		"desc": "Released in 2013 for PS4, PS3, WiiU, X360."
+	},
+	{
+		"text": "Indiana Jones and the Emperor's Tomb",
+		"value": "indiana-jones-and-the-emperors-tomb",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Interstate '76",
+		"value": "interstate-76",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "The Interstate '76 Arsenal",
+		"value": "the-interstate-76-arsenal",
+		"group": "Activision",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Interstate '76: Nitro Pack",
+		"value": "interstate-76-nitro-pack",
+		"group": "Activision",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Interstate '76: Nitro Riders",
+		"value": "interstate-76-nitro-riders",
+		"group": "Activision",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Interstate '82",
+		"value": "interstate-82",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Jack Nicklaus 6: Golden Bear Challenge",
+		"value": "jack-nicklaus-6-golden-bear-challenge",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Kelly Slater's Pro Surfer",
+		"value": "kelly-slaters-pro-surfer",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2, Xbox."
+	},
+	{
+		"text": "Kung Fu Panda",
+		"value": "kung-fu-panda",
+		"group": "Activision",
+		"desc": "Released in 2008 for NDS, PS2, PS3, Wii, Win, X360."
+	},
+	{
+		"text": "The Legend of Korra",
+		"value": "the-legend-of-korra",
+		"group": "Activision",
+		"desc": "Released in 2014 for PS3, PS4, X360, Win."
+	},
+	{
+		"text": "The Legend of Korra: A New Era Begins",
+		"value": "the-legend-of-korra-a-new-era-begins",
+		"group": "Activision",
+		"desc": "Released in 2014 for 3DS."
+	},
+	{
+		"text": "Lemony Snicket's A Series of Unfortunate Events",
+		"value": "lemony-snickets-a-series-of-unfortunate-events",
+		"group": "Activision",
+		"desc": "Released in 2004 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Madagascar",
+		"value": "madagascar",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Madagascar: Escape 2 Africa",
+		"value": "madagascar-escape-2-africa",
+		"group": "Activision",
+		"desc": "Released in 2008 for PS2, Wii, Win, X360."
+	},
+	{
+		"text": "Madagascar Kartz",
+		"value": "madagascar-kartz",
+		"group": "Activision",
+		"desc": "Released in 2009 for PS3, X360, Wii, NDS."
+	},
+	{
+		"text": "The Manhole: New and Enhanced",
+		"value": "the-manhole-new-and-enhanced",
+		"group": "Activision",
+		"desc": "Released in 1992 for Win."
+	},
+	{
+		"text": "Marvel: Ultimate Alliance",
+		"value": "marvel-ultimate-alliance",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, PS3, PSP, Wii, Win, Xbox, X360."
+	},
+	{
+		"text": "Mat Hoffman's Pro BMX",
+		"value": "mat-hoffmans-pro-bmx",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS1, Win."
+	},
+	{
+		"text": "Mat Hoffman's Pro BMX 2",
+		"value": "mat-hoffmans-pro-bmx-2",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2, Xbox."
+	},
+	{
+		"text": "MechWarrior 2: 31st Century Combat",
+		"value": "mechwarrior-2-31st-century-combat",
+		"group": "Activision",
+		"desc": "Released in 1995 for PS1, Win."
+	},
+	{
+		"text": "MechWarrior 2 BattlePack",
+		"value": "mechwarrior-2-battlepack",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "MechWarrior 2: Ghost Bear's Legacy",
+		"value": "mechwarrior-2-ghost-bears-legacy",
+		"group": "Activision",
+		"desc": "Released in 1995 for Win."
+	},
+	{
+		"text": "MechWarrior 2: Mercenaries",
+		"value": "mechwarrior-2-mercenaries",
+		"group": "Activision",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "MechWarrior 2: The Titanium Trilogy",
+		"value": "mechwarrior-2-the-titanium-trilogy",
+		"group": "Activision",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Medieval: Total War",
+		"value": "medieval-total-war",
+		"group": "Activision",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Medieval: Total War Battle Collection",
+		"value": "medieval-total-war-battle-collection",
+		"group": "Activision",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Medieval: Total War - Viking Invasion",
+		"value": "medieval-total-war-viking-invasion",
+		"group": "Activision",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Megapak 9",
+		"value": "megapak-9",
+		"group": "Activision",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "MIB: Alien Crisis",
+		"value": "mib-alien-crisis",
+		"group": "Activision",
+		"desc": "Released in 2012 for 3DS, PS3, X360, Wii, Win."
+	},
+	{
+		"text": "Minority Report: Everybody Runs",
+		"value": "minority-report-everybody-runs",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2, Xbox."
+	},
+	{
+		"text": "Monster Garage",
+		"value": "monster-garage",
+		"group": "Activision",
+		"desc": "Released in 2006 for Win, Xbox."
+	},
+	{
+		"text": "Monster Jam",
+		"value": "monster-jam",
+		"group": "Activision",
+		"desc": "Released in 2007 for PS2, Wii, Win, X360."
+	},
+	{
+		"text": "Monster Jam: Path of Destruction",
+		"value": "monster-jam-path-of-destruction",
+		"group": "Activision",
+		"desc": "Released in 2010 for PS3, PSP, Wii, X360."
+	},
+	{
+		"text": "Monster Jam: Urban Assault",
+		"value": "monster-jam-urban-assault",
+		"group": "Activision",
+		"desc": "Released in 2008 for PS2, PSP, Wii."
+	},
+	{
+		"text": "The Movies",
+		"value": "the-movies",
+		"group": "Activision",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "Muppet Treasure Island",
+		"value": "muppet-treasure-island",
+		"group": "Activision",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "NASCAR The Game: 2011",
+		"value": "nascar-the-game-2011",
+		"group": "Activision",
+		"desc": "Released in 2011 for PS3, Wii, X360."
+	},
+	{
+		"text": "NASCAR The Game: Inside Line",
+		"value": "nascar-the-game-inside-line",
+		"group": "Activision",
+		"desc": "Released in 2012 for PS3, Wii, X360."
+	},
+	{
+		"text": "NASCAR Unleashed",
+		"value": "nascar-unleashed",
+		"group": "Activision",
+		"desc": "Released in 2011 for 3DS, PS3, Wii, X360."
+	},
+	{
+		"text": "NetMech",
+		"value": "netmech",
+		"group": "Activision",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "NetStorm: Islands At War",
+		"value": "netstorm-islands-at-war",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Nightmare Creatures",
+		"value": "nightmare-creatures",
+		"group": "Activision",
+		"desc": "Released in 1997 for PS1, Win."
+	},
+	{
+		"text": "Noddy's Magic Adventure",
+		"value": "noddys-magic-adventure",
+		"group": "Activision",
+		"desc": "Released in 1999 for PS1, Win."
+	},
+	{
+		"text": "Noddy: Playtime in Toyland",
+		"value": "noddy-playtime-in-toyland",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Orphen: Scion of Sorcery",
+		"value": "orphen-scion-of-sorcery",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS2."
+	},
+	{
+		"text": "Over the Hedge",
+		"value": "over-the-hedge",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Over the Hedge: Hammy Goes Nuts!",
+		"value": "over-the-hedge-hammy-goes-nuts",
+		"group": "Activision",
+		"desc": "Released in 2006 for NDS."
+	},
+	{
+		"text": "Paparazzi!: Tales of Tinseltown",
+		"value": "paparazzi-tales-of-tinseltown",
+		"group": "Activision",
+		"desc": "Released in 1995 for Win."
+	},
+	{
+		"text": "Pimp My Ride",
+		"value": "pimp-my-ride",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, PSP, Wii, X360."
+	},
+	{
+		"text": "Pitfall 3D: Beyond the Jungle",
+		"value": "pitfall-3d-beyond-the-jungle",
+		"group": "Activision",
+		"desc": "Released in 1998 for PS1."
+	},
+	{
+		"text": "Pitfall: The Lost Expedition",
+		"value": "pitfall-the-lost-expedition",
+		"group": "Activision",
+		"desc": "Released in 2004 for PS2, Xbox."
+	},
+	{
+		"text": "Pitfall: The Mayan Adventure",
+		"value": "pitfall-the-mayan-adventure",
+		"group": "Activision",
+		"desc": "Released in 1994 for Win."
+	},
+	{
+		"text": "Power Move Pro Wrestling",
+		"value": "power-move-pro-wrestling",
+		"group": "Activision",
+		"desc": "Released in 1996 for PS1."
+	},
+	{
+		"text": "Prototype",
+		"value": "prototype",
+		"group": "Activision",
+		"desc": "Released in 2009 for PS3, Win, X360."
+	},
+	{
+		"text": "Prototype 2",
+		"value": "prototype-2",
+		"group": "Activision",
+		"desc": "Released in 2012 for PS3, Win, X360."
+	},
+	{
+		"text": "Quake 2Quake II",
+		"value": "quake-2quake-ii",
+		"group": "Activision",
+		"desc": "Released in 1997 for PS1, Win."
+	},
+	{
+		"text": "Quake 3 ArenaQuake III Arena",
+		"value": "quake-3-arenaquake-iii-arena",
+		"group": "Activision",
+		"desc": "Released in 1999 for Linux, Win."
+	},
+	{
+		"text": "Quake 3 Team ArenaQuake III Team Arena",
+		"value": "quake-3-team-arenaquake-iii-team-arena",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Quake 4",
+		"value": "quake-4",
+		"group": "Activision",
+		"desc": "Released in 2005 for Win, X360."
+	},
+	{
+		"text": "Quantum of Solace",
+		"value": "quantum-of-solace",
+		"group": "Activision",
+		"desc": "Released in 2008 for NDS, PS2, PS3, Wii, Win, X360."
+	},
+	{
+		"text": "Return to Castle Wolfenstein",
+		"value": "return-to-castle-wolfenstein",
+		"group": "Activision",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Return to Castle Wolfenstein: Operation Resurrection",
+		"value": "return-to-castle-wolfenstein-operation-resurrection",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2."
+	},
+	{
+		"text": "Return to Castle Wolfenstein: Tides of War",
+		"value": "return-to-castle-wolfenstein-tides-of-war",
+		"group": "Activision",
+		"desc": "Released in 2003 for Xbox."
+	},
+	{
+		"text": "Return to Zork",
+		"value": "return-to-zork",
+		"group": "Activision",
+		"desc": "Released in 1993 for PS1, Win."
+	},
+	{
+		"text": "Rodney's Funscreen",
+		"value": "rodneys-funscreen",
+		"group": "Activision",
+		"desc": "Released in 1992 for Win."
+	},
+	{
+		"text": "Rome: Total War",
+		"value": "rome-total-war",
+		"group": "Activision",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "RTX: Red Rock",
+		"value": "rtx-red-rock",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2."
+	},
+	{
+		"text": "Santa Fe Mysteries: Sacred Ground",
+		"value": "santa-fe-mysteries-sacred-ground",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Santa Fe Mysteries: The Elk Moon Murder",
+		"value": "santa-fe-mysteries-the-elk-moon-murder",
+		"group": "Activision",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "SeaWorld Adventure Parks Tycoon",
+		"value": "seaworld-adventure-parks-tycoon",
+		"group": "Activision",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Secret Weapons Over Normandy",
+		"value": "secret-weapons-over-normandy",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, Win."
+	},
+	{
+		"text": "Shanghai: Dynasty",
+		"value": "shanghai-dynasty",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Shanghai: Great Moments",
+		"value": "shanghai-great-moments",
+		"group": "Activision",
+		"desc": "Released in 1995 for Win."
+	},
+	{
+		"text": "Shanghai II: Dragon's Eye",
+		"value": "shanghai-ii-dragons-eye",
+		"group": "Activision",
+		"desc": "Released in 1989 for Win."
+	},
+	{
+		"text": "Shanghai: Mah-Jongg Essentials",
+		"value": "shanghai-mahjongg-essentials",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Shanghai: Second Dynasty",
+		"value": "shanghai-second-dynasty",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Shaun Palmer's Pro Snowboarder",
+		"value": "shaun-palmers-pro-snowboarder",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS2."
+	},
+	{
+		"text": "Shrek 2",
+		"value": "shrek-2",
+		"group": "Activision",
+		"desc": "Released in 2004 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Shrek 2 Team Action",
+		"value": "shrek-2-team-action",
+		"group": "Activision",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Shrek: Forever After",
+		"value": "shrek-forever-after",
+		"group": "Activision",
+		"desc": "Released in 2010 for PS3, X360, Wii."
+	},
+	{
+		"text": "Shrek Smash n' Crash Racing",
+		"value": "shrek-smash-n-crash-racing",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, PSP."
+	},
+	{
+		"text": "Shrek SuperSlam",
+		"value": "shrek-superslam",
+		"group": "Activision",
+		"desc": "Released in 2005 for NDS, PS2, Win, Xbox."
+	},
+	{
+		"text": "Shrek the Third",
+		"value": "shrek-the-third",
+		"group": "Activision",
+		"desc": "Released in 2007 for PS2, PSP, Wii, Win, X360, NDS."
+	},
+	{
+		"text": "Sid Meier's Civilization II",
+		"value": "sid-meiers-civilization-ii",
+		"group": "Activision",
+		"desc": "Released in 1998 for PS1."
+	},
+	{
+		"text": "The Simpsons Wrestling",
+		"value": "the-simpsons-wrestling",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS1."
+	},
+	{
+		"text": "SiN",
+		"value": "sin",
+		"group": "Activision",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Singularity",
+		"value": "singularity",
+		"group": "Activision",
+		"desc": "Released in 2010 for PS3, Win, X360."
+	},
+	{
+		"text": "SiN: Wages of Sin",
+		"value": "sin-wages-of-sin",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Skylanders: Giants",
+		"value": "skylanders-giants",
+		"group": "Activision",
+		"desc": "Released in 2012 for 3DS, PS3, Wii, WiiU, X360, Win."
+	},
+	{
+		"text": "Skylanders: Spyro's Adventure",
+		"value": "skylanders-spyros-adventure",
+		"group": "Activision",
+		"desc": "Released in 2011 for 3DS, PS3, Wii, Win, X360."
+	},
+	{
+		"text": "Skylanders: SuperChargers",
+		"value": "skylanders-superchargers",
+		"group": "Activision",
+		"desc": "Released in 2015 for PS3, PS4, Wii, WiiU, X360, XBO, 3DS."
+	},
+	{
+		"text": "Skylanders: Swap Force",
+		"value": "skylanders-swap-force",
+		"group": "Activision",
+		"desc": "Released in 2013 for 3DS, PS3, Wii, WiiU, X360, Win."
+	},
+	{
+		"text": "Skylanders: Trap Team",
+		"value": "skylanders-trap-team",
+		"group": "Activision",
+		"desc": "Released in 2014 for 3DS, PS3, PS4, Wii, WiiU, X360, Win."
+	},
+	{
+		"text": "Sky Odyssey",
+		"value": "sky-odyssey",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS2."
+	},
+	{
+		"text": "Soldier of Fortune",
+		"value": "soldier-of-fortune",
+		"group": "Activision",
+		"desc": "Released in 2000 for Linux, PS2, Win."
+	},
+	{
+		"text": "Soldier of Fortune II: Double Helix",
+		"value": "soldier-of-fortune-ii-double-helix",
+		"group": "Activision",
+		"desc": "Released in 2002 for Win, Xbox."
+	},
+	{
+		"text": "Soldier of Fortune: Payback",
+		"value": "soldier-of-fortune-payback",
+		"group": "Activision",
+		"desc": "Released in 2007 for Win, X360, PS3."
+	},
+	{
+		"text": "Space Invaders",
+		"value": "space-invaders",
+		"group": "Activision",
+		"desc": "Released in 1999 for PS1, Win."
+	},
+	{
+		"text": "Spider-Man",
+		"value": "spiderman",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS1, Win."
+	},
+	{
+		"text": "Spider-Man 2",
+		"value": "spiderman-2",
+		"group": "Activision",
+		"desc": "Released in 2004 for NDS, PS2, PSP, Win, Xbox."
+	},
+	{
+		"text": "Spider-Man 2: Enter Electro",
+		"value": "spiderman-2-enter-electro",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS1."
+	},
+	{
+		"text": "Spider-Man 3",
+		"value": "spiderman-3",
+		"group": "Activision",
+		"desc": "Released in 2007 for NDS, PS2, PS3, PSP, Wii, Win, X360."
+	},
+	{
+		"text": "Spider-Man: Battle for New York",
+		"value": "spiderman-battle-for-new-york",
+		"group": "Activision",
+		"desc": "Released in 2004 for NDS."
+	},
+	{
+		"text": "Spider-Man: Friend or Foe",
+		"value": "spiderman-friend-or-foe",
+		"group": "Activision",
+		"desc": "Released in 2007 for NDS, PS2, PSP, Wii, Win, X360."
+	},
+	{
+		"text": "Spider-Man: Shattered Dimensions",
+		"value": "spiderman-shattered-dimensions",
+		"group": "Activision",
+		"desc": "Released in 2010 for NDS, PS3, Win, Wii, X360."
+	},
+	{
+		"text": "Spider-Man: The Movie",
+		"value": "spiderman-the-movie",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Spider-Man: Edge of Time",
+		"value": "spiderman-edge-of-time",
+		"group": "Activision",
+		"desc": "Released in 2011 for 3DS, PS3, Wii, X360."
+	},
+	{
+		"text": "SpongeBob HeroPants",
+		"value": "spongebob-heropants",
+		"group": "Activision",
+		"desc": "Released in 2015 for 3DS, X360."
+	},
+	{
+		"text": "SpongeBob SquarePants: Plankton's Robotic Revenge",
+		"value": "spongebob-squarepants-planktons-robotic-revenge",
+		"group": "Activision",
+		"desc": "Released in 2013 for NDS, 3DS, PS3, Wii, X360, WiiU."
+	},
+	{
+		"text": "Spycraft: The Great Game",
+		"value": "spycraft-the-great-game",
+		"group": "Activision",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "Star Trek Action Pack",
+		"value": "star-trek-action-pack",
+		"group": "Activision",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Star Trek: Armada",
+		"value": "star-trek-armada",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Star Trek: Armada II",
+		"value": "star-trek-armada-ii",
+		"group": "Activision",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Star Trek: Away Team",
+		"value": "star-trek-away-team",
+		"group": "Activision",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Star Trek: Bridge Commander",
+		"value": "star-trek-bridge-commander",
+		"group": "Activision",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Star Trek: ConQuest Online",
+		"value": "star-trek-conquest-online",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Star Trek: Elite Force II",
+		"value": "star-trek-elite-force-ii",
+		"group": "Activision",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Star Trek: Hidden Evil",
+		"value": "star-trek-hidden-evil",
+		"group": "Activision",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Star Trek: Invasion",
+		"value": "star-trek-invasion",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS1."
+	},
+	{
+		"text": "Star Trek: Starfleet Command III",
+		"value": "star-trek-starfleet-command-iii",
+		"group": "Activision",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Star Trek: Voyager – Elite Force",
+		"value": "star-trek-voyager-elite-force",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Star Wars: Bounty Hunter",
+		"value": "star-wars-bounty-hunter",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2."
+	},
+	{
+		"text": "Star Wars Jedi Knight: Jedi Academy",
+		"value": "star-wars-jedi-knight-jedi-academy",
+		"group": "Activision",
+		"desc": "Released in 2003 for Win, Xbox."
+	},
+	{
+		"text": "Star Wars Jedi Knight II: Jedi Outcast",
+		"value": "star-wars-jedi-knight-ii-jedi-outcast",
+		"group": "Activision",
+		"desc": "Released in 2002 for Win, Xbox."
+	},
+	{
+		"text": "Star Wars: Obi-Wan",
+		"value": "star-wars-obiwan",
+		"group": "Activision",
+		"desc": "Released in 2002 for Xbox."
+	},
+	{
+		"text": "Star Wars: Republic Commando",
+		"value": "star-wars-republic-commando",
+		"group": "Activision",
+		"desc": "Released in 2005 for Win, Xbox."
+	},
+	{
+		"text": "Star Wars: The Clone Wars",
+		"value": "star-wars-the-clone-wars",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2, Xbox."
+	},
+	{
+		"text": "Street Hoops",
+		"value": "street-hoops",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2, Xbox."
+	},
+	{
+		"text": "Supercar Street Challenge",
+		"value": "supercar-street-challenge",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS2, Win."
+	},
+	{
+		"text": "T'ai Fu: Wrath of the Tiger",
+		"value": "tai-fu-wrath-of-the-tiger",
+		"group": "Activision",
+		"desc": "Released in 1999 for PS1."
+	},
+	{
+		"text": "Tenchu 2: Birth of the Stealth Assassins",
+		"value": "tenchu-2-birth-of-the-stealth-assassins",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS1."
+	},
+	{
+		"text": "Teenage Mutant Ninja Turtles: Danger of the Ooze",
+		"value": "teenage-mutant-ninja-turtles-danger-of-the-ooze",
+		"group": "Activision",
+		"desc": "Released in 2014 for PS3, 3DS."
+	},
+	{
+		"text": "Teenage Mutant Ninja Turtles: Out of the Shadows",
+		"value": "teenage-mutant-ninja-turtles-out-of-the-shadows",
+		"group": "Activision",
+		"desc": "Released in 2013 for PS3, X360, Win."
+	},
+	{
+		"text": "Tenchu: Return from Darkness",
+		"value": "tenchu-return-from-darkness",
+		"group": "Activision",
+		"desc": "Released in 2004 for Xbox."
+	},
+	{
+		"text": "Tenchu: Stealth Assassins",
+		"value": "tenchu-stealth-assassins",
+		"group": "Activision",
+		"desc": "Released in 1998 for PS1."
+	},
+	{
+		"text": "Tenchu: Wrath of Heaven",
+		"value": "tenchu-wrath-of-heaven",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2."
+	},
+	{
+		"text": "The Movies",
+		"value": "the-movies",
+		"group": "Activision",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "The Movies: Stunts & Effects",
+		"value": "the-movies-stunts-effects",
+		"group": "Activision",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "The Voice: I Want You",
+		"value": "the-voice-i-want-you",
+		"group": "Activision",
+		"desc": "Released in 2014 for PS3, Wii, WiiU."
+	},
+	{
+		"text": "Time Commando",
+		"value": "time-commando",
+		"group": "Activision",
+		"desc": "Released in 1996 for PS1, Win."
+	},
+	{
+		"text": "Tony Hawk: Ride",
+		"value": "tony-hawk-ride",
+		"group": "Activision",
+		"desc": "Released in 2009 for PS3, Wii, X360."
+	},
+	{
+		"text": "Tony Hawk’s American Sk8land",
+		"value": "tony-hawks-american-sk8land",
+		"group": "Activision",
+		"desc": "Released in 2005 for NDS."
+	},
+	{
+		"text": "Tony Hawk's American Wasteland",
+		"value": "tony-hawks-american-wasteland",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, Xbox, X360, Win."
+	},
+	{
+		"text": "Tony Hawk's Downhill Jam",
+		"value": "tony-hawks-downhill-jam",
+		"group": "Activision",
+		"desc": "Released in 2006 for NDS, PS2, Wii."
+	},
+	{
+		"text": "Tony Hawk's Motion",
+		"value": "tony-hawks-motion",
+		"group": "Activision",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "Tony Hawk's Project 8",
+		"value": "tony-hawks-project-8",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, PS3, PSP, Xbox, X360."
+	},
+	{
+		"text": "Tony Hawk's Pro Skater",
+		"value": "tony-hawks-pro-skater",
+		"group": "Activision",
+		"desc": "Released in 1999 for PS1."
+	},
+	{
+		"text": "Tony Hawk's Pro Skater 2",
+		"value": "tony-hawks-pro-skater-2",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS1, Win."
+	},
+	{
+		"text": "Tony Hawk's Pro Skater 2x",
+		"value": "tony-hawks-pro-skater-2x",
+		"group": "Activision",
+		"desc": "Released in 2001 for Xbox."
+	},
+	{
+		"text": "Tony Hawk's Pro Skater 3",
+		"value": "tony-hawks-pro-skater-3",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS1, PS2, Win, Xbox."
+	},
+	{
+		"text": "Tony Hawk's Pro Skater 4",
+		"value": "tony-hawks-pro-skater-4",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS1, PS2, Win, Xbox."
+	},
+	{
+		"text": "Tony Hawk's Pro Skater HD",
+		"value": "tony-hawks-pro-skater-hd",
+		"group": "Activision",
+		"desc": "Released in 2012 for Win."
+	},
+	{
+		"text": "Tony Hawk's Pro Skater 5",
+		"value": "tony-hawks-pro-skater-5",
+		"group": "Activision",
+		"desc": "Released in 2015 for PS3, PS4, X360, XBO."
+	},
+	{
+		"text": "Tony Hawk's Proving Ground",
+		"value": "tony-hawks-proving-ground",
+		"group": "Activision",
+		"desc": "Released in 2007 for NDS, PS2, PS3, X360, Wii."
+	},
+	{
+		"text": "Tony Hawk's Underground",
+		"value": "tony-hawks-underground",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Tony Hawk's Underground 2",
+		"value": "tony-hawks-underground-2",
+		"group": "Activision",
+		"desc": "Released in 2004 for PS2, PSP, Win, Xbox."
+	},
+	{
+		"text": "Tony Hawk's Underground 2: Remix",
+		"value": "tony-hawks-underground-2-remix",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, PSP, Win, Xbox."
+	},
+	{
+		"text": "Toy Story Racer",
+		"value": "toy-story-racer",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS1."
+	},
+	{
+		"text": "Transformers: Dark of the Moon",
+		"value": "transformers-dark-of-the-moon",
+		"group": "Activision",
+		"desc": "Released in 2011 for 3DS, NDS, PS3, Wii, X360."
+	},
+	{
+		"text": "Transformers: Devastation",
+		"value": "transformers-devastation",
+		"group": "Activision",
+		"desc": "Released in 2015 for Win, X360, PS3, PS4."
+	},
+	{
+		"text": "Transformers: Fall of Cybertron",
+		"value": "transformers-fall-of-cybertron",
+		"group": "Activision",
+		"desc": "Released in 2012 for PS3, Win, X360."
+	},
+	{
+		"text": "Transformers Prime",
+		"value": "transformers-prime",
+		"group": "Activision",
+		"desc": "Released in 2012 for 3DS, Wii, WiiU."
+	},
+	{
+		"text": "Transformers: Revenge of the Fallen: The Game",
+		"value": "transformers-revenge-of-the-fallen-the-game",
+		"group": "Activision",
+		"desc": "Released in 2009 for NDS, PSP, PS2, PS3, Wii, Win, X360."
+	},
+	{
+		"text": "Transformers: Rise of the Dark Spark",
+		"value": "transformers-rise-of-the-dark-spark",
+		"group": "Activision",
+		"desc": "Released in 2014 for 3DS, PS3, PS4, Wii, WiiU, Win, X360, XBO."
+	},
+	{
+		"text": "Transformers: The Game",
+		"value": "transformers-the-game",
+		"group": "Activision",
+		"desc": "Released in 2007 for PS2, PS3, Wii, X360."
+	},
+	{
+		"text": "Transformers: War for Cybertron",
+		"value": "transformers-war-for-cybertron",
+		"group": "Activision",
+		"desc": "Released in 2010 for PS3, Win, X360."
+	},
+	{
+		"text": "True Crime: New York City",
+		"value": "true-crime-new-york-city",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, Xbox."
+	},
+	{
+		"text": "True Crime: Streets of LA",
+		"value": "true-crime-streets-of-la",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, Xbox, Win."
+	},
+	{
+		"text": "Twinsen's Odyssey",
+		"value": "twinsens-odyssey",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Ty the Tasmanian Tiger 3: Night of the Quinkan",
+		"value": "ty-the-tasmanian-tiger-3-night-of-the-quinkan",
+		"group": "Activision",
+		"desc": "Released in 2005 for Xbox."
+	},
+	{
+		"text": "The Ultimate DOOM Trilogy: Collector's Edition",
+		"value": "the-ultimate-doom-trilogy-collectors-edition",
+		"group": "Activision",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Ultimate Quake",
+		"value": "ultimate-quake",
+		"group": "Activision",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Ultimate Spider-Man",
+		"value": "ultimate-spiderman",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, Win, Xbox."
+	},
+	{
+		"text": "Vampire: The Masquerade – Bloodlines",
+		"value": "vampire-the-masquerade-bloodlines",
+		"group": "Activision",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Vampire: The Masquerade – Redemption",
+		"value": "vampire-the-masquerade-redemption",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Victorious: The Video Game",
+		"value": "victorious-the-video-game",
+		"group": "Activision",
+		"desc": "Released in 2011 for 3DS, NDS, Wii."
+	},
+	{
+		"text": "Vigilante 8",
+		"value": "vigilante-8",
+		"group": "Activision",
+		"desc": "Released in 1998 for PS1."
+	},
+	{
+		"text": "Vigilante 8: 2nd Offense",
+		"value": "vigilante-8-2nd-offense",
+		"group": "Activision",
+		"desc": "Released in 1999 for PS1."
+	},
+	{
+		"text": "Wakeboarding Unleashed featuring Shaun Murray",
+		"value": "wakeboarding-unleashed-featuring-shaun-murray",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, Xbox."
+	},
+	{
+		"text": "The Walking Dead: Survival Instinct",
+		"value": "the-walking-dead-survival-instinct",
+		"group": "Activision",
+		"desc": "Released in 2013 for PS3, X360, Win, WiiU."
+	},
+	{
+		"text": "The Weakest Link",
+		"value": "the-weakest-link",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS1, PS2."
+	},
+	{
+		"text": "Wipeout 2",
+		"value": "wipeout-2",
+		"group": "Activision",
+		"desc": "Released in 2011 for X360."
+	},
+	{
+		"text": "Wipeout 3 the game",
+		"value": "wipeout-3-the-game",
+		"group": "Activision",
+		"desc": "Released in 2012 for Wii, WiiU, 3DS."
+	},
+	{
+		"text": "Wipeout: Create & Crash",
+		"value": "wipeout-create-crash",
+		"group": "Activision",
+		"desc": "Released in 2013 for X360, Wii, WiiU, 3DS."
+	},
+	{
+		"text": "Wipeout in the Zone",
+		"value": "wipeout-in-the-zone",
+		"group": "Activision",
+		"desc": "Released in 2011 for X360."
+	},
+	{
+		"text": "Wizards & Warriors",
+		"value": "wizards-warriors",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Wolfenstein",
+		"value": "wolfenstein",
+		"group": "Activision",
+		"desc": "Released in 2009 for PS3, X360, Win."
+	},
+	{
+		"text": "Wolfenstein: Enemy Territory",
+		"value": "wolfenstein-enemy-territory",
+		"group": "Activision",
+		"desc": "Released in 2003 for Linux, Win."
+	},
+	{
+		"text": "World Series of Poker",
+		"value": "world-series-of-poker",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, PSP, Win, X360."
+	},
+	{
+		"text": "World Series of Poker: Tournament of Champions",
+		"value": "world-series-of-poker-tournament-of-champions",
+		"group": "Activision",
+		"desc": "Released in 2006 for PSP, Win, X360."
+	},
+	{
+		"text": "World's Scariest Police Chases",
+		"value": "worlds-scariest-police-chases",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS1."
+	},
+	{
+		"text": "Wreckless: The Yakuza Missions",
+		"value": "wreckless-the-yakuza-missions",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2, Xbox."
+	},
+	{
+		"text": "Wu-Tang: Shaolin Style",
+		"value": "wutang-shaolin-style",
+		"group": "Activision",
+		"desc": "Released in 1999 for PS1."
+	},
+	{
+		"text": "X2: Wolverine's Revenge",
+		"value": "x2-wolverines-revenge",
+		"group": "Activision",
+		"desc": "Released in 2003 for PS2, Win, Xbox."
+	},
+	{
+		"text": "X-Men: Destiny",
+		"value": "xmen-destiny",
+		"group": "Activision",
+		"desc": "Released in 2011 for PS3, 3DS, X360."
+	},
+	{
+		"text": "X-Men Legends",
+		"value": "xmen-legends",
+		"group": "Activision",
+		"desc": "Released in 2004 for PS2, Xbox."
+	},
+	{
+		"text": "X-Men Legends II: Rise of Apocalypse",
+		"value": "xmen-legends-ii-rise-of-apocalypse",
+		"group": "Activision",
+		"desc": "Released in 2005 for PS2, PSP, Win, Xbox."
+	},
+	{
+		"text": "X-Men: Mutant Academy",
+		"value": "xmen-mutant-academy",
+		"group": "Activision",
+		"desc": "Released in 2000 for PS1."
+	},
+	{
+		"text": "X-Men: Mutant Academy 2",
+		"value": "xmen-mutant-academy-2",
+		"group": "Activision",
+		"desc": "Released in 2001 for PS1."
+	},
+	{
+		"text": "X-Men: Next Dimension",
+		"value": "xmen-next-dimension",
+		"group": "Activision",
+		"desc": "Released in 2002 for PS2, Xbox."
+	},
+	{
+		"text": "X-Men: The Official Game",
+		"value": "xmen-the-official-game",
+		"group": "Activision",
+		"desc": "Released in 2006 for PS2, Win, Xbox, X360."
+	},
+	{
+		"text": "X-Men Origins: Wolverine",
+		"value": "xmen-origins-wolverine",
+		"group": "Activision",
+		"desc": "Released in 2009 for PS3, X360."
+	},
+	{
+		"text": "Zoobles! Spring to Life!",
+		"value": "zoobles-spring-to-life",
+		"group": "Activision",
+		"desc": "Released in 2011 for NDS."
+	},
+	{
+		"text": "Zork Classics: Interactive Fiction",
+		"value": "zork-classics-interactive-fiction",
+		"group": "Activision",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Zork: Grand Inquisitor",
+		"value": "zork-grand-inquisitor",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Zork Legacy Collection",
+		"value": "zork-legacy-collection",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Zork Nemesis: The Forbidden Lands",
+		"value": "zork-nemesis-the-forbidden-lands",
+		"group": "Activision",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "Zork: The Undiscovered Underground",
+		"value": "zork-the-undiscovered-underground",
+		"group": "Activision",
+		"desc": "Released in 1997 for Win."
+	}
+]

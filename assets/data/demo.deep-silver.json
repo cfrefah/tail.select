@@ -1,0 +1,446 @@
+[
+	{
+		"text": "Anno 1701",
+		"value": "anno-1701",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "APB: Reloaded",
+		"value": "apb-reloaded",
+		"group": "Deep Silver",
+		"desc": "Released in 2016 for XBO, PS4."
+	},
+	{
+		"text": "Astrology DS",
+		"value": "astrology-ds",
+		"group": "Deep Silver",
+		"desc": "Released in 2009 for 3DS."
+	},
+	{
+		"text": "Back to the Future: The Game",
+		"value": "back-to-the-future-the-game",
+		"group": "Deep Silver",
+		"desc": "Released in 2010 for PS3, Wii, Win, OSX."
+	},
+	{
+		"text": "Birth of America",
+		"value": "birth-of-america",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Cartoon Network: Punch Time Explosion",
+		"value": "cartoon-network-punch-time-explosion",
+		"group": "Deep Silver",
+		"desc": "Released in 2011 for 3DS, PS3, Wii, X360."
+	},
+	{
+		"text": "Cartoon Network: Punch Time Explosion XL",
+		"value": "cartoon-network-punch-time-explosion-xl",
+		"group": "Deep Silver",
+		"desc": "Released in 2012 for 3DS, PS3, Wii, X360."
+	},
+	{
+		"text": "Catherine",
+		"value": "catherine",
+		"group": "Deep Silver",
+		"desc": "Released in 2011 for PS3, X360."
+	},
+	{
+		"text": "City Life",
+		"value": "city-life",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for 3DS, Win."
+	},
+	{
+		"text": "CrossworDS",
+		"value": "crosswords",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for 3DS."
+	},
+	{
+		"text": "Cursed Mountain",
+		"value": "cursed-mountain",
+		"group": "Deep Silver",
+		"desc": "Released in 2009 for Wii, Win."
+	},
+	{
+		"text": "Dawn of Magic",
+		"value": "dawn-of-magic",
+		"group": "Deep Silver",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "Dead Island",
+		"value": "dead-island",
+		"group": "Deep Silver",
+		"desc": "Released in 2011 for PS3, X360, Win, Linux."
+	},
+	{
+		"text": "Dead Island 2",
+		"value": "dead-island-2",
+		"group": "Deep Silver",
+		"desc": "Released in TBAT for Win, XBO, PS4."
+	},
+	{
+		"text": "Dead Island: Riptide",
+		"value": "dead-island-riptide",
+		"group": "Deep Silver",
+		"desc": "Released in 2013 for PS3, X360, Win."
+	},
+	{
+		"text": "Earth 2160",
+		"value": "earth-2160",
+		"group": "Deep Silver",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "Emergency 2012",
+		"value": "emergency-2012",
+		"group": "Deep Silver",
+		"desc": "Released in 2010 for Win."
+	},
+	{
+		"text": "Emergency 2013",
+		"value": "emergency-2013",
+		"group": "Deep Silver",
+		"desc": "Released in 2012 for Win."
+	},
+	{
+		"text": "Escape Dead Island",
+		"value": "escape-dead-island",
+		"group": "Deep Silver",
+		"desc": "Released in 2014 for PS3, X360, Win."
+	},
+	{
+		"text": "Fritz Chess",
+		"value": "fritz-chess",
+		"group": "Deep Silver",
+		"desc": "Released in 2009 for 3DS, PS3, Wii."
+	},
+	{
+		"text": "Gothic 3",
+		"value": "gothic-3",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Homefront: The Revolution",
+		"value": "homefront-the-revolution",
+		"group": "Deep Silver",
+		"desc": "Released in 2016 for Win, OSX, Linux, XBO, PS4."
+	},
+	{
+		"text": "Horse Life",
+		"value": "horse-life",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for 3DS, Wii."
+	},
+	{
+		"text": "Killer is Dead",
+		"value": "killer-is-dead",
+		"group": "Deep Silver",
+		"desc": "Released in 2013 for PS3, X360, Win."
+	},
+	{
+		"text": "Let's Play Mums",
+		"value": "lets-play-mums",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for 3DS."
+	},
+	{
+		"text": "Let's Play Schools",
+		"value": "lets-play-schools",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for 3DS."
+	},
+	{
+		"text": "Lost Horizon",
+		"value": "lost-horizon",
+		"group": "Deep Silver",
+		"desc": "Released in 2010 for Win."
+	},
+	{
+		"text": "Mage Knight: Apocalypse",
+		"value": "mage-knight-apocalypse",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Metro 2033",
+		"value": "metro-2033",
+		"group": "Deep Silver",
+		"desc": "Released in 2010 for X360, Win, XBO, PS4."
+	},
+	{
+		"text": "Metro: Last Light",
+		"value": "metro-last-light",
+		"group": "Deep Silver",
+		"desc": "Released in 2013 for PS3, X360, Win, OSX, Linux, XBO, PS4."
+	},
+	{
+		"text": "Metro Redux",
+		"value": "metro-redux",
+		"group": "Deep Silver",
+		"desc": "Released in 2014 for PS3, X360, Win, Linux, XBO, PS4."
+	},
+	{
+		"text": "Mighty No. 9",
+		"value": "mighty-no-9",
+		"group": "Deep Silver",
+		"desc": "Released in 2016 for 3DS, PS3, X360, Win, OSX, Linux, XBO, PS4, WiiU, Vita."
+	},
+	{
+		"text": "NASCAR '14",
+		"value": "nascar-14",
+		"group": "Deep Silver",
+		"desc": "Released in 2014 for PS3, X360, Win."
+	},
+	{
+		"text": "Neuro Hunter",
+		"value": "neuro-hunter",
+		"group": "Deep Silver",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "ParaWorld",
+		"value": "paraworld",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Prison Break: The Conspiracy",
+		"value": "prison-break-the-conspiracy",
+		"group": "Deep Silver",
+		"desc": "Released in 2010 for PS3, X360, Win."
+	},
+	{
+		"text": "Professor Heinz Wolff's Gravity",
+		"value": "professor-heinz-wolffs-gravity",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for 3DS, Wii, Win."
+	},
+	{
+		"text": "Rhodan: Myth of the Illochim",
+		"value": "rhodan-myth-of-the-illochim",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for Win."
+	},
+	{
+		"text": "Ride to Hell: Retribution",
+		"value": "ride-to-hell-retribution",
+		"group": "Deep Silver",
+		"desc": "Released in 2013 for PS3, X360, Win."
+	},
+	{
+		"text": "Risen",
+		"value": "risen",
+		"group": "Deep Silver",
+		"desc": "Released in 2009 for X360, Win."
+	},
+	{
+		"text": "Risen 2: Dark Waters",
+		"value": "risen-2-dark-waters",
+		"group": "Deep Silver",
+		"desc": "Released in 2012 for PS3, X360, Win."
+	},
+	{
+		"text": "Risen 3: Titan Lords",
+		"value": "risen-3-titan-lords",
+		"group": "Deep Silver",
+		"desc": "Released in 2014 for PS3, X360, Win."
+	},
+	{
+		"text": "Ryse: Son of Rome",
+		"value": "ryse-son-of-rome",
+		"group": "Deep Silver",
+		"desc": "Released in 2014 for Win, XBO."
+	},
+	{
+		"text": "Rush for Berlin",
+		"value": "rush-for-berlin",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Sacred 2: Fallen Angel",
+		"value": "sacred-2-fallen-angel",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for PS3, X360, Win."
+	},
+	{
+		"text": "Sacred 3",
+		"value": "sacred-3",
+		"group": "Deep Silver",
+		"desc": "Released in 2014 for PS3, X360, Win."
+	},
+	{
+		"text": "Saints Row: Gat out of Hell",
+		"value": "saints-row-gat-out-of-hell",
+		"group": "Deep Silver",
+		"desc": "Released in 2015 for PS3, X360, Win, Linux, XBO, PS4."
+	},
+	{
+		"text": "Saints Row IV",
+		"value": "saints-row-iv",
+		"group": "Deep Silver",
+		"desc": "Released in 2013 for PS3, X360, Win, Linux, XBO, PS4."
+	},
+	{
+		"text": "Secret Files1Secret Files: Tunguska",
+		"value": "secret-files1secret-files-tunguska",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for 3DS, Wii, Win, WiiU."
+	},
+	{
+		"text": "Secret Files2Secret Files 2: Puritas Cordis",
+		"value": "secret-files2secret-files-2-puritas-cordis",
+		"group": "Deep Silver",
+		"desc": "Released in 2009 for 3DS, Wii, Win."
+	},
+	{
+		"text": "Secret Files3Secret Files 3",
+		"value": "secret-files3secret-files-3",
+		"group": "Deep Silver",
+		"desc": "Released in 2012 for Win."
+	},
+	{
+		"text": "Secret Files: Sam PetersSecret Files: Sam Peters",
+		"value": "secret-files-sam-peterssecret-files-sam-peters",
+		"group": "Deep Silver",
+		"desc": "Released in 2013 for Win."
+	},
+	{
+		"text": "Singles1Singles: Flirt Up Your Life",
+		"value": "singles1singles-flirt-up-your-life",
+		"group": "Deep Silver",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Singles2Singles 2: Triple Trouble",
+		"value": "singles2singles-2-triple-trouble",
+		"group": "Deep Silver",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "Spellforce 2",
+		"value": "spellforce-2",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Stalker Clear SkyS.T.A.L.K.E.R.: Clear Sky",
+		"value": "stalker-clear-skystalker-clear-sky",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for Win."
+	},
+	{
+		"text": "The Fall: Last Days of Gaia11",
+		"value": "the-fall-last-days-of-gaia11",
+		"group": "Deep Silver",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "The Guild 2",
+		"value": "the-guild-2",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "The Hustle: Detroit Streets",
+		"value": "the-hustle-detroit-streets",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for PS3, X360."
+	},
+	{
+		"text": "The X Factor",
+		"value": "the-x-factor",
+		"group": "Deep Silver",
+		"desc": "Released in 2010 for PS3, Wii, X360."
+	},
+	{
+		"text": "TrackMania United",
+		"value": "trackmania-united",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "War On Terror",
+		"value": "war-on-terror",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Warhammer1Warhammer: Mark of Chaos",
+		"value": "warhammer1warhammer-mark-of-chaos",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Warhammer2Warhammer: Battle March",
+		"value": "warhammer2warhammer-battle-march",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for X360, Win."
+	},
+	{
+		"text": "Wildlife Park 2",
+		"value": "wildlife-park-2",
+		"group": "Deep Silver",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Wildlife Park 2: Crazy Zoo",
+		"value": "wildlife-park-2-crazy-zoo",
+		"group": "Deep Silver",
+		"desc": "Released in 2007 for Win."
+	},
+	{
+		"text": "Wildlife Park 2: Marine World",
+		"value": "wildlife-park-2-marine-world",
+		"group": "Deep Silver",
+		"desc": "Released in 2007 for Win."
+	},
+	{
+		"text": "WSC Real 08: World Snooker Championship",
+		"value": "wsc-real-08-world-snooker-championship",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for PS3, Wii, X360, Win."
+	},
+	{
+		"text": "X2: The Threat",
+		"value": "x2-the-threat",
+		"group": "Deep Silver",
+		"desc": "Released in 2003 for Win, OSX, Linux."
+	},
+	{
+		"text": "X3 1X3: Reunion",
+		"value": "x3-1x3-reunion",
+		"group": "Deep Silver",
+		"desc": "Released in 2005 for Win, OSX, Linux."
+	},
+	{
+		"text": "X3 2X3: Terran Conflict",
+		"value": "x3-2x3-terran-conflict",
+		"group": "Deep Silver",
+		"desc": "Released in 2008 for Win, OSX, Linux."
+	},
+	{
+		"text": "X3 3X3: Albion Prelude",
+		"value": "x3-3x3-albion-prelude",
+		"group": "Deep Silver",
+		"desc": "Released in 2011 for Win, OSX, Linux."
+	},
+	{
+		"text": "X4 RebirthX Rebirth",
+		"value": "x4-rebirthx-rebirth",
+		"group": "Deep Silver",
+		"desc": "Released in 2013 for Win, Linux."
+	},
+	{
+		"text": "Kingdom Come: Deliverance",
+		"value": "kingdom-come-deliverance",
+		"group": "Deep Silver",
+		"desc": "Released in 2017 for Win, XBO, PS4."
+	}
+]

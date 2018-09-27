@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="content-language" content="en" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>tail.select - HTML Select Fields as beautiful as never before</title>
+
+        <!-- Common -->
+        <meta name="author" content="SamBrishes, pytesNET" />
+        <meta name="publisher" content="SamBrishes, pytesNET" />
+        <meta name="copyright" content="SamBrishes, pytesNET" />
+
+        <meta name="name" content="tail.select - HTML Select Fields as beautiful as never before" />
+        <meta name="description" content="tail.select is back: Create beautiful, functional and extensive (Multi) Select Fields with pure, vanilla JavaScript." />
+        <meta name="keywords" content="Select, Field, Multiple, Selectable, Choose, Chosen, HTML, JavaScript, JS, Vanilla, Pure, Form, Formular, Input, GitHub, OpenSource, Free." />
+
+        <meta itemprop="name" content="tail.select - HTML Select Fields as beautiful as never before" />
+        <meta itemprop="description" content="tail.select is back: Create beautiful, functional and extensive (Multi) Select Fields with pure, vanilla JavaScript." />
+        <meta itemprop="keywords" content="Select, Field, Multiple, Selectable, Choose, Chosen, HTML, JavaScript, JS, Vanilla, Pure, Form, Formular, Input, GitHub, OpenSource, Free." />
+
+        <!-- Dublin Core -->
+        <meta name="DC.Language" content="en" />
+        <meta name="DC.Creator" content="SamBrishes, pytesNET" />
+        <meta name="DC.Publisher" content="SamBrishes, pytesNET" />
+        <meta name="DC.Rights" content="SamBrishes, pytesNET" />
+        <meta name="DC.Description" content="tail.select is back: Create beautiful, functional and extensive (Multi) Select Fields with pure, vanilla JavaScript." />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="pytesNET" />
+        <meta name="twitter:creator" content="pytesNET" />
+        <meta name="twitter:title" content="tail.select - HTML Select Fields as beautiful as never before" />
+        <meta name="twitter:description" content="tail.select is back: Create beautiful, functional and extensive (Multi) Select Fields with pure, vanilla JavaScript." />
+
+        <!-- Open Graph -->
+        <meta name="og:type" content="website" />
+        <meta name="og:url" content="http://pytesNET.github.io/tail.select" />
+        <meta name="og:locale" content="en" />
+        <meta name="og:title" content="tail.select - HTML Select Fields as beautiful as never before" />
+        <meta name="og:site_name" content="tail.select - HTML Select Fields as beautiful as never before" />
+        <meta name="og:description" content="tail.select is back: Create beautiful, functional and extensive (Multi) Select Fields with pure, vanilla JavaScript." />
+
+        <!-- Assets -->
+        <link type="text/css" rel="stylesheet" href="assets/css/tail.demo.css?ver=2.1.0" />
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i|Crimson+Text:400,600|Oswald:400,500" />
+        <script type="text/javascript" src="assets/js/prism.min.js?ver=1.15.0"></script>
+        <script type="text/javascript" src="assets/js/tail.demo.js?ver=2.1.0"></script>
+
+        <!-- Source -->
+        <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.3.0" />
+        <script type="text/javascript" src="source/js/tail.select.min.js?ver=0.3.0"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="container-left header-left">
+                    <a href="https://pytesnet.github.io/tail.select" class="tail">
+                        <div class="tail-logo">
+                            <div class="tail-logo-circle"></div>
+                        </div>
+                        <div class="tail-project">
+                            <span class="tail-title">tail.<b>select</b></span>
+                            <span class="tail-version">0.3.0 - <b>Alpha</b></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="container-right header-right">
+                    <ul class="main-navi">
+                        <li class="navi-item item-internal active"><a href="./index.html"><span>Demo</span></a></li>
+                        <!--<li class="navi-item item-internal"><a href="./docs.html"><span>Docs</span></a></li>-->
+                        <li class="navi-item item-external"><a href="https://www.github.com/pytesNET/tail.select"><span>GitHub</span></a></li>
+                        <li class="navi-item item-external"><a href="https://github.com/pytesNET/tail.select/archive/master.zip"><span>Download</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <div class="container">
+                <div class="container-left toolbar-left">
+                    <span class="label">Written in</span>
+                    <span class="javascript" data-tooltip="Vanilla JavaScript">JavaScript</span>
+                </div>
+                <div class="container-right toolbar-right">
+                    <ul>
+                        <li class="firefox" data-tooltip="Mozilla Firefox"></li>
+                        <li class="chrome" data-tooltip="Google Chrome"></li>
+                        <li class="opera" data-tooltip="Opera"></li>
+                        <li class="ie" data-tooltip="Internet Explorer"></li>
+                    </ul>
+                    <span class="label">Supported</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="welcome-back">
+                <div class="container">
+                    <div class="welcome-title">tail.select is back</div>
+                    <div class="welcome-example">
+                        <select type="text" id="select-special" class="select-description" multiple>
+                            <optgroup label="Atari">
+                                <option>Atari 2600</option>
+                                <option>Atari 5200</option>
+                                <option>Atari 7800</option>
+                                <option disabled>Atari Panther</option>
+                                <option>Atari Jaguar</option>
+                                <option disabled>Atari Jaguar 2</option>
+                                <option>Atari Flashback</option>
+                                <option>Atari Flashback II</option>
+                                <option disabled>Ataribox</option>
+                            </optgroup>
+                            <optgroup label="Microsoft">
+                                <option>Microsoft XBox</option>
+                                <option>Microsoft XBox 360</option>
+                                <option>Microsoft XBox One</option>
+                                <option>Microsoft Windows 95</option>
+                                <option>Microsoft Windows 98</option>
+                                <option>Microsoft Windows 2000 (ME)</option>
+                                <option>Microsoft Windows XP</option>
+                                <option>Microsoft Windows Vista</option>
+                                <option>Microsoft Windows 7</option>
+                                <option>Microsoft Windows 8(.1)</option>
+                                <option>Microsoft Windows 10</option>
+                            </optgroup>
+                            <optgroup label="Nintendo">
+                                <option>Nintendo Entertainment System</option>
+                                <option>Super Nintendo Entertainment System</option>
+                                <option>Nintendo GameBoy</option>
+                                <option>Nintendo GameBoy Color</option>
+                                <option>Nintendo GameBoy Advanced</option>
+                                <option>Nintendo GameBoy Advanced SP</option>
+                                <option>Nintendo DS</option>
+                                <option>Nintendo DS Lite</option>
+                                <option>Nintendo DSi</option>
+                                <option>Nintendo 3DS (XL)</option>
+                                <option>Nintendo New 2DS / 3DS (XL)</option>
+                                <option>Nintendo 64</option>
+                                <option>Nintendo GameCube</option>
+                                <option>Nintendo Wii</option>
+                                <option>Nintendo WiiU</option>
+                                <option>Nintendo Switch</option>
+                            </optgroup>
+                            <optgroup label="SEGA">
+                                <option>SEGA SG-1000</option>
+                                <option>SEGA Master System</option>
+                                <option>SEGA Game Gead</option>
+                                <option>SEGA Mega Drive</option>
+                                <option>SEGA Saturn</option>
+                                <option>SEGA Dreamcast</option>
+                            </optgroup>
+                            <optgroup label="Sony">
+                                <option>Sony PlayStation One</option>
+                                <option>Sony PlayStation 2</option>
+                                <option>Sony PlayStation 3</option>
+                                <option>Sony PlayStation 4</option>
+                                <option>Sony PlayStation Portable</option>
+                                <option>Sony PlayStation Vita</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="welcome-cloud">
+                        <ul>
+                            <li class="item-1">Now written in <b>Pure JavaScript</b></li>
+                            <li class="item-2">With an awesome <b>Search</b> function</li>
+                            <li class="item-3">In a <b>beautiful</b> new <b>Design</b></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="content">
+            <section class="demo-content">
+                <div class="container">
+                    <header>
+                        <h1>A beautiful <b>Select</b> Field</h1>
+                        <p>The tail.select fields below shows you the absolute standard, without any settings!</p>
+                    </header>
+                    <div class="table">
+                        <article>
+                            <h1>Single</h1>
+                            <div>
+                                <select type="text" id="select-1" class="select">
+                                    <option>Atari 2600</option>
+                                    <option>Atari 5200</option>
+                                    <option>Atari 7800</option>
+                                    <option disabled>Atari Panther</option>
+                                    <option>Atari Jaguar</option>
+                                    <option disabled>Atari Jaguar 2</option>
+                                    <option>Atari Flashback</option>
+                                    <option>Atari Flashback II</option>
+                                    <option disabled>Ataribox</option>
+                                    <option>Microsoft XBox</option>
+                                    <option>Microsoft XBox 360</option>
+                                    <option>Microsoft XBox One</option>
+                                    <option>Microsoft Windows 95</option>
+                                    <option>Microsoft Windows 98</option>
+                                    <option>Microsoft Windows 2000 (ME)</option>
+                                    <option>Microsoft Windows XP</option>
+                                    <option>Microsoft Windows Vista</option>
+                                    <option>Microsoft Windows 7</option>
+                                    <option>Microsoft Windows 8(.1)</option>
+                                    <option>Microsoft Windows 10</option>
+                                    <option>Nintendo Entertainment System</option>
+                                    <option>Super Nintendo Entertainment System</option>
+                                    <option>Nintendo GameBoy</option>
+                                    <option>Nintendo GameBoy Color</option>
+                                    <option>Nintendo GameBoy Advanced</option>
+                                    <option>Nintendo GameBoy Advanced SP</option>
+                                    <option>Nintendo DS</option>
+                                    <option>Nintendo DS Lite</option>
+                                    <option>Nintendo DSi</option>
+                                    <option>Nintendo 3DS (XL)</option>
+                                    <option>Nintendo New 2DS / 3DS (XL)</option>
+                                    <option>Nintendo 64</option>
+                                    <option>Nintendo GameCube</option>
+                                    <option>Nintendo Wii</option>
+                                    <option>Nintendo WiiU</option>
+                                    <option>Nintendo Switch</option>
+                                    <option>SEGA SG-1000</option>
+                                    <option>SEGA Master System</option>
+                                    <option>SEGA Game Gead</option>
+                                    <option>SEGA Mega Drive</option>
+                                    <option>SEGA Saturn</option>
+                                    <option>SEGA Dreamcast</option>
+                                    <option>Sony PlayStation One</option>
+                                    <option>Sony PlayStation 2</option>
+                                    <option>Sony PlayStation 3</option>
+                                    <option>Sony PlayStation 4</option>
+                                    <option>Sony PlayStation Portable</option>
+                                    <option>Sony PlayStation Vita</option>
+                                </select>
+                            </div>
+                        </article>
+                        <article>
+                            <h1>Multiple</h1>
+                            <div>
+                                <select type="text" id="select-2" class="select" multiple>
+                                    <option>Atari 2600</option>
+                                    <option>Atari 5200</option>
+                                    <option>Atari 7800</option>
+                                    <option disabled>Atari Panther</option>
+                                    <option>Atari Jaguar</option>
+                                    <option disabled>Atari Jaguar 2</option>
+                                    <option>Atari Flashback</option>
+                                    <option>Atari Flashback II</option>
+                                    <option disabled>Ataribox</option>
+                                    <option>Microsoft XBox</option>
+                                    <option>Microsoft XBox 360</option>
+                                    <option>Microsoft XBox One</option>
+                                    <option>Microsoft Windows 95</option>
+                                    <option>Microsoft Windows 98</option>
+                                    <option>Microsoft Windows 2000 (ME)</option>
+                                    <option>Microsoft Windows XP</option>
+                                    <option>Microsoft Windows Vista</option>
+                                    <option>Microsoft Windows 7</option>
+                                    <option>Microsoft Windows 8(.1)</option>
+                                    <option>Microsoft Windows 10</option>
+                                    <option>Nintendo Entertainment System</option>
+                                    <option>Super Nintendo Entertainment System</option>
+                                    <option>Nintendo GameBoy</option>
+                                    <option>Nintendo GameBoy Color</option>
+                                    <option>Nintendo GameBoy Advanced</option>
+                                    <option>Nintendo GameBoy Advanced SP</option>
+                                    <option>Nintendo DS</option>
+                                    <option>Nintendo DS Lite</option>
+                                    <option>Nintendo DSi</option>
+                                    <option>Nintendo 3DS (XL)</option>
+                                    <option>Nintendo New 2DS / 3DS (XL)</option>
+                                    <option>Nintendo 64</option>
+                                    <option>Nintendo GameCube</option>
+                                    <option>Nintendo Wii</option>
+                                    <option>Nintendo WiiU</option>
+                                    <option>Nintendo Switch</option>
+                                    <option>SEGA SG-1000</option>
+                                    <option>SEGA Master System</option>
+                                    <option>SEGA Game Gead</option>
+                                    <option>SEGA Mega Drive</option>
+                                    <option>SEGA Saturn</option>
+                                    <option>SEGA Dreamcast</option>
+                                    <option>Sony PlayStation One</option>
+                                    <option>Sony PlayStation 2</option>
+                                    <option>Sony PlayStation 3</option>
+                                    <option>Sony PlayStation 4</option>
+                                    <option>Sony PlayStation Portable</option>
+                                    <option>Sony PlayStation Vita</option>
+                                </select>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo-content">
+                <div class="container">
+                    <header>
+                        <h1>A grouped <b>Select</b> Field</h1>
+                        <p>It goes on without any setting, but with some more HTML Code to define some optgroup stuff!</p>
+                    </header>
+                    <div class="table">
+                        <article>
+                            <h1>Single</h1>
+                            <div>
+                                <select type="text" id="select-3" class="select">
+                                    <optgroup label="Atari">
+                                        <option>Atari 2600</option>
+                                        <option>Atari 5200</option>
+                                        <option>Atari 7800</option>
+                                        <option disabled>Atari Panther</option>
+                                        <option>Atari Jaguar</option>
+                                        <option disabled>Atari Jaguar 2</option>
+                                        <option>Atari Flashback</option>
+                                        <option>Atari Flashback II</option>
+                                        <option disabled>Ataribox</option>
+                                    </optgroup>
+                                    <optgroup label="Microsoft">
+                                        <option>Microsoft XBox</option>
+                                        <option>Microsoft XBox 360</option>
+                                        <option>Microsoft XBox One</option>
+                                        <option>Microsoft Windows 95</option>
+                                        <option>Microsoft Windows 98</option>
+                                        <option>Microsoft Windows 2000 (ME)</option>
+                                        <option>Microsoft Windows XP</option>
+                                        <option>Microsoft Windows Vista</option>
+                                        <option>Microsoft Windows 7</option>
+                                        <option>Microsoft Windows 8(.1)</option>
+                                        <option>Microsoft Windows 10</option>
+                                    </optgroup>
+                                    <optgroup label="Nintendo">
+                                        <option>Nintendo Entertainment System</option>
+                                        <option>Super Nintendo Entertainment System</option>
+                                        <option>Nintendo GameBoy</option>
+                                        <option>Nintendo GameBoy Color</option>
+                                        <option>Nintendo GameBoy Advanced</option>
+                                        <option>Nintendo GameBoy Advanced SP</option>
+                                        <option>Nintendo DS</option>
+                                        <option>Nintendo DS Lite</option>
+                                        <option>Nintendo DSi</option>
+                                        <option>Nintendo 3DS (XL)</option>
+                                        <option>Nintendo New 2DS / 3DS (XL)</option>
+                                        <option>Nintendo 64</option>
+                                        <option>Nintendo GameCube</option>
+                                        <option>Nintendo Wii</option>
+                                        <option>Nintendo WiiU</option>
+                                        <option>Nintendo Switch</option>
+                                    </optgroup>
+                                    <optgroup label="SEGA">
+                                        <option>SEGA SG-1000</option>
+                                        <option>SEGA Master System</option>
+                                        <option>SEGA Game Gead</option>
+                                        <option>SEGA Mega Drive</option>
+                                        <option>SEGA Saturn</option>
+                                        <option>SEGA Dreamcast</option>
+                                    </optgroup>
+                                    <optgroup label="Sony">
+                                        <option>Sony PlayStation One</option>
+                                        <option>Sony PlayStation 2</option>
+                                        <option>Sony PlayStation 3</option>
+                                        <option>Sony PlayStation 4</option>
+                                        <option>Sony PlayStation Portable</option>
+                                        <option>Sony PlayStation Vita</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </article>
+                        <article>
+                            <h1>Multiple</h1>
+                            <div>
+                                <select type="text" id="select-4" class="select" multiple>
+                                    <optgroup label="Atari">
+                                        <option>Atari 2600</option>
+                                        <option>Atari 5200</option>
+                                        <option>Atari 7800</option>
+                                        <option disabled>Atari Panther</option>
+                                        <option>Atari Jaguar</option>
+                                        <option disabled>Atari Jaguar 2</option>
+                                        <option>Atari Flashback</option>
+                                        <option>Atari Flashback II</option>
+                                        <option disabled>Ataribox</option>
+                                    </optgroup>
+                                    <optgroup label="Microsoft">
+                                        <option>Microsoft XBox</option>
+                                        <option>Microsoft XBox 360</option>
+                                        <option>Microsoft XBox One</option>
+                                        <option>Microsoft Windows 95</option>
+                                        <option>Microsoft Windows 98</option>
+                                        <option>Microsoft Windows 2000 (ME)</option>
+                                        <option>Microsoft Windows XP</option>
+                                        <option>Microsoft Windows Vista</option>
+                                        <option>Microsoft Windows 7</option>
+                                        <option>Microsoft Windows 8(.1)</option>
+                                        <option>Microsoft Windows 10</option>
+                                    </optgroup>
+                                    <optgroup label="Nintendo">
+                                        <option>Nintendo Entertainment System</option>
+                                        <option>Super Nintendo Entertainment System</option>
+                                        <option>Nintendo GameBoy</option>
+                                        <option>Nintendo GameBoy Color</option>
+                                        <option>Nintendo GameBoy Advanced</option>
+                                        <option>Nintendo GameBoy Advanced SP</option>
+                                        <option>Nintendo DS</option>
+                                        <option>Nintendo DS Lite</option>
+                                        <option>Nintendo DSi</option>
+                                        <option>Nintendo 3DS (XL)</option>
+                                        <option>Nintendo New 2DS / 3DS (XL)</option>
+                                        <option>Nintendo 64</option>
+                                        <option>Nintendo GameCube</option>
+                                        <option>Nintendo Wii</option>
+                                        <option>Nintendo WiiU</option>
+                                        <option>Nintendo Switch</option>
+                                    </optgroup>
+                                    <optgroup label="SEGA">
+                                        <option>SEGA SG-1000</option>
+                                        <option>SEGA Master System</option>
+                                        <option>SEGA Game Gead</option>
+                                        <option>SEGA Mega Drive</option>
+                                        <option>SEGA Saturn</option>
+                                        <option>SEGA Dreamcast</option>
+                                    </optgroup>
+                                    <optgroup label="Sony">
+                                        <option>Sony PlayStation One</option>
+                                        <option>Sony PlayStation 2</option>
+                                        <option>Sony PlayStation 3</option>
+                                        <option>Sony PlayStation 4</option>
+                                        <option>Sony PlayStation Portable</option>
+                                        <option>Sony PlayStation Vita</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo-content">
+                <div class="container">
+                    <header>
+                        <h1>A finding <b>Select</b> Field</h1>
+                        <p>Our first line of (JavaScript) code enables the search field within the dropdown element.</p>
+                    </header>
+                    <div class="table">
+                        <article>
+                            <h1>Single Search</h1>
+                            <div>
+                                <select type="text" id="select-5" class="select-search">
+                                    <optgroup label="Atari">
+                                        <option>Atari 2600</option>
+                                        <option>Atari 5200</option>
+                                        <option>Atari 7800</option>
+                                        <option disabled>Atari Panther</option>
+                                        <option>Atari Jaguar</option>
+                                        <option disabled>Atari Jaguar 2</option>
+                                        <option>Atari Flashback</option>
+                                        <option>Atari Flashback II</option>
+                                        <option disabled>Ataribox</option>
+                                    </optgroup>
+                                    <optgroup label="Microsoft">
+                                        <option>Microsoft XBox</option>
+                                        <option>Microsoft XBox 360</option>
+                                        <option>Microsoft XBox One</option>
+                                        <option>Microsoft Windows 95</option>
+                                        <option>Microsoft Windows 98</option>
+                                        <option>Microsoft Windows 2000 (ME)</option>
+                                        <option>Microsoft Windows XP</option>
+                                        <option>Microsoft Windows Vista</option>
+                                        <option>Microsoft Windows 7</option>
+                                        <option>Microsoft Windows 8(.1)</option>
+                                        <option>Microsoft Windows 10</option>
+                                    </optgroup>
+                                    <optgroup label="Nintendo">
+                                        <option>Nintendo Entertainment System</option>
+                                        <option>Super Nintendo Entertainment System</option>
+                                        <option>Nintendo GameBoy</option>
+                                        <option>Nintendo GameBoy Color</option>
+                                        <option>Nintendo GameBoy Advanced</option>
+                                        <option>Nintendo GameBoy Advanced SP</option>
+                                        <option>Nintendo DS</option>
+                                        <option>Nintendo DS Lite</option>
+                                        <option>Nintendo DSi</option>
+                                        <option>Nintendo 3DS (XL)</option>
+                                        <option>Nintendo New 2DS / 3DS (XL)</option>
+                                        <option>Nintendo 64</option>
+                                        <option>Nintendo GameCube</option>
+                                        <option>Nintendo Wii</option>
+                                        <option>Nintendo WiiU</option>
+                                        <option>Nintendo Switch</option>
+                                    </optgroup>
+                                    <optgroup label="SEGA">
+                                        <option>SEGA SG-1000</option>
+                                        <option>SEGA Master System</option>
+                                        <option>SEGA Game Gead</option>
+                                        <option>SEGA Mega Drive</option>
+                                        <option>SEGA Saturn</option>
+                                        <option>SEGA Dreamcast</option>
+                                    </optgroup>
+                                    <optgroup label="Sony">
+                                        <option>Sony PlayStation One</option>
+                                        <option>Sony PlayStation 2</option>
+                                        <option>Sony PlayStation 3</option>
+                                        <option>Sony PlayStation 4</option>
+                                        <option>Sony PlayStation Portable</option>
+                                        <option>Sony PlayStation Vita</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </article>
+                        <article>
+                            <h1>Multiple Search</h1>
+                            <div>
+                                <select type="text" id="select-6" class="select-search" multiple>
+                                    <optgroup label="Atari">
+                                        <option>Atari 2600</option>
+                                        <option>Atari 5200</option>
+                                        <option>Atari 7800</option>
+                                        <option disabled>Atari Panther</option>
+                                        <option>Atari Jaguar</option>
+                                        <option disabled>Atari Jaguar 2</option>
+                                        <option>Atari Flashback</option>
+                                        <option>Atari Flashback II</option>
+                                        <option disabled>Ataribox</option>
+                                    </optgroup>
+                                    <optgroup label="Microsoft">
+                                        <option>Microsoft XBox</option>
+                                        <option>Microsoft XBox 360</option>
+                                        <option>Microsoft XBox One</option>
+                                        <option>Microsoft Windows 95</option>
+                                        <option>Microsoft Windows 98</option>
+                                        <option>Microsoft Windows 2000 (ME)</option>
+                                        <option>Microsoft Windows XP</option>
+                                        <option>Microsoft Windows Vista</option>
+                                        <option>Microsoft Windows 7</option>
+                                        <option>Microsoft Windows 8(.1)</option>
+                                        <option>Microsoft Windows 10</option>
+                                    </optgroup>
+                                    <optgroup label="Nintendo">
+                                        <option>Nintendo Entertainment System</option>
+                                        <option>Super Nintendo Entertainment System</option>
+                                        <option>Nintendo GameBoy</option>
+                                        <option>Nintendo GameBoy Color</option>
+                                        <option>Nintendo GameBoy Advanced</option>
+                                        <option>Nintendo GameBoy Advanced SP</option>
+                                        <option>Nintendo DS</option>
+                                        <option>Nintendo DS Lite</option>
+                                        <option>Nintendo DSi</option>
+                                        <option>Nintendo 3DS (XL)</option>
+                                        <option>Nintendo New 2DS / 3DS (XL)</option>
+                                        <option>Nintendo 64</option>
+                                        <option>Nintendo GameCube</option>
+                                        <option>Nintendo Wii</option>
+                                        <option>Nintendo WiiU</option>
+                                        <option>Nintendo Switch</option>
+                                    </optgroup>
+                                    <optgroup label="SEGA">
+                                        <option>SEGA SG-1000</option>
+                                        <option>SEGA Master System</option>
+                                        <option>SEGA Game Gead</option>
+                                        <option>SEGA Mega Drive</option>
+                                        <option>SEGA Saturn</option>
+                                        <option>SEGA Dreamcast</option>
+                                    </optgroup>
+                                    <optgroup label="Sony">
+                                        <option>Sony PlayStation One</option>
+                                        <option>Sony PlayStation 2</option>
+                                        <option>Sony PlayStation 3</option>
+                                        <option>Sony PlayStation 4</option>
+                                        <option>Sony PlayStation Portable</option>
+                                        <option>Sony PlayStation Vita</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo-content">
+                <div class="container">
+                    <header>
+                        <h1>A descriptive <b>Select</b> Field</h1>
+                        <p>Just one option and some HTML stuff more and tail.select allows us some descriptive text.</p>
+                    </header>
+                    <div class="table">
+                        <article>
+                            <h1>Single Descriptions</h1>
+                            <div>
+                                <select type="text" id="select-7" class="select-description">
+                                    <optgroup label="Atari">
+                                        <option data-description="Released: 1977">Atari 2600</option>
+                                        <option data-description="Released: 1982">Atari 5200</option>
+                                        <option data-description="Released: 1986">Atari 7800</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Panther</option>
+                                        <option data-description="Released: 1993">Atari Jaguar</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Jaguar 2</option>
+                                        <option data-description="Released: 2005">Atari Flashback</option>
+                                        <option data-description="Released: 2005">Atari Flashback II</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Ataribox</option>
+                                    </optgroup>
+                                    <optgroup label="Microsoft">
+                                        <option data-description="Released: 2001">Microsoft XBox</option>
+                                        <option data-description="Released: 2005">Microsoft XBox 360</option>
+                                        <option data-description="Released: 2013">Microsoft XBox One</option>
+                                        <option data-description="Released: 1995">Microsoft Windows 95</option>
+                                        <option data-description="Released: 1998">Microsoft Windows 98</option>
+                                        <option data-description="Released: 2000">Microsoft Windows 2000 (ME)</option>
+                                        <option data-description="Released: 2001">Microsoft Windows XP</option>
+                                        <option data-description="Released: 2006">Microsoft Windows Vista</option>
+                                        <option data-description="Released: 2006">Microsoft Windows 7</option>
+                                        <option data-description="Released: 2012">Microsoft Windows 8(.1)</option>
+                                        <option data-description="Released: 2015">Microsoft Windows 10</option>
+                                    </optgroup>
+                                    <optgroup label="Nintendo">
+                                        <option data-description="Released: 1985">Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1992">Super Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1996">Nintendo 64</option>
+                                        <option data-description="Released: 2001">Nintendo GameCube</option>
+                                        <option data-description="Released: 2006">Nintendo Wii</option>
+                                        <option data-description="Released: 2012">Nintendo WiiU</option>
+                                        <option data-description="Released: 2017">Nintendo Switch</option>
+                                        <option data-description="Released: 1989">Nintendo GameBoy</option>
+                                        <option data-description="Released: 1998">Nintendo GameBoy Color</option>
+                                        <option data-description="Released: 2001">Nintendo GameBoy Advanced</option>
+                                        <option data-description="Released: 2003">Nintendo GameBoy Advanced SP</option>
+                                        <option data-description="Released: 2004">Nintendo DS</option>
+                                        <option data-description="Released: 2006">Nintendo DS Lite</option>
+                                        <option data-description="Released: 2008/09">Nintendo DSi (XL)</option>
+                                        <option data-description="Released: 2011/12">Nintendo 3DS (XL)</option>
+                                        <option data-description="Released: 20015-17">Nintendo New 2DS / 3DS (XL)</option>
+                                    </optgroup>
+                                    <optgroup label="SEGA">
+                                        <option data-description="Released: 1983">SEGA SG-1000</option>
+                                        <option data-description="Released: 1986">SEGA Master System</option>
+                                        <option data-description="Released: 1989">SEGA Mega Drive</option>
+                                        <option data-description="Released: 1990">SEGA Game Gear</option>
+                                        <option data-description="Released: 1994">SEGA Saturn</option>
+                                        <option data-description="Released: 1999">SEGA Dreamcast</option>
+                                    </optgroup>
+                                    <optgroup label="Sony">
+                                        <option data-description="Released: 1994">Sony PlayStation One</option>
+                                        <option data-description="Released: 2000">Sony PlayStation 2</option>
+                                        <option data-description="Released: 2006">Sony PlayStation 3</option>
+                                        <option data-description="Released: 2013">Sony PlayStation 4</option>
+                                        <option data-description="Released: 2004">Sony PlayStation Portable</option>
+                                        <option data-description="Released: 2011">Sony PlayStation Vita</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </article>
+                        <article>
+                            <h1>Multiple Descriptions</h1>
+                            <div>
+                                <select type="text" id="select-8" class="select-description" multiple>
+                                    <optgroup label="Atari">
+                                        <option data-description="Released: 1977">Atari 2600</option>
+                                        <option data-description="Released: 1982">Atari 5200</option>
+                                        <option data-description="Released: 1986">Atari 7800</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Panther</option>
+                                        <option data-description="Released: 1993">Atari Jaguar</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Jaguar 2</option>
+                                        <option data-description="Released: 2005">Atari Flashback</option>
+                                        <option data-description="Released: 2005">Atari Flashback II</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Ataribox</option>
+                                    </optgroup>
+                                    <optgroup label="Microsoft">
+                                        <option data-description="Released: 2001">Microsoft XBox</option>
+                                        <option data-description="Released: 2005">Microsoft XBox 360</option>
+                                        <option data-description="Released: 2013">Microsoft XBox One</option>
+                                        <option data-description="Released: 1995">Microsoft Windows 95</option>
+                                        <option data-description="Released: 1998">Microsoft Windows 98</option>
+                                        <option data-description="Released: 2000">Microsoft Windows 2000 (ME)</option>
+                                        <option data-description="Released: 2001">Microsoft Windows XP</option>
+                                        <option data-description="Released: 2006">Microsoft Windows Vista</option>
+                                        <option data-description="Released: 2006">Microsoft Windows 7</option>
+                                        <option data-description="Released: 2012">Microsoft Windows 8(.1)</option>
+                                        <option data-description="Released: 2015">Microsoft Windows 10</option>
+                                    </optgroup>
+                                    <optgroup label="Nintendo">
+                                        <option data-description="Released: 1985">Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1992">Super Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1996">Nintendo 64</option>
+                                        <option data-description="Released: 2001">Nintendo GameCube</option>
+                                        <option data-description="Released: 2006">Nintendo Wii</option>
+                                        <option data-description="Released: 2012">Nintendo WiiU</option>
+                                        <option data-description="Released: 2017">Nintendo Switch</option>
+                                        <option data-description="Released: 1989">Nintendo GameBoy</option>
+                                        <option data-description="Released: 1998">Nintendo GameBoy Color</option>
+                                        <option data-description="Released: 2001">Nintendo GameBoy Advanced</option>
+                                        <option data-description="Released: 2003">Nintendo GameBoy Advanced SP</option>
+                                        <option data-description="Released: 2004">Nintendo DS</option>
+                                        <option data-description="Released: 2006">Nintendo DS Lite</option>
+                                        <option data-description="Released: 2008/09">Nintendo DSi (XL)</option>
+                                        <option data-description="Released: 2011/12">Nintendo 3DS (XL)</option>
+                                        <option data-description="Released: 20015-17">Nintendo New 2DS / 3DS (XL)</option>
+                                    </optgroup>
+                                    <optgroup label="SEGA">
+                                        <option data-description="Released: 1983">SEGA SG-1000</option>
+                                        <option data-description="Released: 1986">SEGA Master System</option>
+                                        <option data-description="Released: 1989">SEGA Mega Drive</option>
+                                        <option data-description="Released: 1990">SEGA Game Gear</option>
+                                        <option data-description="Released: 1994">SEGA Saturn</option>
+                                        <option data-description="Released: 1999">SEGA Dreamcast</option>
+                                    </optgroup>
+                                    <optgroup label="Sony">
+                                        <option data-description="Released: 1994">Sony PlayStation One</option>
+                                        <option data-description="Released: 2000">Sony PlayStation 2</option>
+                                        <option data-description="Released: 2006">Sony PlayStation 3</option>
+                                        <option data-description="Released: 2013">Sony PlayStation 4</option>
+                                        <option data-description="Released: 2004">Sony PlayStation Portable</option>
+                                        <option data-description="Released: 2011">Sony PlayStation Vita</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo-content">
+                <div class="container">
+                    <header>
+                        <h1>A limitable <b>Select</b> Field</h1>
+                        <p>You can allow to deselect single select fields, and you can limit the selection on multiple ones.</p>
+                    </header>
+                    <div class="table">
+                        <article>
+                            <h1>DeSelectable Single</h1>
+                            <div>
+                                <select type="text" id="select-9" class="select-deselect">
+                                    <optgroup label="Atari">
+                                        <option data-description="Released: 1977">Atari 2600</option>
+                                        <option data-description="Released: 1982">Atari 5200</option>
+                                        <option data-description="Released: 1986">Atari 7800</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Panther</option>
+                                        <option data-description="Released: 1993">Atari Jaguar</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Jaguar 2</option>
+                                        <option data-description="Released: 2005">Atari Flashback</option>
+                                        <option data-description="Released: 2005">Atari Flashback II</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Ataribox</option>
+                                    </optgroup>
+                                    <optgroup label="Microsoft">
+                                        <option data-description="Released: 2001">Microsoft XBox</option>
+                                        <option data-description="Released: 2005">Microsoft XBox 360</option>
+                                        <option data-description="Released: 2013">Microsoft XBox One</option>
+                                        <option data-description="Released: 1995">Microsoft Windows 95</option>
+                                        <option data-description="Released: 1998">Microsoft Windows 98</option>
+                                        <option data-description="Released: 2000">Microsoft Windows 2000 (ME)</option>
+                                        <option data-description="Released: 2001">Microsoft Windows XP</option>
+                                        <option data-description="Released: 2006">Microsoft Windows Vista</option>
+                                        <option data-description="Released: 2006">Microsoft Windows 7</option>
+                                        <option data-description="Released: 2012">Microsoft Windows 8(.1)</option>
+                                        <option data-description="Released: 2015">Microsoft Windows 10</option>
+                                    </optgroup>
+                                    <optgroup label="Nintendo">
+                                        <option data-description="Released: 1985">Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1992">Super Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1996">Nintendo 64</option>
+                                        <option data-description="Released: 2001">Nintendo GameCube</option>
+                                        <option data-description="Released: 2006">Nintendo Wii</option>
+                                        <option data-description="Released: 2012">Nintendo WiiU</option>
+                                        <option data-description="Released: 2017">Nintendo Switch</option>
+                                        <option data-description="Released: 1989">Nintendo GameBoy</option>
+                                        <option data-description="Released: 1998">Nintendo GameBoy Color</option>
+                                        <option data-descriptionoption data-description="Released: 2001">Nintendo GameBoy Advanced</option>
+                                        <option data-description="Released: 2003">Nintendo GameBoy Advanced SP</option>
+                                        <option data-description="Released: 2004">Nintendo DS</option>
+                                        <option data-description="Released: 2006">Nintendo DS Lite</option>
+                                        <option data-description="Released: 2008/09">Nintendo DSi (XL)</option>
+                                        <option data-description="Released: 2011/12">Nintendo 3DS (XL)</option>
+                                        <option data-description="Released: 20015-17">Nintendo New 2DS / 3DS (XL)</option>
+                                    </optgroup>
+                                    <optgroup label="SEGA">
+                                        <option data-description="Released: 1983">SEGA SG-1000</option>
+                                        <option data-description="Released: 1986">SEGA Master System</option>
+                                        <option data-description="Released: 1989">SEGA Mega Drive</option>
+                                        <option data-description="Released: 1990">SEGA Game Gear</option>
+                                        <option data-description="Released: 1994">SEGA Saturn</option>
+                                        <option data-description="Released: 1999">SEGA Dreamcast</option>
+                                    </optgroup>
+                                    <optgroup label="Sony">
+                                        <option data-description="Released: 1994">Sony PlayStation One</option>
+                                        <option data-description="Released: 2000">Sony PlayStation 2</option>
+                                        <option data-description="Released: 2006">Sony PlayStation 3</option>
+                                        <option data-description="Released: 2013">Sony PlayStation 4</option>
+                                        <option data-description="Released: 2004">Sony PlayStation Portable</option>
+                                        <option data-description="Released: 2011">Sony PlayStation Vita</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </article>
+                        <article>
+                            <h1>Limit Multiple</h1>
+                            <div>
+                                <select type="text" id="select-10" class="select-limit" multiple>
+                                    <optgroup label="Atari">
+                                        <option data-description="Released: 1977">Atari 2600</option>
+                                        <option data-description="Released: 1982">Atari 5200</option>
+                                        <option data-description="Released: 1986">Atari 7800</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Panther</option>
+                                        <option data-description="Released: 1993">Atari Jaguar</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Jaguar 2</option>
+                                        <option data-description="Released: 2005">Atari Flashback</option>
+                                        <option data-description="Released: 2005">Atari Flashback II</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Ataribox</option>
+                                    </optgroup>
+                                    <optgroup label="Microsoft">
+                                        <option data-description="Released: 2001">Microsoft XBox</option>
+                                        <option data-description="Released: 2005">Microsoft XBox 360</option>
+                                        <option data-description="Released: 2013">Microsoft XBox One</option>
+                                        <option data-description="Released: 1995">Microsoft Windows 95</option>
+                                        <option data-description="Released: 1998">Microsoft Windows 98</option>
+                                        <option data-description="Released: 2000">Microsoft Windows 2000 (ME)</option>
+                                        <option data-description="Released: 2001">Microsoft Windows XP</option>
+                                        <option data-description="Released: 2006">Microsoft Windows Vista</option>
+                                        <option data-description="Released: 2006">Microsoft Windows 7</option>
+                                        <option data-description="Released: 2012">Microsoft Windows 8(.1)</option>
+                                        <option data-description="Released: 2015">Microsoft Windows 10</option>
+                                    </optgroup>
+                                    <optgroup label="Nintendo">
+                                        <option data-description="Released: 1985">Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1992">Super Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1996">Nintendo 64</option>
+                                        <option data-description="Released: 2001">Nintendo GameCube</option>
+                                        <option data-description="Released: 2006">Nintendo Wii</option>
+                                        <option data-description="Released: 2012">Nintendo WiiU</option>
+                                        <option data-description="Released: 2017">Nintendo Switch</option>
+                                        <option data-description="Released: 1989">Nintendo GameBoy</option>
+                                        <option data-description="Released: 1998">Nintendo GameBoy Color</option>
+                                        <option data-description="Released: 2001">Nintendo GameBoy Advanced</option>
+                                        <option data-description="Released: 2003">Nintendo GameBoy Advanced SP</option>
+                                        <option data-description="Released: 2004">Nintendo DS</option>
+                                        <option data-description="Released: 2006">Nintendo DS Lite</option>
+                                        <option data-description="Released: 2008/09">Nintendo DSi (XL)</option>
+                                        <option data-description="Released: 2011/12">Nintendo 3DS (XL)</option>
+                                        <option data-description="Released: 20015-17">Nintendo New 2DS / 3DS (XL)</option>
+                                    </optgroup>
+                                    <optgroup label="SEGA">
+                                        <option data-description="Released: 1983">SEGA SG-1000</option>
+                                        <option data-description="Released: 1986">SEGA Master System</option>
+                                        <option data-description="Released: 1989">SEGA Mega Drive</option>
+                                        <option data-description="Released: 1990">SEGA Game Gear</option>
+                                        <option data-description="Released: 1994">SEGA Saturn</option>
+                                        <option data-description="Released: 1999">SEGA Dreamcast</option>
+                                    </optgroup>
+                                    <optgroup label="Sony">
+                                        <option data-description="Released: 1994">Sony PlayStation One</option>
+                                        <option data-description="Released: 2000">Sony PlayStation 2</option>
+                                        <option data-description="Released: 2006">Sony PlayStation 3</option>
+                                        <option data-description="Released: 2013">Sony PlayStation 4</option>
+                                        <option data-description="Released: 2004">Sony PlayStation Portable</option>
+                                        <option data-description="Released: 2011">Sony PlayStation Vita</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo-content">
+                <div class="container">
+                    <header>
+                        <h1>A movable <b>Select</b> Field</h1>
+                        <p>It's also possible to move your selections to an existing container elsewhere and hide the respective options within the dropdown field.</p>
+                    </header>
+                    <div class="table">
+                        <article>
+                            <h1>Multiple Select</h1>
+                            <div>
+                                <select type="text" id="select-11" class="select-move" multiple>
+                                    <optgroup label="Atari">
+                                        <option data-description="Released: 1977">Atari 2600</option>
+                                        <option data-description="Released: 1982">Atari 5200</option>
+                                        <option data-description="Released: 1986">Atari 7800</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Panther</option>
+                                        <option data-description="Released: 1993">Atari Jaguar</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Atari Jaguar 2</option>
+                                        <option data-description="Released: 2005">Atari Flashback</option>
+                                        <option data-description="Released: 2005">Atari Flashback II</option>
+                                        <option data-description="Released: <i>Canceled</i>" disabled>Ataribox</option>
+                                    </optgroup>
+                                    <optgroup label="Microsoft">
+                                        <option data-description="Released: 2001">Microsoft XBox</option>
+                                        <option data-description="Released: 2005">Microsoft XBox 360</option>
+                                        <option data-description="Released: 2013">Microsoft XBox One</option>
+                                        <option data-description="Released: 1995">Microsoft Windows 95</option>
+                                        <option data-description="Released: 1998">Microsoft Windows 98</option>
+                                        <option data-description="Released: 2000">Microsoft Windows 2000 (ME)</option>
+                                        <option data-description="Released: 2001">Microsoft Windows XP</option>
+                                        <option data-description="Released: 2006">Microsoft Windows Vista</option>
+                                        <option data-description="Released: 2006">Microsoft Windows 7</option>
+                                        <option data-description="Released: 2012">Microsoft Windows 8(.1)</option>
+                                        <option data-description="Released: 2015">Microsoft Windows 10</option>
+                                    </optgroup>
+                                    <optgroup label="Nintendo">
+                                        <option data-description="Released: 1985">Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1992">Super Nintendo Entertainment System</option>
+                                        <option data-description="Released: 1996">Nintendo 64</option>
+                                        <option data-description="Released: 2001">Nintendo GameCube</option>
+                                        <option data-description="Released: 2006">Nintendo Wii</option>
+                                        <option data-description="Released: 2012">Nintendo WiiU</option>
+                                        <option data-description="Released: 2017">Nintendo Switch</option>
+                                        <option data-description="Released: 1989">Nintendo GameBoy</option>
+                                        <option data-description="Released: 1998">Nintendo GameBoy Color</option>
+                                        <option data-description="Released: 2001">Nintendo GameBoy Advanced</option>
+                                        <option data-description="Released: 2003">Nintendo GameBoy Advanced SP</option>
+                                        <option data-description="Released: 2004">Nintendo DS</option>
+                                        <option data-description="Released: 2006">Nintendo DS Lite</option>
+                                        <option data-description="Released: 2008/09">Nintendo DSi (XL)</option>
+                                        <option data-description="Released: 2011/12">Nintendo 3DS (XL)</option>
+                                        <option data-description="Released: 20015-17">Nintendo New 2DS / 3DS (XL)</option>
+                                    </optgroup>
+                                    <optgroup label="SEGA">
+                                        <option data-description="Released: 1983">SEGA SG-1000</option>
+                                        <option data-description="Released: 1986">SEGA Master System</option>
+                                        <option data-description="Released: 1989">SEGA Mega Drive</option>
+                                        <option data-description="Released: 1990">SEGA Game Gear</option>
+                                        <option data-description="Released: 1994">SEGA Saturn</option>
+                                        <option data-description="Released: 1999">SEGA Dreamcast</option>
+                                    </optgroup>
+                                    <optgroup label="Sony">
+                                        <option data-description="Released: 1994">Sony PlayStation One</option>
+                                        <option data-description="Released: 2000">Sony PlayStation 2</option>
+                                        <option data-description="Released: 2006">Sony PlayStation 3</option>
+                                        <option data-description="Released: 2013">Sony PlayStation 4</option>
+                                        <option data-description="Released: 2004">Sony PlayStation Portable</option>
+                                        <option data-description="Released: 2011">Sony PlayStation Vita</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </article>
+                        <article>
+                            <h1>Selection Container</h1>
+                            <div>
+                                <div style="width: 425px;margin:0 auto;">
+                                    <div class="tail-move-container"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="demo-content">
+                <div class="container">
+                    <header>
+                        <h1>A manipulatable <b>Select</b> Field</h1>
+                        <p>A small example to show the power of the tail.select.options class.</p>
+                    </header>
+                    <article>
+                        <div class="demo-advanced">
+                            <div class="demo-advanced-left">
+                                <button data-select="open">Open Field</button><br />
+                                <button data-select="close">Close Field</button><br />
+                                <button data-select="toggle">Toggle Field</button><br />
+                                <button class="red" data-select="remove">Remove Field</button><br />
+                                <button class="green" data-select="reinit" disabled>Re-Init Field</button>
+                            </div>
+                            <div class="demo-advanced-center">
+                                <select type="text" id="select-12" class="select-manipulatable" multiple>
+                                </select>
+                            </div>
+                            <div class="demo-advanced-right">
+                                <button data-select="load" data-value="activision">Load Activision (344 Items)</button><br />
+                                <button data-select="load" data-value="bethesda">Load Bethesda (54 Items)</button><br />
+                                <button data-select="load" data-value="bioware">Load BioWare (29 Items)</button><br />
+                                <button data-select="load" data-value="cd-project">Load CD Project Red (7 Items)</button><br />
+                                <button data-select="load" data-value="deep-silver">Load Deep Silver (74 Items)</button><br />
+                                <button data-select="load" data-value="ubisoft">Load Ubisoft (399 Items)</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="container-left footer-left">
+                    Copyright &copy; 2014 - 2018 SamBrishes @ pytesNET<br />
+                    Published under the MIT / X11 License
+                </div>
+                <div class="container-right footer-right">
+                    Star, Fork and Download on <a href="https://github.com/pytesNET/tail.select"><b>GitHub</b>!</a><br />
+                </div>
+            </div>
+        </div>
+
+        <div class="js-footer">
+            <script type="text/javascript">
+                document.addEventListener("DOMContentLoaded", function(){
+                    var w = window, d = window.document;
+
+                    tail.select(".select")
+                    tail.select(".select-search", {
+                        search: true
+                    });
+                    tail.select(".select-description", {
+                        search: true,
+                        descriptions: true
+                    });
+                    tail.select(".select-deselect", {
+                        search: true,
+                        descriptions: true,
+                        deselect: true,
+                    });
+                    tail.select(".select-limit", {
+                        search: true,
+                        descriptions: true,
+                        multiLimit: 10
+                    });
+                    tail.select(".select-move", {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: 15,
+                        multiShowCount: false,
+                        multiContainer: ".tail-move-container"
+                    });
+                    // AJAX Function
+                    var ajax = function(value, callback, argument){
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function(){
+                            if(this.readyState == 4 && this.status == 200){
+                                callback(JSON.parse(this.responseText), argument);
+                            }
+                        };
+                        xhttp.open("GET", w.location.href + "assets/data/demo." + value + ".json", true);
+                        xhttp.send();
+                    }
+
+                    // tail.select Element
+                    var mani = tail.select(".select-manipulatable", {
+                        search: true,
+                        descriptions: true,
+                        hideSelected: true,
+                        hideDisabled: true,
+                        multiLimit: 15,
+                        animate: true
+                    });
+
+                    // Action Buttons
+                    var buttons = d.querySelectorAll("button[data-select]"), l = buttons.length;
+                    for(var i = 0; i < l; i++){
+                        buttons[i].addEventListener("click", function(event){
+                            if(this.disabled){
+                                return;
+                            }
+                            event.preventDefault();
+                            event.stopPropagation(); // Prevent document handler.
+                            action = this.getAttribute("data-select"),
+                            value  = this.getAttribute("data-value") || null;
+
+                            if(action == "open"){
+                                mani.open();
+                            } else if(action == "close"){
+                                mani.close();
+                            } else if(action == "toggle"){
+                                mani.toggle();
+                            } else if(action == "remove"){
+                                for(var b = 0; b < l; b++){
+                                    if(buttons[b].getAttribute("data-select") == "reinit"){
+                                        buttons[b].disabled = false;
+                                    } else {
+                                        buttons[b].disabled = true;
+                                    }
+                                }
+                                mani.remove();
+                            } else if(action == "reinit"){
+                                for(var b = 0; b < l; b++){
+                                    if(buttons[b].getAttribute("data-select") == "reinit"){
+                                        buttons[b].disabled = true;
+                                    } else {
+                                        buttons[b].disabled = false;
+                                    }
+                                }
+                                mani.init();
+                            } else if(action == "onload"){
+                                var items = mani.options.items[this.getAttribute("data-group")];
+                                for(var key in items){
+                                    mani.options.remove(key, items[key].group);
+                                }
+                                this.setAttribute("data-select", "load");
+                                this.removeAttribute("data-group");
+                                this.innerText = this.innerText.replace("Unload", "Load");
+                                this.className = this.className.replace("red", "").trim();
+                            } else if(action == "load"){
+                                this.disabled = true;
+                                this.className += " loading";
+
+                                ajax(value, function(items, element){
+                                    var group = null;
+                                    for(var l = items.length, i = 0; i < l; i++){
+                                        mani.options.add(items[i].value, items[i].text, items[i].group, false, false, items[i].desc);
+                                        if(group == null){
+                                            group =items[i].group;
+                                        }
+                                    }
+                                    element.disabled = false;
+                                    element.setAttribute("data-select", "onload");
+                                    element.setAttribute("data-group", group);
+                                    element.innerText = element.innerText.replace("Load", "Unload");
+                                    element.className = element.className.replace("loading", "red");
+                                }, this);
+                            }
+                        });
+                    }
+
+                });
+            </script>
+        </div>
+    </body>
+</html>

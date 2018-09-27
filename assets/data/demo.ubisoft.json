@@ -1,0 +1,2396 @@
+[
+	{
+		"text": "187: Ride or Die",
+		"value": "187-ride-or-die",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for PS2, Xbox."
+	},
+	{
+		"text": "100 All-Time Favorites",
+		"value": "100-alltime-favorites",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "ABBA: You Can Dance",
+		"value": "abba-you-can-dance",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Wii."
+	},
+	{
+		"text": "Academy of Champions",
+		"value": "academy-of-champions",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Wii."
+	},
+	{
+		"text": "Animaniacs",
+		"value": "animaniacs",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Wii."
+	},
+	{
+		"text": "The Adventures of Tintin: The Secret of the Unicorn",
+		"value": "the-adventures-of-tintin-the-secret-of-the-unicorn",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Win, 3DS, PS3, Wii, X360."
+	},
+	{
+		"text": "The Adventures of Valdo & Marie",
+		"value": "the-adventures-of-valdo-marie",
+		"group": "Ubisoft",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Alexander",
+		"value": "alexander",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Alex Builds His Farm",
+		"value": "alex-builds-his-farm",
+		"group": "Ubisoft",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Alex Ferguson's Player Manager 2001",
+		"value": "alex-fergusons-player-manager-2001",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for PS1."
+	},
+	{
+		"text": "Alexi Lalas Red Hot Soccer",
+		"value": "alexi-lalas-red-hot-soccer",
+		"group": "Ubisoft",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "Alfred Hitchcock Presents: The Final Cut",
+		"value": "alfred-hitchcock-presents-the-final-cut",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "All Star Tennis '99",
+		"value": "all-star-tennis-99",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for PS1."
+	},
+	{
+		"text": "All You Can Play: 10 Racing Games",
+		"value": "all-you-can-play-10-racing-games",
+		"group": "Ubisoft",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "America's Army: Rise of a Soldier",
+		"value": "americas-army-rise-of-a-soldier",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Xbox."
+	},
+	{
+		"text": "AND 1 Streetball",
+		"value": "and-1-streetball",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for PS2, Xbox."
+	},
+	{
+		"text": "Anno 1404",
+		"value": "anno-1404",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Win, Wii, NDS."
+	},
+	{
+		"text": "Anno 2070",
+		"value": "anno-2070",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Win."
+	},
+	{
+		"text": "Anno 2205",
+		"value": "anno-2205",
+		"group": "Ubisoft",
+		"desc": "Released in 2015 for Win."
+	},
+	{
+		"text": "Anne McCaffrey's Freedom: First Resistance",
+		"value": "anne-mccaffreys-freedom-first-resistance",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Ape Escape 2",
+		"value": "ape-escape-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for PS2."
+	},
+	{
+		"text": "Arcatera: The Dark Brotherhood",
+		"value": "arcatera-the-dark-brotherhood",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Armored Core 2",
+		"value": "armored-core-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for PS2."
+	},
+	{
+		"text": "Armored Core: For Answer",
+		"value": "armored-core-for-answer",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for PS3, X360."
+	},
+	{
+		"text": "Asghan: The Dragon Slayer",
+		"value": "asghan-the-dragon-slayer",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Asphalt Urban GT",
+		"value": "asphalt-urban-gt",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for NDS."
+	},
+	{
+		"text": "Asphalt 2: Urban GT",
+		"value": "asphalt-2-urban-gt",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for NDS, PSP."
+	},
+	{
+		"text": "Ape Escape: Pumped & Primed",
+		"value": "ape-escape-pumped-primed",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for PS2."
+	},
+	{
+		"text": "Assassin's Creed",
+		"value": "assassins-creed",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for PS3, X360, Win."
+	},
+	{
+		"text": "Assassin's Creed II",
+		"value": "assassins-creed-ii",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for PS3, X360, Win."
+	},
+	{
+		"text": "Assassin's Creed: Bloodlines",
+		"value": "assassins-creed-bloodlines",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for PSP."
+	},
+	{
+		"text": "Assassin's Creed: Altaïr's Chronicles",
+		"value": "assassins-creed-altars-chronicles",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "Assassin's Creed: Brotherhood",
+		"value": "assassins-creed-brotherhood",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for PS3, X360, Win."
+	},
+	{
+		"text": "Assassin's Creed: Revelations",
+		"value": "assassins-creed-revelations",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for PS3, X360, Win."
+	},
+	{
+		"text": "Assassin's Creed III",
+		"value": "assassins-creed-iii",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for PS3, X360, Win, WiiU."
+	},
+	{
+		"text": "Assassin's Creed IV: Black Flag",
+		"value": "assassins-creed-iv-black-flag",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for Win, PS3, PS4, X360, XBO, WiiU."
+	},
+	{
+		"text": "Assassin's Creed: Freedom Cry",
+		"value": "assassins-creed-freedom-cry",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for Win, PS3, PS4, X360, XBO."
+	},
+	{
+		"text": "Assassin's Creed Rogue",
+		"value": "assassins-creed-rogue",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for PS3, X360, Win."
+	},
+	{
+		"text": "Assassin's Creed Unity",
+		"value": "assassins-creed-unity",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for Win, PS4, XBO."
+	},
+	{
+		"text": "Assassin's Creed Chronicles",
+		"value": "assassins-creed-chronicles",
+		"group": "Ubisoft",
+		"desc": "Released in 2015 for Win, PS4, XBO."
+	},
+	{
+		"text": "Assassin's Creed Syndicate",
+		"value": "assassins-creed-syndicate",
+		"group": "Ubisoft",
+		"desc": "Released in 2015 for Win, PS4, XBO."
+	},
+	{
+		"text": "America's Army: True Soldiers",
+		"value": "americas-army-true-soldiers",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for X360."
+	},
+	{
+		"text": "Armored Core: for Answer",
+		"value": "armored-core-for-answer",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for PS3, X360."
+	},
+	{
+		"text": "Asterix: These Romans are Crazy!",
+		"value": "asterix-these-romans-are-crazy",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "Astonishia Story",
+		"value": "astonishia-story",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for PSP."
+	},
+	{
+		"text": "Babel Rising 3D",
+		"value": "babel-rising-3d",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for PS3, X360."
+	},
+	{
+		"text": "Baldur's Gate: Dark Alliance",
+		"value": "baldurs-gate-dark-alliance",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for PS2."
+	},
+	{
+		"text": "Batman Beyond: Return of the Joker",
+		"value": "batman-beyond-return-of-the-joker",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for PS1."
+	},
+	{
+		"text": "Batman: Rise of Sin Tzu",
+		"value": "batman-rise-of-sin-tzu",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Xbox, PS2."
+	},
+	{
+		"text": "Batman: Vengeance",
+		"value": "batman-vengeance",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Batman: Gotham City Racer",
+		"value": "batman-gotham-city-racer",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for PS1."
+	},
+	{
+		"text": "Battle Realms",
+		"value": "battle-realms",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Battle of Giants: Dinosaurs",
+		"value": "battle-of-giants-dinosaurs",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "Battle of Giants: Dinosaurs Fight for Survival",
+		"value": "battle-of-giants-dinosaurs-fight-for-survival",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for NDS."
+	},
+	{
+		"text": "Battle of Giants: Dragons",
+		"value": "battle-of-giants-dragons",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "Battle of Giants: Dragons Bronze Edition",
+		"value": "battle-of-giants-dragons-bronze-edition",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "Battle of Giants: Mutant Insects",
+		"value": "battle-of-giants-mutant-insects",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for NDS."
+	},
+	{
+		"text": "Battle of Giants: Mutant Insects Revenge",
+		"value": "battle-of-giants-mutant-insects-revenge",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for NDS."
+	},
+	{
+		"text": "Battles of Prince of Persia",
+		"value": "battles-of-prince-of-persia",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for NDS."
+	},
+	{
+		"text": "Beowulf: The Game",
+		"value": "beowulf-the-game",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win, PS3, X360, PSP."
+	},
+	{
+		"text": "Beyond Good & Evil",
+		"value": "beyond-good-evil",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Xbox, PS2."
+	},
+	{
+		"text": "Blazing Angels",
+		"value": "blazing-angels",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Xbox, X360, PS3, Win."
+	},
+	{
+		"text": "Blazing Angels 2: Secret Missions of WWII",
+		"value": "blazing-angels-2-secret-missions-of-wwii",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for PS3, X360, Win, Wii."
+	},
+	{
+		"text": "Brothers in Arms: D-Day",
+		"value": "brothers-in-arms-dday",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for PSP."
+	},
+	{
+		"text": "Brothers in Arms: Earned in Blood",
+		"value": "brothers-in-arms-earned-in-blood",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Win, PS2, Xbox."
+	},
+	{
+		"text": "Brothers in Arms: Road to Hill 30",
+		"value": "brothers-in-arms-road-to-hill-30",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Win, PS2, Xbox."
+	},
+	{
+		"text": "Brothers in Arms: Hell's Highway",
+		"value": "brothers-in-arms-hells-highway",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Win, PS3, X360."
+	},
+	{
+		"text": "Brothers in Arms: Furious 4",
+		"value": "brothers-in-arms-furious-4",
+		"group": "Ubisoft",
+		"desc": "Released in Canc for Win, PS3, X360."
+	},
+	{
+		"text": "Business Tycoon",
+		"value": "business-tycoon",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "C.O.P.: The Recruit",
+		"value": "cop-the-recruit",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "Call of Juarez",
+		"value": "call-of-juarez",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Win, X360."
+	},
+	{
+		"text": "Call of Juarez: Bound in Blood",
+		"value": "call-of-juarez-bound-in-blood",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Win, X360, PS3."
+	},
+	{
+		"text": "Call of Juarez: The Cartel",
+		"value": "call-of-juarez-the-cartel",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Win, X360, PS3."
+	},
+	{
+		"text": "Call of Juarez: Gunslinger",
+		"value": "call-of-juarez-gunslinger",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for Win, X360, PS3."
+	},
+	{
+		"text": "Capitalism 2",
+		"value": "capitalism-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Catz 5",
+		"value": "catz-5",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Catching Granda Jimmy: Battle of the Ages",
+		"value": "catching-granda-jimmy-battle-of-the-ages",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for PS2."
+	},
+	{
+		"text": "Charlie's Angels",
+		"value": "charlies-angels",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for PS2."
+	},
+	{
+		"text": "Chessmaster",
+		"value": "chessmaster",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Chessmaster 9000",
+		"value": "chessmaster-9000",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Chessmaster 10th Edition",
+		"value": "chessmaster-10th-edition",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Child of Light",
+		"value": "child-of-light",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for PS3, PS4, WiiU, Win, X360, XBO."
+	},
+	{
+		"text": "Cesar Millan's The Dog Whisperer",
+		"value": "cesar-millans-the-dog-whisperer",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for NDS, Win."
+	},
+	{
+		"text": "Circus Games",
+		"value": "circus-games",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "Cloudy with a Chance of Meatballs",
+		"value": "cloudy-with-a-chance-of-meatballs",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Win, X360, Wii, PS3, NDS, PSP."
+	},
+	{
+		"text": "Cold Fear",
+		"value": "cold-fear",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Win, Xbox, PS2."
+	},
+	{
+		"text": "Conflict Zone",
+		"value": "conflict-zone",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win, PS2."
+	},
+	{
+		"text": "Conquest: Frontier Wars",
+		"value": "conquest-frontier-wars",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Cover Girl",
+		"value": "cover-girl",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for PSP."
+	},
+	{
+		"text": "Crouching Tiger, Hidden Dragon",
+		"value": "crouching-tiger-hidden-dragon",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Xbox, PS2."
+	},
+	{
+		"text": "CSI: Crime Scene Investigation",
+		"value": "csi-crime-scene-investigation",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Win, Xbox."
+	},
+	{
+		"text": "CSI: Dark Motives",
+		"value": "csi-dark-motives",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win, NDS."
+	},
+	{
+		"text": "CSI: Miami",
+		"value": "csi-miami",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "CSI: 3 Dimensions of Murder",
+		"value": "csi-3-dimensions-of-murder",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Win, PS2."
+	},
+	{
+		"text": "CSI: Hard Evidence",
+		"value": "csi-hard-evidence",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win, X360, Wii."
+	},
+	{
+		"text": "CSI: NY",
+		"value": "csi-ny",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Win."
+	},
+	{
+		"text": "CSI: Deadly Intent",
+		"value": "csi-deadly-intent",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Win, X360, Wii, NDS."
+	},
+	{
+		"text": "CSI: Fatal Conspiracy",
+		"value": "csi-fatal-conspiracy",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Win, X360, PS3, Wii."
+	},
+	{
+		"text": "Cubic Ninja",
+		"value": "cubic-ninja",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for 3DS."
+	},
+	{
+		"text": "Dance on Broadway",
+		"value": "dance-on-broadway",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Wii, PS3."
+	},
+	{
+		"text": "Dark Messiah of Might and Magic",
+		"value": "dark-messiah-of-might-and-magic",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Dark Messiah of Might and Magic: Elements",
+		"value": "dark-messiah-of-might-and-magic-elements",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for X360."
+	},
+	{
+		"text": "Destroyer Command",
+		"value": "destroyer-command",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Devil May Cry 3",
+		"value": "devil-may-cry-3",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Disney's Dinosaur",
+		"value": "disneys-dinosaur",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win, PS1, PS2."
+	},
+	{
+		"text": "Disney's PK: Out of the Shadows",
+		"value": "disneys-pk-out-of-the-shadows",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for PS2."
+	},
+	{
+		"text": "Dogz 5",
+		"value": "dogz-5",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "The Dog Island",
+		"value": "the-dog-island",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Wii, PS2."
+	},
+	{
+		"text": "Donald Duck: Goin' Quackers",
+		"value": "donald-duck-goin-quackers",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win, PS1, PS2."
+	},
+	{
+		"text": "Downtown Run",
+		"value": "downtown-run",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Win, PS2."
+	},
+	{
+		"text": "Driver: Parallel Lines",
+		"value": "driver-parallel-lines",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win, Wii."
+	},
+	{
+		"text": "Driver: Renegade 3D",
+		"value": "driver-renegade-3d",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for 3DS."
+	},
+	{
+		"text": "Driver 76",
+		"value": "driver-76",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for PSP."
+	},
+	{
+		"text": "Driver: San Francisco",
+		"value": "driver-san-francisco",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Win, PS3, X360, Wii, 3DS."
+	},
+	{
+		"text": "Dragon Riders: Chronicles of Pern",
+		"value": "dragon-riders-chronicles-of-pern",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Dungeon Hunter: Alliance",
+		"value": "dungeon-hunter-alliance",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for PS3."
+	},
+	{
+		"text": "Emergency Heroes",
+		"value": "emergency-heroes",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "Enchanted Arms",
+		"value": "enchanted-arms",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for X360, PS3."
+	},
+	{
+		"text": "Ener-G",
+		"value": "energ",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "ESPN Sports Connection",
+		"value": "espn-sports-connection",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for WiiU."
+	},
+	{
+		"text": "Evil Twin: Cyprien's Chronicles",
+		"value": "evil-twin-cypriens-chronicles",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for PS2, Win."
+	},
+	{
+		"text": "F1 Racing Championship",
+		"value": "f1-racing-championship",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win, PS1, PS2."
+	},
+	{
+		"text": "F1 Racing Simulation",
+		"value": "f1-racing-simulation",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Faces of War",
+		"value": "faces-of-war",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Far Cry",
+		"value": "far-cry",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Far Cry Instincts",
+		"value": "far-cry-instincts",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Xbox."
+	},
+	{
+		"text": "Far Cry Instincts Evolution",
+		"value": "far-cry-instincts-evolution",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Xbox."
+	},
+	{
+		"text": "Far Cry Instincts Predator",
+		"value": "far-cry-instincts-predator",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for X360."
+	},
+	{
+		"text": "Far Cry Primal",
+		"value": "far-cry-primal",
+		"group": "Ubisoft",
+		"desc": "Released in 2016 for PS4."
+	},
+	{
+		"text": "Far Cry: Vengeance",
+		"value": "far-cry-vengeance",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Wii."
+	},
+	{
+		"text": "Far Cry 2",
+		"value": "far-cry-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Win, PS3, X360."
+	},
+	{
+		"text": "Far Cry 3",
+		"value": "far-cry-3",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for Win, PS3, X360."
+	},
+	{
+		"text": "Far Cry 3: Blood Dragon",
+		"value": "far-cry-3-blood-dragon",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for Win, PS3, X360."
+	},
+	{
+		"text": "Far Cry 4",
+		"value": "far-cry-4",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for Win, PS3, X360, PS4, XBO."
+	},
+	{
+		"text": "For Honor",
+		"value": "for-honor",
+		"group": "Ubisoft",
+		"desc": "Released in 2017 for Win, PS4, XBO."
+	},
+	{
+		"text": "Flow: Urban Dance Uprising",
+		"value": "flow-urban-dance-uprising",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for PS2."
+	},
+	{
+		"text": "GT Pro Series",
+		"value": "gt-pro-series",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Wii."
+	},
+	{
+		"text": "Grey's Anatomy: The Video Game",
+		"value": "greys-anatomy-the-video-game",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Win, Wii, NDS."
+	},
+	{
+		"text": "Grandia",
+		"value": "grandia",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for PS1."
+	},
+	{
+		"text": "Grandia 2",
+		"value": "grandia-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win, PS2."
+	},
+	{
+		"text": "Grow Home",
+		"value": "grow-home",
+		"group": "Ubisoft",
+		"desc": "Released in 2015 for Win, PS4."
+	},
+	{
+		"text": "Grow Up",
+		"value": "grow-up",
+		"group": "Ubisoft",
+		"desc": "Released in 2016 for Win, PS4, XBO."
+	},
+	{
+		"text": "Hamsterz Life 2",
+		"value": "hamsterz-life-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "Haze",
+		"value": "haze",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for PS3."
+	},
+	{
+		"text": "Hell-Copter",
+		"value": "hellcopter",
+		"group": "Ubisoft",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Heroes of Might and Magic V",
+		"value": "heroes-of-might-and-magic-v",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Heroes of Might and Magic V: Hammers of Fate",
+		"value": "heroes-of-might-and-magic-v-hammers-of-fate",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Heroes of Might and Magic V: Tribes of the East",
+		"value": "heroes-of-might-and-magic-v-tribes-of-the-east",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win."
+	},
+	{
+		"text": "Heroes of the Pacific",
+		"value": "heroes-of-the-pacific",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for PS2, PSP, Win, Xbox."
+	},
+	{
+		"text": "Hooters Road Trip",
+		"value": "hooters-road-trip",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win, PS1."
+	},
+	{
+		"text": "Hype: The Time Quest",
+		"value": "hype-the-time-quest",
+		"group": "Ubisoft",
+		"desc": "Released in 1999 for Win, PS2."
+	},
+	{
+		"text": "I Am Alive",
+		"value": "i-am-alive",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for X360, PS3, Win."
+	},
+	{
+		"text": "IL-2 Sturmovik",
+		"value": "il2-sturmovik",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "IL-2 Sturmovik: Forgotten Battles Ace Expansion Pack",
+		"value": "il2-sturmovik-forgotten-battles-ace-expansion-pack",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "IL-2 Sturmovik: Cliffs of Dover",
+		"value": "il2-sturmovik-cliffs-of-dover",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Win."
+	},
+	{
+		"text": "Imagine: Animal Doctor",
+		"value": "imagine-animal-doctor",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS."
+	},
+	{
+		"text": "Imagine: Babyz",
+		"value": "imagine-babyz",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS."
+	},
+	{
+		"text": "Imagine: Fashion Designer",
+		"value": "imagine-fashion-designer",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS."
+	},
+	{
+		"text": "Imagine Fashion Party",
+		"value": "imagine-fashion-party",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "Imagine: Figure Skater",
+		"value": "imagine-figure-skater",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS."
+	},
+	{
+		"text": "Imagine: Gymnast",
+		"value": "imagine-gymnast",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "Imagine: Master Chef",
+		"value": "imagine-master-chef",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS."
+	},
+	{
+		"text": "Imagine: Party Babyz",
+		"value": "imagine-party-babyz",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "Imperialism II: Age of Exploration",
+		"value": "imperialism-ii-age-of-exploration",
+		"group": "Ubisoft",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Import Tuner Challenge",
+		"value": "import-tuner-challenge",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for X360."
+	},
+	{
+		"text": "Infestation",
+		"value": "infestation",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "James Cameron's Avatar: The Game",
+		"value": "james-camerons-avatar-the-game",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for X360, PS3, PSP, NDS, Wii, Win."
+	},
+	{
+		"text": "Just Dance",
+		"value": "just-dance",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Wii."
+	},
+	{
+		"text": "Just Dance Kids",
+		"value": "just-dance-kids",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Wii, PS3, X360."
+	},
+	{
+		"text": "Just Dance 2",
+		"value": "just-dance-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Wii."
+	},
+	{
+		"text": "Just Dance Summer Party",
+		"value": "just-dance-summer-party",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Wii."
+	},
+	{
+		"text": "Just Dance 3",
+		"value": "just-dance-3",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Wii, PS3, X360."
+	},
+	{
+		"text": "Just Dance Kids 2",
+		"value": "just-dance-kids-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Wii, PS3, X360."
+	},
+	{
+		"text": "Just Dance: Best Of",
+		"value": "just-dance-best-of",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for Wii, PS3, X360."
+	},
+	{
+		"text": "Just Dance 4",
+		"value": "just-dance-4",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for Wii, PS3, X360, WiiU."
+	},
+	{
+		"text": "Just Dance 2014",
+		"value": "just-dance-2014",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for PS3, PS4, X360, XBO, Wii, WiiU."
+	},
+	{
+		"text": "Just Dance 2015",
+		"value": "just-dance-2015",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for PS3, PS4, X360, XBO, Wii, WiiU."
+	},
+	{
+		"text": "Just Dance 2016",
+		"value": "just-dance-2016",
+		"group": "Ubisoft",
+		"desc": "Released in 2015 for PS3, PS4, X360, XBO, Wii, WiiU."
+	},
+	{
+		"text": "Just Dance 2017",
+		"value": "just-dance-2017",
+		"group": "Ubisoft",
+		"desc": "Released in 2016 for PS3, PS4, X360, XBO, Wii, WiiU, Win."
+	},
+	{
+		"text": "Laura's Happy Adventures",
+		"value": "lauras-happy-adventures",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Lost Magic",
+		"value": "lost-magic",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for NDS."
+	},
+	{
+		"text": "Lost: Via Domus",
+		"value": "lost-via-domus",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Win, PS3, X360."
+	},
+	{
+		"text": "Lock On: Modern Air Combat",
+		"value": "lock-on-modern-air-combat",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Lunar: Dragon Song",
+		"value": "lunar-dragon-song",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for NDS."
+	},
+	{
+		"text": "Marcel Desailly Pro Football",
+		"value": "marcel-desailly-pro-football",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for PS1."
+	},
+	{
+		"text": "Marvel Avengers: Battle for Earth",
+		"value": "marvel-avengers-battle-for-earth",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for X360, WiiU."
+	},
+	{
+		"text": "Michael Jackson: The Experience",
+		"value": "michael-jackson-the-experience",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Wii, NDS, PSP."
+	},
+	{
+		"text": "Mad Riders",
+		"value": "mad-riders",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for Win, PS3, X360."
+	},
+	{
+		"text": "Might & Magic: Heroes VI",
+		"value": "might-magic-heroes-vi",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Win."
+	},
+	{
+		"text": "Might & Magic X: Legacy",
+		"value": "might-magic-x-legacy",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for Win."
+	},
+	{
+		"text": "The Mighty Quest for Epic Loot",
+		"value": "the-mighty-quest-for-epic-loot",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for Win."
+	},
+	{
+		"text": "Monaco Grand Prix",
+		"value": "monaco-grand-prix",
+		"group": "Ubisoft",
+		"desc": "Released in 1999 for PS1."
+	},
+	{
+		"text": "Monaco Grand Prix Racing Simulation 2",
+		"value": "monaco-grand-prix-racing-simulation-2",
+		"group": "Ubisoft",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Monster 4x4: Masters of Metal",
+		"value": "monster-4x4-masters-of-metal",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for PS2."
+	},
+	{
+		"text": "Monster 4x4 World Circuit",
+		"value": "monster-4x4-world-circuit",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Wii."
+	},
+	{
+		"text": "Movie Games",
+		"value": "movie-games",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "Mum's Night Off",
+		"value": "mums-night-off",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for PS2."
+	},
+	{
+		"text": "My French Coach",
+		"value": "my-french-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS, Wii."
+	},
+	{
+		"text": "My French Coach Level 2: Intermediate",
+		"value": "my-french-coach-level-2-intermediate",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS."
+	},
+	{
+		"text": "My Fun Facts Coach",
+		"value": "my-fun-facts-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "My Japanese Coach",
+		"value": "my-japanese-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "My Chinese Coach",
+		"value": "my-chinese-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "My Life Coach",
+		"value": "my-life-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "My SAT Coach",
+		"value": "my-sat-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "My Spanish Coach",
+		"value": "my-spanish-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS, Wii, PSP."
+	},
+	{
+		"text": "My Spanish Coach Level 2: Intermediate",
+		"value": "my-spanish-coach-level-2-intermediate",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS."
+	},
+	{
+		"text": "My Weight Loss Coach",
+		"value": "my-weight-loss-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "My Word Coach",
+		"value": "my-word-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS, Wii."
+	},
+	{
+		"text": "My Dutch Coach",
+		"value": "my-dutch-coach",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS."
+	},
+	{
+		"text": "Myst Masterpiece Edition",
+		"value": "myst-masterpiece-edition",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Myst III: Exile",
+		"value": "myst-iii-exile",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Myst IV: Revelation",
+		"value": "myst-iv-revelation",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Myst V: End of Ages",
+		"value": "myst-v-end-of-ages",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "Naruto: Rise of a Ninja",
+		"value": "naruto-rise-of-a-ninja",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for X360."
+	},
+	{
+		"text": "Naruto: The Broken Bond",
+		"value": "naruto-the-broken-bond",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for X360."
+	},
+	{
+		"text": "No More Heroes",
+		"value": "no-more-heroes",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Wii."
+	},
+	{
+		"text": "No More Heroes 2: Desperate Struggle",
+		"value": "no-more-heroes-2-desperate-struggle",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Wii."
+	},
+	{
+		"text": "NCIS: The Game",
+		"value": "ncis-the-game",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Win, PS3, X360."
+	},
+	{
+		"text": "Open Season",
+		"value": "open-season",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Wii, PS2, PSP, Win, X360, Xbox, NDS."
+	},
+	{
+		"text": "Pacific Fighters",
+		"value": "pacific-fighters",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Panzer General Online",
+		"value": "panzer-general-online",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for Win."
+	},
+	{
+		"text": "Paradise",
+		"value": "paradise",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Win."
+	},
+	{
+		"text": "Pawly Pets: My Animal Hospital",
+		"value": "pawly-pets-my-animal-hospital",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win."
+	},
+	{
+		"text": "Payuta",
+		"value": "payuta",
+		"group": "Ubisoft",
+		"desc": "Released in 1994 for Win."
+	},
+	{
+		"text": "Peter Jackson's King Kong",
+		"value": "peter-jacksons-king-kong",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Win, PS2, Xbox, X360, PSP, NDS."
+	},
+	{
+		"text": "Petz: Crazy Monkeyz",
+		"value": "petz-crazy-monkeyz",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "Petz Dogz 2",
+		"value": "petz-dogz-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Wii, PS2."
+	},
+	{
+		"text": "Petz Catz 2",
+		"value": "petz-catz-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Wii, PS2."
+	},
+	{
+		"text": "Petz: Horsez Club",
+		"value": "petz-horsez-club",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "Petz: Rescue Wildlife Vet",
+		"value": "petz-rescue-wildlife-vet",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "Petz Sports: Dog Playground",
+		"value": "petz-sports-dog-playground",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "POD - Planet of Death",
+		"value": "pod-planet-of-death",
+		"group": "Ubisoft",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Planet of the Apes",
+		"value": "planet-of-the-apes",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Prince of Persia: Warrior Within",
+		"value": "prince-of-persia-warrior-within",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Prince of Persia: The Two Thrones",
+		"value": "prince-of-persia-the-two-thrones",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Prince of Persia: Revelations",
+		"value": "prince-of-persia-revelations",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for PSP."
+	},
+	{
+		"text": "Prince of Persia: Rival Swords",
+		"value": "prince-of-persia-rival-swords",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Wii, PSP."
+	},
+	{
+		"text": "Prince of Persia",
+		"value": "prince-of-persia",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for X360, PS3, Win."
+	},
+	{
+		"text": "Prince of Persia: The Forgotten Sands",
+		"value": "prince-of-persia-the-forgotten-sands",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for X360, PS3, Wii, PSP, NDS, Win."
+	},
+	{
+		"text": "Prince of Persia: The Sands of Time",
+		"value": "prince-of-persia-the-sands-of-time",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for PS2, Xbox, Win."
+	},
+	{
+		"text": "Pro Rally 2002",
+		"value": "pro-rally-2002",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for PS2."
+	},
+	{
+		"text": "Racket Sports",
+		"value": "racket-sports",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for PS3."
+	},
+	{
+		"text": "Rayman",
+		"value": "rayman",
+		"group": "Ubisoft",
+		"desc": "Released in 1995 for Win."
+	},
+	{
+		"text": "Rayman Designer",
+		"value": "rayman-designer",
+		"group": "Ubisoft",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Rayman Gold",
+		"value": "rayman-gold",
+		"group": "Ubisoft",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Rayman Forever",
+		"value": "rayman-forever",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Rayman Legends",
+		"value": "rayman-legends",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for PS3, X360, Win, WiiU, XBO, PS4."
+	},
+	{
+		"text": "Rayman 2: The Great Escape",
+		"value": "rayman-2-the-great-escape",
+		"group": "Ubisoft",
+		"desc": "Released in 1999 for Win, PS1."
+	},
+	{
+		"text": "Rayman 2: Revolution",
+		"value": "rayman-2-revolution",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for PS2."
+	},
+	{
+		"text": "Rayman DS",
+		"value": "rayman-ds",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for NDS."
+	},
+	{
+		"text": "Rayman 3D",
+		"value": "rayman-3d",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for 3DS."
+	},
+	{
+		"text": "Rayman M",
+		"value": "rayman-m",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win, PS2."
+	},
+	{
+		"text": "Rayman Arena",
+		"value": "rayman-arena",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Rayman 3: Hoodlum Havoc",
+		"value": "rayman-3-hoodlum-havoc",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Rayman Origins",
+		"value": "rayman-origins",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for PS3, X360, Wii, 3DS, Win."
+	},
+	{
+		"text": "Rayman Raving Rabbids",
+		"value": "rayman-raving-rabbids",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Wii, PS2, NDS, Win, X360."
+	},
+	{
+		"text": "Rayman Raving Rabbids 2",
+		"value": "rayman-raving-rabbids-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Wii, NDS."
+	},
+	{
+		"text": "Rayman Raving Rabbids TV Party",
+		"value": "rayman-raving-rabbids-tv-party",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii, NDS."
+	},
+	{
+		"text": "Rayman Rush",
+		"value": "rayman-rush",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for PS1."
+	},
+	{
+		"text": "Rabbids Go Home",
+		"value": "rabbids-go-home",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Wii, NDS."
+	},
+	{
+		"text": "Rabbids Go Home 2: World Tour Crazy Adventures",
+		"value": "rabbids-go-home-2-world-tour-crazy-adventures",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for 3DS."
+	},
+	{
+		"text": "Rabbids Matter of Party",
+		"value": "rabbids-matter-of-party",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for Wii, 3DS."
+	},
+	{
+		"text": "Rabbids Land",
+		"value": "rabbids-land",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for WiiU."
+	},
+	{
+		"text": "Raving Rabbids Travel In Time",
+		"value": "raving-rabbids-travel-in-time",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Wii, 3DS."
+	},
+	{
+		"text": "Raving Rabbids Alive & Kicking",
+		"value": "raving-rabbids-alive-kicking",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for X360."
+	},
+	{
+		"text": "Rabbids Rumble",
+		"value": "rabbids-rumble",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for 3DS."
+	},
+	{
+		"text": "Real Football 2008",
+		"value": "real-football-2008",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for NDS."
+	},
+	{
+		"text": "RealMYST",
+		"value": "realmyst",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Red Record: Ryan Duguid's Story",
+		"value": "red-record-ryan-duguids-story",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Xbox."
+	},
+	{
+		"text": "Red Steel",
+		"value": "red-steel",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Wii."
+	},
+	{
+		"text": "Red Steel 2",
+		"value": "red-steel-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Wii."
+	},
+	{
+		"text": "Redline Racer",
+		"value": "redline-racer",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Resident Evil 4",
+		"value": "resident-evil-4",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win."
+	},
+	{
+		"text": "Riven, The Sequel to Myst",
+		"value": "riven-the-sequel-to-myst",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Rocky",
+		"value": "rocky",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for PS2, Xbox."
+	},
+	{
+		"text": "Rocky Legends",
+		"value": "rocky-legends",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Xbox, PS2."
+	},
+	{
+		"text": "Rocky Balboa",
+		"value": "rocky-balboa",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for PSP."
+	},
+	{
+		"text": "Rocksmith",
+		"value": "rocksmith",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for X360, PS3, PS4, Win."
+	},
+	{
+		"text": "R.U.S.E.",
+		"value": "ruse",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Wii, X360, PS3, Win."
+	},
+	{
+		"text": "S.C.A.R.S",
+		"value": "scars",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Scott Pilgrim vs. the World: The Game",
+		"value": "scott-pilgrim-vs-the-world-the-game",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for PS3."
+	},
+	{
+		"text": "Shadowbane: The Rise of Chaos",
+		"value": "shadowbane-the-rise-of-chaos",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Shadow Gunner: The Robot Wars",
+		"value": "shadow-gunner-the-robot-wars",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for PS1."
+	},
+	{
+		"text": "Shaun White Snowboarding",
+		"value": "shaun-white-snowboarding",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii, PS3, X360, Win."
+	},
+	{
+		"text": "Shaun White Snowboarding: World Stage",
+		"value": "shaun-white-snowboarding-world-stage",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Wii."
+	},
+	{
+		"text": "Shaun White Skateboarding",
+		"value": "shaun-white-skateboarding",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Wii, PS3, X360, Win."
+	},
+	{
+		"text": "Sherlock Holmes: Secret of the Silver Earring",
+		"value": "sherlock-holmes-secret-of-the-silver-earring",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "ShootMania Storm",
+		"value": "shootmania-storm",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for Win."
+	},
+	{
+		"text": "Shoot Many Robots",
+		"value": "shoot-many-robots",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for PS3, X360."
+	},
+	{
+		"text": "Silent Hunter III",
+		"value": "silent-hunter-iii",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "Silent Hunter 4: Wolves of the Pacific",
+		"value": "silent-hunter-4-wolves-of-the-pacific",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win."
+	},
+	{
+		"text": "Silent Hunter IV: U-Boat Mission",
+		"value": "silent-hunter-iv-uboat-mission",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Win."
+	},
+	{
+		"text": "South Park: The Fractured But Whole",
+		"value": "south-park-the-fractured-but-whole",
+		"group": "Ubisoft",
+		"desc": "Released in 2017 for PS4, XBO, Win."
+	},
+	{
+		"text": "South Park: The Stick of Truth",
+		"value": "south-park-the-stick-of-truth",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for PS3, X360, Win."
+	},
+	{
+		"text": "Spartacus Legends",
+		"value": "spartacus-legends",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for PS3, X360."
+	},
+	{
+		"text": "Speed Busters: American Highways",
+		"value": "speed-busters-american-highways",
+		"group": "Ubisoft",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "Sprung",
+		"value": "sprung",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for NDS."
+	},
+	{
+		"text": "Star Wars Episode III: Revenge of the Sith",
+		"value": "star-wars-episode-iii-revenge-of-the-sith",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for PS2, Xbox."
+	},
+	{
+		"text": "Star Wars: Lethal Alliance",
+		"value": "star-wars-lethal-alliance",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for PSP, NDS."
+	},
+	{
+		"text": "Style Lab: Makeover",
+		"value": "style-lab-makeover",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for NDS."
+	},
+	{
+		"text": "Steep",
+		"value": "steep",
+		"group": "Ubisoft",
+		"desc": "Released in 2016 for Win, PS4."
+	},
+	{
+		"text": "Street Riders",
+		"value": "street-riders",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for PSP."
+	},
+	{
+		"text": "Sunny Garcia Surfing",
+		"value": "sunny-garcia-surfing",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for PS2."
+	},
+	{
+		"text": "Surf's Up",
+		"value": "surfs-up",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for X360, PS3, Wii, PSP, PS2, NDS, Win."
+	},
+	{
+		"text": "Sub Culture",
+		"value": "sub-culture",
+		"group": "Ubisoft",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "Stupid Invaders",
+		"value": "stupid-invaders",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Telefoot Manager",
+		"value": "telefoot-manager",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for PS1."
+	},
+	{
+		"text": "The Expendables 2: The Video Game",
+		"value": "the-expendables-2-the-video-game",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for PS3, X360, Win."
+	},
+	{
+		"text": "The Hip Hop Dance Experience",
+		"value": "the-hip-hop-dance-experience",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for X360, Wii."
+	},
+	{
+		"text": "Tenchu: Shadow Assassins",
+		"value": "tenchu-shadow-assassins",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Wii, PSP."
+	},
+	{
+		"text": "Tennis Arena",
+		"value": "tennis-arena",
+		"group": "Ubisoft",
+		"desc": "Released in 1997 for PS1."
+	},
+	{
+		"text": "Tetris Ultimate",
+		"value": "tetris-ultimate",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for Win, XBO, PS4, 3DS."
+	},
+	{
+		"text": "Tom Clancy's The Division",
+		"value": "tom-clancys-the-division",
+		"group": "Ubisoft",
+		"desc": "Released in 2016 for PS4, XBO, Win."
+	},
+	{
+		"text": "Tom Clancy's EndWar",
+		"value": "tom-clancys-endwar",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for X360, PS3, NDS, PSP, Win."
+	},
+	{
+		"text": "Tom Clancy's H.A.W.X",
+		"value": "tom-clancys-hawx",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Win, X360, PS3."
+	},
+	{
+		"text": "Tom Clancy's H.A.W.X 2",
+		"value": "tom-clancys-hawx-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Win, X360, PS3."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon",
+		"value": "tom-clancys-ghost-recon",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win, Xbox, PS2."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon: Desert Siege",
+		"value": "tom-clancys-ghost-recon-desert-siege",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon: Island Thunder",
+		"value": "tom-clancys-ghost-recon-island-thunder",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Xbox, Win."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon: Jungle Storm",
+		"value": "tom-clancys-ghost-recon-jungle-storm",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for PS2."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon 2",
+		"value": "tom-clancys-ghost-recon-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Xbox, PS2."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon 2: Summit Strike",
+		"value": "tom-clancys-ghost-recon-2-summit-strike",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Xbox."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon Advanced Warfighter",
+		"value": "tom-clancys-ghost-recon-advanced-warfighter",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Xbox, X360, Win, PS2."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon Advanced Warfighter 2",
+		"value": "tom-clancys-ghost-recon-advanced-warfighter-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for X360, PS3, Win."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon: Future Soldier",
+		"value": "tom-clancys-ghost-recon-future-soldier",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for X360, PS3, Win."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon Predator",
+		"value": "tom-clancys-ghost-recon-predator",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for PSP."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon: Shadow Wars",
+		"value": "tom-clancys-ghost-recon-shadow-wars",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for 3DS."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon Online",
+		"value": "tom-clancys-ghost-recon-online",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for Win, WiiU."
+	},
+	{
+		"text": "Tom Clancy's Ghost Recon Wildlands",
+		"value": "tom-clancys-ghost-recon-wildlands",
+		"group": "Ubisoft",
+		"desc": "Released in 2017 for Win, XBO, PS4."
+	},
+	{
+		"text": "Tom Clancy's Rainbow 6: Patriots",
+		"value": "tom-clancys-rainbow-6-patriots",
+		"group": "Ubisoft",
+		"desc": "Released in Canc for Win, XBO, PS4."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six: Rogue Spear",
+		"value": "tom-clancys-rainbow-six-rogue-spear",
+		"group": "Ubisoft",
+		"desc": "Released in 1999 for Win, PS1."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six: Rogue Spear: Urban Operations",
+		"value": "tom-clancys-rainbow-six-rogue-spear-urban-operations",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six: Rogue Spear: Black Thorn",
+		"value": "tom-clancys-rainbow-six-rogue-spear-black-thorn",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six 3: Raven Shield",
+		"value": "tom-clancys-rainbow-six-3-raven-shield",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Win, Xbox, PS2."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six 3: Raven Shield: Athena Sword",
+		"value": "tom-clancys-rainbow-six-3-raven-shield-athena-sword",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six 3: Raven Shield: Iron Wrath",
+		"value": "tom-clancys-rainbow-six-3-raven-shield-iron-wrath",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six 3: Black Arrow",
+		"value": "tom-clancys-rainbow-six-3-black-arrow",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Xbox."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six: Lockdown",
+		"value": "tom-clancys-rainbow-six-lockdown",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six: Critical Hour",
+		"value": "tom-clancys-rainbow-six-critical-hour",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Xbox."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six Siege",
+		"value": "tom-clancys-rainbow-six-siege",
+		"group": "Ubisoft",
+		"desc": "Released in 2015 for Win, PS4, XBO."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six: Vegas",
+		"value": "tom-clancys-rainbow-six-vegas",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for X360, Win, PS3, PSP."
+	},
+	{
+		"text": "Tom Clancy's Rainbow Six: Vegas 2",
+		"value": "tom-clancys-rainbow-six-vegas-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for X360, Win, PS3."
+	},
+	{
+		"text": "Tom Clancy's Splinter Cell",
+		"value": "tom-clancys-splinter-cell",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Tom Clancy's Splinter Cell: Pandora Tomorrow",
+		"value": "tom-clancys-splinter-cell-pandora-tomorrow",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Tom Clancy's Splinter Cell: Chaos Theory",
+		"value": "tom-clancys-splinter-cell-chaos-theory",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Tom Clancy's Splinter Cell: Essentials",
+		"value": "tom-clancys-splinter-cell-essentials",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for PSP."
+	},
+	{
+		"text": "Tom Clancy's Splinter Cell: Double Agent",
+		"value": "tom-clancys-splinter-cell-double-agent",
+		"group": "Ubisoft",
+		"desc": "Released in 2006 for Xbox, PS2, Win, X360, Wii."
+	},
+	{
+		"text": "Tom Clancy's Splinter Cell: Conviction",
+		"value": "tom-clancys-splinter-cell-conviction",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Win, X360."
+	},
+	{
+		"text": "Tom Clancy's Splinter Cell: Blacklist",
+		"value": "tom-clancys-splinter-cell-blacklist",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for Win, X360, PS3, WiiU."
+	},
+	{
+		"text": "Totally Spies! Totally Party",
+		"value": "totally-spies-totally-party",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii, PS2."
+	},
+	{
+		"text": "Toy Soldiers: War Chest",
+		"value": "toy-soldiers-war-chest",
+		"group": "Ubisoft",
+		"desc": "Released in 2015 for Win, XBO, PS4."
+	},
+	{
+		"text": "The Adventures of Tintin",
+		"value": "the-adventures-of-tintin",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for X360, Wii, PS3, 3DS."
+	},
+	{
+		"text": "The Adventures of Valdo and Marie",
+		"value": "the-adventures-of-valdo-and-marie",
+		"group": "Ubisoft",
+		"desc": "Released in 1997 for Win."
+	},
+	{
+		"text": "The Crew",
+		"value": "the-crew",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for Win, X360, XBO, PS4."
+	},
+	{
+		"text": "The Dukes of Hazzard: Return of the General Lee",
+		"value": "the-dukes-of-hazzard-return-of-the-general-lee",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Xbox, PS2."
+	},
+	{
+		"text": "The Elder Scrolls III: Morrowind",
+		"value": "the-elder-scrolls-iii-morrowind",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win, Xbox."
+	},
+	{
+		"text": "The Settlers IV: Mission Pack",
+		"value": "the-settlers-iv-mission-pack",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "The Settlers IV: The Trojans and the Elixir of Power",
+		"value": "the-settlers-iv-the-trojans-and-the-elixir-of-power",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "The Settlers: Heritage of Kings",
+		"value": "the-settlers-heritage-of-kings",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "The Settlers II 10th Anniversary",
+		"value": "the-settlers-ii-10th-anniversary",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win."
+	},
+	{
+		"text": "The Settlers: Rise of an Empire",
+		"value": "the-settlers-rise-of-an-empire",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win."
+	},
+	{
+		"text": "The Settlers 7: Paths to a Kingdom",
+		"value": "the-settlers-7-paths-to-a-kingdom",
+		"group": "Ubisoft",
+		"desc": "Released in 2010 for Win."
+	},
+	{
+		"text": "The Smurfs Dance Party",
+		"value": "the-smurfs-dance-party",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Wii."
+	},
+	{
+		"text": "The Smurfs",
+		"value": "the-smurfs",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for Wii, NDS, 3DS."
+	},
+	{
+		"text": "The Smurfs 2",
+		"value": "the-smurfs-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for X360, Wii, PS3, NDS."
+	},
+	{
+		"text": "The Political Machine",
+		"value": "the-political-machine",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "The Sum of All Fears",
+		"value": "the-sum-of-all-fears",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "TIM7",
+		"value": "tim7",
+		"group": "Ubisoft",
+		"desc": "Released in 1996 for Win."
+	},
+	{
+		"text": "TMNT",
+		"value": "tmnt",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for X360, PS3, PSP, NDS, Wii, Win, PS2."
+	},
+	{
+		"text": "Teenage Mutant Ninja Turtles: Smash-Up",
+		"value": "teenage-mutant-ninja-turtles-smashup",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Wii, PS2."
+	},
+	{
+		"text": "Tonic Trouble",
+		"value": "tonic-trouble",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Tork: Prehistoric Punk",
+		"value": "tork-prehistoric-punk",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Xbox."
+	},
+	{
+		"text": "Trials Evolution: Gold Edition",
+		"value": "trials-evolution-gold-edition",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for Win."
+	},
+	{
+		"text": "Trials Fusion",
+		"value": "trials-fusion",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for PS4, X360, XBO, Win."
+	},
+	{
+		"text": "TrackMania Turbo",
+		"value": "trackmania-turbo",
+		"group": "Ubisoft",
+		"desc": "Released in 2016 for Win, PS4, XBO."
+	},
+	{
+		"text": "TV Show King Party",
+		"value": "tv-show-king-party",
+		"group": "Ubisoft",
+		"desc": "Released in 2008 for Wii."
+	},
+	{
+		"text": "Uru: Ages Beyond Myst",
+		"value": "uru-ages-beyond-myst",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Uru: The Path of the Shell",
+		"value": "uru-the-path-of-the-shell",
+		"group": "Ubisoft",
+		"desc": "Released in 2004 for Win."
+	},
+	{
+		"text": "Theocracy",
+		"value": "theocracy",
+		"group": "Ubisoft",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Valiant Hearts: The Great War",
+		"value": "valiant-hearts-the-great-war",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for PS3, PS4, X360, XBO, Win."
+	},
+	{
+		"text": "Velvet Assassin",
+		"value": "velvet-assassin",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for X360, Win."
+	},
+	{
+		"text": "Warlords Battlecry II",
+		"value": "warlords-battlecry-ii",
+		"group": "Ubisoft",
+		"desc": "Released in 2002 for Win."
+	},
+	{
+		"text": "Warlords IV: Heroes of Etheria",
+		"value": "warlords-iv-heroes-of-etheria",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "War World",
+		"value": "war-world",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for Win."
+	},
+	{
+		"text": "Watch Dogs",
+		"value": "watch-dogs",
+		"group": "Ubisoft",
+		"desc": "Released in 2014 for Win, X360, XBO, PS3, PS4, WiiU."
+	},
+	{
+		"text": "Watch Dogs 2",
+		"value": "watch-dogs-2",
+		"group": "Ubisoft",
+		"desc": "Released in 2016 for Win, XBO, PS4."
+	},
+	{
+		"text": "Wheelman",
+		"value": "wheelman",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Win, X360."
+	},
+	{
+		"text": "Will Rock",
+		"value": "will-rock",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Win."
+	},
+	{
+		"text": "Winnie the Pooh's Rumbly Tumbly Adventure",
+		"value": "winnie-the-poohs-rumbly-tumbly-adventure",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for PS2."
+	},
+	{
+		"text": "World in Conflict",
+		"value": "world-in-conflict",
+		"group": "Ubisoft",
+		"desc": "Released in 2007 for Win."
+	},
+	{
+		"text": "World in Conflict: Soviet Assault",
+		"value": "world-in-conflict-soviet-assault",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Win."
+	},
+	{
+		"text": "Worms World Party",
+		"value": "worms-world-party",
+		"group": "Ubisoft",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "XIII",
+		"value": "xiii",
+		"group": "Ubisoft",
+		"desc": "Released in 2003 for Xbox, PS2, Win."
+	},
+	{
+		"text": "Yohoho! Puzzle Pirates",
+		"value": "yohoho-puzzle-pirates",
+		"group": "Ubisoft",
+		"desc": "Released in 2005 for Win."
+	},
+	{
+		"text": "Your Shape",
+		"value": "your-shape",
+		"group": "Ubisoft",
+		"desc": "Released in 2009 for Wii."
+	},
+	{
+		"text": "Your Shape: Fitness Evolved 2012",
+		"value": "your-shape-fitness-evolved-2012",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for X360."
+	},
+	{
+		"text": "Your Shape: Fitness Evolved 2013",
+		"value": "your-shape-fitness-evolved-2013",
+		"group": "Ubisoft",
+		"desc": "Released in 2013 for WiiU."
+	},
+	{
+		"text": "ZombiU",
+		"value": "zombiu",
+		"group": "Ubisoft",
+		"desc": "Released in 2012 for WiiU."
+	},
+	{
+		"text": "Zeit²",
+		"value": "zeit",
+		"group": "Ubisoft",
+		"desc": "Released in 2011 for X360, Win."
+	}
+]

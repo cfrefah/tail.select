@@ -1,0 +1,326 @@
+[
+	{
+		"text": "BattleCry",
+		"value": "battlecry",
+		"group": "Bethesda",
+		"desc": "Released in 2016 for Win."
+	},
+	{
+		"text": "Breeders' Cup World Thoroughbred Championships",
+		"value": "breeders-cup-world-thoroughbred-championships",
+		"group": "Bethesda",
+		"desc": "Released in 2005 for PS2, Xbox."
+	},
+	{
+		"text": "Brink",
+		"value": "brink",
+		"group": "Bethesda",
+		"desc": "Released in 2011 for Win, PS3, X360."
+	},
+	{
+		"text": "Call of Cthulhu: Dark Corners of the Earth",
+		"value": "call-of-cthulhu-dark-corners-of-the-earth",
+		"group": "Bethesda",
+		"desc": "Released in 2005 for Win, Xbox."
+	},
+	{
+		"text": "Dishonored",
+		"value": "dishonored",
+		"group": "Bethesda",
+		"desc": "Released in 2012 for Win, PS3, X360."
+	},
+	{
+		"text": "Dishonored 2",
+		"value": "dishonored-2",
+		"group": "Bethesda",
+		"desc": "Released in 2016 for Win, PS4, XBO."
+	},
+	{
+		"text": "Dishonored: Definitive Edition",
+		"value": "dishonored-definitive-edition",
+		"group": "Bethesda",
+		"desc": "Released in 2015 for PS4, XBO."
+	},
+	{
+		"text": "Doom",
+		"value": "doom",
+		"group": "Bethesda",
+		"desc": "Released in 2012 for Win, PS3, PS4, XBO."
+	},
+	{
+		"text": "Doom 2",
+		"value": "doom-2-doom-ii",
+		"group": "Bethesda",
+		"desc": "Released in 2010 for PS3, X360."
+	},
+	{
+		"text": "Doom 3 BFG Edition",
+		"value": "doom-3-bfg-edition",
+		"group": "Bethesda",
+		"desc": "Released in 2012 for Win, PS3, X360."
+	},
+	{
+		"text": "Ducati Moto",
+		"value": "ducati-moto",
+		"group": "Bethesda",
+		"desc": "Released in 2008 for NDS."
+	},
+	{
+		"text": "Echelon",
+		"value": "echelon",
+		"group": "Bethesda",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Elder Scrolls 3: Morrowind",
+		"value": "elder-scrolls-3-morrowind",
+		"group": "Bethesda",
+		"desc": "Released in 2002 for Win, Xbox."
+	},
+	{
+		"text": "Elder Scrolls 4: Oblivion",
+		"value": "elder-scrolls-4-oblivion",
+		"group": "Bethesda",
+		"desc": "Released in 2006 for Win, PS3, X360."
+	},
+	{
+		"text": "Elder Scrolls 5: Skyrim",
+		"value": "elder-scrolls-5-skyrim",
+		"group": "Bethesda",
+		"desc": "Released in 2011 for Win, PS3, X360."
+	},
+	{
+		"text": "Elder Scrolls Legends",
+		"value": "elder-scrolls-legends",
+		"group": "Bethesda",
+		"desc": "Released in 2016 for Win."
+	},
+	{
+		"text": "Elder Scrolls Online",
+		"value": "elder-scrolls-online",
+		"group": "Bethesda",
+		"desc": "Released in 2014 for Win, OSX, PS4, XBO."
+	},
+	{
+		"text": "F-16 Aggressor",
+		"value": "f16-aggressor",
+		"group": "Bethesda",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Fallout 3",
+		"value": "fallout-3",
+		"group": "Bethesda",
+		"desc": "Released in 2008 for Win, PS3, X360."
+	},
+	{
+		"text": "Fallout 4",
+		"value": "fallout-4",
+		"group": "Bethesda",
+		"desc": "Released in 2015 for Win, PS4, XBO."
+	},
+	{
+		"text": "Fallout: New Vegas",
+		"value": "fallout-new-vegas",
+		"group": "Bethesda",
+		"desc": "Released in 2010 for Win, PS3, X360."
+	},
+	{
+		"text": "Family Card Games Fun Pack",
+		"value": "family-card-games-fun-pack",
+		"group": "Bethesda",
+		"desc": "Released in 2002 for PS1."
+	},
+	{
+		"text": "Gromada",
+		"value": "gromada",
+		"group": "Bethesda",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Hunted: The Demon's Forge",
+		"value": "hunted-the-demons-forge",
+		"group": "Bethesda",
+		"desc": "Released in 2011 for Win, PS3, X360."
+	},
+	{
+		"text": "IHRA Drag Racing",
+		"value": "ihra-drag-racing",
+		"group": "Bethesda",
+		"desc": "Released in 2000 for Win, PS1."
+	},
+	{
+		"text": "IHRA Drag Racing 2",
+		"value": "ihra-drag-racing-2",
+		"group": "Bethesda",
+		"desc": "Released in 2002 for PS1."
+	},
+	{
+		"text": "IHRA Drag Racing 2004",
+		"value": "ihra-drag-racing-2004",
+		"group": "Bethesda",
+		"desc": "Released in 2003 for Xbox."
+	},
+	{
+		"text": "IHRA Drag Racing Sportsman Edition",
+		"value": "ihra-drag-racing-sportsman-edition",
+		"group": "Bethesda",
+		"desc": "Released in 2006 for Win, PS2, X360."
+	},
+	{
+		"text": "IHRA Professional Drag Racing 2005",
+		"value": "ihra-professional-drag-racing-2005",
+		"group": "Bethesda",
+		"desc": "Released in 2004 for Win, PS2, Xbox."
+	},
+	{
+		"text": "Magic & Mayhem",
+		"value": "magic-mayhem",
+		"group": "Bethesda",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "Magic & Mayhem 2: The Art of Magic",
+		"value": "magic-mayhem-2-the-art-of-magic",
+		"group": "Bethesda",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "NIRA Intense Import Drag Racing",
+		"value": "nira-intense-import-drag-racing",
+		"group": "Bethesda",
+		"desc": "Released in 1999 for Win."
+	},
+	{
+		"text": "PBA Tour Bowling 2",
+		"value": "pba-tour-bowling-2",
+		"group": "Bethesda",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "PBA Tour Bowling 2001",
+		"value": "pba-tour-bowling-2001",
+		"group": "Bethesda",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Pirates of the Caribbean",
+		"value": "pirates-of-the-caribbean",
+		"group": "Bethesda",
+		"desc": "Released in 2003 for Win, Xbox."
+	},
+	{
+		"text": "Pirates of the Caribbean: The Legend of Jack Sparrow",
+		"value": "pirates-of-the-caribbean-the-legend-of-jack-sparrow",
+		"group": "Bethesda",
+		"desc": "Released in 2006 for Win, PS2."
+	},
+	{
+		"text": "Prey",
+		"value": "prey",
+		"group": "Bethesda",
+		"desc": "Released in 2017 for Win, PS4, XBO."
+	},
+	{
+		"text": "Puzznic",
+		"value": "puzznic",
+		"group": "Bethesda",
+		"desc": "Released in 2003 for PS1."
+	},
+	{
+		"text": "Quake Champions",
+		"value": "quake-champions",
+		"group": "Bethesda",
+		"desc": "Released in 2017 for Win."
+	},
+	{
+		"text": "Rage",
+		"value": "rage",
+		"group": "Bethesda",
+		"desc": "Released in 2011 for Win, OSX, PS3, X360."
+	},
+	{
+		"text": "Rogue Warrior",
+		"value": "rogue-warrior",
+		"group": "Bethesda",
+		"desc": "Released in 2009 for Win, PS3, X360."
+	},
+	{
+		"text": "Sea Dogs",
+		"value": "sea-dogs",
+		"group": "Bethesda",
+		"desc": "Released in 2000 for Win."
+	},
+	{
+		"text": "Skip Barber Racing",
+		"value": "skip-barber-racing",
+		"group": "Bethesda",
+		"desc": "Released in 2001 for Win."
+	},
+	{
+		"text": "Star Trek: Conquest",
+		"value": "star-trek-conquest",
+		"group": "Bethesda",
+		"desc": "Released in 2007 for PS2, Wii."
+	},
+	{
+		"text": "Star Trek: Encounters",
+		"value": "star-trek-encounters",
+		"group": "Bethesda",
+		"desc": "Released in 2006 for PS2."
+	},
+	{
+		"text": "Star Trek: Legacy",
+		"value": "star-trek-legacy",
+		"group": "Bethesda",
+		"desc": "Released in 2006 for Win, X360."
+	},
+	{
+		"text": "Star Trek: Tactical Assault",
+		"value": "star-trek-tactical-assault",
+		"group": "Bethesda",
+		"desc": "Released in 2006 for NDS, PSP."
+	},
+	{
+		"text": "Symbiocom",
+		"value": "symbiocom",
+		"group": "Bethesda",
+		"desc": "Released in 1998 for Win."
+	},
+	{
+		"text": "The Evil Within",
+		"value": "the-evil-within",
+		"group": "Bethesda",
+		"desc": "Released in 2014 for Win, PS3, PS4, X360, XBO."
+	},
+	{
+		"text": "Wet",
+		"value": "wet",
+		"group": "Bethesda",
+		"desc": "Released in 2009 for PS3, X360."
+	},
+	{
+		"text": "Wheelspin",
+		"value": "wheelspin",
+		"group": "Bethesda",
+		"desc": "Released in 2009 for Wii."
+	},
+	{
+		"text": "Wolfenstein: The New Order",
+		"value": "wolfenstein-the-new-order",
+		"group": "Bethesda",
+		"desc": "Released in 2014 for Win, PS3, PS4, X360, XBO."
+	},
+	{
+		"text": "Wolfenstein: The Old Blood",
+		"value": "wolfenstein-the-old-blood",
+		"group": "Bethesda",
+		"desc": "Released in 2015 for Win, PS4, XBO."
+	},
+	{
+		"text": "Zero Critical",
+		"value": "zero-critical",
+		"group": "Bethesda",
+		"desc": "Released in 1998 for Win."
+	}
+]
