@@ -1,7 +1,7 @@
 /*
  |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.3.0 [0.3.0] - Alpha
+ |  @version    0.3.1 - Alpha
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
@@ -32,13 +32,25 @@
             return element;
         },
         trigger: function(element, event, options){
-            if(CustomEvent && typeof(CustomEvent) !== "undefined"){
+            if(CustomEvent && CustomEvent.name){
                 var e = new CustomEvent(event, options);
                 return element.dispatchEvent(e);
             }
             var e = d.createEvent("CustomEvent");
             e.initCustomEvent(event, !!options.bubbles, !!options.cancelable, options.detail);
             return element.dispatchEvent(e);
+        },
+        clone: function(object, replace){
+            replace = (typeof(replace) == "object")? replace: {};
+            var clone = object.constructor();
+            for(var key in object){
+                if(replace.hasOwnProperty(replace)){
+                    clone[key] = replace[key];
+                } else if(object.hasOwnProperty(key)){
+                    clone[key] = object[key];
+                }
+            }
+            return clone;
         },
         animate: function(element, callback, delay, prevent){
             if(element.hasAttribute("data-tail-animation")){
@@ -59,11 +71,14 @@
             }, delay, element, callback, this);
         },
         animation: {},
-        animationCounter: 0,
+        animationCounter: 0
     };
+    tail.IE = (w.navigator.userAgent.indexOf("MSIE") > -1 || w.navigator.userAgent.indexOf("Edge") > -1);
 
     /*
      |  CONSTRUCTOR
+     |  @since  0.3.0
+     |  @update 0.3.1
      */
     var tailSelect = function(element, config){
         if(typeof(element) == "string"){
@@ -105,15 +120,21 @@
             config.width = element.offsetWidth + 30;
         }
 
+        // IE Fallback
+        config.animate = (tail.IE)? false: config.animate;
+
         // Init Prototype Instance
         this.e = element;
         this.id = ++tailSelect.count;
-        this.con = Object.assign({}, tailSelect.defaults, config);
-
+        if(Object.assign){
+            this.con = Object.assign({}, tailSelect.defaults, config);
+        } else {
+            this.con = tail.clone(tailSelect.defaults, config);
+        }
         tailSelect.instances["tail-" + this.id] = this;
         return this.init();
     };
-    tailSelect.version = "0.3.0";
+    tailSelect.version = "0.3.1";
     tailSelect.status = "alpha";
     tailSelect.count = 0;
     tailSelect.instances = {};
@@ -145,7 +166,7 @@
         hideSelect: true,
         hideSelected: false,
         hideDisabled: false,
-        bindSourceSelect: false,
+        bindSourceSelect: false
     };
 
     /*
@@ -170,17 +191,20 @@
      |  TAIL.SELECT HANDLER
      */
     tailSelect.prototype = {
-        e: null,
-        id: 0,
-        con: {},
-        options: {},
-        select: null,
-        label: null,
-        dropdown: null,
-        container: null,
+        e: null,            // The <select> Field
+        id: 0,              // The unique select ID
+        con: {},            // The current configuration object
+
+        options: {},        // The tail.options instance
+
+        select: null,       // The tail.select container
+        label: null,        // The tail.select label
+        dropdown: null,     // The tail.select dropdown
+        container: null,    // The tail.select container
 
         /*
          |  HANDLE :: (RESET &) INIT SELECT FIELD
+         |  @since  0.3.0
          */
         init: function(){
             var self = this, classes = new Array("tail-select");
@@ -337,6 +361,7 @@
 
         /*
          |  HANDLE :: BUILD DROPDOWN LIST
+         |  @since  0.3.0
          */
         build: function(search){
             var item, optgroups = [], optgroup, option, self = this;
@@ -412,6 +437,7 @@
 
         /*
          |  HANDLE :: EVENT LISTENER
+         |  @since  0.3.0
          */
         bind: function(event, option){
             if(!option.hasAttribute("data-key")){
@@ -430,6 +456,7 @@
 
         /*
          |  HANDLE :: INTERNAL CALLBACK
+         |  @since  0.3.0
          */
         callback: function(item, state){
             var self = this;
@@ -491,6 +518,7 @@
 
         /*
          |  ACTION :: WRITE LABEL
+         |  @since  0.3.0
          */
         setLabel: function(string){
             if(string == "placeholder"){
@@ -508,6 +536,7 @@
 
         /*
          |  ACTION :: WRITE COUNTER
+         |  @since  0.3.0
          */
         setCounter: function(){
             var count = (this.options.selected || []).length;
@@ -517,6 +546,7 @@
 
         /*
          |  ACTION :: WRITE CONTAINER
+         |  @since  0.3.0
          */
         setContainer: function(item, state){
             var self = this;
@@ -544,6 +574,15 @@
 
         /*
          |  ACTION :: CHOOSE AN OPTION
+         |  @since  0.3.0
+         |
+         |  @param  string  The choosed state "select", "unselect" or "toggle"
+         |                                    "disable" or "enable"
+         |  @param  multi   <see tailOptions.get()>
+         |                  or Use a list of touples [(key, group), (key, group)], wait this is the
+         |                  wrong language: Use an Array with (key[, group]) Arrays.
+         |  @param  multi   <see tailOptions.get()>
+         |                  or undefined if @param2 is an Array.
          */
         choose: function(state, key, group){
             if(key instanceof Array){
@@ -631,6 +670,7 @@
 
         /*
          |  ACTION :: CLOSE DROPDOWN
+         |  @since  0.3.0
          */
         close: function(){
             if(!tail.hasClass(this.select, "active") || tail.hasClass(this.select, "idle")){
@@ -668,6 +708,7 @@
 
         /*
          |  ACTION :: TOGGLE DROPDOWN
+         |  @since  0.3.0
          */
         toggle: function(){
             if(!tail.hasClass(this.select, "active")){
@@ -678,6 +719,7 @@
 
         /*
          |  ACTION :: REMOVE SELECT
+         |  @since  0.3.0
          */
         remove: function(){
             this.e.style.display = "inherit";
@@ -694,6 +736,7 @@
 
         /*
          |  ACTION :: RELOAD SELECT
+         |  @since  0.3.0
          */
         reload: function(){
             this.remove();
@@ -720,6 +763,7 @@
     tailOptions.prototype = {
         /*
          |  INTERNAL :: REPLACE TYPOs
+         |  @since  0.3.0
          */
         _replaceTypo: function(state){
             state = state.replace("disabled", "disable");
@@ -731,6 +775,7 @@
 
         /*
          |  INIT OPTIONS CLASS
+         |  @since  0.3.0
          */
         init: function(){
             this.length = 0;
@@ -779,6 +824,15 @@
 
         /*
          |  GET AN EXISTING OPTION
+         |  @since  0.3.0
+         |
+         |  @param  multi   The respective option key.
+         |                  The <option> element of the <select> element.
+         |                  The <li>.tail-drowdown-option of the tail.select element.
+         |  @param  multi   The respective group if @param1 is a string.
+         |
+         |  @return multi   The respective item object on success, FALSE on failure or NULL
+         |                  if no option could be found!
          */
         get: function(key, group){
             if(typeof(key) == "object" && key.key && key.value){
@@ -815,6 +869,11 @@
 
         /*
          |  ADD (SET) AN EXISTING OPTION
+         |  @since  0.3.0
+         |
+         |  @param  object  The <option> element within the respectove <select> field.
+         |
+         |  @return bool    Returns true if the option could be added, false if not.
          */
         set: function(option){
             if(!option.tagName || option.tagName != "OPTION"){
@@ -866,6 +925,16 @@
 
         /*
          |  ADD (CREATE) A NEW OPTION
+         |  @since  0.3.0
+         |
+         |  @param  string  The option key.
+         |  @param  string  The option value.
+         |  @param  string  The option group or undefined.
+         |  @param  bool    The option selected state or undefined.
+         |  @param  bool    The option disabled state or undefined.
+         |  @param  string  The option description.
+         |
+         |  @return bool    Returns true if the option could be created, false if not.
          */
         add: function(key, value, group, selected, disabled, description){
             if(this.get(key, group) != null){
@@ -914,6 +983,12 @@
 
         /*
          |  REMOVE AN EXISTING OPTION
+         |  @since  0.3.0
+         |
+         |  @param  multi   <see get()>
+         |  @param  multi   <see get()>
+         |
+         |  @return bool    Returns true if the option could be deleted, false if not.
          */
         remove: function(key, group){
             var item = this.get(key, group);
@@ -947,6 +1022,14 @@
 
         /*
          |  CHECK AN EXISTING OPTION
+         |  @since  0.3.0
+         |
+         |  @param  string  "disabled", "enabled", "selected" or "unselected"
+         |  @param  multi   <see get()>
+         |  @param  multi   <see get()>
+         |
+         |  @return bool    Returns true if the passed state is true, false if not,
+         |                  and null on failure.
          */
         is: function(state, key, group){
             var state = this._replaceTypo(state), item = this.get(key, group);
@@ -963,6 +1046,14 @@
 
         /*
          |  INTERACT WITH AN OPTION
+         |  @since  0.3.0
+         |
+         |  @param  string  "disable", "enable", "select" or "unselect"
+         |  @param  multi   <see get()>
+         |  @param  multi   <see get()>
+         |
+         |  @return bool    Returns true if the state has been successfully setted, false if not
+         |                  and null on failure.
          */
         handle: function(state, key, group, _force){
             var state = this._replaceTypo(state), item = this.get(key, group);
@@ -1019,6 +1110,13 @@
 
         /*
          |  FIND SOME OPTIONs - WALKER EDITION
+         |  @since  0.3.0
+         |
+         |  @param  string  The search term.
+         |  @param  string  Test-Phase: May not work as expected!
+         @                  Use 'required' if the search term MUST appear within the value attribute AND MUST within the text.
+         @                  Use 'optional' if the search term MAY appear within the value attribute AND MUST within the text.
+         @                  Use 'eitheror' if the search term MUST appear within the value OR within the text (or BOTH).
          */
         finder: function(search, keys){
             if(typeof(this._findLoop) == "undefined"){
@@ -1061,6 +1159,11 @@
 
         /*
          |  FIND SOME OPTIONs - ARRAY EDITION
+         |  @since  0.3.0
+         |
+         |  @param  string  <see finder()>
+         |  @param  string  <see finder()>
+         |  @param  string  <see finder()>
          */
         find: function(search, keys, groups){
             var items = new Array();
@@ -1072,6 +1175,11 @@
 
         /*
          |  WALK THROUGH ALL OPTIONs
+         |  @since  0.3.0
+         |
+         |  @param  multi   Use "ASC" or "DESC" or pass an own callback sort function.
+         |  @param  multi   Use "ASC" or "DESC" or pass an own callback sort function.
+         |  @param  bool    Use true to return the optgroup keys too, false to do it not.
          */
         walk: function(item_order, group_order, with_keys){
             if(typeof(this._inLoop) != "undefined" && this._inLoop){

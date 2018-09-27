@@ -8,7 +8,7 @@ The tail.select script is back, completely re-written in pure vanilla JavaScript
 offers almost the same functionality as the jQuery version, back in 2016, and has been enriched with
 important and useful features.
 
-**[Check out the demonstration](https://pytesnet.github.io/tail.select/)**
+**[Check out the demonstration](https://github.pytes.net/tail.select)**
 
 Features
 --------
