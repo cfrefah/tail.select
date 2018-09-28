@@ -2,6 +2,7 @@ tail.select
 ===========
 [![npm](https://img.shields.io/npm/v/tail.select.svg?style=flat-square)](https://www.npmjs.com/package/tail.select)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![plainJS](https://img.shields.io/badge/plainJS-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%9C%AB-yellow.svg)](https://plainjs.com/javascript/plugins/tailselect-185/)
 [![Author](https://img.shields.io/badge/Author-SamBrishes@pytesNET-lightgrey.svg?style=flat-square)](https://www.github.com/pytesNET)
 
 The tail.select script is back, completely re-written in pure vanilla JavaScript from scratch! It
