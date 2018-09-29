@@ -1,6 +1,11 @@
 CHANGELOG
 ===========
 
+Version 0.3.3 - Alpha
+---------------------
+-   Hotfix: Nothing can be selected anymore when using the search function
+            [#1](https://github.com/pytesNET/tail.select/issues/1)
+
 Version 0.3.2 - Alpha
 ---------------------
 -   Add: jQuery bindings, tested with jQuery v.1.12.4 only!

@@ -1,7 +1,7 @@
 /*
  |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.3.2 - Alpha
+ |  @version    0.3.3 - Alpha
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
@@ -133,7 +133,7 @@
         tailSelect.instances["tail-" + this.id] = this;
         return this.init();
     };
-    tailSelect.version = "0.3.2";
+    tailSelect.version = "0.3.3";
     tailSelect.status = "alpha";
     tailSelect.count = 0;
     tailSelect.instances = {};
@@ -357,7 +357,7 @@
         /*
          |  HANDLE :: BUILD DROPDOWN LIST
          |  @since  0.3.0
-         |  @update 0.3.2
+         |  @update 0.3.3
          */
         build: function(search){
             var optgroups = [], optgroup, option, self = this;
@@ -395,6 +395,7 @@
                         option.innerHTML += '<span class="tail-option-description">' + item.description + '</span>';
                     }
                     option.setAttribute("data-key", item.key);
+                    option.setAttribute("data-group", item.group);
                     option.addEventListener("click", function(event){
                         self.bind.call(self, event, this);
                     })
@@ -409,7 +410,7 @@
                 if(typeof(search) === "string"){
                     item = this.options.finder(search)
                 } else {
-                item = this.options.walk(this.con.sortItems, this.con.sortGroups, true);
+                    item = this.options.walk(this.con.sortItems, this.con.sortGroups, true);
                 }
                 if(item){
                     call(item);
@@ -440,7 +441,7 @@
                 return false;
             }
             var key = option.getAttribute("data-key"),
-                group = option.parentElement.getAttribute("data-group") || "#";
+                group = option.getAttribute("data-group") || "#";
 
             // Select Option
             if(this.choose("toggle", key, group)){
@@ -453,6 +454,7 @@
         /*
          |  HANDLE :: INTERNAL CALLBACK
          |  @since  0.3.0
+         |  @update 0.3.3
          */
         callback: function(item, state){
             var self = this;
@@ -461,11 +463,7 @@
             }
 
             // Set Element-Item States
-            if(item.group !== "#"){
-                var element = this.dropdown.querySelector("[data-group='" + item.group + "'] [data-key='" + item.key + "']");
-            } else {
-                var element = this.dropdown.querySelector("[data-key='" + item.key + "']");
-            }
+            var element = this.dropdown.querySelector("[data-key='" + item.key + "'][data-group='" + item.group + "']");
             if(element){
                 if(state == "select"){
                     tail.addClass(element, "selected");
