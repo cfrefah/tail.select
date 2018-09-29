@@ -1,7 +1,7 @@
 /*
  |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.3.1 - Alpha
+ |  @version    0.3.2 - Alpha
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
@@ -31,22 +31,25 @@
             }
             return element;
         },
-        trigger: function(element, event, options){
+        trigger: function(e, event, opt){
             if(CustomEvent && CustomEvent.name){
-                var e = new CustomEvent(event, options);
-                return element.dispatchEvent(e);
+                var ev = new CustomEvent(event, opt);
+                return e.dispatchEvent(ev);
             }
-            var e = d.createEvent("CustomEvent");
-            e.initCustomEvent(event, !!options.bubbles, !!options.cancelable, options.detail);
-            return element.dispatchEvent(e);
+            var ev = d.createEvent("CustomEvent");
+            ev.initCustomEvent(event, !!opt.bubbles, !!opt.cancelable, opt.detail);
+            return e.dispatchEvent(ev);
         },
         clone: function(object, replace){
             replace = (typeof(replace) == "object")? replace: {};
+            if(Object.assign){
+                return Object.assign({}, object, replace);
+            }
             var clone = object.constructor();
             for(var key in object){
-                if(replace.hasOwnProperty(replace)){
+                if(key in replace){
                     clone[key] = replace[key];
-                } else if(object.hasOwnProperty(key)){
+                } else if(key in object){
                     clone[key] = object[key];
                 }
             }
@@ -60,54 +63,57 @@
                 clearInterval(tail.animation[element.getAttribute("data-tail-animation")]);
             }
             element.setAttribute("data-tail-animation", "tail-" + ++this.animationCounter);
-            this.animation["tail-" + this.animationCounter] = setInterval(function(e, func, tail){
-                var animationID = e.getAttribute("data-tail-animation");
-                if(func.call(e, e) == false){
-                    clearInterval(tail.animation[animationID]);
-                    if(e.parentElement){
-                        e.removeAttribute("data-tail-animation");
+
+            (function(e, func, delay){
+                var tail = this;
+                this.animation["tail-" + this.animationCounter] = setInterval(function(){
+                    var animationID = e.getAttribute("data-tail-animation");
+                    if(func.call(e, e) === false){
+                        clearInterval(tail.animation[animationID]);
+                        if(e.parentElement){
+                            e.removeAttribute("data-tail-animation");
+                        }
                     }
-                }
-            }, delay, element, callback, this);
+                }, delay);
+            }).call(this, element, callback, delay);
         },
         animation: {},
         animationCounter: 0
     };
-    tail.IE = (w.navigator.userAgent.indexOf("MSIE") > -1 || w.navigator.userAgent.indexOf("Edge") > -1);
+    tail.IE = (function(ua){
+        return ua.indexOf("MSIE") > -1 || ua.indexOf("Trident") > -1 || ua.indexOf("Edge") > -1;
+    })(w.navigator.userAgent || "");
 
     /*
      |  CONSTRUCTOR
      |  @since  0.3.0
-     |  @update 0.3.1
+     |  @update 0.3.2
      */
     var tailSelect = function(element, config){
         if(typeof(element) == "string"){
             element = d.querySelectorAll(element);
         }
         if(element instanceof NodeList || element instanceof HTMLCollection){
-            if(element.length == 0){
-                return false;
-            }
-            var _return = new Array();
+            var _r = [];
             for(var i = 0; i < element.length; i++){
-                _return.push(new tailSelect(element[i], config));
+                _r.push(new tailSelect(element[i], config));
             }
-            return (_return.length == 1)? _return[0]: _return;
+            return (_r.length === 1)? _r[0]: ((_r.length === 0)? false: _r);
+        }
+        if(!(element instanceof Element) || (element.tagName && element.tagName !== "SELECT")){
+            return false;
         }
         if(typeof(this) == "undefined"){
             return new tailSelect(element, config);
         }
 
         // Check Element
-        if(!(element instanceof Element) || (element.tagName && element.tagName != "SELECT")){
-            return false;
-        }
-        if(element.hasAttribute("data-tail-select") && tailSelect.instances[element.getAttribute("data-tail-select")]){
+        if(tailSelect.instances[element.getAttribute("data-tail-select")]){
             return tailSelect.instances[element.getAttribute("data-tail-select")];
         }
 
         // Get Element Options
-        var config = config || {};
+        config = (typeof(config) == "object")? config: {};
         if(element.hasAttribute("multiple")){
             config.multiple = element.multiple;
         }
@@ -116,25 +122,18 @@
         } else if(element.hasAttribute("data-placeholder")){
             config.placeholder = element.getAttribute("data-placeholder");
         }
-        if(config.width && config.width == "auto"){
+        if(config.width && config.width === "auto"){
             config.width = element.offsetWidth + 30;
         }
-
-        // IE Fallback
-        config.animate = (tail.IE)? false: config.animate;
 
         // Init Prototype Instance
         this.e = element;
         this.id = ++tailSelect.count;
-        if(Object.assign){
-            this.con = Object.assign({}, tailSelect.defaults, config);
-        } else {
-            this.con = tail.clone(tailSelect.defaults, config);
-        }
+        this.con = tail.clone(tailSelect.defaults, config);
         tailSelect.instances["tail-" + this.id] = this;
         return this.init();
     };
-    tailSelect.version = "0.3.1";
+    tailSelect.version = "0.3.2";
     tailSelect.status = "alpha";
     tailSelect.count = 0;
     tailSelect.instances = {};
@@ -175,7 +174,7 @@
     tailSelect.strings = {
         empty: "No options available",
         limit: "You can't select more options",
-        selectLimit: "Select up to %d options....",
+        selectLimit: "Select up to %d options...",
         placeholder: "Select an option...",
         searchField: "Type in to search...",
         searchEmpty: "No Results found...."
@@ -205,12 +204,13 @@
         /*
          |  HANDLE :: (RESET &) INIT SELECT FIELD
          |  @since  0.3.0
+         |  @update 0.3.2
          */
         init: function(){
             var self = this, classes = new Array("tail-select");
 
             // Build Select ClassNames
-            var c = (this.con.classNames == true)? this.e.className: this.con.classNames;
+            var c = (this.con.classNames === true)? this.e.className: this.con.classNames;
             if(typeof(c) == "string" || c instanceof Array){
                 classes.push((c instanceof Array)? c.join(" "): c);
             }
@@ -222,25 +222,19 @@
             // Create Select
             this.select = d.createElement("DIV");
             this.select.className = classes.join(" ");
-            if(!isNaN(parseInt(this.con.width))){
-                this.select.style.width = parseInt(this.con.width) + "px";
+            if(!isNaN(parseInt(this.con.width, 10))){
+                this.select.style.width = parseInt(this.con.width, 10) + "px";
             }
 
             // Create Label
             this.label = d.createElement("DIV");
             this.label.className = "tail-select-label";
-            this.label.innerHTML = '<span class="tail-label-inner"></span>';
             if(this.con.multiple && this.con.multiShowCount){
-                this.label.innerHTML = '<span class="tail-label-count">0</span>' + this.label.innerHTML;
+                this.label.innerHTML = '<span class="tail-label-count">0</span>';
             }
+            this.label.innerHTML += '<span class="tail-label-inner"></span>';
             this.label.addEventListener("click", function(event){
                 self.toggle.call(self);
-
-                if(tail.hasClass(self.select, "active")){
-                    if(self.con.search && self.con.searchFocus){
-                        self.dropdown.querySelector("input").focus()
-                    }
-                }
             });
             this.select.appendChild(this.label);
             this.setLabel("placeholder");
@@ -249,11 +243,11 @@
             this.dropdown = d.createElement("DIV");
             this.dropdown.className = "tail-select-dropdown";
             this.dropdown.innerHTML = '<div class="tail-dropdown-inner"></div>';
-            if(!isNaN(parseInt(this.con.width))){
-                this.dropdown.style.width = parseInt(this.con.width) + "px";
+            if(!isNaN(parseInt(this.con.width, 10))){
+                this.dropdown.style.width = parseInt(this.con.width, 10) + "px";
             }
-            if(!isNaN(parseInt(this.con.height))){
-                this.dropdown.children[0].style.maxHeight = parseInt(this.con.height) + "px";
+            if(!isNaN(parseInt(this.con.height, 10))){
+                this.dropdown.children[0].style.maxHeight = parseInt(this.con.height, 10) + "px";
             }
             this.select.appendChild(this.dropdown);
 
@@ -261,7 +255,8 @@
             if(this.con.search){
                 this.search = d.createElement("DIV");
                 this.search.className = "tail-dropdown-search";
-                this.search.innerHTML = '<input type="text" class="tail-search-input" placeholder="' + __("searchField") + '" />'
+                this.search.innerHTML = '<input type="text" class="tail-search-input" />';
+                this.search.querySelector("input").setAttribute("placeholder", __("searchField"));
                 this.search.querySelector("input").addEventListener("input", function(event){
                     if(this.value.length > 2){
                         self.build(this.value);
@@ -279,7 +274,7 @@
             }
 
             // Init Options
-            this.options = new tailOptions(this.e, self)
+            this.options = new tailOptions(this.e, self);
             this.options.init();
             if(typeof(this.con.items) == "object"){
                 for(var key in this.con.items){
@@ -300,7 +295,7 @@
                 if(!self.select.contains(event.target) && !self.e.contains(event.target)){
                     if(event.target != self.select && event.target != self.e){
                         if(!self.con.stayOpen){
-                            self.close.call(self)
+                            self.close.call(self);
                         }
                     }
                 }
@@ -336,7 +331,7 @@
                     } else if(this.selectedOptions){
                         handle(this.selectedOptions);
                     } else {
-                        var selected = new Array();
+                        var selected = [];
                         for(var i = 0; i < this.options.length; i++){
                             if(this.options[i].selected){
                                 selected.push(this.options[i])
@@ -362,9 +357,10 @@
         /*
          |  HANDLE :: BUILD DROPDOWN LIST
          |  @since  0.3.0
+         |  @update 0.3.2
          */
         build: function(search){
-            var item, optgroups = [], optgroup, option, self = this;
+            var optgroups = [], optgroup, option, self = this;
             optgroups[0] = d.createElement("UL");
             optgroups[0].className = "tail-dropdown";
             optgroup = optgroups[0];
@@ -408,20 +404,20 @@
             }
 
             // Loop Technique
-            var empty = true;
-            if(search === undefined){
-                while(item = this.options.walk(this.con.sortItems, this.con.sortGroups, true)){
-                    call(item);
-                    if(item !== "#"){
-                        empty = false;
-                    }
+            var item, empty = true;
+            while(true){
+                if(typeof(search) === "string"){
+                    item = this.options.finder(search)
+                } else {
+                item = this.options.walk(this.con.sortItems, this.con.sortGroups, true);
                 }
-            } else {
-                while(item = this.options.finder(search)){
+                if(item){
                     call(item);
-                    if(item !== "#"){
+                    if(item !== "#" && empty){
                         empty = false;
                     }
+                } else {
+                    break;
                 }
             }
             if(empty){
@@ -607,6 +603,7 @@
         /*
          |  ACTION :: OPEN DROPDOWN
          |  @since  0.3.0
+         |  @update 0.3.2
          */
         open: function(){
             if(tail.hasClass(this.select, "active") || tail.hasClass(this.select, "idle")){
@@ -616,11 +613,7 @@
             // Calculate Open Condition
             var h = d.documentElement.offsetHeight,
                 c = this.dropdown.cloneNode(true);
-                c.style.height = "auto";
-                c.style.opacity = 0;
-                c.style.display = "block";
-                c.style.position = "absolue";
-                c.style.visibility = "hidden";
+                c.style.cssText += "height:auto;opacity:0;display:block;visibility:hidden;";
                 c.className += " clone";
             this.dropdown.parentElement.appendChild(c);
             var e = c.offsetHeight, t = this.select.offsetTop + e + 25;
@@ -638,12 +631,10 @@
                 tail.addClass(self.select, "idle");
                 this.label.style.zIndex = 25;
                 this.dropdown.setAttribute("data-height", e);
-                this.dropdown.style.height = "0";
-                this.dropdown.style.overflow = "hidden";
-                this.dropdown.style.display = "block";
+                this.dropdown.style.cssText += "height:0;display:block;overflow:hidden;";
                 tail.animate(this.dropdown, function(){
-                    var h = parseInt(this.style.height),
-                        m = parseInt(this.getAttribute("data-height"));
+                    var h = parseInt(this.style.height, 10),
+                        m = parseInt(this.getAttribute("data-height"), 10);
                     if(h < m){
                         this.style.height = ((h+50 > m)? m: h+50) + "px";
                         return true;
@@ -657,6 +648,9 @@
                     tail.trigger(self.select, "tail.select::open", {
                         bubbles: false, cancelable: true, detail: self
                     });
+                    if(self.con.search && self.con.searchFocus){
+                        self.dropdown.querySelector("input").focus();
+                    }
                     return false;
                 }, 1, true);
             } else {
@@ -664,6 +658,9 @@
                 tail.trigger(this.select, "tail.select::open", {
                     bubbles: false, cancelable: true, detail: self
                 });
+                if(this.con.search && this.con.searchFocus){
+                    this.dropdown.querySelector("input").focus();
+                }
             }
             return this;
         },
@@ -684,7 +681,7 @@
                 tail.addClass(this.select, "idle");
                 this.dropdown.style.overflow = "hidden";
                 tail.animate(this.dropdown, function(){
-                    var h = parseInt(this.offsetHeight);
+                    var h = parseInt(this.offsetHeight, 10);
                     if((h-50) > 0){
                         this.style.height = (h-50) + "px";
                         return true;
@@ -1010,7 +1007,7 @@
             this.length--;
 
             // Remove Optgroup
-            if(Object.keys(this.items[item.group]).length == 0){
+            if(Object.keys(this.items[item.group]).length === 0){
                 delete this.items[item.group];
                 delete this.groups[item.group];
             }
@@ -1166,7 +1163,7 @@
          |  @param  string  <see finder()>
          */
         find: function(search, keys, groups){
-            var items = new Array();
+            var items = [];
             while((item = this.finder(search, keys, groups)) !== false){
                 items.push(item);
             }
@@ -1235,11 +1232,34 @@
         }
     }
 
+    // Assign to jQuery
+    if(typeof(jQuery) != "undefined"){
+        jQuery.fn.tailselect = function(options){
+            var _r = [];
+            this.each(function(){
+                var instance = tailSelect(this);
+                if(instance){
+                    _r.push(instance);
+                }
+            });
+            return (_r.length === 1)? _r[0]: (_r.length === 0)? false: _r;
+        }
+    }
+
+    // Assign to MooTools
+    if(typeof(MooTools) !== "undefined"){
+        Element.implement({
+            tailselect: function(options){
+                return new tailSelect(this, options);
+            }
+        });
+    }
+
     // Assign to Window
     if(typeof(w.tail) == "undefined"){
         w.tail = {};
     }
     w.tail.select = tailSelect;
     w.tail.options = tailOptions;
-    return tail.select;
-})(this);
+    return tailSelect;
+}(this));

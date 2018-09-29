@@ -1,6 +1,6 @@
 {
     "name": "tail.select",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "Create beautiful, functional and extensive (Multi) Select Fields with pure, vanilla JavaScript.",
     "main": "js/tail.select.js",
     "scripts": {},
@@ -9,14 +9,7 @@
         "url": "git+ssh://git@github.com/pytesNET/tail.select.git"
     },
     "keywords": [
-        "select",
-        "selection",
-        "selectable",
-        "choose",
-        "beautify",
-        "form",
-        "field",
-        "tail"
+        "select", "selection", "selectable", "choose", "beautify", "form", "field", "tail"
     ],
     "author": "SamBrishes, pytesNET",
     "license": "MIT",

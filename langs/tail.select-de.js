@@ -1,4 +1,8 @@
-;(function(w){
+;(function(window){
+    var w = window;
+    if(!w.tail || !w.tail.select){
+        return false;
+    }
     w.tail.select.strings = {
         empty: "Keine Optionen verfügbar",
         limit: "Keine weiteren Optionen auswählbar",
