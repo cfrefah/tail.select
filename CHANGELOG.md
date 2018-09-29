@@ -1,6 +1,21 @@
 CHANGELOG
 ===========
 
+Version 0.3.2 - Alpha
+---------------------
+-   Add: jQuery bindings, tested with jQuery v.1.12.4 only!
+-   Add: MooTools bindings, text with MooTools 1.5.2 only!
+-   Update: The helper method `animate()` is now backward compatible with IE >= 9.
+-   Update: Add `Object.assign` check directly to the `clone()` method.
+-   Codacy: Avoid assignments in operands.
+-   Codacy: Use ===/!== to compare with true/false or Numbers.
+-   Codacy: Always provide a base when using parseInt() functions.
+-   Codacy: Unsafe assignment to innerHTML.
+-   Codacy: Move the invocation into the parens that contain the function.
+-   Bugfix: Wrong key assignment on the helper method `clone()`.
+-   Bugfix: The `searchFocus` option doesn't work on animated dropdown elements!
+-   Bugfix: Wrong return variable on the mein IIFE function wrapper.
+
 Version 0.3.1 - Alpha
 ---------------------
 -   Info: Official support for IE >= 9 starts now :(

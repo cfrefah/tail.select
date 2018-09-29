@@ -1,24 +1,51 @@
 tail.select
 ===========
 [![npm](https://img.shields.io/npm/v/tail.select.svg?style=flat-square)](https://www.npmjs.com/package/tail.select)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![plainJS](https://img.shields.io/badge/plainJS-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%9C%AB-yellow.svg?style=flat-square)](https://plainjs.com/javascript/plugins/tailselect-185/)
 [![Author](https://img.shields.io/badge/Author-SamBrishes@pytesNET-lightgrey.svg?style=flat-square)](https://www.github.com/pytesNET)
 
 The tail.select script is back, completely re-written in pure vanilla JavaScript from scratch! It
 offers almost the same functionality as the jQuery version, back in 2016, and has been enriched with
-important and useful features.
+important and useful features. And version 0.3.2 brings back the jQuery implementation and adds on
+top also a binding for the MooTools library.
 
 **[Check out the demonstration](https://github.pytes.net/tail.select)**
 
 Features
 --------
+-   Compatible with all modern browsers, and also for IE >= 9.
 -   Single and Multiple select fields, deselect- and limitable
 -   A search field, to find required options with ease
 -   Hide and Move selected (and disabled) options
 -   Manipulate, Add, Edit and Delete options on the fly
 -   Optional descriptions to describe the single options
 -   Optional dropdown open/close animation and handling options
+-   Implementations for the jQuery and the MooTools libraries
 -   ... and a few more feature-rich settings
+
+Embed
+-----
+Just download the archive and include the `js/tail.select(.min).js` script as well as the
+`css/tail.select.css` stylesheet into your HTML document.
+
+```
+<link type="text/css" rel="stylesheet" href="css/tail.select.css" />
+<script type="text/javascript" src="js/tail.select.min.js"></script>
+```
+
+###### Download tail.select using NPM
+```
+npm -i tail.select
+```
+
+###### Embed tail.select using jsDevlir
+`https://cdn.jsdelivr.net/npm/tail.select@latest/css/tail.select.css`<br />
+`https://cdn.jsdelivr.net/npm/tail.select@latest/js/tail.select.min.js`
+
+###### Embed tail.select using UNPKG
+`https://unpkg.com/tail.select/css/tail.select.css`<br />
+`https://unpkg.com/tail.select/js/tail.select.min.js`
 
 Documentation
 -------------
@@ -54,6 +81,13 @@ tail.select("select", {
     hideDisabled:       false,
     bindSourceSelect:   false
 });
+
+// Use in jQuery
+$("select").tailselect(options)
+
+// Use in MooTools
+$("select-id").tailselect(options)
+$$("select").tailselect(options)
 ```
 
 #### width
