@@ -182,10 +182,8 @@
     tailSelect.strings = {
         empty: "No Options available",
         placeholder: "Select an Option...",
-
         multiLimit: "You can't select more Options",
         multiPlaceholder: "Select up to %d Options...",
-
         search: "Type in to search...",
         searchEmpty: "No Options found"
     };

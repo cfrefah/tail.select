@@ -4,11 +4,11 @@
         return false;
     }
     w.tail.select.strings = {
-        empty: "Keine Optionen verfügbar",
-        limit: "Keine weiteren Optionen auswählbar",
-        selectLimit: "Wähle bis zu %d Optionen...",
+        empty: "Keine Optionsn verfügbar",
         placeholder: "Wähle eine Option...",
-        searchField: "Tippen zum suchen...",
-        searchEmpty: "Keine Ergebnisse gefunden...."
+        multiLimit: "Keine weiteren Optionen auswählbar",
+        multiPlaceholder: "Wähle bis zu %d Optionen...",
+        search: "Tippen zum suchen...",
+        searchEmpty: "Keine Optionen gefunden"
     };
 })(this);
