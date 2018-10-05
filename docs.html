@@ -53,8 +53,8 @@
         <script type="text/javascript" src="assets/js/tail.demo.js?ver=2.2.0"></script>
 
         <!-- Source -->
-        <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.3.3" />
-        <script type="text/javascript" src="source/js/tail.select.js?ver=0.3.3"></script>
+        <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.3.4" />
+        <script type="text/javascript" src="source/js/tail.select.js?ver=0.3.4"></script>
     </head>
     <body>
         <div class="header">
@@ -66,7 +66,7 @@
                         </div>
                         <div class="tail-project">
                             <span class="tail-title">tail.<b>select</b></span>
-                            <span class="tail-version">0.3.3 - <b>Alpha</b></span>
+                            <span class="tail-version">0.3.4 - <b>Alpha</b></span>
                         </div>
                     </a>
                 </div>
@@ -132,8 +132,12 @@
                             <img src="https://img.shields.io/badge/plainJS-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%9C%AB-yellow.svg?style=flat-square" alt="plainJS" />
                         </a>
                         <p>
-                            The <b>tail.select</b> script is back, completely re-written in pure vanilla JavaScript from scratch! It offers almost the same functionality as the jQuery version, back in 2016, and has been enriched with
-                            important and useful features. And version 0.3.2 brings back the jQuery implementation and adds on top also a binding for the MooTools library.
+                            The <b>tail.select</b> script is back, completely written from scratch in pure vanilla JavaScript! It offers almost the same functionality as the jQuery version, back
+                            in 2014 and has been enriched with important and useful features. And version 0.3.2 brings back the jQuery implementation and adds on top also a binding for the MooTools
+                            library.
+                        </p>
+                        <p>
+                            Since Version 0.3.4 the Usage as Asynchronous Module Definition (AMD) is now also supported, tested with requireJS.
                         </p>
 
                         <h1 id="docs">Documentation</h1>
@@ -251,6 +255,8 @@
         search: false,
         searchFocus: true,
         searchMarked: true,
+        csvOutput: false,
+        csvSeparator: ",",
         hideSelect: true,
         hideSelected: false,
         hideDisabled: false,
@@ -319,6 +325,12 @@
 
                             <dt>searchMarked</dt>
                             <dd><code>bool</code><br /> This option will 'mark' the search term on the respective option test within the given results.</dd>
+
+                            <dt>csvOutput</dt>
+                            <dd><code>bool</code><br /> This option will add a hidden input field, which takes over the name attribute of the source select field and contains the selected values - separated with the option separator defined in <code class="invert">csvSeparator</code></dd>
+
+                            <dt>csvSeparator</dt>
+                            <dd><code>string</code><br /> This option defines the separator, which is used for the option <code class="invert">csvOutput</code>.</dd>
 
                             <dt>hideSelect</dt>
                             <dd><code>bool</code><br /> This option will hide, set the 'display: none;' styling, to the source select element.</dd>

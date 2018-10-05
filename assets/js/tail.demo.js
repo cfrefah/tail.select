@@ -1,4 +1,12 @@
-(function(window){
+;(function(factory){
+    if(typeof(define) == "function" && define.amd){
+        define(factory);                // AMD - Anonymous Module
+    } else {
+        window.document.addEventListener("DOMContentLoaded", function(){
+            (factory())();
+        });
+    }
+}(function(){
 	"use strict";
     var w = window, d = window.document;
 
@@ -119,10 +127,8 @@
         }
     }
 
-    // Ready
-    d.addEventListener("DOMContentLoaded", function(){
-
-        // Fix Sub Navigation
+    // Init Website
+    var tailDemo = function(){
         tail.each(d.querySelectorAll("ul.sub-navi"), function(){
             var clone = this.cloneNode(true);
                 clone.style.zIndex = "-1";
@@ -151,5 +157,9 @@
         tail.each(d.querySelectorAll("*[data-handle='example']"), function(){
             this.addEventListener("click", source);
         });
-    });
-})(this);
+    }
+    tailDemo.version = "2.2.1";
+
+    // Return
+    return tailDemo;
+}));

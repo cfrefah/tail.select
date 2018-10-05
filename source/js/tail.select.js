@@ -1,13 +1,22 @@
 /*
  |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.3.3 - Alpha
+ |  @version    0.3.4 - Alpha
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
  |  @copyright  Copyright © 2014 - 2018 SamBrishes, pytesNET <pytes@gmx.net>
  */
-;(function(window){
+;(function(factory){
+    if(typeof(define) == "function" && define.amd){
+        define(factory);                // Asynchronous Module Definition
+    } else {
+        if(typeof(window.tail) == "undefined"){
+            window.tail = {};
+        }
+        window.tail.select = factory();
+    }
+}(function(){
     "use strict";
     var w = window, d = window.document;
 
@@ -80,9 +89,6 @@
         animation: {},
         animationCounter: 0
     };
-    tail.IE = (function(ua){
-        return ua.indexOf("MSIE") > -1 || ua.indexOf("Trident") > -1 || ua.indexOf("Edge") > -1;
-    })(w.navigator.userAgent || "");
 
     /*
      |  CONSTRUCTOR
@@ -147,7 +153,7 @@
         classNames: null,
         placeholder: null,
         deselect: false,
-        animate: false,
+        animate: true,
         openAbove: null,
         stayOpen: false,
         startOpen: false,
@@ -162,6 +168,8 @@
         search: false,
         searchFocus: true,
         searchMarked: true,
+        csvOutput: false,
+        csvSeparator: ",",
         hideSelect: true,
         hideSelected: false,
         hideDisabled: false,
@@ -172,12 +180,14 @@
      |  STORAGE :: STRINGS
      */
     tailSelect.strings = {
-        empty: "No options available",
-        limit: "You can't select more options",
-        selectLimit: "Select up to %d options...",
-        placeholder: "Select an option...",
-        searchField: "Type in to search...",
-        searchEmpty: "No Results found...."
+        empty: "No Options available",
+        placeholder: "Select an Option...",
+
+        multiLimit: "You can't select more Options",
+        multiPlaceholder: "Select up to %d Options...",
+
+        search: "Type in to search...",
+        searchEmpty: "No Options found"
     };
     var __ = function(key){
         if(tailSelect.strings.hasOwnProperty(key)){
@@ -200,11 +210,12 @@
         label: null,        // The tail.select label
         dropdown: null,     // The tail.select dropdown
         container: null,    // The tail.select container
+        csvInput: null,     // The hidden CSV Input Field
 
         /*
          |  HANDLE :: (RESET &) INIT SELECT FIELD
          |  @since  0.3.0
-         |  @update 0.3.2
+         |  @update 0.3.4
          */
         init: function(){
             var self = this, classes = new Array("tail-select");
@@ -256,7 +267,7 @@
                 this.search = d.createElement("DIV");
                 this.search.className = "tail-dropdown-search";
                 this.search.innerHTML = '<input type="text" class="tail-search-input" />';
-                this.search.querySelector("input").setAttribute("placeholder", __("searchField"));
+                this.search.querySelector("input").setAttribute("placeholder", __("search"));
                 this.search.querySelector("input").addEventListener("input", function(event){
                     if(this.value.length > 2){
                         self.build(this.value);
@@ -271,6 +282,18 @@
             if(this.con.multiple && d.querySelector(this.con.multiContainer)){
                 this.container = d.querySelector(this.con.multiContainer);
                 this.container.className += " tail-select-container";
+            }
+
+            // Create Hidden CSV
+            if(this.con.csvOutput){
+                var name = this.e.getAttribute("name") || this.id;
+                    this.e.removeAttribute("name");
+
+                this.csvInput = document.createElement("INPUT");
+                this.csvInput.type = "hidden";
+                this.csvInput.name = name;
+                this.csvInput.value = "";
+                this.select.appendChild(this.csvInput);
             }
 
             // Init Options
@@ -357,7 +380,7 @@
         /*
          |  HANDLE :: BUILD DROPDOWN LIST
          |  @since  0.3.0
-         |  @update 0.3.3
+         |  @update 0.3.4
          */
         build: function(search){
             var optgroups = [], optgroup, option, self = this;
@@ -387,6 +410,7 @@
                     option = d.createElement("LI");
                     option.className = "tail-dropdown-option" + ((item.selected)? " selected": "") + ((item.disabled)? " disabled": "");
                     if(search && search.length > 0 && self.con.searchMarked){
+                        search = search.replace(/[\[\]\{\}\(\)\*\+\?\.\,\^\$\\\|\#\-]/g, "\\$&");
                         option.innerHTML = item.value.replace(new RegExp("(" + search + ")", "i"), "<mark>$1</mark>");
                     } else {
                         option.innerText = item.value;
@@ -501,6 +525,15 @@
                 this.setContainer(item, state);
             }
 
+            // Update CSV
+            if(this.csvInput && this.con.csvOutput && ["select", "unselect"].indexOf(state) >= 0){
+                var selected = [];
+                for(var l = this.options.selected.length, i = 0; i < l; i++){
+                    selected.push(this.options.selected[i].value);
+                }
+                this.csvInput.value = selected.join(this.con.csvSeparator || ",");
+            }
+
             // Call Event
             tail.trigger(this.select, "tail.select::" + state, {
                 bubbles: false,
@@ -513,16 +546,21 @@
         /*
          |  ACTION :: WRITE LABEL
          |  @since  0.3.0
+         |  @update 0.3.4
          */
         setLabel: function(string){
             if(string == "placeholder"){
                 if(typeof(this.con.placeholder) == "string" && this.con.placeholder.length > 0){
                     string = this.con.placeholder;
                 } else {
-                    string = __("placeholder")
+                    if(this.con.multiple && this.con.multiLimit > 0){
+                        string = __("multiPlaceholder").replace("%d", this.con.multiLimit);
+                    } else {
+                        string = __("placeholder");
+                    }
                 }
             } else if(string == "limit"){
-                string = __("limit")
+                string = __("multiLimit")
             }
             this.label.querySelector(".tail-label-inner").innerText = string;
             return this;
@@ -715,10 +753,14 @@
         /*
          |  ACTION :: REMOVE SELECT
          |  @since  0.3.0
+         |  @update 0.3.4
          */
         remove: function(){
             this.e.style.display = "inherit";
             this.e.removeAttribute("data-tail-select");
+            if(this.csvInput){
+                this.e.setAttribute("name", this.csvInput.getAttribute("name"));
+            }
             this.select.parentElement.removeChild(this.select);
             if(this.container){
                 var handles = this.container.querySelectorAll(selector);
@@ -1106,6 +1148,7 @@
         /*
          |  FIND SOME OPTIONs - WALKER EDITION
          |  @since  0.3.0
+         |  @update 0.3.4
          |
          |  @param  string  The search term.
          |  @param  string  Test-Phase: May not work as expected!
@@ -1115,6 +1158,7 @@
          */
         finder: function(search, keys){
             if(typeof(this._findLoop) == "undefined"){
+                search = search.replace(/[\[\]\{\}\(\)\*\+\?\.\,\^\$\\\|\#\-]/g, "\\$&");
                 if(keys == "required"){
                     var regex = "\<[^\<\>]+value\=\"[^\"]*" + search + "[^\"]*\"\>";
                 } else if(keys == "optional" || keys == "eitheror"){
@@ -1260,4 +1304,4 @@
     w.tail.select = tailSelect;
     w.tail.options = tailOptions;
     return tailSelect;
-}(this));
+}));
