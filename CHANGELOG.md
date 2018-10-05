@@ -1,6 +1,16 @@
 CHANGELOG
 ===========
 
+Version 0.3.4 - Alpha
+---------------------
+-   Info: I don't understand why some JS window/DOM-depended libraries exports their library to
+          nodeJS using `module.exports`, so I'll just offer AMD only for the moment!
+-   Add: The options `csvOutput` and `csvSeparator` as well as a hidden CSV input method.
+-   Add: Support as Asynchronous Module Definition, tested with requireJS (I'm new with AMD).
+-   Update: The `animate` option is now set to `true` per default!
+-   Update: Correct use of the labels / placeholders.
+-   Bugfix: Escape RegExp Characters in Search string.
+
 Version 0.3.3 - Alpha
 ---------------------
 -   Hotfix: Nothing can be selected anymore when using the search function

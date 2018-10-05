@@ -6,47 +6,42 @@ tail.select
 [![plainJS](https://img.shields.io/badge/plainJS-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%9C%AB-yellow.svg?style=flat-square)](https://plainjs.com/javascript/plugins/tailselect-185/)
 [![Author](https://img.shields.io/badge/Author-SamBrishes@pytesNET-lightgrey.svg?style=flat-square)](https://www.github.com/pytesNET)
 
-The tail.select script is back, completely re-written in pure vanilla JavaScript from scratch! It
-offers almost the same functionality as the jQuery version, back in 2016, and has been enriched with
+The **tail.select** script is back, completely written from scratch in pure vanilla JavaScript! It
+offers almost the same functionality as the jQuery version, back in 2014 and has been enriched with
 important and useful features. And version 0.3.2 brings back the jQuery implementation and adds on
 top also a binding for the MooTools library.
 
-**[Check out the demonstration](https://github.pytes.net/tail.select)**
+Since Version 0.3.4 the Usage as Asynchronous Module Definition (**AMD**) is now also supported,
+tested with requireJS.
+
+**[Check out the Demonstration](https://github.pytes.net/tail.select)**
 
 Features
 --------
--   Compatible with all modern browsers, and also for IE >= 9.
--   Single and Multiple select fields, deselect- and limitable
--   A search field, to find required options with ease
--   Hide and Move selected (and disabled) options
--   Manipulate, Add, Edit and Delete options on the fly
--   Optional descriptions to describe the single options
--   Optional dropdown open/close animation and handling options
--   Implementations for the jQuery and the MooTools libraries
--   ... and a few more feature-rich settings
+-   Compatible with all modern browsers, and also for **IE >= 9**.
+-   Supports Single and Multiple Select fields, also deselect- and limitable!
+-   Offers a Search field within the dropdown list to find the desired options quickly!
+-   Offers a Description text to describe each single option!
+-   Allows to manipulate (add, edit and delete) each single option during the runtime.
+-   Bindings for the jQuery and MooTools library and usable as **AMD**.
+-   ... and many settings to configure the environment and its behavior!
 
 Embed
 -----
-Just download the archive and include the `js/tail.select(.min).js` script as well as the
-`css/tail.select.css` stylesheet into your HTML document.
+You can download the *tail.select* package as [.tar](https://github.com/pytesNET/tail.select/tarball/master)
+or as [.zip](https://github.com/pytesNET/tail.select/zipball/master) archive, you can also use NPM
+`npm install tail.select` or YARN `yarn add tail.select` if you have the respective package manager
+installed of course.
 
+The CDN jsDelivr and unpkg can also be used to embed the respective files:
 ```
-<link type="text/css" rel="stylesheet" href="css/tail.select.css" />
-<script type="text/javascript" src="js/tail.select.min.js"></script>
-```
-
-###### Download tail.select using NPM
-```
-npm -i tail.select
+https://cdn.jsdelivr.net/npm/tail.select@latest/
 ```
 
-###### Embed tail.select using jsDevlir
-`https://cdn.jsdelivr.net/npm/tail.select@latest/css/tail.select.css`<br />
-`https://cdn.jsdelivr.net/npm/tail.select@latest/js/tail.select.min.js`
+```
+https://unpkg.com/tail.select/
+```
 
-###### Embed tail.select using UNPKG
-`https://unpkg.com/tail.select/css/tail.select.css`<br />
-`https://unpkg.com/tail.select/js/tail.select.min.js`
 
 Documentation
 -------------
@@ -77,6 +72,8 @@ tail.select("select", {
     search:             false,
     searchFocus:        true,
     searchMarked:       true,
+    csvOutput:          false,
+    csvSeparator:       ",",
     hideSelect:         true,
     hideSelected:       false,
     hideDisabled:       false,
@@ -196,6 +193,14 @@ opened.
 #### searchMarked
 `bool`<br />
 This option will 'mark' the search term on the respective option test within the given results.
+
+#### csvOutput
+`bool`<br />
+This option will add a hidden input field, which takes over the name attribute of the source select field and contains the selected values - separated with the option separator defined in `csvSeparator`.
+
+#### csvSeparator
+`string`<br />
+This option defines the separator, which is used for the option `csvOutput`.
 
 #### hideSelect
 `bool`<br />
