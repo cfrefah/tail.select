@@ -45,10 +45,110 @@
         <meta name="og:description" content="tail.select is back: Create beautiful, functional and extensive (Multi) Select Fields with pure, vanilla JavaScript." />
 
         <!-- Assets -->
-        <link type="text/css" rel="stylesheet" href="assets/css/tail.demo.css?ver=2.1.0" />
-        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i|Crimson+Text:400,600|Oswald:400,500" />
+        <link type="text/css" rel="stylesheet" href="assets/css/tail.demo.css?ver=2.2.0" />
+        <link type="text/css" rel="stylesheet" href="assets/css/octicons.css?ver=8.1.0" />
+        <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i|Oswald:400,500" />
         <script type="text/javascript" src="assets/js/prism.min.js?ver=1.15.0"></script>
-        <script type="text/javascript" src="assets/js/tail.demo.js?ver=2.1.0"></script>
+        <script type="text/javascript" src="assets/js/tail.demo.js?ver=2.2.0"></script>
+        <style type="text/css">
+            .content section.welcome-back{
+                width: 100%;
+                height: 500px;
+                margin: -1px 0 0 0;
+                padding: 0;
+                position: relative;
+                background-color: #DC4650;
+                background-image: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
+                background-image: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%);
+                background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=1 );
+            }
+            .content section.welcome-back .welcome-title{
+                top: 50%;
+                left: 50%;
+                width: 500px;
+                height: 60px;
+                color: #ffffff;
+                margin: -80px 0 0 -250px;
+                padding: 0;
+                display: block;
+                position: absolute;
+                font-size: 48px;
+                text-align: center;
+                line-height: 60px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+            }
+            .content section.welcome-back .welcome-cloud{
+                margin: 0;
+                padding: 0;
+                display: block;
+            }
+            .content section.welcome-back .welcome-cloud ul{
+                width: 100%;
+                height: 500px;
+                margin: 0;
+                padding: 0;
+                display: block;
+                position: relative;
+                list-style: none;
+            }
+            .content section.welcome-back .welcome-cloud ul li{
+                color: rgba(255, 255, 255, 0.8);
+                margin: 5px;
+                padding: 10px;
+                display: block;
+                position: absolute;
+                line-height: 40px;
+                letter-spacing: 1px;
+                text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+            }
+            .content section.welcome-back .welcome-cloud ul li b{
+                color: rgba(255, 255, 255, 1);
+            }
+            .content section.welcome-back .welcome-cloud ul li.item-1{
+                top: 30px;
+                left: 40px;
+                font-size: 30px;
+            }
+            .content section.welcome-back .welcome-cloud ul li.item-2{
+                left: 50px;
+                bottom: 30px;
+                font-size: 22px;
+            }
+            .content section.welcome-back .welcome-cloud ul li.item-3{
+                right: 100px;
+                bottom: 65px;
+                font-size: 26px;
+            }
+            .content section.welcome-back .welcome-example{
+                top: 50%;
+                left: 50%;
+                right: 200px;
+                width: 300px;
+                margin: 20px 0 0 -150px;
+                padding: 20px 10px;
+                display: inline-block;
+                position: absolute;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.15);
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+            }
+            .content section.welcome-back .welcome-example .tail-select .tail-select-label,
+            .content section.welcome-back .welcome-example .tail-select .tail-select-dropdown{
+                border-color: transparent;
+                background-color: #ffffff;
+                box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+                -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+            }
+        </style>
 
         <!-- Source -->
         <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.3.3" />
@@ -71,9 +171,14 @@
                 <div class="container-right header-right">
                     <ul class="main-navi">
                         <li class="navi-item item-internal active"><a href="./index.html"><span>Demo</span></a></li>
-                        <!--<li class="navi-item item-internal"><a href="./docs.html"><span>Docs</span></a></li>-->
-                        <li class="navi-item item-external"><a href="https://www.github.com/pytesNET/tail.select"><span>GitHub</span></a></li>
-                        <li class="navi-item item-external"><a href="https://github.com/pytesNET/tail.select/archive/master.zip"><span>Download</span></a></li>
+                        <li class="navi-item item-internal"><a href="./docs.html"><span>Docs</span></a></li>
+
+                        <li class="navi-item item-external">
+                            <a href="https://www.github.com/pytesNET/tail.select"><span class="octicon octicon-mark-github"></span></a>
+                        </li>
+                        <li class="navi-item item-external">
+                            <a href="https://github.com/pytesNET/tail.select/tarball/master" class="tar"><span>.TAR</span></a><a href="https://github.com/pytesNET/tail.select/zipball/master" class="zip"><span>.ZIP</span></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -181,10 +286,10 @@
                         <h1>A beautiful <b>Select</b> Field</h1>
                         <p>The tail.select fields below shows you the absolute standard, without any settings!</p>
                     </header>
-                    <div class="table">
-                        <article>
+                    <article class="side-by-side separated">
+                        <aside>
                             <h1>Single</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-1" class="select">
                                     <option>Atari 2600</option>
                                     <option>Atari 5200</option>
@@ -236,10 +341,10 @@
                                     <option>Sony PlayStation Vita</option>
                                 </select>
                             </div>
-                        </article>
-                        <article>
+                        </aside>
+                        <aside>
                             <h1>Multiple</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-2" class="select" multiple>
                                     <option>Atari 2600</option>
                                     <option>Atari 5200</option>
@@ -291,8 +396,23 @@
                                     <option>Sony PlayStation Vita</option>
                                 </select>
                             </div>
-                        </article>
-                    </div>
+                        </aside>
+                    </article>
+                    <footer>
+                        <div class="example-label" data-handle="example">Show Example Code</div>
+                        <div class="example-code">
+                            <div>
+                                <b>HTML Structure</b>
+<pre class="language-markup line-numbers"><code>&lt;select class="select" multiple&gt;
+    &lt;option&gt;[...]&lt;/option&gt;
+    &lt;option&gt;[...]&lt;/option&gt;
+    &lt;option&gt;[...]&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                                <b>JavaScript Code</b>
+<pre class="language-javascript line-numbers"><code>tail.select(".select");</code></pre>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </section>
 
@@ -302,10 +422,10 @@
                         <h1>A grouped <b>Select</b> Field</h1>
                         <p>It goes on without any setting, but with some more HTML Code to define some optgroup stuff!</p>
                     </header>
-                    <div class="table">
-                        <article>
+                    <article class="side-by-side separated">
+                        <aside>
                             <h1>Single</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-3" class="select">
                                     <optgroup label="Atari">
                                         <option>Atari 2600</option>
@@ -367,10 +487,10 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </article>
-                        <article>
+                        </aside>
+                        <aside>
                             <h1>Multiple</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-4" class="select" multiple>
                                     <optgroup label="Atari">
                                         <option>Atari 2600</option>
@@ -432,8 +552,25 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </article>
-                    </div>
+                        </aside>
+                    </article>
+                    <footer>
+                        <div class="example-label" data-handle="example">Show Example Code</div>
+                        <div class="example-code">
+                            <div>
+                                <b>HTML Structure</b>
+<pre class="language-markup line-numbers"><code>&lt;select class="select" multiple&gt;
+    &lt;optgroup label="[...]"&gt;
+        &lt;option&gt;[...]&lt;/option&gt;
+        &lt;option&gt;[...]&lt;/option&gt;
+        &lt;option&gt;[...]&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                                <b>JavaScript Code</b>
+<pre class="language-javascript line-numbers"><code>tail.select(".select");</code></pre>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </section>
 
@@ -443,10 +580,10 @@
                         <h1>A finding <b>Select</b> Field</h1>
                         <p>Our first line of (JavaScript) code enables the search field within the dropdown element.</p>
                     </header>
-                    <div class="table">
-                        <article>
+                    <article class="side-by-side separated">
+                        <aside>
                             <h1>Single Search</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-5" class="select-search">
                                     <optgroup label="Atari">
                                         <option>Atari 2600</option>
@@ -508,10 +645,10 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </article>
-                        <article>
+                        </aside>
+                        <aside>
                             <h1>Multiple Search</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-6" class="select-search" multiple>
                                     <optgroup label="Atari">
                                         <option>Atari 2600</option>
@@ -573,8 +710,27 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </article>
-                    </div>
+                        </aside>
+                    </article>
+                    <footer>
+                        <div class="example-label" data-handle="example">Show Example Code</div>
+                        <div class="example-code">
+                            <div>
+                                <b>HTML Structure</b>
+<pre class="language-markup line-numbers"><code>&lt;select class="select" multiple&gt;
+    &lt;optgroup label="[...]"&gt;
+        &lt;option&gt;[...]&lt;/option&gt;
+        &lt;option&gt;[...]&lt;/option&gt;
+        &lt;option&gt;[...]&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                                <b>JavaScript Code</b>
+<pre class="language-javascript line-numbers"><code>tail.select(".select-search", {
+    search: true
+});</code></pre>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </section>
 
@@ -584,10 +740,10 @@
                         <h1>A descriptive <b>Select</b> Field</h1>
                         <p>Just one option and some HTML stuff more and tail.select allows us some descriptive text.</p>
                     </header>
-                    <div class="table">
-                        <article>
+                    <article class="side-by-side separated">
+                        <aside>
                             <h1>Single Descriptions</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-7" class="select-description">
                                     <optgroup label="Atari">
                                         <option data-description="Released: 1977">Atari 2600</option>
@@ -649,10 +805,10 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </article>
-                        <article>
+                        </aside>
+                        <aside>
                             <h1>Multiple Descriptions</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-8" class="select-description" multiple>
                                     <optgroup label="Atari">
                                         <option data-description="Released: 1977">Atari 2600</option>
@@ -714,8 +870,52 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </article>
-                    </div>
+                        </aside>
+                    </article>
+                    <footer>
+                        <div class="example-label" data-handle="example">Show Example Code</div>
+                        <div class="example-code">
+                            <div>
+                                <b>HTML Structure</b>
+<pre class="language-markup line-numbers"><code>&lt;select class="select-description" multiple&gt;
+    &lt;optgroup label="[...]"&gt;
+        &lt;option data-description="[...]"&gt;[...]&lt;/option&gt;
+        &lt;option data-description="[...]"&gt;[...]&lt;/option&gt;
+        &lt;option data-description="[...]"&gt;[...]&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                                <b>JavaScript Code</b>
+<pre class="language-javascript line-numbers"><code>tail.select(".select-description", {
+    search: true,
+    descriptions: true
+});</code></pre>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </section>
+
+            <section class="demo-content invert">
+                <div class="container">
+                    <header>
+                        <div class="badge badge-green">
+                            <span class="badge-icon"><span class="octicon octicon-mark-github"></span></span>
+                            <span class="badge-inner">We need your Support</span>
+                        </div>
+                    </header>
+                    <article class="bordered inner">
+                        <p>
+                            We need <mark>your help</mark> to make the <b>tail.select</b> script as comfortable and stable as possible!<br />
+                            Please report each issue and request your ideas and suggestions on our Github Repository!
+                        </p>
+                    </article>
+                    <article class="inner" style="padding:50px 30px 0 30px;">
+                        <p>
+                            <a href="https://www.github.com/pytesNET/tail.select" class="github-special-white">
+                                Written with <span class="octicon octicon-heart"></span> on <span class="octicon octicon-mark-github"></span>
+                            </a>
+                        </p>
+                    </article>
                 </div>
             </section>
 
@@ -725,10 +925,10 @@
                         <h1>A limitable <b>Select</b> Field</h1>
                         <p>You can allow to deselect single select fields, and you can limit the selection on multiple ones.</p>
                     </header>
-                    <div class="table">
-                        <article>
+                    <article class="side-by-side separated">
+                        <aside>
                             <h1>DeSelectable Single</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-9" class="select-deselect">
                                     <optgroup label="Atari">
                                         <option data-description="Released: 1977">Atari 2600</option>
@@ -790,10 +990,10 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </article>
-                        <article>
+                        </aside>
+                        <aside>
                             <h1>Limit Multiple</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-10" class="select-limit" multiple>
                                     <optgroup label="Atari">
                                         <option data-description="Released: 1977">Atari 2600</option>
@@ -855,8 +1055,37 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </article>
-                    </div>
+                        </aside>
+                    </article>
+                    <footer>
+                        <div class="example-label" data-handle="example">Show Example Code</div>
+                        <div class="example-code">
+                            <div>
+                                <b>HTML Structure</b>
+<pre class="language-markup line-numbers"><code>&lt;select class="select-[...]" multiple&gt;
+    &lt;optgroup label="[...]"&gt;
+        &lt;option data-description="[...]"&gt;[...]&lt;/option&gt;
+        &lt;option data-description="[...]"&gt;[...]&lt;/option&gt;
+        &lt;option data-description="[...]"&gt;[...]&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+                                <b>JavaScript Code</b>
+<pre class="language-javascript line-numbers"><code>// Left Select
+tail.select(".select-deselect", {
+    search: true,
+    descriptions: true,
+    deselect: true,
+});
+
+// Right Select
+tail.select(".select-limit", {
+    search: true,
+    descriptions: true,
+    multiLimit: 10
+});</code></pre>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </section>
 
@@ -866,10 +1095,10 @@
                         <h1>A movable <b>Select</b> Field</h1>
                         <p>It's also possible to move your selections to an existing container elsewhere and hide the respective options within the dropdown field.</p>
                     </header>
-                    <div class="table">
-                        <article>
+                    <article class="side-by-side separated">
+                        <aside>
                             <h1>Multiple Select</h1>
-                            <div>
+                            <div class="example">
                                 <select type="text" id="select-11" class="select-move" multiple>
                                     <optgroup label="Atari">
                                         <option data-description="Released: 1977">Atari 2600</option>
@@ -931,16 +1160,43 @@
                                     </optgroup>
                                 </select>
                             </div>
-                        </article>
-                        <article>
+                        </aside>
+                        <aside>
                             <h1>Selection Container</h1>
-                            <div>
+                            <div class="example">
                                 <div style="width: 425px;margin:0 auto;">
                                     <div class="tail-move-container"></div>
                                 </div>
                             </div>
-                        </article>
-                    </div>
+                        </aside>
+                    </article>
+                    <footer>
+                        <div class="example-label" data-handle="example">Show Example Code</div>
+                        <div class="example-code">
+                            <div>
+                                <b>HTML Structure</b>
+<pre class="language-markup line-numbers"><code>&lt;select class="select-move" multiple&gt;
+    &lt;optgroup label="[...]"&gt;
+        &lt;option data-description="[...]"&gt;[...]&lt;/option&gt;
+        &lt;option data-description="[...]"&gt;[...]&lt;/option&gt;
+        &lt;option data-description="[...]"&gt;[...]&lt;/option&gt;
+    &lt;/optgroup&gt;
+&lt;/select&gt;
+
+&lt;div class="tail-move-container"&gt;&lt;/div&gt;</code></pre>
+                                <b>JavaScript Code</b>
+<pre class="language-javascript line-numbers"><code>tail.select(".select-move", {
+    search: true,
+    descriptions: true,
+    hideSelected: true,
+    hideDisabled: true,
+    multiLimit: 15,
+    multiShowCount: false,
+    multiContainer: ".tail-move-container"
+});</code></pre>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </section>
 
@@ -950,29 +1206,137 @@
                         <h1>A manipulatable <b>Select</b> Field</h1>
                         <p>A small example to show the power of the tail.select.options class.</p>
                     </header>
-                    <article>
-                        <div class="demo-advanced">
-                            <div class="demo-advanced-left">
-                                <button data-select="open">Open Field</button><br />
-                                <button data-select="close">Close Field</button><br />
-                                <button data-select="toggle">Toggle Field</button><br />
-                                <button class="red" data-select="remove">Remove Field</button><br />
+                    <article class="side-by-side separated">
+                        <aside class="aside-25 text-right">
+                            <div class="form-field">
+                                <button data-select="open">Open Field</button>
+                            </div>
+                            <div class="form-field">
+                                <button data-select="close">Close Field</button>
+                            </div>
+                            <div class="form-field">
+                                <button data-select="toggle">Toggle Field</button>
+                            </div>
+                            <div class="form-field">
+                                <button class="red" data-select="remove">Remove Field</button>
+                            </div>
+                            <div class="form-field">
                                 <button class="green" data-select="reinit" disabled>Re-Init Field</button>
                             </div>
-                            <div class="demo-advanced-center">
-                                <select type="text" id="select-12" class="select-manipulatable" multiple>
-                                </select>
+                        </aside>
+                        <aside class="aside-50">
+                            <div class="example">
+                                <select type="text" id="select-12" class="select-manipulatable" multiple></select>
                             </div>
-                            <div class="demo-advanced-right">
-                                <button data-select="load" data-value="activision">Load Activision (344 Items)</button><br />
-                                <button data-select="load" data-value="bethesda">Load Bethesda (54 Items)</button><br />
-                                <button data-select="load" data-value="bioware">Load BioWare (29 Items)</button><br />
-                                <button data-select="load" data-value="cd-project">Load CD Project Red (7 Items)</button><br />
-                                <button data-select="load" data-value="deep-silver">Load Deep Silver (74 Items)</button><br />
+                        </aside>
+                        <aside class="aside-25 text-left">
+                            <div class="form-field">
+                                <button data-select="load" data-value="activision">Load Activision (344 Items)</button>
+                            </div>
+                            <div class="form-field">
+                                <button data-select="load" data-value="bethesda">Load Bethesda (54 Items)</button>
+                            </div>
+                            <div class="form-field">
+                                <button data-select="load" data-value="bioware">Load BioWare (29 Items)</button>
+                            </div>
+                            <div class="form-field">
+                                <button data-select="load" data-value="cd-project">Load CD Project Red (7 Items)</button>
+                            </div>
+                            <div class="form-field">
+                                <button data-select="load" data-value="deep-silver">Load Deep Silver (74 Items)</button>
+                            </div>
+                            <div class="form-field">
                                 <button data-select="load" data-value="ubisoft">Load Ubisoft (399 Items)</button>
                             </div>
-                        </div>
+                        </aside>
                     </article>
+                    <footer>
+                        <div class="example-label" data-handle="example">Show Example Code</div>
+                        <div class="example-code">
+                            <div>
+                                <b>HTML Structure</b>
+<pre class="language-markup line-numbers"><code>&lt;select class="select-manipulatable" multiple&gt;&lt;/select&gt;</code></pre>
+                                <b>JavaScript Code</b>
+<pre class="language-javascript line-numbers"><code>var mani = tail.select(".select-manipulatable", {
+    search: true,
+    descriptions: true,
+    multiLimit: 15,
+    animate: true
+});
+
+// Action Buttons
+var buttons = d.querySelectorAll("button[data-select]"), l = buttons.length;
+for(var i = 0; i < l; i++){
+    buttons[i].addEventListener("click", function(event){
+        if(this.disabled){
+            return;
+        }
+        event.preventDefault();
+        event.stopPropagation(); // Prevent document handler.
+        action = this.getAttribute("data-select"),
+        value  = this.getAttribute("data-value") || null;
+
+        if(action == "open"){
+            mani.open();
+        } else if(action == "close"){
+            mani.close();
+        } else if(action == "toggle"){
+            mani.toggle();
+        } else if(action == "remove"){
+            for(var b = 0; b < l; b++){
+                if(buttons[b].getAttribute("data-select") == "reinit"){
+                    buttons[b].disabled = false;
+                } else {
+                    buttons[b].disabled = true;
+                }
+            }
+            mani.remove();
+        } else if(action == "reinit"){
+            for(var b = 0; b < l; b++){
+                if(buttons[b].getAttribute("data-select") == "reinit"){
+                    buttons[b].disabled = true;
+                } else {
+                    buttons[b].disabled = false;
+                }
+            }
+            mani.init();
+        } else if(action == "onload"){
+            this.disabled = true;
+            this.className = this.className.replace("red", "loading");
+
+            var items = mani.options.items[this.getAttribute("data-group")];
+            for(var key in items){
+                mani.options.remove(key, items[key].group);
+            }
+            this.setAttribute("data-select", "load");
+            this.removeAttribute("data-group");
+            this.disabled = false;
+            this.innerText = this.innerText.replace("Unload", "Load");
+            this.className = this.className.replace("loading", "").trim();
+        } else if(action == "load"){
+            this.disabled = true;
+            this.className += " loading";
+
+            ajax(value, function(items, element){
+                var group = null;
+                for(var l = items.length, i = 0; i < l; i++){
+                    mani.options.add(items[i].value, items[i].text, items[i].group, false, false, items[i].desc);
+                    if(group == null){
+                        group =items[i].group;
+                    }
+                }
+                element.disabled = false;
+                element.setAttribute("data-select", "onload");
+                element.setAttribute("data-group", group);
+                element.innerText = element.innerText.replace("Load", "Unload");
+                element.className = element.className.replace("loading", "red");
+            }, this);
+        }
+    });
+}</code></pre>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </section>
         </div>
@@ -984,13 +1348,26 @@
                     Published under the MIT / X11 License
                 </div>
                 <div class="container-right footer-right">
-                    Star, Fork and Download on <a href="https://github.com/pytesNET/tail.select"><b>GitHub</b>!</a><br />
+                    Star, Fork and Download on <a href="https://github.com/pytesNET/tail.select"><span class="octicon octicon-logo-github"></span>!</a><br />
+                    This Page uses <a href="https://prismjs.com/" target="_blank">prismJS</a> and <a href="https://github.com/lcdsantos/menuspy" target="_blank">MenuSpy</a>!
                 </div>
             </div>
         </div>
 
         <div class="js-footer">
             <script type="text/javascript">
+                var href = window.location.href.slice(0, window.location.href.lastIndexOf("/")+1);
+                var ajax = function(value, callback, argument){
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function(){
+                        if(this.readyState == 4 && this.status == 200){
+                            callback(JSON.parse(this.responseText), argument);
+                        }
+                    };
+                    xhttp.open("GET", href + "assets/data/demo." + value + ".json", true);
+                    xhttp.send();
+                }
+
                 document.addEventListener("DOMContentLoaded", function(){
                     var w = window, d = window.document;
 
@@ -1026,17 +1403,6 @@
                         multiShowCount: false,
                         multiContainer: ".tail-move-container"
                     });
-                    // AJAX Function
-                    var ajax = function(value, callback, argument){
-                        var xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function(){
-                            if(this.readyState == 4 && this.status == 200){
-                                callback(JSON.parse(this.responseText), argument);
-                            }
-                        };
-                        xhttp.open("GET", w.location.href + "assets/data/demo." + value + ".json", true);
-                        xhttp.send();
-                    }
 
                     // tail.select Element
                     var mani = tail.select(".select-manipulatable", {
@@ -1084,7 +1450,7 @@
                                 mani.init();
                             } else if(action == "onload"){
                                 this.disabled = true;
-                                this.className = this.className.replace("red", "loading");
+                                this.className = this.className.replace("button-red", "loading");
 
                                 var items = mani.options.items[this.getAttribute("data-group")];
                                 for(var key in items){
@@ -1111,7 +1477,7 @@
                                     element.setAttribute("data-select", "onload");
                                     element.setAttribute("data-group", group);
                                     element.innerText = element.innerText.replace("Load", "Unload");
-                                    element.className = element.className.replace("loading", "red");
+                                    element.className = element.className.replace("loading", "button-red");
                                 }, this);
                             }
                         });

@@ -22,22 +22,21 @@
                 end_callback.call(elements);
             }
         },
-        hasClass: function(element, classname){
-            var regex = new RegExp("(|\s+)" + classname + "(\s+|)");
-            return regex.test(element.className);
+        hasClass: function(e, name){
+            return (new RegExp("(|\s+)" + name + "(\s+|)")).test(e.className);
         },
-        addClass: function(element, classname){
-            if(!this.hasClass(element, classname)){
-                element.className = (element.className.trim() + " " + classname.trim()).trim();
+        addClass: function(e, name){
+            if(!(new RegExp("(|\s+)" + name + "(\s+|)")).test(e.className)){
+                e.className = (e.className.trim() + " " + name.trim()).trim();
             }
-            return element;
+            return e;
         },
-        removeClass: function(element, classname){
-            var regex = new RegExp("(|\s+)(" + classname + ")(\s+|)");
-            if(regex.test(element.className)){
-                element.className = (element.className.replace(regex, "$1$3")).trim();
+        removeClass: function(e, name){
+            var regex = new RegExp("(|\s+)(" + name + ")(\s+|)");
+            if(regex.test(e.className)){
+                e.className = (e.className.replace(regex, "$1$3")).trim();
             }
-            return element;
+            return e;
         }
     };
 
@@ -92,38 +91,65 @@
         }
     };
 
+    /*
+     |  TOGGLE SOURCE CODE
+     */
+    var source = function(event){
+        var container = this.nextElementSibling;
+        if(!tail.hasClass(container, "active")){
+            var coptainer = container.cloneNode(true);
+                coptainer.style.height = "auto";
+                coptainer.style.position = "absolute";
+                coptainer.style.visibility = "hidden";
+                coptainer.className += " active";
+
+            this.parentElement.appendChild(coptainer);
+            var height = coptainer.offsetHeight;
+            this.parentElement.removeChild(coptainer);
+
+            this.innerText = "Hide Example Code";
+            tail.addClass(this, "active");
+            tail.addClass(container, "active");
+            container.style.height = height + "px";
+        } else {
+            container.removeAttribute("style");
+            this.innerText = "Show Example Code";
+            tail.removeClass(this, "active");
+            tail.removeClass(container, "active");
+        }
+    }
+
     // Ready
     d.addEventListener("DOMContentLoaded", function(){
+
+        // Fix Sub Navigation
+        tail.each(d.querySelectorAll("ul.sub-navi"), function(){
+            var clone = this.cloneNode(true);
+                clone.style.zIndex = "-1";
+                clone.style.opacity = "0";
+                clone.style.display = "block";
+                clone.style.visibility = "hidden";
+                this.parentElement.appendChild(clone);
+            var width = clone.offsetWidth;
+                this.parentElement.removeChild(clone);
+            this.style.left = "50%";
+            this.style.marginLeft = "-" + (width/2) + "px";
+        });
+
+        // Init Tooltips
         tail.each(d.querySelectorAll("*[data-tooltip]"), function(){
             this.addEventListener("mouseenter", tooltip);
             this.addEventListener("mouseleave", tooltip);
         });
 
+        // Init ScrollSpy
+        tail.each(d.querySelector("*[data-handle='menuspy']"), function(){
+            new MenuSpy(this);
+        });
+
+        // Toggle Source Code
         tail.each(d.querySelectorAll("*[data-handle='example']"), function(){
-            this.addEventListener("click", function(event){
-                event.preventDefault();
-
-                var container = this.nextElementSibling;
-                if(!tail.hasClass(container, "active")){
-                    var coptainer = container.cloneNode(true);
-                        coptainer.style.height = "auto";
-                        coptainer.style.position = "absolute";
-                        coptainer.style.visibility = "hidden";
-                        coptainer.className += " active";
-
-                    this.parentElement.appendChild(coptainer);
-                    var height = coptainer.offsetHeight;
-                    this.parentElement.removeChild(coptainer);
-
-                    this.innerText = "Hide Example Code";
-                    tail.addClass(container, "active");
-                    container.style.height = height + "px";
-                } else {
-                    container.removeAttribute("style");
-                    this.innerText = "Show Example Code";
-                    tail.removeClass(container, "active");
-                }
-            });
+            this.addEventListener("click", source);
         });
     });
 })(this);
