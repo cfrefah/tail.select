@@ -1,7 +1,7 @@
 /*
  |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.3.5 - Alpha
+ |  @version    0.3.6 - Alpha
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
@@ -140,7 +140,7 @@
         tailSelect.instances["tail-" + this.id] = this;
         return this.init();
     };
-    tailSelect.version = "0.3.5";
+    tailSelect.version = "0.3.6";
     tailSelect.status = "alpha";
     tailSelect.count = 0;
     tailSelect.instances = {};
@@ -1158,7 +1158,7 @@
         /*
          |  FIND SOME OPTIONs - WALKER EDITION
          |  @since  0.3.0
-         |  @update 0.3.5
+         |  @update 0.3.6
          |
          |  @param  string  The search term.
          |  @param  string  Experimental: May not work as expected!
@@ -1170,18 +1170,13 @@
             if(typeof(this._findLoop) == "undefined"){
                 search = search.replace(/[\[\]{}()*+?.,^$\\|#-]/g, "\\$&");
                 if(keys == "required"){
-                    var regex = "\<[^<>]+value\=\"[^\"]*" + search + "[^\"]*\"\>";
+                    var regex = "\<.*(?!<\/option>)value\=\"[^\"]*(" + search + ")[^\"]*\".*(?!<\/option>)\>";
                 } else if(keys == "optional" || keys == "eitheror"){
-                    var regex = "\<[^<>]+(value\=\"[^\"]*" + search + "[^\"]*\")?\>";
+                    var regex = "\<.*(?!<\/option>)(value\=\"[^\"]*(" + search + ")[^\"]*\")?.*(?!<\/option>)\>";
                 } else {
-                    var regex = "\<[^<>]+\>";
+                    var regex = "\<.*(?!<\/option>)\>";
                 }
-                if(keys == "eitheror"){
-                    regex += "[^<>]*(" + search + ")?[^<>]*";
-                } else {
-                    regex += "[^<>]*(" + search + ")[^<>]*";
-                }
-                regex += "\<[^<>]+\>";
+                regex += "[^<>]*(" + search + ")[^<>]*" + (keys == "eitheror"? "?": "") + "\<\/option\>";
             }
 
             // Start Walker
