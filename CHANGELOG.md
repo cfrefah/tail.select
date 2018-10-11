@@ -1,6 +1,16 @@
 CHANGELOG
 ===========
 
+Version 0.3.5 - Alpha
+---------------------
+-   Update: Change for loop expression.
+-   Codacy: 'ev' is already defined. (no-redeclare).
+-   Codacy: 'ev' used outside of binding context. (block-scoped-var).
+-   Bugfix: Constructor Instance check.
+-   Bugfix: Wrong Version Number.
+-   Hotfix: Searching when data-description containes > char
+            [#2](https://github.com/pytesNET/tail.select/issues/2). Thanks to **tomasKucera**
+
 Version 0.3.4 - Alpha
 ---------------------
 -   Info: I don't understand why some JS window/DOM-depended libraries exports their library to
@@ -9,12 +19,13 @@ Version 0.3.4 - Alpha
 -   Add: Support as Asynchronous Module Definition, tested with requireJS (I'm new with AMD).
 -   Update: The `animate` option is now set to `true` per default!
 -   Update: Correct use of the labels / placeholders.
+-   Update: The string-keys (+ the german translation).
 -   Bugfix: Escape RegExp Characters in Search string.
 
 Version 0.3.3 - Alpha
 ---------------------
 -   Hotfix: Nothing can be selected anymore when using the search function
-            [#1](https://github.com/pytesNET/tail.select/issues/1)
+            [#1](https://github.com/pytesNET/tail.select/issues/1). Thanks to **markteunen65**
 
 Version 0.3.2 - Alpha
 ---------------------

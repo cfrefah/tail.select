@@ -28,12 +28,18 @@ Features
 
 Embed
 -----
-You can download the *tail.select* package as [.tar](https://github.com/pytesNET/tail.select/tarball/master)
-or as [.zip](https://github.com/pytesNET/tail.select/zipball/master) archive, you can also use NPM
-`npm install tail.select` or YARN `yarn add tail.select` if you have the respective package manager
-installed of course.
+You can download the latest **tail.select** package as [.tar](https://github.com/pytesNET/tail.select/tarball/master)
+or as [.zip](https://github.com/pytesNET/tail.select/zipball/master) archive or by using NPM or YARN:
 
-The CDN jsDelivr and unpkg can also be used to embed the respective files:
+```
+npm install tail.select
+```
+
+```
+yarn add tail.select
+```
+
+### CDN
 ```
 https://cdn.jsdelivr.net/npm/tail.select@latest/
 ```
@@ -114,28 +120,28 @@ at all 'tail.select.strings.placeholder' will be used!
 #### deselect
 `bool`<br />
 This option allows to deselect single select fields, which theoretically isn't possible in HTML. If
-enabled, tail.select will use '<option>.hasAttribtue("selected")' instead of the '<option>.selected'
+enabled, tail.select will use `<option>.hasAttribute("selected")` instead of the `<option>.selected`
 variable. Please note: This option affects single select fields only!
 
 #### animate
 `bool`<br />
 This options animates the open / close sequence of the tail.select dropdown field. Therefore it uses
-the classname 'iodle' during the animation.
+the className 'idle' during the animation.
 
 #### openAbove
 `bool`<br />
-This option determines where the tail.select dropdown field is located. Use 'true' to open the
+This option determines where the tail.select dropdown field is located. Use `true` to open the
 dropdown field always above the select field, use 'false' for the opposite or just keep it to
-'null', which will use the bottom location unless there is no room left for it.
+`null`, which will use the bottom location unless there is no room left for it.
 
 #### stayOpen
 `bool`<br />
-This option will prevent the call of the '.close()' method at the typical events, but you can still
-call the '.close()' method on your own to close the dropdown field.
+This option will prevent the call of the `.close()` method at the typical events, but you can still
+call the `.close()` method on your own to close the dropdown field.
 
 #### startOpen
 `bool`<br />
-This option will call the '.open()' method directly after the tail.select initialization has been
+This option will call the `.open()` method directly after the tail.select initialization has been
 completed.
 
 #### multiple
@@ -145,13 +151,13 @@ overwritten by the source select element during the initialization.
 
 #### multiLimit
 `int`<br />
-This option allows to limit the selection to the respective number. Use '-1' to disable any limit,
-use 0 to allow no selection at all. Please note: This option affects multiple select
+This option allows to limit the selection to the respective number. Use `-1` to disable any limit,
+use `0` to allow no selection at all. Please note: This option affects multiple select
 fields only!
 
 #### multiShowCount
 `bool`<br />
-This option shows a small counter to the left of the tail.select label. Please note: this option is
+This option shows a small counter to the left of the tail.select label. Please note: This option is
 only available on multiple select fields!
 
 #### multiContainer
@@ -163,7 +169,8 @@ fields!
 #### descriptions
 `string`<br />
 This option will enable the 'description' option on the respective tail.select instance. To add a
-description to an option just use the 'data-description' attribute on the respective HTML element.
+description to an option just use the 'data-description' attribute on the respective HTML option
+element.
 
 #### items
 `object`<br />
@@ -174,12 +181,12 @@ This option can contain additional options, which should be shown within the tai
 #### sortItems
 `string|function`<br />
 This option configures the sort order of the shown options within the tail.select dropdown element.
-You can use 'ASC', 'DESC' or your own callback sort function!
+You can use `ASC`, `DESC` or your own callback sort [compareFunction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)!
 
 #### sortGroups
 `string|function`<br />
 This option configures the sort order of the shown option groups within the tail.select dropdown
-element. You can use 'ASC', 'DESC' or your own callback sort function!
+element. You can use `ASC`, `DESC` or your own callback sort [compareFunction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)!
 
 #### search
 `bool`<br />
@@ -192,11 +199,12 @@ opened.
 
 #### searchMarked
 `bool`<br />
-This option will 'mark' the search term on the respective option test within the given results.
+This option will 'mark' the search term on the respective option text within the given results.
 
 #### csvOutput
 `bool`<br />
-This option will add a hidden input field, which takes over the name attribute of the source select field and contains the selected values - separated with the option separator defined in `csvSeparator`.
+This option will add a hidden input field, which takes over the name attribute of the source select
+field and contains the selected values - separated with the option separator defined in `csvSeparator`.
 
 #### csvSeparator
 `string`<br />
@@ -204,7 +212,7 @@ This option defines the separator, which is used for the option `csvOutput`.
 
 #### hideSelect
 `bool`<br />
-This option will hide, set the 'display: none;' styling, to the source select element.
+This option will hide, set the `display: none` styling, to the source select element.
 
 #### hideSelected
 `bool`<br />
