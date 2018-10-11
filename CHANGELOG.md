@@ -1,6 +1,10 @@
 CHANGELOG
 ===========
 
+Version 0.3.6 - Alpha
+---------------------
+-   Hotfix: Mismatching / Faulty Search Regex on different HTML conditions.
+
 Version 0.3.5 - Alpha
 ---------------------
 -   Update: Change for loop expression.
