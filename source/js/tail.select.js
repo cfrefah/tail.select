@@ -1,7 +1,7 @@
 /*
  |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.3.4 - Alpha
+ |  @version    0.3.5 - Alpha
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
@@ -43,26 +43,27 @@
         trigger: function(e, event, opt){
             if(CustomEvent && CustomEvent.name){
                 var ev = new CustomEvent(event, opt);
-                return e.dispatchEvent(ev);
+            } else {
+                var ev = d.createEvent("CustomEvent");
+                ev.initCustomEvent(event, !!opt.bubbles, !!opt.cancelable, opt.detail);
             }
-            var ev = d.createEvent("CustomEvent");
-            ev.initCustomEvent(event, !!opt.bubbles, !!opt.cancelable, opt.detail);
             return e.dispatchEvent(ev);
         },
         clone: function(object, replace){
             replace = (typeof(replace) == "object")? replace: {};
             if(Object.assign){
                 return Object.assign({}, object, replace);
-            }
-            var clone = object.constructor();
-            for(var key in object){
-                if(key in replace){
-                    clone[key] = replace[key];
-                } else if(key in object){
-                    clone[key] = object[key];
+            } else {
+                var clone = object.constructor();
+                for(var key in object){
+                    if(key in replace){
+                        clone[key] = replace[key];
+                    } else if(key in object){
+                        clone[key] = object[key];
+                    }
                 }
+                return clone;
             }
-            return clone;
         },
         animate: function(element, callback, delay, prevent){
             if(element.hasAttribute("data-tail-animation")){
@@ -93,7 +94,7 @@
     /*
      |  CONSTRUCTOR
      |  @since  0.3.0
-     |  @update 0.3.2
+     |  @update 0.3.5
      */
     var tailSelect = function(element, config){
         if(typeof(element) == "string"){
@@ -101,7 +102,7 @@
         }
         if(element instanceof NodeList || element instanceof HTMLCollection){
             var _r = [];
-            for(var i = 0; i < element.length; i++){
+            for(var l = element.length, i = 0; i < l; i++){
                 _r.push(new tailSelect(element[i], config));
             }
             return (_r.length === 1)? _r[0]: ((_r.length === 0)? false: _r);
@@ -109,7 +110,7 @@
         if(!(element instanceof Element) || (element.tagName && element.tagName !== "SELECT")){
             return false;
         }
-        if(typeof(this) == "undefined"){
+        if(typeof(this) == "undefined" || !this.init){
             return new tailSelect(element, config);
         }
 
@@ -139,7 +140,7 @@
         tailSelect.instances["tail-" + this.id] = this;
         return this.init();
     };
-    tailSelect.version = "0.3.3";
+    tailSelect.version = "0.3.5";
     tailSelect.status = "alpha";
     tailSelect.count = 0;
     tailSelect.instances = {};
@@ -213,7 +214,7 @@
         /*
          |  HANDLE :: (RESET &) INIT SELECT FIELD
          |  @since  0.3.0
-         |  @update 0.3.4
+         |  @update 0.3.5
          */
         init: function(){
             var self = this, classes = new Array("tail-select");
@@ -327,7 +328,7 @@
                 this.e.addEventListener("change", function(event){
                     var handle = function(options, selected){
                         var o, key, item, group, compare = self.options.selected.slice(0);
-                        for(var i = 0; i < options.length; i++){
+                        for(var l = options.length, i = 0; i < l; i++){
                             o = options[i];
                             key = o.value || o.innerText;
                             group = (o.parentElement.tagName == "OPTGROUP")? o.parentElement.label: "#";
@@ -345,7 +346,7 @@
                         for(var i in compare){
                             self.options.handle("unselect", compare[i]);
                         }
-                    }
+                    };
 
                     if(!this.multiple && this.selectedIndex){
                         self.choose("select", this.options[this.selectedIndex])
@@ -353,7 +354,7 @@
                         handle(this.selectedOptions);
                     } else {
                         var selected = [];
-                        for(var i = 0; i < this.options.length; i++){
+                        for(var l = this.options.length, i = 0; i < l; i++){
                             if(this.options[i].selected){
                                 selected.push(this.options[i])
                             }
@@ -476,7 +477,7 @@
         /*
          |  HANDLE :: INTERNAL CALLBACK
          |  @since  0.3.0
-         |  @update 0.3.3
+         |  @update 0.3.5
          */
         callback: function(item, state){
             var self = this;
@@ -751,7 +752,7 @@
         /*
          |  ACTION :: REMOVE SELECT
          |  @since  0.3.0
-         |  @update 0.3.4
+         |  @update 0.3.5
          */
         remove: function(){
             this.e.style.display = "inherit";
@@ -762,7 +763,7 @@
             this.select.parentElement.removeChild(this.select);
             if(this.container){
                 var handles = this.container.querySelectorAll(selector);
-                for(var i = 0; i < handles.length; i++){
+                for(var l = handles.length, i = 0; i < l; i++){
                     this.container.removeChild(handles[i]);
                 }
             }
@@ -811,6 +812,7 @@
         /*
          |  INIT OPTIONS CLASS
          |  @since  0.3.0
+         |  @update 0.3.5
          */
         init: function(){
             this.length = 0;
@@ -830,6 +832,13 @@
                 if(g !== "#" && !(g in this.groups)){
                     this.items[g] = {};
                     this.groups[g] = o.parentElement;
+                }
+
+                // Sanitize Description
+                if(o.hasAttribute("data-description")){
+                    var span = d.createElement("SPAN");
+                        span.innerHTML = o.getAttribute("data-description");
+                    o.setAttribute("data-description", span.innerHTML);
                 }
 
                 // Set Item
@@ -961,6 +970,7 @@
         /*
          |  ADD (CREATE) A NEW OPTION
          |  @since  0.3.0
+         |  @update 0.3.5
          |
          |  @param  string  The option key.
          |  @param  string  The option value.
@@ -1004,7 +1014,9 @@
                 option.disabled = disabled;
                 option.innerText = value;
             if(typeof(description) == "string"){
-                option.setAttribute("data-description", description);
+                var span = d.createElement("SPAN");
+                    span.innerHTML = o.getAttribute("data-description");
+                o.setAttribute("data-description", span.innerHTML);
             }
 
             // Add Option and Return
@@ -1146,30 +1158,30 @@
         /*
          |  FIND SOME OPTIONs - WALKER EDITION
          |  @since  0.3.0
-         |  @update 0.3.4
+         |  @update 0.3.5
          |
          |  @param  string  The search term.
-         |  @param  string  Test-Phase: May not work as expected!
+         |  @param  string  Experimental: May not work as expected!
          @                  Use 'required' if the search term MUST appear within the value attribute AND MUST within the text.
          @                  Use 'optional' if the search term MAY appear within the value attribute AND MUST within the text.
          @                  Use 'eitheror' if the search term MUST appear within the value OR within the text (or BOTH).
          */
         finder: function(search, keys){
             if(typeof(this._findLoop) == "undefined"){
-                search = search.replace(/[\[\]\{\}\(\)\*\+\?\.\,\^\$\\\|\#\-]/g, "\\$&");
+                search = search.replace(/[\[\]{}()*+?.,^$\\|#-]/g, "\\$&");
                 if(keys == "required"){
-                    var regex = "\<[^\<\>]+value\=\"[^\"]*" + search + "[^\"]*\"\>";
+                    var regex = "\<[^<>]+value\=\"[^\"]*" + search + "[^\"]*\"\>";
                 } else if(keys == "optional" || keys == "eitheror"){
-                    var regex = "\<[^\<\>]+(value\=\"[^\"]*" + search + "[^\"]*\")?\>";
+                    var regex = "\<[^<>]+(value\=\"[^\"]*" + search + "[^\"]*\")?\>";
                 } else {
-                    var regex = "\<[^\<\>]+\>";
+                    var regex = "\<[^<>]+\>";
                 }
                 if(keys == "eitheror"){
-                    regex += "[^\<\>]*(" + search + ")?[^\<\>]*";
+                    regex += "[^<>]*(" + search + ")?[^<>]*";
                 } else {
-                    regex += "[^\<\>]*(" + search + ")[^\<\>]*";
+                    regex += "[^<>]*(" + search + ")[^<>]*";
                 }
-                regex += "\<[^\<\>]+\>";
+                regex += "\<[^<>]+\>";
             }
 
             // Start Walker
