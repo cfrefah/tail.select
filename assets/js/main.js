@@ -14,30 +14,30 @@ require(["prism.min", "menuspy.min", "tail.demo", "source/tail.select"], functio
     }
     website();
 
-    tail.select(".select")
-    tail.select(".select-search", {
+    select(".select")
+    select(".select-search", {
         search: true
     });
-    tail.select("#select-special", {
+    select("#select-special", {
         search: true,
         animate: true,
         descriptions: true
     });
-    tail.select(".select-description", {
+    select(".select-description", {
         search: true,
         descriptions: true
     });
-    tail.select(".select-deselect", {
+    select(".select-deselect", {
         search: true,
         descriptions: true,
         deselect: true,
     });
-    tail.select(".select-limit", {
+    select(".select-limit", {
         search: true,
         descriptions: true,
         multiLimit: 10
     });
-    tail.select(".select-move", {
+    select(".select-move", {
         search: true,
         descriptions: true,
         hideSelected: true,
@@ -46,9 +46,49 @@ require(["prism.min", "menuspy.min", "tail.demo", "source/tail.select"], functio
         multiShowCount: false,
         multiContainer: ".tail-move-container"
     });
+    select(".select-hooked", {
+        search: true,
+        descriptions: true,
+        multiSelectAll: true,
+        cbLoopItem: function(item, optgroup, search){
+            var li = d.createElement("LI");
+                li.className = "tail-dropdown-option" + ((item.selected)? " selected": "") + ((item.disabled)? " disabled": "");
+
+            // Inner Text
+            if(search){
+                var pos = item.option.innerHTML.search(/[^\s]/i)/2,
+                    path = d.createElement("SPAN"), text = [], el = item.option, i = 0;
+                while(el = el.previousElementSibling){
+                    if(i++ >= pos){
+                        break;
+                    }
+                    text.push(el.innerText);
+                }
+                path.className = "options-path";
+                path.innerText = text.reverse().join(" > ");
+                li.innerHTML += path.outerHTML;
+                li.innerHTML += item.value.replace(new RegExp("(" + search + ")", "i"), "<mark>$1</mark>");
+            } else {
+                li.innerHTML += item.option.innerHTML.replace(/ /g, "&nbsp;&nbsp;");
+            }
+
+            // Inner Description
+            if(this.con.descriptions && item.description){
+                li.innerHTML += '<span class="tail-option-description">' + item.description + '</span>';
+            }
+            return li;
+        }
+    }).on("open", function(){
+        d.querySelector("#hook-latest").innerText = "Open Select Field";
+    }).on("close", function(){
+        d.querySelector("#hook-latest").innerText = "Close Select Field";
+    }).on("change", function(item, state){
+        var text = state[0].toUpperCase() + state.slice(1);
+        d.querySelector("#hook-latest").innerText = text + " Option: '" + item.key + "'";
+    });
 
     // tail.select Element
-    var mani = tail.select(".select-manipulatable", {
+    var mani = select(".select-manipulatable", {
         search: true,
         descriptions: true,
         multiLimit: 15,

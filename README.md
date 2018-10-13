@@ -1,20 +1,16 @@
 tail.select
 ===========
-[![npm](https://img.shields.io/npm/v/tail.select.svg?style=flat-square)](https://www.npmjs.com/package/tail.select)
-[![npm](https://img.shields.io/npm/dt/tail.select.svg?style=flat-square)](https://www.npmjs.com/package/tail.select)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![plainJS](https://img.shields.io/badge/plainJS-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%9C%AB-yellow.svg?style=flat-square)](https://plainjs.com/javascript/plugins/tailselect-185/)
-[![Author](https://img.shields.io/badge/Author-SamBrishes@pytesNET-lightgrey.svg?style=flat-square)](https://www.github.com/pytesNET)
+[![plainJS](https://s.pytes.net/p000001)](https://s.pytes.net/h000001)
+[![npm](https://s.pytes.net/p000001)](https://s.pytes.net/h000001)
+[![npm](https://s.pytes.net/p000001)](https://s.pytes.net/h000001)
+[![Author](https://s.pytes.net/p000001)](https://s.pytes.net/h000001)
+[![License](https://s.pytes.net/p000001)](https://s.pytes.net/h000001)
 
-The **tail.select** script is back, completely written from scratch in pure vanilla JavaScript! It
-offers almost the same functionality as the jQuery version, back in 2014 and has been enriched with
-important and useful features. And version 0.3.2 brings back the jQuery implementation and adds on
-top also a binding for the MooTools library.
+The **tail.select** script is back, completely rewritten in pure vanilla JavaScript and ready to
+beautify your (multiple) select fields again and now even a lot better as the deprecated jQuery
+Version back in 2014!
 
-Since Version 0.3.4 the Usage as Asynchronous Module Definition (**AMD**) is now also supported,
-tested with requireJS.
-
-**[Check out the Demonstration](https://github.pytes.net/tail.select)**
+[Wanna see **tail.select** in action?](https://github.pytes.net/tail.select)
 
 Features
 --------
@@ -24,34 +20,133 @@ Features
 -   Offers a Description text to describe each single option!
 -   Allows to manipulate (add, edit and delete) each single option during the runtime.
 -   Bindings for the jQuery and MooTools library and usable as **AMD**.
+-   No dependencies, just include and use it!
+-   Event Listeners to bind your own function on each action.
 -   ... and many settings to configure the environment and its behavior!
 
-Embed
------
-You can download the latest **tail.select** package as [.tar](https://github.com/pytesNET/tail.select/tarball/master)
-or as [.zip](https://github.com/pytesNET/tail.select/zipball/master) archive or by using NPM or YARN:
+Install & Embed
+---------------
+It's recommended to use the [Published Releases](https://github.com/pytesNET/tail.select/releases)
+instead of downloading the master branch, because the master branch may contains 'unreleased' changes,
+which may not work as expected! You can **download** the latest published **tail.select** Release as
+[.tar](https://github.com/pytesNET/tail.select/tarball/master) or as [.zip](https://github.com/pytesNET/tail.select/zipball/master)
+archive, or by using NPM or YARN:
 
-```
-npm install tail.select
-```
-
-```
-yarn add tail.select
+```markup
+npm install tail.select --save
 ```
 
-### CDN
+```markup
+yarn add tail.select --save
 ```
+
+### Using a CDN
+You can also use the awesome CDN services from jsDelivr or UNPKG.
+
+```markup
 https://cdn.jsdelivr.net/npm/tail.select@latest/
 ```
 
-```
+```markup
 https://unpkg.com/tail.select/
 ```
 
-
 Documentation
 -------------
-_The documentation is still WiP_
+The Documentation has been moved to [GitHubs Wiki Pages](https://github.com/pytesNET/tail.select/wiki),
+but I will keep a table of contents list here and some basic instructions.
+
+-   [Instructions](https://github.com/pytesNET/tail.select/wiki/instruction)
+-   [Default Usage](https://github.com/pytesNET/tail.select/wiki/default-usage)
+-   [Public Options](https://github.com/pytesNET/tail.select/wiki/public-options)
+-   [Public Methods](https://github.com/pytesNET/tail.select/wiki/public-methods)
+-   [Events & Callbacks](https://github.com/pytesNET/tail.select/wiki/events-callbacks)
+
+
+### Basic Instructions
+You can pass up to 2 arguments to the **tail.select** constructor, the first parameter is required
+and need to be an `Element`, a `NodeList`, a `HTMLCollection`, an Array with `Element` objects or
+just a single selector as `string`, which calls the `querySelectorAll()` method on its own. The
+second parameter is optional and, if set, MUST be an object with your *tail.select* options.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link type="text/css" rel="stylesheet" href="css/tail.select.css" />
+    </head>
+    <body>
+        <script type="text/javascript" src="js/tail.select.min.js"></script>
+
+        <select>
+            <!-- Your <optgroup> and <option> Elements -->
+        </select>
+
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(){
+                tail.select("select", { /* Your Options */ });
+            });
+        </script>
+    </body>
+</html>
+```
+
+### Default options
+Please check out [GitHubs Wiki Pages](https://github.com/pytesNET/tail.select/wiki) to read more
+about each single option!
+
+```javascript
+tail.select("select", {
+    width:              null,
+    height:             null,
+    classNames:         null,
+    placeholder:        null,
+    deselect:           false,
+    animate:            false,
+    openAbove:          null,
+    stayOpen:           false,
+    startOpen:          false,
+    multiple:           false,
+    multiLimit:         -1,
+    multiShowCount:     true,
+    multiContainer:     false,
+    descriptions:       false,
+    items:              {},
+    sortItems:          false,
+    sortGroups:         false,
+    search:             false,
+    searchFocus:        true,
+    searchMarked:       true,
+    csvOutput:          false,
+    csvSeparator:       ",",
+    hideSelect:         true,
+    hideSelected:       false,
+    hideDisabled:       false,
+    bindSourceSelect:   false
+});
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
 
 ### Options
 All options (with the default settings):

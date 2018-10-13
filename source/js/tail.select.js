@@ -1,7 +1,7 @@
 /*
- |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
+ |  tail.select - Another solution to make (multiple) select fields beautiful, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.3.6 - Alpha
+ |  @version    0.4.0 - Beta
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
@@ -9,12 +9,30 @@
  */
 ;(function(factory){
     if(typeof(define) == "function" && define.amd){
-        define(factory);                // Asynchronous Module Definition
+        define(factory);
     } else {
         if(typeof(window.tail) == "undefined"){
             window.tail = {};
         }
         window.tail.select = factory();
+
+        // Assign to jQuery
+        if(typeof(jQuery) != "undefined"){
+            jQuery.fn.tailselect = function(options){
+                var _r = [], instance;
+                this.each(function(){
+                    if((instance = tail.select(this, options)) !== false){ _r.push(instance); }
+                });
+                return (_r.length === 1)? _r[0]: (_r.length === 0)? false: _r;
+            }
+        }
+
+        // Assign to MooTools
+        if(typeof(MooTools) !== "undefined"){
+            Element.implement({
+                tailselect: function(options){ return new tail.select(this, options); }
+            });
+        }
     }
 }(function(){
     "use strict";
@@ -24,46 +42,41 @@
      |  HELPER METHODs
      */
     var tail = {
-        hasClass: function(element, name){
-            return (new RegExp("(|\s+)" + name + "(\s+|)")).test(element.className);
+        hasClass: function(el, name){
+            return (new RegExp("(|\s+)" + name + "(\s+|)")).test(el.className || "");
         },
-        addClass: function(element, name){
-            if(!(new RegExp("(|\s+)" + name + "(\s+|)")).test(element.className)){
-                element.className = (element.className.trim() + " " + name.trim()).trim();
+        addClass: function(el, name){
+            if("className" in el && !(new RegExp("(|\s+)" + name + "(\s+|)")).test(el.className)){
+                el.className = (el.className.trim() + " " + name.trim()).trim();
             }
-            return element;
+            return el;
         },
-        removeClass: function(element, name){
+        removeClass: function(el, name){
             var regex = new RegExp("(|\s+)(" + name + ")(\s+|)");
-            if(regex.test(element.className)){
-                element.className = (element.className.replace(regex, "$1$3")).trim();
+            if("className" in el && regex.test(el.className)){
+                el.className = (el.className.replace(regex, "$1$3")).trim();
             }
-            return element;
+            return el;
         },
-        trigger: function(e, event, opt){
+        trigger: function(el, event, opt){
             if(CustomEvent && CustomEvent.name){
                 var ev = new CustomEvent(event, opt);
             } else {
                 var ev = d.createEvent("CustomEvent");
                 ev.initCustomEvent(event, !!opt.bubbles, !!opt.cancelable, opt.detail);
             }
-            return e.dispatchEvent(ev);
+            return el.dispatchEvent(ev);
         },
         clone: function(object, replace){
             replace = (typeof(replace) == "object")? replace: {};
             if(Object.assign){
                 return Object.assign({}, object, replace);
-            } else {
-                var clone = object.constructor();
-                for(var key in object){
-                    if(key in replace){
-                        clone[key] = replace[key];
-                    } else if(key in object){
-                        clone[key] = object[key];
-                    }
-                }
-                return clone;
             }
+            var clone = object.constructor();
+            for(var key in object){
+                clone[key] = (key in replace)? replace[key]: object[key];
+            }
+            return clone;
         },
         animate: function(element, callback, delay, prevent){
             if(element.hasAttribute("data-tail-animation")){
@@ -92,22 +105,21 @@
     };
 
     /*
-     |  CONSTRUCTOR
+     |  SELECT CONSTRUCTOR
      |  @since  0.3.0
-     |  @update 0.3.5
+     |  @update 0.4.0
      */
     var tailSelect = function(element, config){
         if(typeof(element) == "string"){
             element = d.querySelectorAll(element);
         }
-        if(element instanceof NodeList || element instanceof HTMLCollection){
-            var _r = [];
-            for(var l = element.length, i = 0; i < l; i++){
+        if(element instanceof NodeList || element instanceof HTMLCollection || element instanceof Array){
+            for(var _r = [], l = element.length, i = 0; i < l; i++){
                 _r.push(new tailSelect(element[i], config));
             }
             return (_r.length === 1)? _r[0]: ((_r.length === 0)? false: _r);
         }
-        if(!(element instanceof Element) || (element.tagName && element.tagName !== "SELECT")){
+        if(!(element.tagName && element.tagName == "SELECT")){
             return false;
         }
         if(typeof(this) == "undefined" || !this.init){
@@ -115,8 +127,8 @@
         }
 
         // Check Element
-        if(tailSelect.instances[element.getAttribute("data-tail-select")]){
-            return tailSelect.instances[element.getAttribute("data-tail-select")];
+        if(tailSelect.inst[element.getAttribute("data-tail-select")]){
+            return tailSelect.inst[element.getAttribute("data-tail-select")];
         }
 
         // Get Element Options
@@ -133,24 +145,38 @@
             config.width = element.offsetWidth + 30;
         }
 
-        // Init Prototype Instance
+        // Init Instance
         this.e = element;
         this.id = ++tailSelect.count;
         this.con = tail.clone(tailSelect.defaults, config);
-        tailSelect.instances["tail-" + this.id] = this;
+        tailSelect.inst["tail-" + this.id] = this;
         return this.init();
     };
-    tailSelect.version = "0.3.6";
-    tailSelect.status = "alpha";
+    tailSelect.version = "0.4.0";
+    tailSelect.status = "beta";
     tailSelect.count = 0;
-    tailSelect.instances = {};
+    tailSelect.inst = {};
+
+    /*
+     |  OPTIONS CONSTRUCTOR
+     |  @since  0.3.0
+     |  @update 0.4.0
+     */
+    var tailOptions = function(select, parent){
+        if(typeof(this) == "undefined" || !this.init){
+            return new tailOptions(select, parent);
+        }
+        this.self = parent;
+        this.select = select;
+        return this;
+    }
 
     /*
      |  STORAGE :: DEFAULT OPTIONS
      */
     tailSelect.defaults = {
         width: null,
-        height: null,
+        height: 350,
         classNames: null,
         placeholder: null,
         deselect: false,
@@ -162,6 +188,8 @@
         multiLimit: -1,
         multiShowCount: true,
         multiContainer: false,
+        multiSelectAll: false,          // NEW IN **0.4.0**
+        multiSelectGroup: true,         // NEW IN **0.4.0**
         descriptions: false,
         items: {},
         sortItems: false,
@@ -174,25 +202,28 @@
         hideSelect: true,
         hideSelected: false,
         hideDisabled: false,
-        bindSourceSelect: false
+        bindSourceSelect: false,
+        cbLoopItem: undefined,          // NEW IN **0.4.0**
+        cbLoopGroup: undefined          // NEW IN **0.4.0**
     };
 
     /*
      |  STORAGE :: STRINGS
      */
     tailSelect.strings = {
+        all: "All",
+        none: "None",
+        actionAll: "Select All",
+        actionNone: "Unselect All",
         empty: "No Options available",
+        emptySearch: "No Options found",
+        limit: "You can't select more Options",
         placeholder: "Select an Option...",
-        multiLimit: "You can't select more Options",
-        multiPlaceholder: "Select up to %d Options...",
-        search: "Type in to search...",
-        searchEmpty: "No Options found"
+        placeholderMulti: "Select up to :limit Options...",
+        search: "Type in to search..."
     };
     var __ = function(key){
-        if(tailSelect.strings.hasOwnProperty(key)){
-            return tailSelect.strings[key];
-        }
-        return key;
+        return (key in tailSelect.strings)? tailSelect.strings[key]: key;
     };
 
     /*
@@ -202,22 +233,23 @@
         e: null,            // The <select> Field
         id: 0,              // The unique select ID
         con: {},            // The current configuration object
-
+        events: {},         // Internal Event Storage
         options: {},        // The tail.options instance
-
         select: null,       // The tail.select container
         label: null,        // The tail.select label
         dropdown: null,     // The tail.select dropdown
+        search: null,       // The tail.select search
         container: null,    // The tail.select container
         csvInput: null,     // The hidden CSV Input Field
 
         /*
-         |  HANDLE :: (RESET &) INIT SELECT FIELD
+         |  INTERNAL :: (RESET &) INIT SELECT FIELD
          |  @since  0.3.0
-         |  @update 0.3.5
+         |  @update 0.4.0
          */
         init: function(){
             var self = this, classes = new Array("tail-select");
+            this.events = {};
 
             // Build Select ClassNames
             var c = (this.con.classNames === true)? this.e.className: this.con.classNames;
@@ -229,52 +261,55 @@
             if(self.con.multiple){     classes.push("multiple");      }
             if(self.con.deselect){     classes.push("deselect");      }
 
-            // Create Select
-            this.select = d.createElement("DIV");
+            // Build Main
+            var tailHTML = '<div class="tail-select-label"><span class="tail-label-count">0</span>'
+                         + '<span class="tail-label-inner"></span></div>'
+                         + '<div class="tail-select-dropdown"><div class="tail-dropdown-search">'
+                         + '<input type="text" class="tail-search-input" placeholder="" /></div>'
+                         + '<div class="tail-dropdown-inner"></div>'
+                         + '</div><input type="hidden" name="" value="" />';
+            this.select  = d.createElement("DIV");
+            this.select.innerHTML = tailHTML;
             this.select.className = classes.join(" ");
             if(!isNaN(parseInt(this.con.width, 10))){
                 this.select.style.width = parseInt(this.con.width, 10) + "px";
             }
 
-            // Create Label
-            this.label = d.createElement("DIV");
-            this.label.className = "tail-select-label";
-            if(this.con.multiple && this.con.multiShowCount){
-                this.label.innerHTML = '<span class="tail-label-count">0</span>';
-            }
-            this.label.innerHTML += '<span class="tail-label-inner"></span>';
+            // Assign Label
+            this.label = this.select.querySelector(".tail-select-label");
             this.label.addEventListener("click", function(event){
                 self.toggle.call(self);
             });
-            this.select.appendChild(this.label);
-            this.setLabel("placeholder");
+            if(!this.con.multiple || (this.con.multiple && !this.con.multiShowCount)){
+                this.label.removeChild(this.label.querySelector(".tail-label-count"));
+            }
 
-            // Create Dropdown
-            this.dropdown = d.createElement("DIV");
-            this.dropdown.className = "tail-select-dropdown";
-            this.dropdown.innerHTML = '<div class="tail-dropdown-inner"></div>';
+            // Assign Dropdown
+            this.dropdown = this.select.querySelector(".tail-select-dropdown");
             if(!isNaN(parseInt(this.con.width, 10))){
                 this.dropdown.style.width = parseInt(this.con.width, 10) + "px";
             }
             if(!isNaN(parseInt(this.con.height, 10))){
-                this.dropdown.children[0].style.maxHeight = parseInt(this.con.height, 10) + "px";
+                this.dropdown.style.maxHeight = parseInt(this.con.height, 10) + "px";
             }
-            this.select.appendChild(this.dropdown);
 
-            // Create Search
-            if(this.con.search){
-                this.search = d.createElement("DIV");
-                this.search.className = "tail-dropdown-search";
-                this.search.innerHTML = '<input type="text" class="tail-search-input" />';
-                this.search.querySelector("input").setAttribute("placeholder", __("search"));
-                this.search.querySelector("input").addEventListener("input", function(event){
-                    if(this.value.length > 2){
-                        self.build(this.value);
-                    } else {
-                        self.build();
-                    }
-                });
-                this.dropdown.insertBefore(this.search, this.dropdown.children[0]);
+            // Assign Search
+            this.search = this.dropdown.querySelector(".tail-dropdown-search");
+            this.search.querySelector("input").setAttribute("placeholder", __("search"));
+            this.search.querySelector("input").addEventListener("input", function(event){
+                tail[(this.value.length > 2? "add": "remove") + "Class"](self.select, "in-search");
+                self.build.call(self, (this.value.length > 2)? this.value: undefined,
+                                self.con.cbLoopItem, self.con.cbLoopGroup);
+            });
+            if(!this.con.search){
+                this.dropdown.removeChild(this.search);
+            }
+
+            // Assign CSV Input
+            this.csvInput = this.select.querySelector("input[type='hidden']");
+            this.csvInput.name = this.e.getAttribute("name") || this.id;
+            if(!this.csvInput){
+                this.select.removeChild(this.csvInput);
             }
 
             // Prepare Container
@@ -283,88 +318,20 @@
                 this.container.className += " tail-select-container";
             }
 
-            // Create Hidden CSV
-            if(this.con.csvOutput){
-                var name = this.e.getAttribute("name") || this.id;
-                    this.e.removeAttribute("name");
-
-                this.csvInput = document.createElement("INPUT");
-                this.csvInput.type = "hidden";
-                this.csvInput.name = name;
-                this.csvInput.value = "";
-                this.select.appendChild(this.csvInput);
-            }
-
-            // Init Options
-            this.options = new tailOptions(this.e, self);
-            this.options.init();
-            if(typeof(this.con.items) == "object"){
-                for(var key in this.con.items){
-                    if(typeof(this.con.items[key]) == "string"){
-                        this.con.items[key] = {value: this.con.items[key]};
-                    }
-                    this.options.add(key, this.con.items[key].value, this.con.items[key].group,
-                        this.con.items[key].selected, this.con.items[key].disabled)
+            // Prepare Options
+            this.options = new tailOptions(this.e, self).init();
+            for(var key in this.con.items){
+                if(typeof(this.con.items[key]) == "string"){
+                    this.con.items[key] = {value: this.con.items[key]};
                 }
+                this.options.add(key, this.con.items[key].value, this.con.items[key].group,
+                    this.con.items[key].selected, this.con.items[key].disabled,
+                    this.con.items[key].description);
             }
-            this.build();
+            this.build(null, this.con.cbLoopItem, this.con.cbLoopGroup);
+            this.bind(false);
 
-            // Bind Document Event
-            d.addEventListener("click", function(event){
-                if(!tail.hasClass(self.select, "active")){
-                    return;
-                }
-                if(!self.select.contains(event.target) && !self.e.contains(event.target)){
-                    if(event.target != self.select && event.target != self.e){
-                        if(!self.con.stayOpen){
-                            self.close.call(self);
-                        }
-                    }
-                }
-            });
-
-            // Bind Source Select
-            if(this.con.bindSourceSelect){
-                this.e.addEventListener("change", function(event){
-                    var handle = function(options, selected){
-                        var o, key, item, group, compare = self.options.selected.slice(0);
-                        for(var l = options.length, i = 0; i < l; i++){
-                            o = options[i];
-                            key = o.value || o.innerText;
-                            group = (o.parentElement.tagName == "OPTGROUP")? o.parentElement.label: "#";
-
-                            if((item = self.options.get(key, group)) == null){
-                                continue;
-                            }
-                            if(!self.options.is("selected", item)){
-                                self.options.handle("select", item)
-                            }
-                            if(compare.indexOf(o) >= 0){
-                                compare.splice(compare.indexOf(o), 1);
-                            }
-                        }
-                        for(var i in compare){
-                            self.options.handle("unselect", compare[i]);
-                        }
-                    };
-
-                    if(!this.multiple && this.selectedIndex){
-                        self.choose("select", this.options[this.selectedIndex])
-                    } else if(this.selectedOptions){
-                        handle(this.selectedOptions);
-                    } else {
-                        var selected = [];
-                        for(var l = this.options.length, i = 0; i < l; i++){
-                            if(this.options[i].selected){
-                                selected.push(this.options[i])
-                            }
-                        }
-                        handle(selected);
-                    }
-                });
-            }
-
-            // Insert and Return
+            // Append and Return
             this.e.parentElement.insertBefore(this.select, this.e);
             this.e.setAttribute("data-tail-select", "tail-" + this.id);
             if(this.con.hideSelect){
@@ -377,107 +344,185 @@
         },
 
         /*
-         |  HANDLE :: BUILD DROPDOWN LIST
+         |  INTERNAL :: BUILD DROPDOWN LIST
          |  @since  0.3.0
-         |  @update 0.3.4
+         |  @update 0.4.0
          */
-        build: function(search){
-            var optgroups = [], optgroup, option, self = this;
-            optgroups[0] = d.createElement("UL");
-            optgroups[0].className = "tail-dropdown";
-            optgroup = optgroups[0];
+        build: function(search, cb_item, cb_group){
+            search = (typeof(search) == "string")? search: false;
 
-            var call = function(item){
-                if(typeof(item) == "string"){
-                    if(item == "#"){
-                        optgroup = optgroups[0];
-                        return;
-                    }
-                    optgroup = d.createElement("UL");
-                    optgroup.className = "tail-dropdown-optgroup";
-                    optgroup.setAttribute("data-group", item);
+            // Get Root
+            var root = d.createElement("UL");
+                root.className = "tail-dropdown";
+                root.setAttribute("data-group", "#");
 
-                    // Add Group
-                    optgroups.push(optgroup);
-                    optgroups[0].appendChild(optgroup)
-
-                    // Create Option Title
-                    option = d.createElement("LI");
-                    option.className = "tail-optgroup-title";
-                    option.innerHTML = "<b>" + item + "</b>";
-                } else {
-                    option = d.createElement("LI");
-                    option.className = "tail-dropdown-option" + ((item.selected)? " selected": "") + ((item.disabled)? " disabled": "");
-                    if(search && search.length > 0 && self.con.searchMarked){
-                        search = search.replace(/[\[\]\{\}\(\)\*\+\?\.\,\^\$\\\|\#\-]/g, "\\$&");
-                        option.innerHTML = item.value.replace(new RegExp("(" + search + ")", "i"), "<mark>$1</mark>");
-                    } else {
-                        option.innerText = item.value;
-                    }
-                    if(self.con.descriptions && item.description){
-                        option.innerHTML += '<span class="tail-option-description">' + item.description + '</span>';
-                    }
-                    option.setAttribute("data-key", item.key);
-                    option.setAttribute("data-group", item.group);
-                    option.addEventListener("click", function(event){
-                        self.bind.call(self, event, this);
-                    })
+            // Walk
+            var self = this, item, ul = root, li, func = (search)? "finder": "walker",
+                args = (search)? [search]: [this.con.sortItems, this.con.sortGroups];
+            while(item = this.options[func].apply(this.options, args)){
+                if(item.group != ul.getAttribute("data-group")){
+                    ul = (cb_group || this.createGroup).call(this, item.group, search);
+                    ul.setAttribute("data-group", item.group);
+                    root.appendChild(ul);
                 }
-                optgroup.appendChild(option);
-                return option;
-            }
 
-            // Loop Technique
-            var item, empty = true;
-            while(true){
-                if(typeof(search) === "string"){
-                    item = this.options.finder(search)
-                } else {
-                    item = this.options.walk(this.con.sortItems, this.con.sortGroups, true);
-                }
-                if(item){
-                    call(item);
-                    if(item !== "#" && empty){
-                        empty = false;
-                    }
-                } else {
-                    break;
+                // Create Item
+                li = (cb_item || this.createItem).call(this, item, ul, search);
+                li.setAttribute("data-key", item.key);
+                li.setAttribute("data-group", item.group);
+                li.addEventListener("click", function(event){
+                    self.bind.call(self, event, this);
+                });
+                ul.appendChild(li);
+
+                // Container
+                if(item.selected){
+                    this.setContainer(item, "select");
                 }
             }
-            if(empty){
-                empty = call({key: null, value: ((search == undefined)? __("empty"): __("searchEmpty"))});
-                empty.className += " label-only";
+
+            // Empty
+            var count = root.querySelectorAll("*[data-key]").length, a1, a2;
+            if(count == 0){
+                li = d.createElement("LI");
+                li.innerText = __("empty");
+                li.className = "tail-dropdown-empty";
+                root.appendChild(li);
             }
 
-            // Add to Dropdown
+            // Select All
+            if(count > 0 && this.con.multiple && this.con.multiLimit < 0 && this.con.multiSelectAll){
+                a1 = d.createElement("BUTTON");
+                a1.innerText = __("actionAll");
+                a1.className = "tail-all";
+                a1.addEventListener("click", function(event){
+                    event.preventDefault();
+                    var items = this.parentElement.parentElement.querySelectorAll("*[data-key]");
+                    for(var l = items.length, i = 0; i < l; i++){
+                        self.choose.call(self, "select", items[i].getAttribute("data-key"), items[i].getAttribute("data-group"));
+                    }
+                })
+
+                a2 = d.createElement("BUTTON");
+                a2.innerText = __("actionNone");
+                a2.className = "tail-none";
+                a2.addEventListener("click", function(event){
+                    event.preventDefault();
+                    var items = this.parentElement.parentElement.querySelectorAll("*[data-key]");
+                    for(var l = items.length, i = 0; i < l; i++){
+                        self.choose.call(self, "unselect", items[i].getAttribute("data-key"), items[i].getAttribute("data-group"));
+                    }
+                })
+
+                li = d.createElement("LI");
+                li.className = "tail-dropdown-action";
+                li.appendChild(a1);
+                li.appendChild(a2);
+                root.insertBefore(li, root.children[0]);
+            }
+
+            // Add and Return
             this.dropdown.querySelector(".tail-dropdown-inner").innerHTML = "";
-            this.dropdown.querySelector(".tail-dropdown-inner").appendChild(optgroups[0]);
+            this.dropdown.querySelector(".tail-dropdown-inner").appendChild(root);
+            this.setCSVInput();
+            this.setCounter();
+            this.setLabel();
             return this;
         },
 
         /*
-         |  HANDLE :: EVENT LISTENER
+         |  INTERNAL :: EVENT LISTENER
          |  @since  0.3.0
+         |  @update 0.4.0
          */
-        bind: function(event, option){
-            if(!option.hasAttribute("data-key")){
-                return false;
-            }
-            var key = option.getAttribute("data-key"),
-                group = option.getAttribute("data-group") || "#";
-
-            // Select Option
-            if(this.choose("toggle", key, group)){
-                if(!this.con.stayOpen && !this.con.multiple){
-                    this.close();
+        bind: function(event, item){
+            if(event !== false){
+                if(!item.hasAttribute("data-key")){
+                    return false;
                 }
+                var key = item.getAttribute("data-key"), group = item.getAttribute("data-group") || "#";
+
+                // Select Option
+                if(!this.choose("toggle", key, group)){
+                    return false;
+                }
+                if(this.con.stayOpen || this.con.multiple){
+                    return true;
+                }
+                return this.close();
             }
+
+            // Close
+            var self = this;
+            d.addEventListener("click", function(ev){
+                if(!tail.hasClass(self.select, "active") || tail.hasClass(self.select, "idle")){
+                    return false;
+                }
+                if(self.con.stayOpen){
+                    return false;
+                }
+
+                var targets = [self.e, self.select, self.container];
+                for(var l = targets.length, i = 0; i < l; i++){
+                    if(targets[i] && (targets[i].contains(ev.target) || targets[i] == ev.target)){
+                        return false;
+                    }
+                    if(!ev.target.parentElement){
+                        return false;
+                    }
+                }
+                return self.close.call(self);
+            });
+
+            // Bind Source Select
+            if(!this.con.bindSourceSelect){
+                return true;
+            }
+            this.e.addEventListener("change", function(event){
+                var handle = function(options, selected){
+                    var i, l, o, item, compare = self.options.selected.slice(0);
+                    for(l = options.length, i = 0; i < l; i++){
+                        o = options[i];
+                        item = self.options.get(
+                            (o.value || o.innerText),
+                            (o.parentElement.tagName === "OPTGROUP")? o.parentElement.label: "#"
+                        );
+                        if(item == null){
+                            continue;
+                        }
+                        if(!self.options.is("selected", item)){
+                            self.options.handle("select", item)
+                        }
+                        if(compare.indexOf(o) >= 0){
+                            compare.splice(compare.indexOf(o), 1);
+                        }
+                    }
+                    for(i in compare){
+                        self.options.handle("unselect", compare[i]);
+                    }
+                };
+
+                if(!this.multiple && this.selectedIndex){
+                    self.choose("select", this.options[this.selectedIndex]);
+                } else if(this.selectedOptions){
+                    handle(this.selectedOptions);
+                } else {
+                    var selected = [];
+                    for(var l = this.options.length, i = 0; i < l; i++){
+                        if(this.options[i].selected){
+                            selected.push(this.options[i])
+                        }
+                    }
+                    handle(selected);
+                }
+            });
+            return true;
         },
 
         /*
-         |  HANDLE :: INTERNAL CALLBACK
+         |  INTERNAL :: INTERNAL CALLBACK
          |  @since  0.3.0
-         |  @update 0.3.5
+         |  @update 0.4.0
          */
         callback: function(item, state){
             var self = this;
@@ -499,32 +544,170 @@
                 }
             }
 
-            // Set Placeholder and Class Name
-            if(["select", "unselect"].indexOf(state) >= 0){
-                if(this.con.multiple){
-                    if(this.con.multiLimit >= 0 && this.con.multiLimit <= this.options.selected.length){
-                        tail.addClass(this.select, "limit");
-                        this.setLabel("limit");
-                    } else {
-                        tail.removeClass(this.select, "limit");
-                        this.setLabel("placeholder");
+            // Handle
+            this.setLabel();
+            this.setCounter();
+            this.setContainer(item, state);
+            this.setCSVInput();
+            this.trigger("change", item, state);
+            return true;
+        },
+
+        /*
+         |  INTERNAL :: TRIGGER EVENT HANDLER
+         |  @since  0.4.0
+         */
+        trigger: function(event){
+            tail.trigger(this.select, "tail.select::" + event, {
+                bubbles: false, cancelable: true, detail: {args: arguments, self: this}
+            });
+            for(var l = (this.events[event] || []).length, i = 0; i < l; i++){
+                this.events[event][i].cb.apply(this, (function(args, a, b){
+                    for(var l = a.length, i = 0; i < l; ++i){
+                        args[i-1] = a[i];
                     }
+                    args[i] = b;
+                    return args;
+                }(new Array(arguments.length), arguments, this.events[event][i].args)));
+            }
+        },
+
+        /*
+         |  DEFAULT :: CALLBACK -> CREATE GROUP
+         |  @since  0.4.0
+         */
+        createGroup: function(group, search){
+            var ul = d.createElement("UL"), self = this;
+                ul.className = "tail-dropdown-optgroup";
+                ul.innerHTML = '<li class="tail-optgroup-title"><b>' + group + '</b></li>';
+            if(this.con.multiple && this.con.multiLimit < 0 && this.con.multiSelectGroup){
+                var a1 = d.createElement("BUTTON"), a2 = d.createElement("BUTTON");
+                    a1.innerText = __("none");
+                    a1.className = "tail-none";
+                    a1.addEventListener("click", function(event){
+                        event.preventDefault();
+                        var items = this.parentElement.parentElement.querySelectorAll("*[data-key]");
+                        for(var l = items.length, i = 0; i < l; i++){
+                            self.choose.call(self, "unselect", items[i].getAttribute("data-key"), items[i].getAttribute("data-group"));
+                        }
+                    });
+                    a2.innerText = __("all");
+                    a2.className = "tail-all";
+                    a2.addEventListener("click", function(event){
+                        event.preventDefault();
+                        var items = this.parentElement.parentElement.querySelectorAll("*[data-key]");
+                        for(var l = items.length, i = 0; i < l; i++){
+                            self.choose.call(self, "select", items[i].getAttribute("data-key"), items[i].getAttribute("data-group"));
+                        }
+                    });
+                ul.children[0].appendChild(a1);
+                ul.children[0].appendChild(a2);
+            }
+            return ul;
+        },
+
+        /*
+         |  DEFAULT :: CALLBACK -> CREATE ITEM
+         |  @since  0.4.0
+         */
+        createItem: function(item, optgroup, search){
+            var li = d.createElement("LI");
+                li.className = "tail-dropdown-option" + ((item.selected)? " selected": "") + ((item.disabled)? " disabled": "");
+
+            // Inner Text
+            if(search && search.length > 0 && this.con.searchMarked){
+                li.innerHTML = item.value.replace(new RegExp("(" + search + ")", "i"), "<mark>$1</mark>");
+            } else {
+                li.innerText = item.value;
+            }
+
+            // Inner Description
+            if(this.con.descriptions && item.description){
+                li.innerHTML += '<span class="tail-option-description">' + item.description + '</span>';
+            }
+            return li;
+        },
+
+        /*
+         |  PUBLIC :: SET / UPDATE LABEL
+         |  @since  0.3.0
+         |  @update 0.4.0
+         |
+         |  @param  multi   The string or translation key (tailSelect.strings)
+         |                  NULL / UNDEFINED to update the label automatically.
+         */
+        setLabel: function(string){
+            if(typeof(string) != "string"){
+                if(this.dropdown.querySelectorAll("*[data-key]").length == 0){
+                    string = "empty" + (tail.hasClass(this.select, "in-search")? "Search": "");
+                } else if(this.con.multiLimit >= 0 && this.con.multiLimit <= this.options.selected.length){
+                    string = "limit";
+                } else if(this.con.multiple){
+                    if(typeof(this.con.placeholder) == "string" && this.con.placeholder.length > 0){
+                        string = this.con.placeholder;
+                    } else {
+                        string = "placeholder" + (this.con.multiple && this.con.multiLimit >= 0? "Multi": "");
+                    }
+                } else if(this.options.selected.length == 0){
+                    string = "placeholder";
                 } else {
-                    this.setLabel((state == "unselect")? "placeholder": item.value);
+                    string = this.options.selected[0].innerText;
                 }
             }
+            string = __(string).replace(":limit", this.con.multiLimit);
+            this.label.querySelector(".tail-label-inner").innerText = string;
+            return this;
+        },
 
-            // Set Counter
-            if(this.con.multiple && this.con.multiShowCount){
-                this.setCounter();
+        /*
+         |  PUBLIC :: SET / UPDATE COUNTER
+         |  @since  0.3.0
+         |  @update 0.4.0
+         */
+        setCounter: function(count){
+            if(this.label.querySelector(".tail-label-count")){
+                count = (count == undefined)? (this.options.selected || []).length: count;
+                this.label.querySelector(".tail-label-count").innerText = count;
             }
+            return this;
+        },
 
-            // Move to Container
+        /*
+         |  PUBLIC :: SET / UPDATE CONTAINER
+         |  @since  0.3.0
+         |  @update 0.4.0
+         */
+        setContainer: function(item, state){
             if(this.container){
-                this.setContainer(item, state);
+                var self = this;
+                if(state == "select"){
+                    var hndl = d.createElement("DIV");
+                        hndl.innerText = item.value;
+                        hndl.className = "tail-select-handle";
+                        hndl.setAttribute("data-key", item.key);
+                        hndl.setAttribute("data-group", item.group);
+                        hndl.addEventListener("click", function(event){
+                            event.preventDefault();
+                            self.choose.call(self, "unselect", this.getAttribute("data-key"),
+                                             this.getAttribute("data-group"));
+                        });
+                    this.container.appendChild(hndl);
+                } else {
+                    var selector = "[data-group='" + item.group + "'][data-key='" + item.key + "']";
+                    var hndl = this.container.querySelector(selector);
+                    if(hndl){
+                        hndl.parentElement.removeChild(hndl);
+                    }
+                }
             }
+            return this;
+        },
 
-            // Update CSV
+        /*
+         |  PUBLIC :: SET / UPDATE CSV INPUT FIELD
+         |  @since  0.4.0
+         */
+        setCSVInput: function(){
             if(this.csvInput && this.con.csvOutput && ["select", "unselect"].indexOf(state) >= 0){
                 var selected = [];
                 for(var l = this.options.selected.length, i = 0; i < l; i++){
@@ -532,80 +715,13 @@
                 }
                 this.csvInput.value = selected.join(this.con.csvSeparator || ",");
             }
-
-            // Call Event
-            tail.trigger(this.select, "tail.select::" + state, {
-                bubbles: false,
-                cancelable: true,
-                detail: self
-            });
-        },
-
-
-        /*
-         |  ACTION :: WRITE LABEL
-         |  @since  0.3.0
-         |  @update 0.3.4
-         */
-        setLabel: function(string){
-            if(string == "placeholder"){
-                if(typeof(this.con.placeholder) == "string" && this.con.placeholder.length > 0){
-                    string = this.con.placeholder;
-                } else {
-                    if(this.con.multiple && this.con.multiLimit > 0){
-                        string = __("multiPlaceholder").replace("%d", this.con.multiLimit);
-                    } else {
-                        string = __("placeholder");
-                    }
-                }
-            } else if(string == "limit"){
-                string = __("multiLimit")
-            }
-            this.label.querySelector(".tail-label-inner").innerText = string;
             return this;
         },
 
         /*
-         |  ACTION :: WRITE COUNTER
+         |  PUBLIC :: CHOOSE AN OPTION
          |  @since  0.3.0
-         */
-        setCounter: function(){
-            var count = (this.options.selected || []).length;
-            this.label.querySelector(".tail-label-count").innerText = count;
-            return this;
-        },
-
-        /*
-         |  ACTION :: WRITE CONTAINER
-         |  @since  0.3.0
-         */
-        setContainer: function(item, state){
-            var self = this;
-            if(state == "select"){
-                var hndl = d.createElement("DIV");
-                    hndl.innerText = item.value;
-                    hndl.className = "tail-select-handle";
-                    hndl.setAttribute("data-key", item.key);
-                    hndl.setAttribute("data-group", item.group);
-                    hndl.addEventListener("click", function(event){
-                        event.preventDefault();
-                        self.choose.call(self, "unselect", this.getAttribute("data-key"),
-                                         this.getAttribute("data-group"));
-                    });
-                this.container.appendChild(hndl);
-            } else {
-                var selector = "[data-group='" + item.group + "'][data-key='" + item.key + "']";
-                var hndl = this.container.querySelector(selector);
-                if(hndl){
-                    hndl.parentElement.removeChild(hndl);
-                }
-            }
-            return this;
-        },
-
-        /*
-         |  ACTION :: CHOOSE AN OPTION
-         |  @since  0.3.0
+         |  @update 0.4.0
          |
          |  @param  string  The choosed state "select", "unselect" or "toggle"
          |                                    "disable" or "enable"
@@ -618,7 +734,7 @@
         choose: function(state, key, group){
             if(key instanceof Array){
                 for(var k in key){
-                    this.choose(state, key[k][0], key[k][1])
+                    this.choose(state, key[k][0], key[k][1] || "#")
                 }
                 return this;
             }
@@ -636,130 +752,132 @@
         },
 
         /*
-         |  ACTION :: OPEN DROPDOWN
+         |  PUBLIC :: OPEN DROPDOWN
          |  @since  0.3.0
-         |  @update 0.3.2
+         |  @update 0.4.0
          */
-        open: function(){
+        open: function(animate){
             if(tail.hasClass(this.select, "active") || tail.hasClass(this.select, "idle")){
                 return false;
             }
 
-            // Calculate Open Condition
-            var h = d.documentElement.offsetHeight,
-                c = this.dropdown.cloneNode(true);
-                c.style.cssText += "height:auto;opacity:0;display:block;visibility:hidden;";
-                c.className += " clone";
-            this.dropdown.parentElement.appendChild(c);
-            var e = c.offsetHeight, t = this.select.offsetTop + e + 25;
-            this.dropdown.parentElement.removeChild(c);
-            if(this.con.openAbove === true || (this.con.openAbove === null && h <= t)){
+            // Calculate Dropdown Height
+            var clone = this.dropdown.cloneNode(true);
+                clone.style.cssText = "height:auto;opacity:0;display:block;visibility:hidden;";
+                clone.style.maxHeight = this.con.height + "px";
+                clone.className += " cloned";
+            this.dropdown.parentElement.appendChild(clone);
+            var height = this.con.height, search = 0;
+                height = (height > clone.clientHeight)? clone.clientHeight: height;
+            if(this.con.search){
+                search = clone.querySelector(".tail-dropdown-search").clientHeight;
+            }
+            this.dropdown.parentElement.removeChild(clone);
+
+            // Calculate Viewport
+            var pos = this.select.getBoundingClientRect(),
+                bottom = w.innerHeight-(pos.top+pos.height),
+                view = ((height+search) > bottom)? pos.top > bottom: false;
+            if(this.con.openAbove === true || (this.con.openAbove !== false && view)){
+                view = true;
+                height = Math.min((height), pos.top-10);
                 tail.addClass(this.select, "open-top");
             } else {
+                view = false;
+                height = Math.min((height), bottom-10);
                 tail.removeClass(this.select, "open-top");
             }
+            this.dropdown.style.maxHeight = height + "px";
+            this.dropdown.querySelector(".tail-dropdown-inner").style.maxHeight = height-search + "px";
+
+            // Final Function
+            var final = function(){
+                tail.addClass(tail.removeClass(self.select, "idle"), "active");
+                this.dropdown.style.height = "auto";
+                this.label.removeAttribute("style");
+                if(this.con.search && this.con.searchFocus){
+                    this.dropdown.querySelector("input").focus();
+                }
+                this.trigger.call(this, "open");
+            }, self = this;
 
             // Open
-            if(this.con.animate){
-                var self = this;
+            if(this.con.animate && animate !== false){
+                this.label.style.zIndex = 25;
+                this.dropdown.style.cssText += "height:0;display:block;overflow:hidden;";
 
                 tail.addClass(self.select, "idle");
-                this.label.style.zIndex = 25;
-                this.dropdown.setAttribute("data-height", e);
-                this.dropdown.style.cssText += "height:0;display:block;overflow:hidden;";
                 tail.animate(this.dropdown, function(){
-                    var h = parseInt(this.style.height, 10),
-                        m = parseInt(this.getAttribute("data-height"), 10);
+                    var h = parseInt(this.style.height, 10), m = parseInt(this.style.maxHeight, 10);
                     if(h < m){
                         this.style.height = ((h+50 > m)? m: h+50) + "px";
                         return true;
                     }
-                    tail.addClass(self.select, "active");
-                    tail.removeClass(self.select, "idle");
-
-                    this.removeAttribute("style");
-                    this.removeAttribute("data-height");
-                    self.label.removeAttribute("style");
-                    tail.trigger(self.select, "tail.select::open", {
-                        bubbles: false, cancelable: true, detail: self
-                    });
-                    if(self.con.search && self.con.searchFocus){
-                        self.dropdown.querySelector("input").focus();
-                    }
+                    final.call(self);
                     return false;
-                }, 1, true);
-            } else {
-                tail.addClass(this.select, "active");
-                tail.trigger(this.select, "tail.select::open", {
-                    bubbles: false, cancelable: true, detail: self
                 });
-                if(this.con.search && this.con.searchFocus){
-                    this.dropdown.querySelector("input").focus();
-                }
+            } else {
+                final.call(this);
             }
             return this;
         },
 
         /*
-         |  ACTION :: CLOSE DROPDOWN
+         |  PUBLIC :: CLOSE DROPDOWN
          |  @since  0.3.0
+         |  @update 0.4.0
          */
-        close: function(){
+        close: function(animate){
             if(!tail.hasClass(this.select, "active") || tail.hasClass(this.select, "idle")){
                 return false;
             }
+            var final = function(){
+                tail.removeClass(tail.removeClass(this.select, "idle"), "active");
+                this.dropdown.removeAttribute("style");
+                this.dropdown.querySelector(".tail-dropdown-inner").removeAttribute("style");
+                this.trigger.call(this, "close");
+            }, self = this;
 
-            // Open
-            if(this.con.animate){
-                var self = this;
-
+            // Close
+            if(this.con.animate && animate !== false){
                 tail.addClass(this.select, "idle");
-                this.dropdown.style.overflow = "hidden";
                 tail.animate(this.dropdown, function(){
-                    var h = parseInt(this.offsetHeight, 10);
-                    if((h-50) > 0){
-                        this.style.height = (h-50) + "px";
+                    if((parseInt(this.offsetHeight, 10)-50) > 0){
+                        this.style.height = (parseInt(this.offsetHeight, 10)-50) + "px";
                         return true;
                     }
-                    tail.removeClass(self.select, "idle");
-                    tail.removeClass(self.select, "active");
-                    this.removeAttribute("style");
-                    tail.trigger(self.select, "tail.select::close", {
-                        bubbles: false, cancelable: true, detail: self
-                    });
+                    final.call(self);
                     return false;
                 }, 1, true);
             } else {
-                tail.removeClass(this.select, "active");
-                tail.trigger(this.select, "tail.select::close", {
-                    bubbles: false, cancelable: true, detail: self
-                });
+                final.call(this);
             }
             return this;
         },
 
         /*
-         |  ACTION :: TOGGLE DROPDOWN
+         |  PUBLIC :: TOGGLE DROPDOWN
          |  @since  0.3.0
+         |  @update 0.4.0
          */
-        toggle: function(){
-            if(!tail.hasClass(this.select, "active")){
-                return this.open();
+        toggle: function(animate){
+            if(tail.hasClass(this.select, "idle")){
+                return false;
             }
-            return this.close();
+            if(!tail.hasClass(this.select, "active")){
+                return this.open(animate);
+            }
+            return this.close(animate);
         },
 
         /*
-         |  ACTION :: REMOVE SELECT
+         |  PUBLIC :: REMOVE SELECT
          |  @since  0.3.0
-         |  @update 0.3.5
+         |  @update 0.4.0
          */
         remove: function(){
-            this.e.style.display = "inherit";
+            this.e.style.removeProperty("display");
             this.e.removeAttribute("data-tail-select");
-            if(this.csvInput){
-                this.e.setAttribute("name", this.csvInput.getAttribute("name"));
-            }
             this.select.parentElement.removeChild(this.select);
             if(this.container){
                 var handles = this.container.querySelectorAll(selector);
@@ -771,48 +889,72 @@
         },
 
         /*
-         |  ACTION :: RELOAD SELECT
+         |  PUBLIC :: RELOAD SELECT
          |  @since  0.3.0
+         |  @update 0.4.0
          */
         reload: function(){
             this.remove();
-            return new tailSelect(this.e, this.con);
+            return this.init();
+        },
+
+        /*
+         |  PUBLIC :: GET|SET CONFIG
+         |  @since  0.4.0
+         */
+        config: function(key, value){
+            if(typeof(key) == "undefined"){
+                return this.con;
+            } else if(!(key in this.con)){
+                return false;
+            }
+
+            // Set | Return
+            if(typeof(value) == "undefined"){
+                return this.con[key];
+            }
+            this.con[key] = value;
+            return this;
+        },
+
+        /*
+         |  PUBLIC :: CUSTOM EVENT LISTENER
+         |  @since  0.4.0
+         |
+         |  @param  string  'open', 'close', 'change'
+         |  @param  callb.  A custom callback function.
+         |  @param  array   An array with own arguments, which should pass to the callback too.
+         */
+        on: function(event, callback, args){
+            if(["open", "close", "change"].indexOf(event) < 0 || typeof(callback) != "function"){
+                return false;
+            }
+            if(!(event in this.events)){
+                this.events[event] = [];
+            }
+            this.events[event].push({cb: callback, args: (args instanceof Array)? args: []});
+            return this;
         }
     };
 
     /*
      |  TAIL.OPTIONS HANDLER
      */
-    var tailOptions = function(select, parent){
-        if(!select.tagName || select.tagName != "SELECT" || !(parent instanceof tailSelect)){
-            return false;
-        }
-        if(typeof(this) == "undefined"){
-            return new tailOptions(select, parent);
-        }
-
-        // Init Class
-        this.self = parent;
-        this.select = select;
-        return this;
-    }
     tailOptions.prototype = {
         /*
          |  INTERNAL :: REPLACE TYPOs
          |  @since  0.3.0
+         |  @update 0.4.0
          */
         _replaceTypo: function(state){
-            state = state.replace("disabled", "disable");
-            state = state.replace("enabled", "enable");
-            state = state.replace("selected", "select");
-            state = state.replace("unselected", "unselect");
-            return state;
+            return state.replace("disabled", "disable").replace("enabled", "enable")
+                        .replace("selected", "select").replace("unselected", "unselect");
         },
 
         /*
          |  INIT OPTIONS CLASS
          |  @since  0.3.0
-         |  @update 0.3.5
+         |  @update 0.4.0
          */
         init: function(){
             this.length = 0;
@@ -822,46 +964,8 @@
             this.groups = {};
 
             // Set Items
-            var l = this.select.options.length, o, k, i, g, t, self = this.self;
-            for(i = 0; i < l; i++){
-                o = this.select.options[i];
-                k = o.value || o.innerText;
-                g = (o.parentElement.tagName == "OPTGROUP")? o.parentElement.label: "#";
-
-                // Check Group
-                if(g !== "#" && !(g in this.groups)){
-                    this.items[g] = {};
-                    this.groups[g] = o.parentElement;
-                }
-
-                // Sanitize Description
-                if(o.hasAttribute("data-description")){
-                    var span = d.createElement("SPAN");
-                        span.innerHTML = o.getAttribute("data-description");
-                    o.setAttribute("data-description", span.innerHTML);
-                }
-
-                // Set Item
-                this.items[g][k] = {
-                    key: k,
-                    value: o.innerText,
-                    description: o.getAttribute("data-description") || null,
-                    group: g,
-                    option: o,
-                    optgroup: this.groups[g],
-                    selected: false,
-                    disabled: false
-                }
-
-                // Set States
-                t = (!self.con.multiple && self.con.deselect)? o.hasAttribute("selected"): o.selected;
-                if(t && !o.disabled && !this.handle("select", k, g)){
-                    o.selected = false;
-                }
-                if(o.disabled && !this.handle("disabled", k, g)){
-                    o.disabled = false;
-                }
-                this.length++;
+            for(var l = this.select.options.length, i = 0; i < l; i++){
+                this.set(this.select.options[i]);
             }
             return this;
         },
@@ -914,63 +1018,66 @@
         /*
          |  ADD (SET) AN EXISTING OPTION
          |  @since  0.3.0
+         |  @update 0.4.0
          |
-         |  @param  object  The <option> element within the respectove <select> field.
+         |  @param  object  The <option> element within the respective <select> field.
+         |  @param  bool    TRUE to reBuild tail.select, FALSE to do it not.
          |
          |  @return bool    Returns true if the option could be added, false if not.
          */
-        set: function(option){
-            if(!option.tagName || option.tagName != "OPTION"){
-                return false;
-            }
-            var key = option.value || option.text,
-                group = option.parentElement;
+        set: function(opt, rebuild){
+            var key = opt.value || opt.text, group = opt.parentElement, self = this.self;
                 group = ((group.tagName == "OPTGROUP")? group.label: "#");
 
-            // Check Group & Item
+            // Check Group
             if(group != "#" && !(group in this.groups)){
-                this.groups[group] = option.parentElement;
                 this.items[group] = {};
-            }
-            if(key in this.items[group]){
+                this.groups[group] = opt.parentElement;
+            } else if(key in this.items[group]){
                 return false;
             }
 
             // Selection
-            if(option.selected && this.self.con.multiple){
+            opt.selected = (self.con.multiple || self.con.deselect)? opt.hasAttribute("selected"): opt.selected;
+            if(self.con.multiple){
                 if(this.self.con.multiLimit >= 0 && this.self.con.multiLimit <= this.selected.length){
-                    option.selected = false;
+                    opt.selected = false;
                 }
-            } else if(option.selected && !this.self.con.multiple && this.selected.length > 0){
-                option.selected = false;
+            } else {
+                opt.selected = (!self.con.deselect && this.selected.length == 0)? true: opt.selected
+            }
+
+            // Sanitize Description
+            if(opt.hasAttribute("data-description")){
+                var span = d.createElement("SPAN");
+                    span.innerHTML = opt.getAttribute("data-description");
+                opt.setAttribute("data-description", span.innerHTML);
             }
 
             // Add Item
             this.items[group][key] = {
                 key: key,
-                value: option.text,
-                description: option.getAttribute("data-description") || null,
+                value: opt.text,
+                description: opt.getAttribute("data-description") || null,
                 group: group,
-                option: option,
+                option: opt,
                 optgroup: (group != "#")? this.groups[group]: undefined,
-                selected: option.selected,
-                disabled: option.disabled
+                selected: opt.selected,
+                disabled: opt.disabled
             }
-            if(this.items[group][key].selected){
-                this.selected.push(this.items[group][key].option)
-            }
-            if(this.items[group][key].disabled){
-                this.disabled.push(this.items[group][key].option)
-            }
+            this.handle((opt.selected? "select": "unselect"), key, group);
+            this.handle((opt.disabled? "disable": "enable"), key, group);
             this.length++;
-            this.self.callback.call(this.self, this.items[group][key], "rebuild")
+            if(rebuild){
+                this.self.callback.call(this.self, this.items[group][key], "rebuild");
+            }
             return true;
         },
 
         /*
          |  ADD (CREATE) A NEW OPTION
          |  @since  0.3.0
-         |  @update 0.3.5
+         |  @update 0.4.0
          |
          |  @param  string  The option key.
          |  @param  string  The option value.
@@ -1013,11 +1120,6 @@
                 option.selected = selected;
                 option.disabled = disabled;
                 option.innerText = value;
-            if(typeof(description) == "string"){
-                var span = d.createElement("SPAN");
-                    span.innerHTML = o.getAttribute("data-description");
-                o.setAttribute("data-description", span.innerHTML);
-            }
 
             // Add Option and Return
             if(group == "#"){
@@ -1025,7 +1127,7 @@
             } else {
                 this.groups[group].appendChild(option)
             }
-            return this.set(option);
+            return this.set(option, true);
         },
 
         /*
@@ -1094,6 +1196,7 @@
         /*
          |  INTERACT WITH AN OPTION
          |  @since  0.3.0
+         |  @update 0.4.0
          |
          |  @param  string  "disable", "enable", "select" or "unselect"
          |  @param  multi   <see get()>
@@ -1137,7 +1240,9 @@
                     }
                 }
 
-                this.selected.push(item.option);
+                if(this.selected.indexOf(item.option) < 0){
+                    this.selected.push(item.option);
+                }
                 item.selected = true;
                 item.option.selected = true;
                 item.option.setAttribute("selected", "selected");
@@ -1189,7 +1294,8 @@
             var text = this.self.e.innerHTML, match, item, num;
             while((match = this._findRegex.exec(text)) !== null){
                 num = (text.substr(0, this._findRegex.lastIndex).match(/\<\/option\>/g) || []).length;
-                if((item = this.get(this.self.e.options[num-1])) == null){
+                item = this.get(this.self.e.options[num-1]);
+                if(item === null){
                     continue;
                 }
                 return item;
@@ -1204,31 +1310,32 @@
         /*
          |  FIND SOME OPTIONs - ARRAY EDITION
          |  @since  0.3.0
+         |  @update 0.4.0
          |
-         |  @param  string  <see finder()>
          |  @param  string  <see finder()>
          |  @param  string  <see finder()>
          */
         find: function(search, keys, groups){
             var items = [];
-            while((item = this.finder(search, keys, groups)) !== false){
+            while((item = this.finder(search, keys)) !== false){
                 items.push(item);
             }
             return items;
         },
 
         /*
-         |  WALK THROUGH ALL OPTIONs
-         |  @since  0.3.0
+         |  NEW OPTIONS WALKER
+         |  @since  0.4.0
          |
-         |  @param  multi   Use "ASC" or "DESC" or pass an own callback sort function.
-         |  @param  multi   Use "ASC" or "DESC" or pass an own callback sort function.
-         |  @param  bool    Use true to return the optgroup keys too, false to do it not.
+         |  @param  multi   Use "ASC" or "DESC" or pass an own callback function.
+         |  @param  multi   Use "ASC" or "DESC" or pass an own callback function.
+         |
+         |  @return multi   Walks through each single options and returns false on the end!
          */
-        walk: function(item_order, group_order, with_keys){
+        walker: function(orderi, orderg){
             if(typeof(this._inLoop) != "undefined" && this._inLoop){
                 if(this._inItems.length > 0){
-                    var key = this._inItems.shift()
+                    var key = this._inItems.shift();
                     return this.items[this._inGroup][key];
                 }
 
@@ -1240,16 +1347,16 @@
                             break;
                         }
                     }
-                    if(item_order == "ASC"){
+                    if(orderi == "ASC"){
                         keys.sort();
-                    } else if(item_order == "DESC"){
+                    } else if(orderi == "DESC"){
                         keys.sort().reverse();
-                    } else if(typeof(item_order) == "function"){
-                        keys.sort(item_order);
+                    } else if(typeof(orderi) == "function"){
+                        keys = orderi.call(this, keys);
                     }
                     this._inItems = keys;
                     this._inGroup = group;
-                    return (with_keys)? group: this.walk(null, null, with_keys);
+                    return this.walker(null, null);
                 }
 
                 // Delete and Exit
@@ -1262,51 +1369,32 @@
 
             // Sort Groups
             var groups = Object.keys(this.groups);
-            if(group_order == "ASC"){
+            if(orderg == "ASC"){
                 groups.sort();
-            } else if(group_order == "DESC"){
+            } else if(orderg == "DESC"){
                 groups.sort().reverse();
-            } else if(typeof(group_order) == "function"){
-                groups.sort(group_order);
+            } else if(typeof(orderg) == "function"){
+                groups.orderg.call(this);
             }
-            groups.unshift("#")
+            groups.unshift("#");
 
             // Init Loop
             this._inLoop = true;
             this._inItems = [];
             this._inGroups = groups;
-            return this.walk(item_order, null, with_keys);
+            return this.walker(orderi, null);
+        },
+
+        /*
+         |  WALK THROUGH ALL OPTIONs
+         |  @since  0.3.0
+         |  @update 0.4.0   DEPRECATED
+         */
+        walk: function(item_order, group_oder, deprecated){
+            return this.walker(item_order, group_order);
         }
     }
 
-    // Assign to jQuery
-    if(typeof(jQuery) != "undefined"){
-        jQuery.fn.tailselect = function(options){
-            var _r = [];
-            this.each(function(){
-                var instance = tailSelect(this);
-                if(instance){
-                    _r.push(instance);
-                }
-            });
-            return (_r.length === 1)? _r[0]: (_r.length === 0)? false: _r;
-        }
-    }
-
-    // Assign to MooTools
-    if(typeof(MooTools) !== "undefined"){
-        Element.implement({
-            tailselect: function(options){
-                return new tailSelect(this, options);
-            }
-        });
-    }
-
-    // Assign to Window
-    if(typeof(w.tail) == "undefined"){
-        w.tail = {};
-    }
-    w.tail.select = tailSelect;
-    w.tail.options = tailOptions;
+    // Return
     return tailSelect;
 }));

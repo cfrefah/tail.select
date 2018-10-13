@@ -48,7 +48,7 @@
         <link type="text/css" rel="stylesheet" href="assets/css/tail.demo.css?ver=2.2.0" />
         <link type="text/css" rel="stylesheet" href="assets/css/octicons.css?ver=8.1.0" />
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i|Oswald:400,500" />
-        <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.3.6" />
+        <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.4.0" />
         <style type="text/css">
             .content section.welcome-back{
                 width: 100%;
@@ -147,6 +147,12 @@
                 -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 1px 1px rgba(0, 0, 0, 0.1);
                 -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 1px 1px rgba(0, 0, 0, 0.1);
             }
+            span.options-path{
+                color: #707478;
+                displaY: block;
+                font-size: 10px;
+                line-height: 14px;
+            }
         </style>
 
         <!-- requireJS -->
@@ -169,13 +175,21 @@
                         </div>
                         <div class="tail-project">
                             <span class="tail-title">tail.<b>select</b></span>
-                            <span class="tail-version">0.3.6 - <b>Alpha</b></span>
+                            <span class="tail-version">0.4.0 - <b>Beta</b></span>
                         </div>
                     </a>
                 </div>
                 <div class="container-right header-right">
                     <ul class="main-navi">
-                        <li class="navi-item item-internal active"><a href="./index.html"><span>Demo</span></a></li>
+                        <li class="navi-item item-internal active has-submenu">
+                            <a href="./index.html"><span>Demo</span></a>
+                            <ul class="sub-navi">
+                                <li class="navi-item"><a href="./index-de.html">German Language</a></li>
+                                <li class="navi-item"><a href="./index-jquery.html">jQuery 1.12.4</a></li>
+                                <li class="navi-item"><a href="./index-mootools.html">MooTools 1.6.0</a></li>
+                                <li class="navi-item"><a href="./index-amd.html">AMD @ requireJS</a></li>
+                            </ul>
+                        </li>
                         <li class="navi-item item-internal"><a href="./docs.html"><span>Docs</span></a></li>
 
                         <li class="navi-item item-external">
@@ -1339,6 +1353,97 @@ for(var i = 0; i < l; i++){
         }
     });
 }</code></pre>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </section>
+
+            <section class="demo-content">
+                <div class="container">
+                    <header>
+                        <h1>A hooked <b>Select</b> Field</h1>
+                        <p>The magic of Hooks and Callbacks (Example for <a href="https://github.com/pytesNET/tail.select/issues/3#issuecomment-429315514">Issue #3</a>).</p>
+                    </header>
+                    <article class="side-by-side separated">
+                        <aside class="aside-50">
+                            <select type="text" id="select-13" class="select-hooked" multiple>
+                                <option>Category #1</option>
+                                <option>  Category #2</option>
+                                <option>    Category #3</option>
+                                <option>      Category #4</option>
+                                <option>        Category #5</option>
+                                <option>Category ABC</option>
+                                <option>  Category DEF</option>
+                                <option>    Category GHI</option>
+                                <option>      Category JKL</option>
+                                <option>        Category MNO</option>
+                            </select>
+                        </aside>
+                        <aside class="aside-50">
+                            <span id="hook-latest"></span>
+                        </aside>
+                    </article>
+                    <footer>
+                        <div class="example-label" data-handle="example">Show Example Code</div>
+                        <div class="example-code">
+                            <div>
+                                <b>HTML Structure</b>
+<pre class="language-markup line-numbers"><code>&lt;select type="text" id="select-13" class="select-hooked" multiple&gt;
+    &lt;option&gt;Category #1&lt;/option&gt;
+    &lt;option&gt;  Category #2&lt;/option&gt;
+    &lt;option&gt;    Category #3&lt;/option&gt;
+    &lt;option&gt;      Category #4&lt;/option&gt;
+    &lt;option&gt;        Category #5&lt;/option&gt;
+    &lt;option&gt;Category ABC&lt;/option&gt;
+    &lt;option&gt;  Category DEF&lt;/option&gt;
+    &lt;option&gt;    Category GHI&lt;/option&gt;
+    &lt;option&gt;      Category JKL&lt;/option&gt;
+    &lt;option&gt;        Category MNO&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                                <b>JavaScript Code</b>
+<pre class="language-javascript line-numbers"><code>tail.select(".select-hooked", {
+    search: true,
+    descriptions: true,
+    multiSelectAll: true,
+    cbLoopItem: function(item, optgroup, search){
+        var li = d.createElement("LI");
+            li.className  = "tail-dropdown-option";
+            li.className += (item.selected)? " selected": "";
+            li.className += (item.disabled)? " disabled": "";
+
+        // Inner Text
+        if(search){
+            var pos = item.option.innerHTML.search(/[^\s]/i)/2,
+                path = d.createElement("SPAN"), text = [], el = item.option, i = 0;
+            while(el = el.previousElementSibling){
+                if(i++ >= pos){
+                    break;
+                }
+                text.push(el.innerText);
+            }
+            path.className = "options-path";
+            path.innerText = text.reverse().join(" > ");
+            li.innerHTML += path.outerHTML;
+            li.innerHTML += item.value.replace(new RegExp("(" + search + ")", "i"), "<mark>$1</mark>");
+        } else {
+            li.innerHTML += item.option.innerHTML.replace(/ /g, "&amp;nbsp;&amp;nbsp;");
+        }
+
+        // Inner Description
+        if(this.con.descriptions && item.description){
+            li.innerHTML += '<span class="tail-option-description">' + item.description + '</span>';
+        }
+        return li;
+    }
+}).on("open", function(){
+    d.querySelector("#hook-latest").innerText = "Open Select Field";
+}).on("close", function(){
+    d.querySelector("#hook-latest").innerText = "Close Select Field";
+}).on("change", function(item, state){
+    var text = state[0].toUpperCase() + state.slice(1);
+    d.querySelector("#hook-latest").innerText = text + " Option: '" + item.key + "'";
+});</code></pre>
                             </div>
                         </div>
                     </footer>

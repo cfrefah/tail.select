@@ -158,6 +158,7 @@
 
         <!-- Source -->
         <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.4.0" />
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="source/js/tail.select.js?ver=0.4.0"></script>
     </head>
     <body>
@@ -423,7 +424,7 @@
     &lt;option&gt;[...]&lt;/option&gt;
 &lt;/select&gt;</code></pre>
                                 <b>JavaScript Code</b>
-<pre class="language-javascript line-numbers"><code>tail.select(".select");</code></pre>
+<pre class="language-javascript line-numbers"><code>$(".select").tailselect();</code></pre>
                             </div>
                         </div>
                     </footer>
@@ -581,7 +582,7 @@
     &lt;/optgroup&gt;
 &lt;/select&gt;</code></pre>
                                 <b>JavaScript Code</b>
-<pre class="language-javascript line-numbers"><code>tail.select(".select");</code></pre>
+<pre class="language-javascript line-numbers"><code>$(".select").tailselect();</code></pre>
                             </div>
                         </div>
                     </footer>
@@ -739,7 +740,7 @@
     &lt;/optgroup&gt;
 &lt;/select&gt;</code></pre>
                                 <b>JavaScript Code</b>
-<pre class="language-javascript line-numbers"><code>tail.select(".select-search", {
+<pre class="language-javascript line-numbers"><code>$(".select-search").tailselect({
     search: true
 });</code></pre>
                             </div>
@@ -899,7 +900,7 @@
     &lt;/optgroup&gt;
 &lt;/select&gt;</code></pre>
                                 <b>JavaScript Code</b>
-<pre class="language-javascript line-numbers"><code>tail.select(".select-description", {
+<pre class="language-javascript line-numbers"><code>$(".select-description").tailselect({
     search: true,
     descriptions: true
 });</code></pre>
@@ -1085,14 +1086,14 @@
 &lt;/select&gt;</code></pre>
                                 <b>JavaScript Code</b>
 <pre class="language-javascript line-numbers"><code>// Left Select
-tail.select(".select-deselect", {
+$(".select-deselect").tailselect(
     search: true,
     descriptions: true,
     deselect: true,
 });
 
 // Right Select
-tail.select(".select-limit", {
+$(".select-limit").tailselect(
     search: true,
     descriptions: true,
     multiLimit: 10
@@ -1199,7 +1200,7 @@ tail.select(".select-limit", {
 
 &lt;div class="tail-move-container"&gt;&lt;/div&gt;</code></pre>
                                 <b>JavaScript Code</b>
-<pre class="language-javascript line-numbers"><code>tail.select(".select-move", {
+<pre class="language-javascript line-numbers"><code>$(".select-move").tailselect({
     search: true,
     descriptions: true,
     hideSelected: true,
@@ -1271,7 +1272,7 @@ tail.select(".select-limit", {
                                 <b>HTML Structure</b>
 <pre class="language-markup line-numbers"><code>&lt;select class="select-manipulatable" multiple&gt;&lt;/select&gt;</code></pre>
                                 <b>JavaScript Code</b>
-<pre class="language-javascript line-numbers"><code>var mani = tail.select(".select-manipulatable", {
+<pre class="language-javascript line-numbers"><code>var mani = $(".select-manipulatable").tailselect({
     search: true,
     descriptions: true,
     multiLimit: 15,
@@ -1279,75 +1280,71 @@ tail.select(".select-limit", {
 });
 
 // Action Buttons
-var buttons = d.querySelectorAll("button[data-select]"), l = buttons.length;
-for(var i = 0; i < l; i++){
-    buttons[i].addEventListener("click", function(event){
-        if(this.disabled){
-            return;
+$("button[data-select]").click(function(event){
+    if($(this).disabled){
+        return;
+    }
+    event.preventDefault();
+    event.stopPropagation(); // Prevent document handler.
+
+    var action = $(this).attr("data-select"),
+        value  = $(this).attr("data-value") || null;
+
+    if(action == "open"){
+        mani.open();
+    } else if(action == "close"){
+        mani.close();
+    } else if(action == "toggle"){
+        mani.toggle();
+    } else if(action == "remove"){
+        $("button[data-select]").each(function(){
+            this.disabled = !($(this).attr("data-select") == "reinit");
+        });
+        mani.remove();
+    } else if(action == "reinit"){
+        $("button[data-select]").each(function(){
+            this.disabled = ($(this).attr("data-select") == "reinit");
+        });
+        mani.init();
+    } else if(action == "onload"){
+        this.disabled = true;
+        this.className = this.className.replace("button-red", "loading");
+
+        var items = mani.options.items[this.getAttribute("data-group")];
+        for(var key in items){
+            mani.options.remove(key, items[key].group);
         }
-        event.preventDefault();
-        event.stopPropagation(); // Prevent document handler.
-        action = this.getAttribute("data-select"),
-        value  = this.getAttribute("data-value") || null;
+        this.setAttribute("data-select", "load");
+        this.removeAttribute("data-group");
+        this.disabled = false;
+        this.innerText = this.innerText.replace("Unload", "Load");
+        this.className = this.className.replace("loading", "").trim();
+    } else if(action == "load"){
+        this.disabled = true;
+        this.className += " loading";
 
-        if(action == "open"){
-            mani.open();
-        } else if(action == "close"){
-            mani.close();
-        } else if(action == "toggle"){
-            mani.toggle();
-        } else if(action == "remove"){
-            for(var b = 0; b < l; b++){
-                if(buttons[b].getAttribute("data-select") == "reinit"){
-                    buttons[b].disabled = false;
-                } else {
-                    buttons[b].disabled = true;
-                }
-            }
-            mani.remove();
-        } else if(action == "reinit"){
-            for(var b = 0; b < l; b++){
-                if(buttons[b].getAttribute("data-select") == "reinit"){
-                    buttons[b].disabled = true;
-                } else {
-                    buttons[b].disabled = false;
-                }
-            }
-            mani.init();
-        } else if(action == "onload"){
-            this.disabled = true;
-            this.className = this.className.replace("red", "loading");
-
-            var items = mani.options.items[this.getAttribute("data-group")];
-            for(var key in items){
-                mani.options.remove(key, items[key].group);
-            }
-            this.setAttribute("data-select", "load");
-            this.removeAttribute("data-group");
-            this.disabled = false;
-            this.innerText = this.innerText.replace("Unload", "Load");
-            this.className = this.className.replace("loading", "").trim();
-        } else if(action == "load"){
-            this.disabled = true;
-            this.className += " loading";
-
-            ajax(value, function(items, element){
+        var self = this;
+        $.ajax(href + "assets/data/demo." + value + ".json", {
+            success: function(items, status){
                 var group = null;
                 for(var l = items.length, i = 0; i < l; i++){
                     mani.options.add(items[i].value, items[i].text, items[i].group, false, false, items[i].desc);
                     if(group == null){
-                        group =items[i].group;
+                        group = items[i].group;
                     }
                 }
-                element.disabled = false;
-                element.setAttribute("data-select", "onload");
-                element.setAttribute("data-group", group);
-                element.innerText = element.innerText.replace("Load", "Unload");
-                element.className = element.className.replace("loading", "red");
-            }, this);
-        }
-    });
-}</code></pre>
+                self.disabled = false;
+                self.setAttribute("data-select", "onload");
+                self.setAttribute("data-group", group);
+                self.innerText = self.innerText.replace("Load", "Unload");
+                self.className = self.className.replace("loading", "button-red");
+            },
+            complete: function(){
+                mani.toggle(false).toggle(false);
+            }
+        });
+    }
+});</code></pre>
                             </div>
                         </div>
                     </footer>
@@ -1397,12 +1394,12 @@ for(var i = 0; i < l; i++){
     &lt;option&gt;        Category MNO&lt;/option&gt;
 &lt;/select&gt;</code></pre>
                                 <b>JavaScript Code</b>
-<pre class="language-javascript line-numbers"><code>tail.select(".select-hooked", {
+<pre class="language-javascript line-numbers"><code>$(".select-hooked").tailselect({
     search: true,
     descriptions: true,
     multiSelectAll: true,
     cbLoopItem: function(item, optgroup, search){
-        var li = d.createElement("LI");
+        var li = document.createElement("LI");
             li.className  = "tail-dropdown-option";
             li.className += (item.selected)? " selected": "";
             li.className += (item.disabled)? " disabled": "";
@@ -1422,7 +1419,7 @@ for(var i = 0; i < l; i++){
             li.innerHTML += path.outerHTML;
             li.innerHTML += item.value.replace(new RegExp("(" + search + ")", "i"), "<mark>$1</mark>");
         } else {
-            li.innerHTML += item.option.innerHTML.replace(/ /g, "&amp;nbsp;&amp;nbsp;");
+            li.innerHTML += item.option.innerHTML.replace(/ /g, "&nbsp;&nbsp;");
         }
 
         // Inner Description
@@ -1432,12 +1429,12 @@ for(var i = 0; i < l; i++){
         return li;
     }
 }).on("open", function(){
-    d.querySelector("#hook-latest").innerText = "Open Select Field";
+    document.querySelector("#hook-latest").innerText = "Open Select Field";
 }).on("close", function(){
-    d.querySelector("#hook-latest").innerText = "Close Select Field";
+    document.querySelector("#hook-latest").innerText = "Close Select Field";
 }).on("change", function(item, state){
     var text = state[0].toUpperCase() + state.slice(1);
-    d.querySelector("#hook-latest").innerText = text + " Option: '" + item.key + "'";
+    document.querySelector("#hook-latest").innerText = text + " Option: '" + item.key + "'";
 });</code></pre>
                             </div>
                         </div>
@@ -1462,45 +1459,32 @@ for(var i = 0; i < l; i++){
         <div class="js-footer">
             <script type="text/javascript">
                 var href = window.location.href.slice(0, window.location.href.lastIndexOf("/")+1);
-                var ajax = function(value, callback, argument){
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function(){
-                        if(this.readyState == 4 && this.status == 200){
-                            callback(JSON.parse(this.responseText), argument);
-                        }
-                    };
-                    xhttp.open("GET", href + "assets/data/demo." + value + ".json", true);
-                    xhttp.send();
-                }
-
-                document.addEventListener("DOMContentLoaded", function(){
-                    var w = window, d = window.document;
-
-                    tail.select("#select-special", {
+                jQuery(document).ready(function($){
+                    $("#select-special").tailselect({
                         search: true,
                         animate: true,
                         descriptions: true
                     });
 
-                    tail.select(".select")
-                    tail.select(".select-search", {
+                    $(".select").tailselect();
+                    $(".select-search").tailselect({
                         search: true
                     });
-                    tail.select(".select-description", {
+                    $(".select-description").tailselect({
                         search: true,
                         descriptions: true
                     });
-                    tail.select(".select-deselect", {
+                    $(".select-deselect").tailselect({
                         search: true,
                         descriptions: true,
                         deselect: true,
                     });
-                    tail.select(".select-limit", {
+                    $(".select-limit").tailselect({
                         search: true,
                         descriptions: true,
                         multiLimit: 10
                     });
-                    tail.select(".select-move", {
+                    $(".select-move").tailselect({
                         search: true,
                         descriptions: true,
                         hideSelected: true,
@@ -1509,13 +1493,15 @@ for(var i = 0; i < l; i++){
                         multiShowCount: false,
                         multiContainer: ".tail-move-container"
                     });
-                    tail.select(".select-hooked", {
+                    $(".select-hooked").tailselect({
                         search: true,
                         descriptions: true,
                         multiSelectAll: true,
                         cbLoopItem: function(item, optgroup, search){
-                            var li = d.createElement("LI");
-                                li.className = "tail-dropdown-option" + ((item.selected)? " selected": "") + ((item.disabled)? " disabled": "");
+                            var li = document.createElement("LI");
+                                li.className  = "tail-dropdown-option";
+                                li.className += (item.selected)? " selected": "";
+                                li.className += (item.disabled)? " disabled": "";
 
                             // Inner Text
                             if(search){
@@ -1542,16 +1528,16 @@ for(var i = 0; i < l; i++){
                             return li;
                         }
                     }).on("open", function(){
-                        d.querySelector("#hook-latest").innerText = "Open Select Field";
+                        document.querySelector("#hook-latest").innerText = "Open Select Field";
                     }).on("close", function(){
-                        d.querySelector("#hook-latest").innerText = "Close Select Field";
+                        document.querySelector("#hook-latest").innerText = "Close Select Field";
                     }).on("change", function(item, state){
                         var text = state[0].toUpperCase() + state.slice(1);
-                        d.querySelector("#hook-latest").innerText = text + " Option: '" + item.key + "'";
+                        document.querySelector("#hook-latest").innerText = text + " Option: '" + item.key + "'";
                     });
 
-                    // tail.select Element
-                    var mani = tail.select(".select-manipulatable", {
+                    // Big Example
+                    var mani = $(".select-manipulatable").tailselect({
                         search: true,
                         descriptions: true,
                         multiLimit: 15,
@@ -1559,77 +1545,71 @@ for(var i = 0; i < l; i++){
                     });
 
                     // Action Buttons
-                    var buttons = d.querySelectorAll("button[data-select]"), l = buttons.length;
-                    for(var i = 0; i < l; i++){
-                        buttons[i].addEventListener("click", function(event){
-                            if(this.disabled){
-                                return;
+                    $("button[data-select]").click(function(event){
+                        if($(this).disabled){
+                            return;
+                        }
+                        event.preventDefault();
+                        event.stopPropagation(); // Prevent document handler.
+
+                        var action = $(this).attr("data-select"),
+                            value  = $(this).attr("data-value") || null;
+
+                        if(action == "open"){
+                            mani.open();
+                        } else if(action == "close"){
+                            mani.close();
+                        } else if(action == "toggle"){
+                            mani.toggle();
+                        } else if(action == "remove"){
+                            $("button[data-select]").each(function(){
+                                this.disabled = !($(this).attr("data-select") == "reinit");
+                            });
+                            mani.remove();
+                        } else if(action == "reinit"){
+                            $("button[data-select]").each(function(){
+                                this.disabled = ($(this).attr("data-select") == "reinit");
+                            });
+                            mani.init();
+                        } else if(action == "onload"){
+                            this.disabled = true;
+                            this.className = this.className.replace("button-red", "loading");
+
+                            var items = mani.options.items[this.getAttribute("data-group")];
+                            for(var key in items){
+                                mani.options.remove(key, items[key].group);
                             }
-                            event.preventDefault();
-                            event.stopPropagation(); // Prevent document handler.
-                            action = this.getAttribute("data-select"),
-                            value  = this.getAttribute("data-value") || null;
+                            this.setAttribute("data-select", "load");
+                            this.removeAttribute("data-group");
+                            this.disabled = false;
+                            this.innerText = this.innerText.replace("Unload", "Load");
+                            this.className = this.className.replace("loading", "").trim();
+                        } else if(action == "load"){
+                            this.disabled = true;
+                            this.className += " loading";
 
-                            if(action == "open"){
-                                mani.open();
-                            } else if(action == "close"){
-                                mani.close();
-                            } else if(action == "toggle"){
-                                mani.toggle();
-                            } else if(action == "remove"){
-                                for(var b = 0; b < l; b++){
-                                    if(buttons[b].getAttribute("data-select") == "reinit"){
-                                        buttons[b].disabled = false;
-                                    } else {
-                                        buttons[b].disabled = true;
-                                    }
-                                }
-                                mani.remove();
-                            } else if(action == "reinit"){
-                                for(var b = 0; b < l; b++){
-                                    if(buttons[b].getAttribute("data-select") == "reinit"){
-                                        buttons[b].disabled = true;
-                                    } else {
-                                        buttons[b].disabled = false;
-                                    }
-                                }
-                                mani.init();
-                            } else if(action == "onload"){
-                                this.disabled = true;
-                                this.className = this.className.replace("button-red", "loading");
-
-                                var items = mani.options.items[this.getAttribute("data-group")];
-                                for(var key in items){
-                                    mani.options.remove(key, items[key].group);
-                                }
-                                this.setAttribute("data-select", "load");
-                                this.removeAttribute("data-group");
-                                this.disabled = false;
-                                this.innerText = this.innerText.replace("Unload", "Load");
-                                this.className = this.className.replace("loading", "").trim();
-                            } else if(action == "load"){
-                                this.disabled = true;
-                                this.className += " loading";
-
-                                ajax(value, function(items, element){
+                            var self = this;
+                            $.ajax(href + "assets/data/demo." + value + ".json", {
+                                success: function(items, status){
                                     var group = null;
                                     for(var l = items.length, i = 0; i < l; i++){
                                         mani.options.add(items[i].value, items[i].text, items[i].group, false, false, items[i].desc);
                                         if(group == null){
-                                            group =items[i].group;
+                                            group = items[i].group;
                                         }
                                     }
-                                    element.disabled = false;
-                                    element.setAttribute("data-select", "onload");
-                                    element.setAttribute("data-group", group);
-                                    element.innerText = element.innerText.replace("Load", "Unload");
-                                    element.className = element.className.replace("loading", "button-red");
-
+                                    self.disabled = false;
+                                    self.setAttribute("data-select", "onload");
+                                    self.setAttribute("data-group", group);
+                                    self.innerText = self.innerText.replace("Load", "Unload");
+                                    self.className = self.className.replace("loading", "button-red");
+                                },
+                                complete: function(){
                                     mani.toggle(false).toggle(false);
-                                }, this);
-                            }
-                        });
-                    }
+                                }
+                            });
+                        }
+                    });
                 });
             </script>
         </div>
