@@ -1,7 +1,7 @@
 /*
  |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.3.6 - Alpha
+ |  @version    0.4.0 - Alpha
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
@@ -109,6 +109,36 @@
     color: #fff;
     background-color: #DC4650;
 }
+.tail-select button.tail-all, .tail-select button.tail-none{
+    cursor: pointer;
+    color: #707478;
+    margin: 1px 3px 0 0;
+    padding: 1px 5px;
+    display: inline-block;
+    font-size: 12px;
+    text-shadow: none;
+    line-height: 18px;
+    vertical-align: top;
+    border: 1px solid #c0c0c0;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.tail-select button.tail-all:hover{
+    color: #3C82E6;
+    border-color: #3C82E6;
+}
+.tail-select button.tail-none:hover{
+    color: #DC4650;
+    border-color: #DC4650;
+}
+
+
 .tail-select .tail-select-label{
     cursor: pointer;
     width: 100%;
@@ -174,6 +204,7 @@
     padding: 0;
     display: none;
     z-index: 23;
+    overflow: hidden;
     position: absolute;
     font-size: 14px;
     text-align: left;
@@ -204,12 +235,14 @@
     margin: 0;
     padding: 0;
     display: block;
+    z-index: 31;
+    position: relative;
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.075);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.075);
 }
 .tail-select .tail-select-dropdown input{
     width: 100%;
@@ -229,12 +262,14 @@
 }
 .tail-select .tail-select-dropdown .tail-dropdown-inner{
     width: 100%;
-    max-height: 300px;
     margin: 0;
     padding: 10px 0;
     display: block;
     overflow-x: hidden;
     overflow-y: auto;
+}
+.tail-select .tail-select-dropdown .tail-dropdown-inner > *:last-child{
+    margin-bottom: 2px;
 }
 .tail-select .tail-select-dropdown ul, .tail-select .tail-select-dropdown ul li{
     width: auto;
@@ -252,8 +287,37 @@
 .tail-select .tail-select-dropdown ul li li{
     padding-left: 30px;
 }
+.tail-select .tail-select-dropdown ul li.tail-dropdown-action{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    margin: -10px 0 5px 0;
+    padding: 5px 0 0 0;
+    z-index: 30;
+    /*position: sticky;*/
+    position: static;
+    text-align: center;
+    border-bottom: 1px solid #d0d0d0;
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.075);
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.075);
+}
+.tail-select .tail-select-dropdown ul li.tail-dropdown-action button{
+    margin: 0 5px;
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 18px;
+    background-color: #ffffff;
+}
 .tail-select .tail-select-dropdown ul li.tail-optgroup-title{
     font-size: 14px;
+}
+.tail-select .tail-select-dropdown ul li.tail-optgroup-title button{
+    float: right;
+    font-size: 10px;
+    line-height: 14px;
 }
 .tail-select .tail-select-dropdown ul li .tail-option-description{
     color: #888888;
@@ -352,14 +416,14 @@
     SDFWMmgxMnYxMnptLTguNS0ySDN2LTEuNUw5LjUgNEgxMXYxLjVMNC41IDEyeiIvPjwvc3ZnPg==");
 }
 
-/* LabelOnly */
-.tail-select .tail-select-dropdown ul li.tail-dropdown-option.label-only{
+/* Empty */
+.tail-select .tail-select-dropdown ul li.tail-dropdown-empty{
     cursor: auto;
     text-align: center;
     padding-left: 10px;
     background-color: #fff;
 }
-.tail-select .tail-select-dropdown ul li.tail-dropdown-option.label-only:before{
+.tail-select .tail-select-dropdown ul li.tail-dropdown-empty:before{
     display: none;
 }
 

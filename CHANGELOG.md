@@ -1,6 +1,47 @@
 CHANGELOG
 ===========
 
+Version 0.4.0 - Beta
+--------------------
+-   Info: First Beta Version
+-   Add: A custom event listener which allows more details / arguments.
+-   Add: The new `on()` method to use the new custom event listener.
+-   Add: The new `config()` method to get and set configurations after init.
+-   Add: The new `setCSVInput()` method to handle the CSV Input field.
+-   Add: The new internal `trigger()` method which handles the events.
+-   Add: The new default `createGroup()` and `createItem()` callback methods.
+-   Add: The new `cbLoopItem` and `cbLoopGroup` options, which allows to use a custom callback
+         function for the creation of options and groups within the dropdown list.
+-   Add: The new `multiSelectAll` and `multiSelectGroup` options, which allows to (un)select all
+         options or all options within a group!
+-   Add: The new `walker()` function which replaces `walk()`.
+-   Add: The additional class name `in-search` on search-results.
+-   Update: The jQuery and MooTools Bindings.
+-   Update: The `init()` method on `tailOptions` uses now also `set()`.
+-   Update: The `reload()` method uses the same instance instead of creating a new one.
+-   Update: The `open()`, `close()` and `toggle()` method accepts now one parameter, which disables
+|           the animation (if turned on).
+-   Update: The Group will also be shown on search-results.
+-   Update: New strings including a new string-key structure (+ updated translations).
+-   Update: Assign HTML String method instead of Single Element Creation on `init()`.
+-   Update: The default option for `height` has been changed to 350 (px) according to the new
+            `maxHeight` JS-based setup (replaces the CSS setup).
+-   Update: The sort callback on the `walker()` method is now called directly instead as
+            callback within the `sort()` function!
+-   Update: The CSS design has been modified and adapted to the new features.
+-   Codacy: Expected '!==' and instead saw '!='. (eqeqeq)
+-   Codacy: Avoid assignments in operands. (At least on if)
+-   Codacy: 'tailOptions' was used before it was defined. (no-use-before-define)
+-   Codacy: 'i' is already defined. (no-redeclare)
+-   Rename: The internval variable `tailSelect.instances` has been renamed into `tailSelect.inst`.
+-   Bugfix: Displaying of tail.select out of viewport
+            [#4](https://github.com/pytesNET/tail.select/issues/4). Thanks to **tomasKucera**
+-   Bugfix: The `items` option object doesn't added a option description.
+-   Bugfix: Don't close the dropdown list, when playing with the `multiContainer` element.
+-   Bugfix: Already selected items can be selected again!
+-   Bugfix: Load Items into the `multiContainer` and `csvInput` field on soft reloads.
+-   Deprecated: The `walk()` function has been marked as deprecated and gets removed in the future!
+
 Version 0.3.6 - Alpha
 ---------------------
 -   Hotfix: Mismatching / Faulty Search Regex on different HTML conditions.
