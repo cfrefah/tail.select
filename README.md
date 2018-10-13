@@ -133,7 +133,9 @@ tail.select("select", {
 
 Thanks To
 ---------
-Awesome Help by Awesome Companies
+Awesome Help by Awesome Companies and Projects
 
--   [jsCompress](https://jscompress.com/)
+-   [jsCompress](https://jscompress.com)
 -   [Codacy](https://app.codacy.com)
+-   [prismJS](https://prismjs.com)
+-   [MenuSpy](https://github.com/lcdsantos/menuspy)
