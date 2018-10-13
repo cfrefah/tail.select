@@ -10,8 +10,8 @@ The **tail.select** script is back, completely rewritten in pure vanilla JavaScr
 beautify your (multiple) select fields again and now even a lot better as the deprecated jQuery
 Version back in 2014!
 
-[Wanna see **tail.select** in action?](https://github.pytes.net/tail.select)
-[Wanne translate **tail.select** in your language?](https://github.com/pytesNET/tail.select/wiki/Help-Translating)
+[Wanna see **tail.select** in action?](https://github.pytes.net/tail.select)<br />
+[Wanna translate **tail.select** in your language?](https://github.com/pytesNET/tail.select/wiki/Help-Translating)
 
 Features
 --------
