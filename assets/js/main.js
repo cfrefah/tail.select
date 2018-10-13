@@ -12,16 +12,17 @@ require(["prism.min", "menuspy.min", "tail.demo", "source/tail.select"], functio
         xhttp.open("GET", href + "assets/data/demo." + value + ".json", true);
         xhttp.send();
     }
-    website();
+
+    select("#select-special", {
+        search: true,
+        animate: true,
+        descriptions: true,
+        multiSelectAll: true
+    });
 
     select(".select")
     select(".select-search", {
         search: true
-    });
-    select("#select-special", {
-        search: true,
-        animate: true,
-        descriptions: true
     });
     select(".select-description", {
         search: true,
@@ -161,6 +162,8 @@ require(["prism.min", "menuspy.min", "tail.demo", "source/tail.select"], functio
                     element.setAttribute("data-group", group);
                     element.innerText = element.innerText.replace("Load", "Unload");
                     element.className = element.className.replace("loading", "button-red");
+
+                    mani.toggle(false).toggle(false);
                 }, this);
             }
         });

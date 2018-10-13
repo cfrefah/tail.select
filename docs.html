@@ -244,11 +244,11 @@
     // The settings below are the defaults!
     tail.select("select", {
         width: null,
-        height: null,
+        height: 350,
         classNames: null,
         placeholder: null,
         deselect: false,
-        animate: false,
+        animate: true,
         openAbove: null,
         stayOpen: false,
         startOpen: false,
@@ -256,6 +256,8 @@
         multiLimit: -1,
         multiShowCount: true,
         multiContainer: false,
+        multiSelectAll: false,          // NEW IN **0.4.0**
+        multiSelectGroup: true,         // NEW IN **0.4.0**
         descriptions: false,
         items: {},
         sortItems: false,
@@ -268,7 +270,9 @@
         hideSelect: true,
         hideSelected: false,
         hideDisabled: false,
-        bindSourceSelect: false
+        bindSourceSelect: false,
+        cbLoopItem: undefined,          // NEW IN **0.4.0**
+        cbLoopGroup: undefined          // NEW IN **0.4.0**
     });
 });</code></pre>
 
@@ -313,6 +317,12 @@
                             <dt>multiContainer</dt>
                             <dd><code>string</code><br /> This option allow on string-based element selector only. If passed it will move special handle objects to the respective element. Please note: This option is only available on multiple select fields!</dd>
 
+                            <dt>multiSelectAll</dt>
+                            <dd><code>bool</code><br /> This option will show a "Select All" / "Unselect All" action buttons on top of the dropdown list, which (un)selects all available options!</dd>
+
+                            <dt>multiSelectGroup</dt>
+                            <dd><code>bool</code><br /> This option will show a "All" / "None" Button on each Optgroup header, which (un)selects all options within this group!</dd>
+
                             <dt>descriptions</dt>
                             <dd><code>string</code><br /> This option will enable the 'description' option on the respective tail.select instance. To add a description to an option just use the 'data-description' attribute on the respective HTML element.</dd>
 
@@ -351,6 +361,12 @@
 
                             <dt>bindSourceSelect</dt>
                             <dd><code>bool</code><br /> This option will set an event listener to the source select element. Thus, all changes to the source element will be taken over in the tail.select instance!</dd>
+
+                            <dt>cbLoopItem</dt>
+                            <dd><code>callback<dd><code>bool</code><br /> This option allows you to edit / manipulate each displayed item within the dropdown field, just pass a function, which accepts the following 3 arguments: (item , group , search &lt;string|false&gt;).</dd>
+                            
+                            <dt>cbLoopGroup</dt>
+                            <dd><code>callback<dd><code>bool</code><br /> This option allows you to edit / manipulate each displayed group within the dropdown field, just pass a function, which accepts the following 2 arguments: (label , search &lt;string|false&gt;).</dd>
                         </dl>
                     </article>
                 </div>
