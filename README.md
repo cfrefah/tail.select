@@ -1,10 +1,10 @@
 tail.select
 ===========
-[![npm](https://img.shields.io/npm/v/tail.select.svg?style=flat-square)](https://www.npmjs.com/package/tail.select)
-[![npm](https://img.shields.io/npm/dt/tail.select.svg?style=flat-square)](https://www.npmjs.com/package/tail.select)
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![plainJS](https://img.shields.io/badge/plainJS-%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%9C%AB-yellow.svg?style=flat-square)](https://plainjs.com/javascript/plugins/tailselect-185/)
-[![Author](https://img.shields.io/badge/Author-SamBrishes@pytesNET-lightgrey.svg?style=flat-square)](https://www.github.com/pytesNET)
+[![npm](https://s.pytes.net/9e506510)](https://s.pytes.net/2a8c886a)
+[![npm](https://s.pytes.net/3fd8be97)](https://s.pytes.net/2a8c886a)
+[![License](https://s.pytes.net/8257ac72)](LICENSE.md)
+[![plainJS](https://s.pytes.net/cb2d2d94)](https://s.pytes.net/21d65dff)
+[![Author](https://s.pytes.net/5542d1fa)](https://s.pytes.net/5be37d0a)
 
 The **tail.select** script is back, completely rewritten in pure vanilla JavaScript and ready to
 beautify your (multiple) select fields again and now even a lot better as the deprecated jQuery
