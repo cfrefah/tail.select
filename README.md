@@ -11,6 +11,7 @@ beautify your (multiple) select fields again and now even a lot better as the de
 Version back in 2014!
 
 [Wanna see **tail.select** in action?](https://github.pytes.net/tail.select)
+[Wanne translate **tail.select** in your language?](https://github.com/pytesNET/tail.select/wiki/Help-Translating)
 
 Features
 --------
