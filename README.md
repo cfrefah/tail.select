@@ -133,5 +133,7 @@ tail.select("select", {
 
 Thanks To
 ---------
-[jsCompress](https://jscompress.com/)
-[Codacy](https://app.codacy.com)
+Awesome Help by Awesome Companies
+
+-   [jsCompress](https://jscompress.com/)
+-   [Codacy](https://app.codacy.com)
