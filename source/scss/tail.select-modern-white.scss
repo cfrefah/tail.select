@@ -1,0 +1,168 @@
+/*
+ |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
+ |  @author     SamBrishes@pytesNET
+ |  @version    0.4.1 - Beta
+ |  @website    https://www.github.com/pytesNET/tail.select
+ |
+ |  @license    X11 / MIT License
+ |  @copyright  Copyright © 2014 - 2018 SamBrishes, pytesNET <pytes@gmx.net>
+ */
+@import "tail.select";
+
+/* @start CORE */
+.tail-select{
+    button.tail-all,
+    button.tail-none{
+        @include border-radius(12px);
+    }
+    button.tail-all:hover{
+        color: #fff;
+        background-color: $blue;
+    }
+    button.tail-none:hover{
+        color: #fff;
+        background-color: $red;
+    }
+}
+/* @end CORE */
+
+/* @start LABEL */
+.tail-select .tail-select-label{
+    padding: 5px 15px;
+    @include border-radius(34px);
+}
+.tail-select .tail-select-label:before{
+    top: 1px;
+    right: 1px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: #ffffff;
+    @include border(1px solid transparent);
+    @include border-radius(50%);
+    @include transition("border 142ms linear, background 142ms linear");
+}
+.tail-select:hover .tail-select-label:before{
+    border-color: #dfdfdf;
+}
+.tail-select.active .tail-select-label:before{
+    border-color: #e8e8e8;
+    background-color: #e8e8e8;
+}
+.tail-select .tail-select-label:after{
+    top: 2px;
+    right: 1px;
+    width: 30px;
+    height: 29px;
+    content: "";
+    opacity: 0.75;
+}
+.tail-select:hover .tail-select-label:after,
+.tail-select.active .tail-select-label:after{
+    opacity: 1;
+}
+.tail-select .tail-select-label .tail-label-count{
+    color: #ffffff;
+    margin: 0 5px 0 -7px;
+    padding: 0 7px;
+    display: inline-block;
+    border: 0;
+    background-color: $blue;
+    @include border-radius(10px);
+}
+/* @end LABEL */
+
+/* @start CONTAINER */
+.tail-select-container{
+    padding: 2px 5px;
+    @include border-radius(34px);
+}
+.tail-select-container .tail-select-handle{
+    padding: 2px 22px 2px 10px;
+    background-color: $blue;
+    @include border-radius(12px);
+}
+.tail-select-container .tail-select-handle:after{
+    width: 20px;
+    margin-right: 3px;
+}
+/* @end CONTAINER */
+
+/* @start DROPDOWN */
+.tail-select .tail-select-dropdown{
+    margin: 15px 0 0 0;
+    padding: 0;
+    @include border-radius(3px);
+}
+.tail-select.active .tail-select-dropdown{
+    overflow: visible !important;
+}
+.tail-select.open-top .tail-select-dropdown{
+    bottom: 35px;
+    margin: 0 0 15px 0;
+}
+.tail-select .tail-select-dropdown:before,
+.tail-select .tail-select-dropdown:after{
+    top: -13px;
+    right: 3px;
+    width: 0;
+    height: 0;
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 0 14px 13px 14px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+}
+.tail-select .tail-select-dropdown:after{
+    top: -12px;
+    right: 4px;
+    border-width: 0 13px 12px 13px;
+    border-color: transparent transparent #ffffff transparent;
+}
+.tail-select.open-top .tail-select-dropdown:before,
+.tail-select.open-top .tail-select-dropdown:after{
+    top: auto;
+    bottom: -13px;
+    border-width: 13px 14px 0 14px;
+    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;
+}
+.tail-select.open-top .tail-select-dropdown:after{
+    top: auto;
+    bottom: -12px;
+    border-width: 12px 13px 0 13px;
+    border-color: #ffffff transparent transparent transparent;
+}
+.tail-select .tail-select-dropdown .tail-dropdown-inner{
+    padding: 0;
+    overflow: hidden;
+}
+.tail-select .tail-select-dropdown ul.tail-dropdown{
+    margin: 0 0 1px 0;
+    max-height: inherit;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Search Field */
+.tail-select .tail-select-dropdown .tail-dropdown-search{
+    @include box-shadow(none);
+}
+
+/* Action Field */
+.tail-select .tail-select-dropdown ul li.tail-dropdown-action{
+    margin: 0;
+    padding: 6px 0 0 0;
+        @include box-shadow(none);
+}
+.tail-select .tail-select-dropdown ul li.tail-dropdown-action button{
+    padding: 2px 7px;
+    font-size: 10px;
+    line-height: 16px;
+}
+.tail-select .tail-select-dropdown ul li.tail-optgroup-title button{
+    @include border-radius(10px);
+}
+/* @end DROPDOWN */

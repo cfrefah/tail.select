@@ -1202,6 +1202,7 @@ ul.sub-navi > li{
     margin: 0;
     padding: 0;
     display: block;
+    position: relative;
 }
 ul.sub-navi > li:first-child:before, ul.sub-navi > li:first-child:after{
     top: -10px;
@@ -1226,11 +1227,26 @@ ul.sub-navi > li:first-child:before{
 ul.sub-navi > li:first-child:hover:after{
     border-color: transparent transparent #FCF5F6 transparent;
 }
+ul.sub-navi > li.has-submenu{
+}
+ul.sub-navi > li.separator{
+    height: 1px;
+}
+ul.sub-navi > li.separator:before{
+    top: 0;
+    left: 5px;
+    right: 5px;
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: 1px solid #d0d0d0;
+}
 ul.sub-navi > li > a{
     color: #777777;
     margin: 0;
     padding: 7px 14px;
     display: block;
+    position: relative;
     font-size: 14px;
     line-height: 20px;
     white-space: nowrap;
@@ -1252,10 +1268,66 @@ ul.sub-navi > li:last-child > a{
     -webkit-border-bottom-left-radius: 4px;
     -webkit-border-bottom-right-radius: 4px;
 }
-ul.sub-navi > li > a:hover{
+ul.sub-navi > li:hover > a{
     color: #DC4650;
     background-color: #FCF5F6;
 }
+ul.sub-navi > li.has-submenu > a:after{
+    top: 0;
+    right: 15px;
+    margin: 0;
+    content: "\e9a8";
+    displaY: inline-block;
+    position: absolute;
+    speak: none;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 34px;
+    font-weight: normal;
+    font-family: "octicons" !important;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sub Sub Navi */
+ul.sub-navi > li:hover > ul.sub-sub-navi{
+    display: block;
+}
+ul.sub-sub-navi{
+    top: 0;
+    left: 100%;
+    margin: 0 0 0 15px;
+}
+ul.sub-sub-navi:before{
+    top: 0;
+    left: -15px;
+    right: 0;
+    bottom: 0;
+    width: 15px;
+    content: "";
+    display: inline-block;
+    position: absolute;
+}
+ul.sub-sub-navi > li:first-child:before{
+    top: 5px;
+    left: -12px;
+    margin: 0;
+    border-width: 12px 12px 12px 0;
+    border-color: transparent rgba(0, 0, 0, 0.2) transparent transparent;
+}
+ul.sub-sub-navi > li:first-child:after{
+    top: 7px;
+    left: -10px;
+    margin: 0;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #ffffff transparent transparent;
+}
+ul.sub-sub-navi > li:first-child:hover:after{
+    border-color: transparent #FCF5F6 transparent transparent;
+}
+
 /* @end HEADER */
 
 /* @start TOOLBAR */

@@ -1,7 +1,7 @@
 /*
  |  tail.select - Another solution to make (multiple) select fields beautiful, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.4.0 - Beta
+ |  @version    0.4.1 - Beta
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
@@ -152,7 +152,7 @@
         tailSelect.inst["tail-" + this.id] = this;
         return this.init();
     };
-    tailSelect.version = "0.4.0";
+    tailSelect.version = "0.4.1";
     tailSelect.status = "beta";
     tailSelect.count = 0;
     tailSelect.inst = {};
@@ -357,7 +357,7 @@
                 root.setAttribute("data-group", "#");
 
             // Walk
-            var self = this, item, ul = root, li, func = (search)? "finder": "walker",
+            var self = this, item, ul = root, li, a1, a2, func = (search)? "finder": "walker",
                 args = (search)? [search]: [this.con.sortItems, this.con.sortGroups];
             while(item = this.options[func].apply(this.options, args)){
                 if(item.group != ul.getAttribute("data-group")){
@@ -381,18 +381,15 @@
                 }
             }
 
-            // Empty
-            var count = root.querySelectorAll("*[data-key]").length, a1, a2;
+            // Empty | Select All
+            var count = root.querySelectorAll("*[data-key]").length;
             if(count == 0){
                 li = d.createElement("LI");
                 li.innerText = __("empty");
                 li.className = "tail-dropdown-empty";
                 root.appendChild(li);
-            }
-
-            // Select All
-            if(count > 0 && this.con.multiple && this.con.multiLimit < 0 && this.con.multiSelectAll){
-                a1 = d.createElement("BUTTON");
+            } else if(this.con.multiple && this.con.multiLimit < 0 && this.con.multiSelectAll){
+                a1 = d.createElement("BUTTON"), a2 = d.createElement("BUTTON");
                 a1.innerText = __("actionAll");
                 a1.className = "tail-all";
                 a1.addEventListener("click", function(event){
@@ -402,8 +399,6 @@
                         self.choose.call(self, "select", items[i].getAttribute("data-key"), items[i].getAttribute("data-group"));
                     }
                 })
-
-                a2 = d.createElement("BUTTON");
                 a2.innerText = __("actionNone");
                 a2.className = "tail-none";
                 a2.addEventListener("click", function(event){
@@ -414,6 +409,7 @@
                     }
                 })
 
+                // Add Element
                 li = d.createElement("LI");
                 li.className = "tail-dropdown-action";
                 li.appendChild(a1);
@@ -424,9 +420,7 @@
             // Add and Return
             this.dropdown.querySelector(".tail-dropdown-inner").innerHTML = "";
             this.dropdown.querySelector(".tail-dropdown-inner").appendChild(root);
-            this.setCSVInput();
-            this.setCounter();
-            this.setLabel();
+            this.setCSVInput().setCounter().setLabel();
             return this;
         },
 
@@ -545,10 +539,7 @@
             }
 
             // Handle
-            this.setLabel();
-            this.setCounter();
-            this.setContainer(item, state);
-            this.setCSVInput();
+            this.setLabel().setCounter().setContainer(item, state).setCSVInput();
             this.trigger("change", item, state);
             return true;
         },
@@ -675,27 +666,25 @@
         /*
          |  PUBLIC :: SET / UPDATE CONTAINER
          |  @since  0.3.0
-         |  @update 0.4.0
+         |  @update 0.4.1
          */
         setContainer: function(item, state){
             if(this.container){
-                var self = this;
+                var self = this, hndl = d.createElement("DIV"), selector;
                 if(state == "select"){
-                    var hndl = d.createElement("DIV");
-                        hndl.innerText = item.value;
-                        hndl.className = "tail-select-handle";
-                        hndl.setAttribute("data-key", item.key);
-                        hndl.setAttribute("data-group", item.group);
-                        hndl.addEventListener("click", function(event){
-                            event.preventDefault();
-                            self.choose.call(self, "unselect", this.getAttribute("data-key"),
-                                             this.getAttribute("data-group"));
-                        });
+                    hndl.innerText = item.value;
+                    hndl.className = "tail-select-handle";
+                    hndl.setAttribute("data-key", item.key);
+                    hndl.setAttribute("data-group", item.group);
+                    hndl.addEventListener("click", function(event){
+                        event.preventDefault();
+                        self.choose.call(self, "unselect", this.getAttribute("data-key"),
+                                         this.getAttribute("data-group"));
+                    });
                     this.container.appendChild(hndl);
                 } else {
-                    var selector = "[data-group='" + item.group + "'][data-key='" + item.key + "']";
-                    var hndl = this.container.querySelector(selector);
-                    if(hndl){
+                    selector = "[data-group='" + item.group + "'][data-key='" + item.key + "']";
+                    if(hndl = this.container.querySelector(selector)){
                         hndl.parentElement.removeChild(hndl);
                     }
                 }
@@ -788,7 +777,7 @@
                 tail.removeClass(this.select, "open-top");
             }
             this.dropdown.style.maxHeight = height + "px";
-            this.dropdown.querySelector(".tail-dropdown-inner").style.maxHeight = height-search + "px";
+            this.dropdown.querySelector(".tail-dropdown-inner").style.maxHeight = height-search-2 + "px";
 
             // Final Function
             var final = function(){
@@ -967,6 +956,9 @@
             for(var l = this.select.options.length, i = 0; i < l; i++){
                 this.set(this.select.options[i]);
             }
+            if(!this.self.con.multiple && !this.self.con.deselect && this.selected.length == 0){
+
+            }
             return this;
         },
 
@@ -1018,7 +1010,7 @@
         /*
          |  ADD (SET) AN EXISTING OPTION
          |  @since  0.3.0
-         |  @update 0.4.0
+         |  @update 0.4.1
          |
          |  @param  object  The <option> element within the respective <select> field.
          |  @param  bool    TRUE to reBuild tail.select, FALSE to do it not.
@@ -1026,7 +1018,7 @@
          |  @return bool    Returns true if the option could be added, false if not.
          */
         set: function(opt, rebuild){
-            var key = opt.value || opt.text, group = opt.parentElement, self = this.self;
+            var key = opt.value || opt.text, group = opt.parentElement, self = this.self, changed = false;
                 group = ((group.tagName == "OPTGROUP")? group.label: "#");
 
             // Check Group
@@ -1039,12 +1031,12 @@
 
             // Selection
             opt.selected = (self.con.multiple || self.con.deselect)? opt.hasAttribute("selected"): opt.selected;
-            if(self.con.multiple){
-                if(this.self.con.multiLimit >= 0 && this.self.con.multiLimit <= this.selected.length){
+
+            if(self.con.multiple && this.self.con.multiLimit >= 0){
+                if(this.self.con.multiLimit <= this.selected.length){
+                    changed = true;
                     opt.selected = false;
                 }
-            } else {
-                opt.selected = (!self.con.deselect && this.selected.length == 0)? true: opt.selected
             }
 
             // Sanitize Description
@@ -1065,8 +1057,12 @@
                 selected: opt.selected,
                 disabled: opt.disabled
             }
-            this.handle((opt.selected? "select": "unselect"), key, group);
-            this.handle((opt.disabled? "disable": "enable"), key, group);
+            if(changed || opt.selected){
+                this.handle("select", key, group);
+            }
+            if(opt.disabled){
+                this.handle("disable", key, group);
+            }
             this.length++;
             if(rebuild){
                 this.self.callback.call(this.self, this.items[group][key], "rebuild");

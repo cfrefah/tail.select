@@ -48,7 +48,7 @@
         <link type="text/css" rel="stylesheet" href="assets/css/tail.demo.css?ver=2.2.0" />
         <link type="text/css" rel="stylesheet" href="assets/css/octicons.css?ver=8.1.0" />
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i|Oswald:400,500" />
-        <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.4.0" />
+        <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.4.1" />
         <style type="text/css">
             .content section.welcome-back{
                 width: 100%;
@@ -175,7 +175,7 @@
                         </div>
                         <div class="tail-project">
                             <span class="tail-title">tail.<b>select</b></span>
-                            <span class="tail-version">0.4.0 - <b>Beta</b></span>
+                            <span class="tail-version">0.4.1 - <b>Beta</b></span>
                         </div>
                     </a>
                 </div>
@@ -184,7 +184,21 @@
                         <li class="navi-item item-internal active has-submenu">
                             <a href="./index.html"><span>Demo</span></a>
                             <ul class="sub-navi">
-                                <li class="navi-item"><a href="./index-de.html">German Language</a></li>
+                                <li class="navi-item has-submenu">
+                                    <a href="#">Languages</a>
+                                    <ul class="sub-navi sub-sub-navi">
+                                        <li class="navi-item"><a href="./index-de.html">German</a></li>
+                                        <li class="separator"></li>
+                                        <li class="navi-item"><a href="https://github.com/pytesNET/tail.select/wiki/Help-Translating">Help Translating</a></li>
+                                    </ul>
+                                </li>
+                                <li class="navi-item has-submenu">
+                                    <a href="#">Themes</a>
+                                    <ul class="sub-navi sub-sub-navi">
+                                        <li class="navi-item"><a href="./themes/modern-white.html">Modern White</a></li>
+                                    </ul>
+                                </li>
+                                <li class="separator"></li>
                                 <li class="navi-item"><a href="./index-jquery.html">jQuery 1.12.4</a></li>
                                 <li class="navi-item"><a href="./index-mootools.html">MooTools 1.6.0</a></li>
                                 <li class="navi-item"><a href="./index-amd.html">AMD @ requireJS</a></li>
@@ -1284,7 +1298,7 @@ tail.select(".select-limit", {
 });
 
 // Action Buttons
-var buttons = d.querySelectorAll("button[data-select]"), l = buttons.length;
+var buttons = document.querySelectorAll("button[data-select]"), l = buttons.length;
 for(var i = 0; i < l; i++){
     buttons[i].addEventListener("click", function(event){
         if(this.disabled){
@@ -1407,7 +1421,7 @@ for(var i = 0; i < l; i++){
     descriptions: true,
     multiSelectAll: true,
     cbLoopItem: function(item, optgroup, search){
-        var li = d.createElement("LI");
+        var li = document.createElement("LI");
             li.className  = "tail-dropdown-option";
             li.className += (item.selected)? " selected": "";
             li.className += (item.disabled)? " disabled": "";
@@ -1415,7 +1429,7 @@ for(var i = 0; i < l; i++){
         // Inner Text
         if(search){
             var pos = item.option.innerHTML.search(/[^\s]/i)/2,
-                path = d.createElement("SPAN"), text = [], el = item.option, i = 0;
+                path = document.createElement("SPAN"), text = [], el = item.option, i = 0;
             while(el = el.previousElementSibling){
                 if(i++ >= pos){
                     break;
@@ -1437,12 +1451,12 @@ for(var i = 0; i < l; i++){
         return li;
     }
 }).on("open", function(){
-    d.querySelector("#hook-latest").innerText = "Open Select Field";
+    document.querySelector("#hook-latest").innerText = "Open Select Field";
 }).on("close", function(){
-    d.querySelector("#hook-latest").innerText = "Close Select Field";
+    document.querySelector("#hook-latest").innerText = "Close Select Field";
 }).on("change", function(item, state){
     var text = state[0].toUpperCase() + state.slice(1);
-    d.querySelector("#hook-latest").innerText = text + " Option: '" + item.key + "'";
+    document.querySelector("#hook-latest").innerText = text + " Option: '" + item.key + "'";
 });</code></pre>
                             </div>
                         </div>

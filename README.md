@@ -1,9 +1,9 @@
 tail.select
 ===========
-[![npm](https://s.pytes.net/9e506510)](https://s.pytes.net/2a8c886a)
-[![npm](https://s.pytes.net/3fd8be97)](https://s.pytes.net/2a8c886a)
-[![License](https://s.pytes.net/8257ac72)](LICENSE.md)
 [![plainJS](https://s.pytes.net/cb2d2d94)](https://s.pytes.net/21d65dff)
+[![npm Version](https://s.pytes.net/9e506510)](https://s.pytes.net/2a8c886a)
+[![npm Downloads](https://s.pytes.net/3fd8be97)](https://s.pytes.net/2a8c886a)
+[![License](https://s.pytes.net/8257ac72)](LICENSE.md)
 [![Author](https://s.pytes.net/5542d1fa)](https://s.pytes.net/5be37d0a)
 
 The **tail.select** script is back, completely rewritten in pure vanilla JavaScript and ready to
@@ -11,6 +11,8 @@ beautify your (multiple) select fields again and now even a lot better as the de
 Version back in 2014!
 
 [Wanna see **tail.select** in action?](https://github.pytes.net/tail.select)
+
+[Wanna translate **tail.select** in your language?](https://github.com/pytesNET/tail.select/wiki/Help-Translating)
 
 Features
 --------
@@ -75,9 +77,11 @@ second parameter is optional and, if set, MUST be an object with your *tail.sele
     <head>
         <meta charset="utf-8" />
         <link type="text/css" rel="stylesheet" href="css/tail.select.css" />
+        <!-- <link type="text/css" rel="stylesheet" href="css/tail.select-{theme}.css" /> -->
     </head>
     <body>
         <script type="text/javascript" src="js/tail.select.min.js"></script>
+        <!-- <script type="text/javascript" src="langs/tail.select-{lang}.js"></script> -->
 
         <select>
             <!-- Your <optgroup> and <option> Elements -->
@@ -136,6 +140,5 @@ Thanks To
 Awesome Help by Awesome Companies and Projects
 
 -   [jsCompress](https://jscompress.com)
--   [Codacy](https://app.codacy.com)
 -   [prismJS](https://prismjs.com)
 -   [MenuSpy](https://github.com/lcdsantos/menuspy)

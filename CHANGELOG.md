@@ -1,6 +1,15 @@
 CHANGELOG
 ===========
 
+Version 0.4.1 - Beta
+--------------------
+-   Add: The new design `modern-white` as additional stylesheet `tail.select-modern-white.css`.
+-   Add: The `.scss` preprocessor stylesheet(-ing) (I'm new at pre-processing, and I'm not sure
+         if i'm using it right :/).
+-   Update: Many design changed and optimizations.
+-   Bugfix: Ignoring `selected` attribute [#6](https://github.com/pytesNET/tail.select/issues/6)
+            Thanks to **tomasKucera**!
+
 Version 0.4.0 - Beta
 --------------------
 -   Info: First Beta Version

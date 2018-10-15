@@ -7,7 +7,7 @@
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>tail.select - HTML Select Fields as beautiful as never before</title>
+        <title>tail.select / "Modern White" Theme</title>
 
         <!-- Common -->
         <meta name="author" content="SamBrishes, pytesNET" />
@@ -45,11 +45,11 @@
         <meta name="og:description" content="tail.select is back: Create beautiful, functional and extensive (Multi) Select Fields with pure, vanilla JavaScript." />
 
         <!-- Assets -->
-        <link type="text/css" rel="stylesheet" href="assets/css/tail.demo.css?ver=2.2.0" />
-        <link type="text/css" rel="stylesheet" href="assets/css/octicons.css?ver=8.1.0" />
+        <link type="text/css" rel="stylesheet" href="../assets/css/tail.demo.css?ver=2.2.0" />
+        <link type="text/css" rel="stylesheet" href="../assets/css/octicons.css?ver=8.1.0" />
         <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i|Oswald:400,500" />
-        <script type="text/javascript" src="assets/js/prism.min.js?ver=1.15.0"></script>
-        <script type="text/javascript" src="assets/js/tail.demo.js?ver=2.2.0"></script>
+        <script type="text/javascript" src="../assets/js/prism.min.js?ver=1.15.0"></script>
+        <script type="text/javascript" src="../assets/js/tail.demo.js?ver=2.2.0"></script>
         <style type="text/css">
             .content section.welcome-back{
                 width: 100%;
@@ -157,8 +157,9 @@
         </style>
 
         <!-- Source -->
-        <link type="text/css" rel="stylesheet" href="source/css/tail.select.css?ver=0.4.1" />
-        <script type="text/javascript" src="source/js/tail.select.js?ver=0.4.1"></script>
+        <link type="text/css" rel="stylesheet" href="../source/css/tail.select.css?ver=0.4.1" />
+        <link type="text/css" rel="stylesheet" href="../source/css/tail.select-modern-white.css?ver=0.4.1" />
+        <script type="text/javascript" src="../source/js/tail.select.js?ver=0.4.1"></script>
     </head>
     <body>
         <div class="header">
@@ -177,12 +178,12 @@
                 <div class="container-right header-right">
                     <ul class="main-navi">
                         <li class="navi-item item-internal active has-submenu">
-                            <a href="./index.html"><span>Demo</span></a>
+                            <a href="../index.html"><span>Demo</span></a>
                             <ul class="sub-navi">
                                 <li class="navi-item has-submenu">
                                     <a href="#">Languages</a>
                                     <ul class="sub-navi sub-sub-navi">
-                                        <li class="navi-item"><a href="./index-de.html">German</a></li>
+                                        <li class="navi-item"><a href="../index-de.html">German</a></li>
                                         <li class="separator"></li>
                                         <li class="navi-item"><a href="https://github.com/pytesNET/tail.select/wiki/Help-Translating">Help Translating</a></li>
                                     </ul>
@@ -190,16 +191,16 @@
                                 <li class="navi-item has-submenu">
                                     <a href="#">Themes</a>
                                     <ul class="sub-navi sub-sub-navi">
-                                        <li class="navi-item"><a href="./themes/modern-white.html">Modern White</a></li>
+                                        <li class="navi-item"><a href="./modern-white.html">Modern White</a></li>
                                     </ul>
                                 </li>
                                 <li class="separator"></li>
-                                <li class="navi-item"><a href="./index-jquery.html">jQuery 1.12.4</a></li>
-                                <li class="navi-item"><a href="./index-mootools.html">MooTools 1.6.0</a></li>
-                                <li class="navi-item"><a href="./index-amd.html">AMD @ requireJS</a></li>
+                                <li class="navi-item"><a href="../index-jquery.html">jQuery 1.12.4</a></li>
+                                <li class="navi-item"><a href="../index-mootools.html">MooTools 1.6.0</a></li>
+                                <li class="navi-item"><a href="../index-amd.html">AMD @ requireJS</a></li>
                             </ul>
                         </li>
-                        <li class="navi-item item-internal"><a href="./docs.html"><span>Docs</span></a></li>
+                        <li class="navi-item item-internal"><a href="../docs.html"><span>Docs</span></a></li>
 
                         <li class="navi-item item-external">
                             <a href="https://www.github.com/pytesNET/tail.select"><span class="octicon octicon-mark-github"></span></a>
@@ -396,10 +397,10 @@
                                     <option>Microsoft Windows 10</option>
                                     <option>Nintendo Entertainment System</option>
                                     <option>Super Nintendo Entertainment System</option>
-                                    <option selected>Nintendo GameBoy</option>
-                                    <option selected>Nintendo GameBoy Color</option>
-                                    <option selected>Nintendo GameBoy Advanced</option>
-                                    <option selected>Nintendo GameBoy Advanced SP</option>
+                                    <option>Nintendo GameBoy</option>
+                                    <option>Nintendo GameBoy Color</option>
+                                    <option>Nintendo GameBoy Advanced</option>
+                                    <option>Nintendo GameBoy Advanced SP</option>
                                     <option>Nintendo DS</option>
                                     <option>Nintendo DS Lite</option>
                                     <option>Nintendo DSi</option>
@@ -1529,7 +1530,7 @@ for(var i = 0; i < l; i++){
                         descriptions: true,
                         multiSelectAll: true,
                         cbLoopItem: function(item, optgroup, search){
-                            var li = d.createElement("LI");
+                            var li = document.createElement("LI");
                                 li.className = "tail-dropdown-option" + ((item.selected)? " selected": "") + ((item.disabled)? " disabled": "");
 
                             // Inner Text

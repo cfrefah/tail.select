@@ -1,9 +1,17 @@
-;(function(window){
-    var w = window;
-    if(!w.tail || !w.tail.select){
+/*
+ |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
+ |  @author     SamBrishes@pytesNET
+ |  @version    0.4.1 - Beta
+ |  @website    https://www.github.com/pytesNET/tail.select
+ |
+ |  @license    X11 / MIT License
+ |  @copyright  Copyright © 2014 - 2018 SamBrishes, pytesNET <pytes@gmx.net>
+ */
+;(function(){
+    if(!window.tail || !window.tail.select){
         return false;
     }
-    w.tail.select.strings = {
+    window.tail.select.strings = {
         all: "Alle",
         none: "Keine",
         actionAll: "Alle auswählen",
@@ -15,4 +23,4 @@
         placeholderMulti: "Wähle bis zu :limit Optionen...",
         search: "Tippen zum suchen..."
     };
-})(this);
+}());

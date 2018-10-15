@@ -129,7 +129,7 @@
 
     // Init Website
     var tailDemo = function(){
-        tail.each(d.querySelectorAll("ul.sub-navi"), function(){
+        tail.each(d.querySelectorAll("ul.main-navi > li > ul.sub-navi"), function(){
             var clone = this.cloneNode(true);
                 clone.style.zIndex = "-1";
                 clone.style.opacity = "0";
