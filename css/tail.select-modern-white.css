@@ -1,0 +1,187 @@
+/*
+ |  tail.select - A solution to make (multiple) selection fields beatiful again, written in vanillaJS!
+ |  @author     SamBrishes@pytesNET
+ |  @version    0.4.1 - Beta
+ |  @website    https://www.github.com/pytesNET/tail.select
+ |
+ |  @license    X11 / MIT License
+ |  @copyright  Copyright © 2014 - 2018 SamBrishes, pytesNET <pytes@gmx.net>
+ */
+
+/* @start CORE */
+.tail-select button.tail-all,
+.tail-select button.tail-none{
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+}
+.tail-select button.tail-all:hover{
+    color: #fff;
+    background-color: #3C82E6;
+}
+.tail-select button.tail-none:hover{
+    color: #fff;
+    background-color: #DC4650;
+}
+/* @end CORE */
+
+/* @start LABEL */
+.tail-select .tail-select-label{
+    padding: 5px 15px;
+    border-radius: 34px;
+    -moz-border-radius: 34px;
+    -webkit-border-radius: 34px;
+}
+.tail-select .tail-select-label:before{
+    top: 1px;
+    right: 1px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    transition: border 142ms linear, background 142ms linear;
+    -moz-transition: border 142ms linear, background 142ms linear;
+    -webkit-transition: border 142ms linear, background 142ms linear;
+}
+.tail-select:hover .tail-select-label:before{
+    border-color: #dfdfdf;
+}
+.tail-select.active .tail-select-label:before{
+    border-color: #e8e8e8;
+    background-color: #e8e8e8;
+}
+.tail-select .tail-select-label:after{
+    top: 2px;
+    right: 1px;
+    width: 30px;
+    height: 29px;
+    content: "";
+    opacity: 0.75;
+}
+.tail-select:hover .tail-select-label:after,
+.tail-select.active .tail-select-label:after{
+    opacity: 1;
+}
+.tail-select .tail-select-label .tail-label-count{
+    color: #ffffff;
+    margin: 0 5px 0 -7px;
+    padding: 0 7px;
+    display: inline-block;
+    border: 0;
+    background-color: #3C82E6;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+/* @end LABEL */
+
+/* @start CONTAINER */
+.tail-select-container{
+    padding: 2px 5px;
+    border-radius: 34px;
+    -moz-border-radius: 34px;
+    -webkit-border-radius: 34px;
+}
+.tail-select-container .tail-select-handle{
+    padding: 2px 22px 2px 10px;
+    background-color: #3C82E6;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+}
+.tail-select-container .tail-select-handle:after{
+    width: 20px;
+    margin-right: 3px;
+}
+/* @end CONTAINER */
+
+/* @start DROPDOWN */
+.tail-select .tail-select-dropdown{
+    margin: 15px 0 0 0;
+    padding: 0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.tail-select.active .tail-select-dropdown{
+    overflow: visible !important;
+}
+.tail-select.open-top .tail-select-dropdown{
+    bottom: 35px;
+    margin: 0 0 15px 0;
+}
+.tail-select .tail-select-dropdown:before,
+.tail-select .tail-select-dropdown:after{
+    top: -13px;
+    right: 3px;
+    width: 0;
+    height: 0;
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 0 14px 13px 14px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+}
+.tail-select .tail-select-dropdown:after{
+    top: -12px;
+    right: 4px;
+    border-width: 0 13px 12px 13px;
+    border-color: transparent transparent #ffffff transparent;
+}
+.tail-select.open-top .tail-select-dropdown:before,
+.tail-select.open-top .tail-select-dropdown:after{
+    top: auto;
+    bottom: -13px;
+    border-width: 13px 14px 0 14px;
+    border-color: rgba(0, 0, 0, 0.5) transparent transparent transparent;
+}
+.tail-select.open-top .tail-select-dropdown:after{
+    top: auto;
+    bottom: -12px;
+    border-width: 12px 13px 0 13px;
+    border-color: #ffffff transparent transparent transparent;
+}
+.tail-select .tail-select-dropdown .tail-dropdown-inner{
+    padding: 0;
+    overflow: hidden;
+}
+.tail-select .tail-select-dropdown ul.tail-dropdown{
+    margin: 0 0 1px 0;
+    max-height: inherit;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Search Field */
+.tail-select .tail-select-dropdown .tail-dropdown-search{
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+/* Action Field */
+.tail-select .tail-select-dropdown ul li.tail-dropdown-action{
+    margin: 0;
+    padding: 6px 0 0 0;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.tail-select .tail-select-dropdown ul li.tail-dropdown-action button{
+    padding: 2px 7px;
+    font-size: 10px;
+    line-height: 16px;
+}
+.tail-select .tail-select-dropdown ul li.tail-optgroup-title button{
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+/* @end DROPDOWN */
