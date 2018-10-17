@@ -1,13 +1,18 @@
 CHANGELOG
 ===========
 
+Version 0.4.2 - Beta
+--------------------
+-   Bugfix: Search problem [#8](https://github.com/pytesNET/tail.select/issues/8),
+            Thansk to **elPesecillo**!
+
 Version 0.4.1 - Beta
 --------------------
 -   Add: The new design `modern-white` as additional stylesheet `tail.select-modern-white.css`.
 -   Add: The `.scss` preprocessor stylesheet(-ing) (I'm new at pre-processing, and I'm not sure
          if i'm using it right :/).
 -   Update: Many design changed and optimizations.
--   Bugfix: Ignoring `selected` attribute [#6](https://github.com/pytesNET/tail.select/issues/6)
+-   Bugfix: Ignoring `selected` attribute [#6](https://github.com/pytesNET/tail.select/issues/6),
             Thanks to **tomasKucera**!
 
 Version 0.4.0 - Beta
@@ -44,7 +49,7 @@ Version 0.4.0 - Beta
 -   Codacy: 'i' is already defined. (no-redeclare)
 -   Rename: The internval variable `tailSelect.instances` has been renamed into `tailSelect.inst`.
 -   Bugfix: Displaying of tail.select out of viewport
-            [#4](https://github.com/pytesNET/tail.select/issues/4). Thanks to **tomasKucera**
+            [#4](https://github.com/pytesNET/tail.select/issues/4), Thanks to **tomasKucera**!
 -   Bugfix: The `items` option object doesn't added a option description.
 -   Bugfix: Don't close the dropdown list, when playing with the `multiContainer` element.
 -   Bugfix: Already selected items can be selected again!
@@ -63,7 +68,7 @@ Version 0.3.5 - Alpha
 -   Bugfix: Constructor Instance check.
 -   Bugfix: Wrong Version Number.
 -   Hotfix: Searching when data-description containes > char
-            [#2](https://github.com/pytesNET/tail.select/issues/2). Thanks to **tomasKucera**
+            [#2](https://github.com/pytesNET/tail.select/issues/2), Thanks to **tomasKucera**!
 
 Version 0.3.4 - Alpha
 ---------------------
@@ -79,7 +84,7 @@ Version 0.3.4 - Alpha
 Version 0.3.3 - Alpha
 ---------------------
 -   Hotfix: Nothing can be selected anymore when using the search function
-            [#1](https://github.com/pytesNET/tail.select/issues/1). Thanks to **markteunen65**
+            [#1](https://github.com/pytesNET/tail.select/issues/1), Thanks to **markteunen65**!
 
 Version 0.3.2 - Alpha
 ---------------------

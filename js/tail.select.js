@@ -1,7 +1,7 @@
 /*
  |  tail.select - Another solution to make (multiple) select fields beautiful, written in vanillaJS!
  |  @author     SamBrishes@pytesNET
- |  @version    0.4.1 - Beta
+ |  @version    0.4.2 - Beta
  |  @website    https://www.github.com/pytesNET/tail.select
  |
  |  @license    X11 / MIT License
@@ -152,7 +152,7 @@
         tailSelect.inst["tail-" + this.id] = this;
         return this.init();
     };
-    tailSelect.version = "0.4.1";
+    tailSelect.version = "0.4.2";
     tailSelect.status = "beta";
     tailSelect.count = 0;
     tailSelect.inst = {};
@@ -1259,7 +1259,7 @@
         /*
          |  FIND SOME OPTIONs - WALKER EDITION
          |  @since  0.3.0
-         |  @update 0.3.6
+         |  @update 0.4.2
          |
          |  @param  string  The search term.
          |  @param  string  Experimental: May not work as expected!
@@ -1271,13 +1271,13 @@
             if(typeof(this._findLoop) == "undefined"){
                 search = search.replace(/[\[\]{}()*+?.,^$\\|#-]/g, "\\$&");
                 if(keys == "required"){
-                    var regex = "\<.*(?!<\/option>)value\=\"[^\"]*(" + search + ")[^\"]*\".*(?!<\/option>)\>";
+                    var regex = "<.*?value=\"(" + search + ")\".*?>";
                 } else if(keys == "optional" || keys == "eitheror"){
-                    var regex = "\<.*(?!<\/option>)(value\=\"[^\"]*(" + search + ")[^\"]*\")?.*(?!<\/option>)\>";
+                    var regex = "<.*?(?:value=\"(" + search + "))?\".*?>";
                 } else {
-                    var regex = "\<.*(?!<\/option>)\>";
+                    var regex = "<.*?>";
                 }
-                regex += "[^<>]*(" + search + ")[^<>]*" + (keys == "eitheror"? "?": "") + "\<\/option\>";
+                regex += "([^<>]*(" + search + ")" + (keys == "eitheror"? "?": "") + ")[^<>]*<\/option>";
             }
 
             // Start Walker
